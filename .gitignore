@@ -1,0 +1,80 @@
+# ============================================================
+# .gitignore para el repositorio claude-skills-jjmobijuesa
+# Repo PRIVADO. NUNCA subir secretos, datos de terceros, o
+# corpus financiero sensible. Última actualización: 2026-06-27
+# ============================================================
+
+# === 1. Secretos (NUNCA) ===
+*.env
+.env*
+*token*
+*secret*
+*credentials*
+*api_key*
+cookies.txt
+*.cookies
+storage_state.json
+*storage_state*
+
+# === 2. Sesiones de navegador ===
+browser_profile*/
+*.sqlite
+*.sqlite-journal
+*.db
+
+# === 3. Bytecode y caches ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# === 4. Logs y temporales ===
+*.log
+*.tmp
+*.bak
+*.swp
+
+# === 5. Outputs grandes / locales del usuario ===
+_RnD/MATRIZ_SKILLS_Y_AUTODIAGNOSTICO*.xlsx
+_RnD/*backup*.xlsx
+
+# === 6. Skills con PII de terceros — sanear antes de subir ===
+# Estas skills contienen correos reales de colegas, contables,
+# abogados y contactos bancarios que NO han consentido a su
+# publicación. Su lógica metodológica vale, pero los datos
+# duros deben moverse a archivos externos en una iteración futura.
+triage-inbox-rapido-jjmobijuesa/
+estratega-ventas-inmobiliario-vista-al-rio/
+vista-al-rio-obra-gris-hijos-exitosos/
+comite-cuarto-guerra-qvp/
+
+# === 7. Skills con corpus financiero sensible de Quevepalma ===
+# Contienen métricas internas, márgenes, costos por tonelada
+# y nombres de proveedores. La doctrina vale; los números no
+# deben quedar en el repo.
+control-financiero-semanal-qvp/
+memoria-financiera-inteligenciada/
+politica-retiros-socio-propietario/
+analisis-cognitivo-intervenciones-qvp/
+
+# === 8. Skills con datos forenses del caso EPACEM / Oro Juez ===
+# El caso está bajo confidencialidad profesional. La
+# metodología wolfram puede subirse, pero las references
+# concretas (queries, montos, fechas) no.
+wolfram-forensic-engine/references/
+
+# === 9. Laboratorio interno (matriz de auto-diagnóstico) ===
+_RnD/
+
+# === 10. Datos curados personales en references ===
+# El usuario @fdc_ec tiene curación temática que es señal
+# de sus intereses personales. Lo público son las skills
+# `intereses-*` con las CUENTAS top (señal débil); los
+# bookmarks concretos NO van.
+*/references/bookmarks-curados-fdc-ec.md
+*/references/sintesis-empresas-fantasmas-ocultamiento-legal.md
+*/references/muestras.md
+
+# === 11. Archivos del autoreflex pipeline ===
+*/references/cuentas-top.md
