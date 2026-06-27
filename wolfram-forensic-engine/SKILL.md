@@ -116,3 +116,17 @@ inflation adjustment $600,000 from 2017 to 2026 USA
 ## Conexión con el resto del expediente EPACEM
 
 Este skill es el **motor de cifras** del informe forense que se está construyendo en el cuaderno EPACEM de NotebookLM (ver skill `notebooklm-reorganize`). Cada cifra del Resumen Ejecutivo y de las Cédulas de Cuadre debe pasar por aquí antes de publicarse. Las queries específicas del caso están en `references/epacem-queries.md`.
+
+
+---
+
+## Datos privados del caso
+
+Los correos, nombres concretos, queries específicas y cifras del caso
+del usuario están en `private/SKILL_FULL.md` (excluido del repo por
+`.gitignore`). Esta versión pública conserva la doctrina metodológica
+con placeholders en lugar de PII.
+
+Para usar la skill con los datos reales, la versión en `private/` se
+carga automáticamente cuando Claude detecta los triggers documentados
+en el frontmatter.

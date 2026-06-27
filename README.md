@@ -54,29 +54,43 @@ skills/
 | **Auditoría** | auditoria-cognitiva-reflexiva |
 | **Cierre** | cierre-jornada-apagado |
 
-## Lo que NO está en este repo
+## Modelo "split público/privado"
 
-Por privacidad de terceros, confidencialidad profesional y prudencia
-financiera, las siguientes skills viven SOLO en el disco local del
-usuario y **no se suben aquí** (ver `.gitignore` para la lista
-exacta):
+A partir de la iteración 2 (2026-06-27), las skills sensibles ya no
+se excluyen totalmente del repo. En su lugar, cada una de ellas tiene
+la estructura:
 
-- `triage-inbox-rapido-jjmobijuesa/` — contiene correos de colegas,
-  contables, abogados, contactos bancarios.
-- `estratega-ventas-inmobiliario-vista-al-rio/` — listas de
-  prospectos inmobiliarios.
-- `vista-al-rio-obra-gris-hijos-exitosos/` — perfiles segmentados.
-- `comite-cuarto-guerra-qvp/` — correos de equipo y agenda interna.
-- `control-financiero-semanal-qvp/`, `memoria-financiera-inteligenciada/`,
-  `politica-retiros-socio-propietario/`, `analisis-cognitivo-intervenciones-qvp/`
-  — datos financieros internos de Quevepalma.
-- `wolfram-forensic-engine/references/` — caso forense EPACEM /
-  Oro Juez bajo confidencialidad.
-- `_RnD/` — matriz interna de auto-diagnóstico.
+```
+<skill-sensible>/
+├── SKILL.md              ← PÚBLICO (doctrina, frontmatter, placeholders)
+└── private/              ← LOCAL (.gitignore lo excluye)
+    ├── SKILL_FULL.md     ← Copia íntegra con los datos reales
+    ├── references/       ← Casos, tablas, queries con PII
+    ├── scripts/          ← Código con emails/tokens hardcoded
+    └── templates/        ← Plantillas de outreach con BCC reales
+```
 
-Estas skills son **refactorizables**: su doctrina metodológica
-puede volverse pública moviendo los datos duros a un archivo externo
-fuera del repo. Iteración futura.
+El patrón global `*/private/` en `.gitignore` excluye ese subdirectorio
+de cualquier skill, presente o futura. La doctrina metodológica viaja
+en el repo; los datos duros del caso del usuario se quedan en disco.
+
+Skills con split en esta iteración:
+
+- `triage-inbox-rapido-jjmobijuesa/`
+- `comite-cuarto-guerra-qvp/`
+- `estratega-ventas-inmobiliario-vista-al-rio/`
+- `vista-al-rio-obra-gris-hijos-exitosos/`
+- `control-financiero-semanal-qvp/`
+- `memoria-financiera-inteligenciada/`
+- `politica-retiros-socio-propietario/`
+- `analisis-cognitivo-intervenciones-qvp/`
+- `wolfram-forensic-engine/`
+
+Quedan totalmente excluidos del repo (no aplican split):
+
+- `_RnD/` — laboratorio interno de auto-diagnóstico.
+- `*/references/bookmarks-curados-fdc-ec.md` y similares — curación
+  personal del usuario.
 
 ## Doctrinas que rigen este repo
 
@@ -96,9 +110,11 @@ Curación intelectual; no redistribuir.
 
 ## Tamaño
 
-- ~55 skills publicadas en este repo.
-- ~10 skills retenidas en local por las razones del bloque anterior.
-- Total disco: ~1.6 MB.
+- **67 skills publicadas** en este repo (58 + 9 saneadas en iter 2).
+- **9 skills con `private/`** cuya doctrina sí está en el repo pero los
+  datos duros se quedan en disco.
+- Total disco (con `private/` incluido): ~1.6 MB.
+- Repo público sin `private/`: ~1.3 MB.
 
 ---
 
