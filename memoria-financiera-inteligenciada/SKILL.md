@@ -228,6 +228,17 @@ Fuente: Jordi Altimira, LinkedIn (`activity-7472573800476340224`). Detalle: [[re
   excesivos, logística/compras ineficientes, sobrecostos ocultos) y monitorear **EBITDA mensual**.
   Detalle: [[reference-ebitda-radiografia-zevallos]].
 
+## V-decies. Lote LinkedIn fedphd — IA en finanzas + unit economics (R30–R31)
+Destilado del bucket finanzas-control (163 posts) de los guardados de LinkedIn de fedphd
+([[reference-linkedin-finanzas-lote-fedphd]]); el resto del bucket ya estaba cubierto por R17–R29.
+- **R30 — IA aplicada a finanzas / FP&A con IA (Nicolas Boucher).** «La mayoría de los equipos de
+  finanzas usan el 5% de lo que la IA puede hacer»: automatizar cierre, conciliaciones, análisis y
+  reporting con IA libera el 95% restante. Ata con el control QVP: la **IA local** debe automatizar los
+  cuadros de ratios (no operarlos a mano).
+- **R31 — Unit economics: CAC vs LTV, regla 3× (A. Gonzales y afines).** Crecer en ventas gastando más
+  en adquirir clientes destruye caja; el cliente debe valer **≥3× su costo de adquisición (LTV/CAC ≥ 3)**.
+  Refuerza el panel de 12 KPIs (§V-quinquies) y el sesgo «vender mucho ≠ ganar» (R29).
+
 ## VI. Relación con otras skills
 - `control-financiero-semanal-qvp` — operacionaliza el mínimo financiero (War Room).
 - `wolfram-forensic-engine` — recálculo/validación forense de las cifras.

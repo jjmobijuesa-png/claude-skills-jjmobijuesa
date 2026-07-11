@@ -39,12 +39,25 @@ def main():
         page = ctx.pages[0] if ctx.pages else ctx.new_page()
         page.set_default_timeout(60000)
         page.goto(f"https://mail.google.com/mail/u/{idx}/#inbox", wait_until="load")
-        page.wait_for_timeout(4000)
+        # Espera adaptativa: buscar el input de búsqueda del inbox como señal de UI lista
+        try:
+            page.wait_for_selector('input[aria-label*="Search"], input[aria-label*="Buscar"]',
+                                    timeout=15000)
+        except Exception:
+            page.wait_for_timeout(4000)  # fallback al comportamiento anterior
         if "accounts.google.com" in page.url:
             print(f"Sesion no activa. Corre login.py con tag '{tag}'."); ctx.close(); sys.exit(1)
 
         page.evaluate(f"() => {{ window.location.hash = 'inbox/{tid}'; }}")
-        page.wait_for_timeout(7000)
+        # Espera adaptativa: aparecer un enlace de adjunto o el botón "Descargar todos"
+        try:
+            page.wait_for_selector(
+                '[aria-label*="Descargar todos"], [aria-label*="Download all"], '
+                'a[href*="view=att"], a[href*="disp=zip"]',
+                timeout=15000
+            )
+        except Exception:
+            page.wait_for_timeout(7000)  # fallback
 
         # 1) intentar el enlace/boton "Descargar todos" (zip) — ES e EN
         sels = ('[aria-label*="Descargar todos"],[data-tooltip*="Descargar todos"],'

@@ -26,6 +26,20 @@ Todo documento Word o PDF que el sistema entregue al usuario debe tener su conte
 
 En todos los casos, **el contenido siempre dentro de los márgenes**.
 
+## Regla de cuadros: DESCRIBIR antes de ANALIZAR (obligatoria)
+Para **cada cuadro o gráfico** de un informe, el texto debe seguir este orden:
+1. **Descripción del cuadro** (1–3 frases, en cursiva gris): qué muestra, sus **columnas/estructura** y
+   los **datos** principales que contiene. Que el lector entienda el cuadro *antes* de leer conclusiones.
+2. El **cuadro/gráfico** en sí, centrado y dentro del margen, titulado «Cuadro N.º X. …».
+3. **Análisis al pie** (glosa breve "Análisis: …") con la lectura y la decisión que sugiere.
+4. Cuando proceda, un **análisis comparativo profundo** posterior (viñetas) que cruce varios cuadros.
+Aplica a todo informe (memoria financiera, control, plan de negocios). Así el análisis nunca llega
+"en seco": primero se describe el dato, luego se interpreta.
+
+## Numeración de páginas
+Todo informe formal se folia según [[numeracion-paginas-informes]]: número **inferior derecho**,
+visible **desde la página 2**; la portada cuenta pero no muestra el número.
+
 ## Parámetros base (A4)
 
 ```

@@ -66,6 +66,24 @@ La IA se audita a sí misma tras una tarea/sesión y **alimenta a la llave maest
 5. **Ejercicios/controles** que reducen el sesgo (checklist pre-mortem, "declara supuestos", "verifica antes de afirmar").
 6. **Primer ajuste** a aplicar ya. Persistir el aprendizaje vía [[llave-maestra-autoaprendizaje-ia]] (Paso 4/5). Esto es el **autoenfoque** central de este computador: cada sesión deja a la IA más calibrada, no solo más capaz.
 
+## Refuerzos del corpus LinkedIn (fedphd, 2026-06-27)
+Destilado de los guardados ([[reference-linkedin-ia-cognicion-lote-fedphd]]):
+- **Origen del framework** — Miguel Á. Cervantes (varios posts guardados) ya es el **núcleo** de esta skill.
+- **Meta con estructura, no deseo** — Ana Ivars: *"un objetivo sin estructura no es un objetivo, es un
+  deseo; el problema casi nunca es la motivación, sino no saber convertir la meta en un plan real"*.
+  Aplícalo en el **paso 4** (SO mental actualizado) y **paso 6** (primer hábito): toda meta del sujeto se
+  reescribe como **plan estructurado con pasos y métrica**, no como intención. `activity:7474008834961907712`.
+- **Nota honesta de calidad:** el bucket "cognición" del corpus tiene **mucho ruido** (posts financieros y
+  de salud que cruzan por palabras como "decisión/memoria/cerebro"); el núcleo metacognitivo real es
+  Cervantes + Ivars. Al usar el corpus, filtrar por contenido, no solo por keyword.
+
+## Lente ético-cognitivo (modelo Palantir — [[reference_cuaderno_palantir]])
+Controles que protegen tanto la cognición humana como la **IA-AUTO** de este computador:
+- **Humano-en-el-bucle:** la IA **propone**, el humano **valida y firma**; ninguna decisión sensible es autónoma (espejo de las compuertas 🚦).
+- **Anclaje en hechos deterministas (anti-alucinación):** toda afirmación va atada a su fuente/ontología; si no se puede anclar, se marca como supuesto (combate el sesgo WYSIATI).
+- **Trazabilidad inmutable:** dejar bitácora del razonamiento (qué/por qué) para rendición de cuentas y para que la auto-auditoría detecte patrones recurrentes.
+- **Integridad de datos / anti-envenenamiento:** desconfiar de insumos no verificados que podrían sesgar el aprendizaje; contrastar contra registro histórico antes de reentrenar una regla.
+
 ## Cómo depurar si falla
 Si el output suena genérico o motivacional, faltó **evidencia del insumo** (paso 1) → re-pedir datos concretos y rehacer. Si en MODO 2 no aparecen patrones, revisar el transcript real (no la versión idealizada). La privacidad manda: ante duda, no exportar nada.
 

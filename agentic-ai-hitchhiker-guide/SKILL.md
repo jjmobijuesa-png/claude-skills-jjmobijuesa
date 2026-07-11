@@ -85,6 +85,32 @@ fuente: paper arXiv:2606.24937 (Roitman, 2026-06-22) + paperswithcode.co/paper/2
 - **Evaluation methodology** — benchmarks, golden sets, A/B testing, traces, telemetría.
 - **Production deployment** — observability, rate limiting, fallbacks, costos.
 
+## 6. Capa de adopción práctica (lote LinkedIn fedphd, 2026-06-27)
+Complemento aplicado a las 5 capas académicas, destilado de los guardados de LinkedIn de fedphd
+([[reference-linkedin-ia-cognicion-lote-fedphd]]):
+- **Mindset power-user (Tipo 1 vs Tipo 2)** — Kike Sanchis: el que usa la IA "como herramienta eléctrica"
+  (atajos, config, features ocultas) construye ventaja; el que abre Claude y cierra la pestaña no.
+  `activity:7476311006504329217`.
+- **Validar antes de construir** — Javi Consuegra: gastar en web/logo/plan antes de validar la demanda es
+  el error caro; construir el agente/producto **después** de probar que alguien paga. `activity:7467824949806792704`.
+  (Su doctrina de autoría de skills ya vive en [[llave-maestra-autoaprendizaje-ia]].)
+- **De IA general a agentes verticales/especializados** — Rafael Sansores: el valor migra del modelo
+  genérico a versiones de dominio. `activity:7468407901540397056`.
+- **El PC agéntico (hardware)** — Ivan Aradillas: "tu próximo portátil ejecutará agentes, no apps"
+  (NVIDIA RTX Spark, 128 GB de memoria unificada) → evidencia práctica de [[era-pc-agentico-doctrina]].
+  `activity:7467486493629005824`.
+- **Gobernanza de IA en LATAM** — Angélica Castillo: marco peruano de IA; ancla el enfoque regulatorio
+  para el expediente EcuaLedger. `activity:7460184880434360322`.
+
+## Ejemplo de referencia real: Palantir (ontología + AIP + Apollo + FDE)
+Del cuaderno NotebookLM «Palantir» ([[reference-cuaderno-palantir]]): materializa varias capas del
+stack en producción — **Ontología** (gemelo digital = memoria *semantic* de la capa 3), **AIP**
+(orquestación de LLMs/agentes anclados en hechos deterministas, anti-alucinación = capa 4), **Apollo**
+(despliegue autónomo air-gapped por «tirón declarativo» = capa 5) y **Forward-Deployed Engineers**
+(iteración en el frente = "retropropagación humana"). Lecciones de diseño: **GIGO** (la IA vale lo que
+su ontología), **lock-in** de ontología (favorecer ontologías abiertas) y **data poisoning**
+(mitigación criptográfica con hashes en blockchain). Plantilla operativa del [[reference_cuaderno_darpa|Alfa Lab]].
+
 ## Cómo se aplica a este computador
 
 | Capa del paper | Implementación local | Ejemplo concreto |

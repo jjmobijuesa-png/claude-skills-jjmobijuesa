@@ -102,6 +102,23 @@ Plantilla del archivo persistido:
 - `Navigation to this domain is not allowed` → añadir `perplexity.ai`
   a la allowlist de la extensión Claude in Chrome (la extensión, no
   settings.json — está documentado en `update-config`).
+- **La APP de escritorio se cuelga** (ventana en blanco que solo muestra
+  el menú «View → Toggle Developer Tools») → el render webview de Electron
+  no cargó. NO basta con reabrir: el proceso colgado intercepta el nuevo
+  lanzamiento y vuelve a la ventana vacía. Hay que cerrar TODO el árbol y
+  relanzar:
+  ```powershell
+  $pp = Get-Process Perplexity -ErrorAction SilentlyContinue; $ids=@($pp.Id)
+  Get-CimInstance Win32_Process -Filter "Name='msedgewebview2.exe'" |
+    Where-Object { $ids -contains $_.ParentProcessId } |
+    ForEach-Object { Stop-Process -Id $_.ProcessId -Force -EA SilentlyContinue }
+  $pp | Stop-Process -Force -EA SilentlyContinue; Start-Sleep 2
+  Start-Process (Join-Path $env:LOCALAPPDATA "Programs\Perplexity\Perplexity.exe")
+  ```
+  Mata solo los `msedgewebview2.exe` hijos de Perplexity (no toca
+  WhatsApp/Teams/Edge). Señal de éxito: relanza con 8–9 procesos y la
+  ventana carga el contenido. *Las skills locales (.md) NUNCA causan esto;
+  son inertes.* Verificado 2026-06-28.
 
 ## Relacionado
 

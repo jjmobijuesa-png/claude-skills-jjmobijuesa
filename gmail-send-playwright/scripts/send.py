@@ -99,7 +99,12 @@ def main():
                     break
                 except Exception:
                     continue
-            page.wait_for_timeout(22000)  # wait for upload
+            # Espera adaptativa por tamaño (base 15s + ~10 KB/s conservador)
+            total_bytes = sum(Path(a).stat().st_size for a in args.attach if Path(a).exists())
+            wait_ms = max(15000, 3000 + total_bytes // 100)
+            wait_ms = min(wait_ms, 180000)  # cap a 3 min
+            print(f"  Esperando upload de {len(args.attach)} adjuntos ({total_bytes/1024:.0f} KB) — {wait_ms/1000:.0f}s")
+            page.wait_for_timeout(wait_ms)
 
         # 6. Send (try Spanish + English labels, then Ctrl+Enter)
         sent = False

@@ -199,6 +199,17 @@ como fuente y regenerar el mapa.
 - ❌ Mentir o exagerar cifras o garantías.
 - ❌ Convertir la apologética en agresión personal.
 
+## Banco de objeciones «modelo Palantir / vigilancia» (del cuaderno NotebookLM «Palantir»)
+Munición lista para el eje **privacidad / vigilancia / concentración de poder** (adversario típico:
+activista de protección de datos, académico crítico). Cada objeción al modelo Palantir trae su
+**contramedida en la IBPP soberana ABIERTA** — ver [[reference_cuaderno_palantir]]:
+1. **Vigilancia masiva / exfiltración de datos** → *cómputo en el borde soberano* (perímetro nacional, sin nubes comerciales) + **minimización de datos**.
+2. **Opacidad / falta de rendición de cuentas** (contratos secretos) → **auditoría en qDLT**: cada decisión/orden queda en un libro mayor inmutable auditable por múltiples nodos públicos (FF.AA., Ministerio, academia).
+3. **Concentración de poder / lock-in** → **ontología y código abierto** (Hyperledger Besu, ontología desarrollada por la academia local/ESPE): la soberanía no depende de un proveedor extranjero.
+4. **Desviación de propósito (function creep)** — datos civiles usados para represión → **gobernanza por contratos inteligentes** (privilegios mínimos, **DIDs**, acceso atado a mandato legal específico).
+5. **Sesgo algorítmico / "pre-crimen"** → **humano-en-el-bucle**: la IA solo propone opciones; un humano valida y **firma digitalmente**; lógica anclada en hechos deterministas de la ontología (anti-alucinación).
+> Encaja en RAMA 1 (datos, Art. 66.19), RAMA 2 (dependencia de proveedores) y RAMA 5 (riesgo reputacional). Refuta la acusación "EcuaLedger = Palantir/vigilancia" mostrando que la **apertura, la gobernanza multisectorial y la auditoría inmutable invierten** el modelo cerrado de Palantir.
+
 ## Skills hermanas
 
 - `entrenador-experto-notebooklm-ecualedger` — skill maestra.

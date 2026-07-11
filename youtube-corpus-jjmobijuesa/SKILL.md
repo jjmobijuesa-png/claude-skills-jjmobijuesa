@@ -23,6 +23,7 @@ trigger_phrases:
   - "transcribir videos de YouTube"
   - "corpus YouTube jjmobijuesa"
   - "qué tengo guardado en YouTube"
+  - "<cualquier link de video youtube/youtu.be compartido por el usuario>"
 
 idioma_de_salida: español neutro técnico
 nivel_madurez: aplicada
@@ -30,6 +31,12 @@ fuente: instalación 2026-06-26 (yt-dlp + youtube-transcript-api)
 ---
 
 # YouTube — corpus jjmobijuesa@gmail.com
+
+> **REGLA DE INVOCACIÓN AUTOMÁTICA (2026-07-04):** siempre que el usuario comparta
+> un **link de video** (YouTube u otro), invocar esta skill de inmediato para
+> extraer la transcripción y **usarla** en la tarea en curso + aprovechar la
+> **memoria compartida** — nunca responder «no puedo ver video». Regla registrada en
+> memoria como `feedback-video-links-auto-transcribe`.
 
 ## Doctrina
 
