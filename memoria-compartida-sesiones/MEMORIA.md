@@ -20,9 +20,11 @@ Un hilo = un agente de la PC = una carpeta en `relevos/` = un chat espejo en la 
 |---|---|---|---|---|
 | `agente-ia-local-autoreflexivo` | Agente IA Local autoreflexivo | "Ver otras sesiones de Claude Code" (coordinador) | PC | Primer checkpoint desde la PC |
 | `flujo-caja-proyeccion-mobijuesa` | Flujo de caja y proyección Mobijuesa | "Espejo — Flujo de caja y proyección Mobijuesa" | PC | PC extrae publicación LinkedIn 7508480383286452224 → espejo la aplica |
+| `financial-report-mobijuesa` | Financial report for Mobijuesa | "Espejo — Financial report for Mobijuesa" | PC | Primer volcado en caliente desde la PC |
 
 ## Pendientes
 - [ ] Identificar y subir el archivo principal.
 - [ ] Pegar `PROMPT-agente-local.md` en la sesión local (instala hooks SessionStart + Stop y hace el primer checkpoint).
 - [ ] Pegar `relevos/flujo-caja-proyeccion-mobijuesa/PROMPT-pc.md` en la sesión local de flujo de caja.
+- [ ] Pegar `relevos/financial-report-mobijuesa/PROMPT-pc.md` en la sesión local "Financial report for Mobijuesa".
 - [ ] Revisar rama `claude/awesome-einstein-6h3af4`.
