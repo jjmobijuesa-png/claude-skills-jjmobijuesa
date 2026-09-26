@@ -34,7 +34,7 @@ título** que es el que casi nadie lee. Ver §2.
 Gmail MCP devuelve metadatos, no binarios. Usar [[gmail-attachments]]:
 
 ```
-python scripts/download_all_zip.py jjm "<...>\Actas\sem NN\Adjuntos compra fruta" <threadId>
+python "$env:USERPROFILE\.claude\skills\gmail-attachments\scripts\download_all_zip.py" jjm "<...>\Actas\sem NN\Adjuntos compra fruta" <threadId>
 ```
 
 Localizar el hilo con `search_threads` y `from:asiscon03@quevepalma.com`. El `.xls` es formato

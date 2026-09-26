@@ -23,7 +23,7 @@ metadata:
   version: 1.0
   fecha: 2026-06-19
   origen: sesión 2026-06-19 (prueba real con el cuaderno DARPA de mobijuesa360); construida sobre anthropic-skills:notebooklmskill
-  fuente: anthropic-skills:notebooklmskill (CLI notebooklm-py v0.3.4) + truco de reauth de [[reference-cuaderno-toma-decisiones-qvp]]
+  fuente: anthropic-skills:notebooklmskill (CLI notebooklm-py v0.3.4) + truco de reauth de [[reference_cuaderno_toma_decisiones_qvp]]
   relacionada: notebooklmskill, analisis-cognitivo-intervenciones-qvp, llave-maestra-autoaprendizaje-ia
 ---
 
@@ -33,7 +33,7 @@ metadata:
 Lee primero `C:\Users\datos\.claude\projects\C--Users-datos-Downloads\memory\user_role.md`
 y `MEMORY.md` para heredar perfil y proyectos (QVP, EcuaLedger/FBSE, Vista al Río).
 Cuenta NotebookLM por defecto: **mobijuesa360@gmail.com** (perfil `browser_profile_edge`).
-Ver [[feedback-notebooklm-cuenta]].
+Ver [[feedback_notebooklm_cuenta]].
 
 ## Doctrina central
 NotebookLM no es solo un generador de artefactos: es un **corpus curado + un chat

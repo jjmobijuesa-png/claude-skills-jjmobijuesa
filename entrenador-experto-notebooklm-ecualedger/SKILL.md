@@ -310,7 +310,7 @@ Uso en la suite:
 - **Persona E (Académico internacional)**: marco de equivalencia funcional
   + propiedad off-chain (lingote físico) + posesión on-chain (token).
 
-Detalle: [[reference-dbs-oro-tokenizado-pablogomez]]. Fuente: Pablo Gómez,
+Detalle: [[reference_dbs_oro_tokenizado_pablogomez]]. Fuente: Pablo Gómez,
 LinkedIn (`activity-7472679931739725825`).
 
 ## Antipatrones

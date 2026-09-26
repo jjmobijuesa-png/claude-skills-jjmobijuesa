@@ -282,8 +282,8 @@ Añadir entrada de una sola línea en `MEMORY.md`:
 ```
 
 Si la skill substituye o complementa una skill anterior, dejar
-constancia en el cuerpo del nuevo `SKILL.md` con un enlace
-`[[skill-anterior]]`.
+constancia en el cuerpo del nuevo `SKILL.md` con un wikilink
+al nombre de carpeta de la skill anterior.
 
 ### Paso 6 — Cierre y promoción
 

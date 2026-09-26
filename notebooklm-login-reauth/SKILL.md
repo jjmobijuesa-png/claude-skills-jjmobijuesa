@@ -50,7 +50,7 @@ Get-CimInstance Win32_Process -Filter "Name='msedge.exe'" |
 # y aplicar MoveWindow + ShowWindow + SetForegroundWindow sobre ese handle
 ```
 
-Ver [[feedback-reauth-notebooklm-cosecha]] y [[regla-del-primer-tropiezo]].
+Ver [[feedback_reauth_notebooklm_cosecha]] y [[regla-del-primer-tropiezo]].
 
 ## 2. PRIMERO intentar el refresh automático (el agente SÍ puede)
 

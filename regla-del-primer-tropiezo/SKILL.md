@@ -314,7 +314,7 @@ catálogo cada vez más largo y cada vez menos navegable. Una red que solo crece
 
 | Movimiento | Cuándo | Qué se hace |
 |---|---|---|
-| **Enlazar** | Se usaron dos skills juntas y no se citaban | Agregar `[[wikilink]]` recíproco |
+| **Enlazar** | Se usaron dos skills juntas y no se citaban | Agregar wikilink recíproco |
 | **Fusionar** | Dos skills se solapan y siempre se leen juntas | Una absorbe a la otra; la absorbida queda como puntero |
 | **Escindir** | Una skill acumuló dos doctrinas distintas | Partirla; cada parte enlaza a la otra |
 | **Elevar** | Un truco local resultó valer para toda la casa | Promoverlo a skill propia y enlazarlo desde el racimo |

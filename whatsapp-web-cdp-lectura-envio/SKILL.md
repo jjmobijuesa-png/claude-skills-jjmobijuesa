@@ -134,5 +134,5 @@ Vincular WhatsApp Web **puede desvincular la app nativa de Windows** (límite de
 ## 9. Referencias
 
 - `E:\vars\var 13 RedSerAk\SAS-Agua-Cerebro-Operativo\_archived_skills\sas-agua-whatsapp-envio\` — antecesora.
-- [[feedback-aprendido]] §8 (envío verificado) y §9 (revisar lo archivado antes de declarar imposible).
+- [[feedback_aprendido]] §8 (envío verificado) y §9 (revisar lo archivado antes de declarar imposible).
 - Scripts de referencia en el scratchpad de la sesión 2026-07-19 (`wa_v3.py`, `wa_kleper.py`, `wa_alvimar_send.py`).

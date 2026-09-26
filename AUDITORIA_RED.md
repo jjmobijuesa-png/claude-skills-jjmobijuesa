@@ -8,21 +8,24 @@ su existencia en disco **no se verificó**.
 
 ## 1. Resumen ejecutivo
 
-| Indicador | Antes | Después |
-|---|---:|---:|
-| Menciones `[[destino]]` | 858 | 857 |
-| Destinos únicos | 187 | 180 |
-| A. Interno resuelto | 137 | 137 |
-| B. Fuera de alcance (memoria o plugin) | 34 | 40 |
-| C. Discrepancia de grafía | 12 (6 pares) | 0 |
-| D. Colgante | 4 | 3 |
-| Scripts fantasma | 0 | 0 |
-| Skills con frontmatter defectuoso | 0 | 0 |
-| Archivos modificados | | 5 `SKILL.md` + este informe |
+| Indicador | Inicial | Ronda 1 | Ronda 2 (final) |
+|---|---:|---:|---:|
+| Menciones `[[destino]]` | 858 | 857 | 855 |
+| Destinos únicos | 187 | 180 | 178 |
+| A. Interno resuelto | 137 | 137 | 137 |
+| B. Fuera de alcance (memoria o plugin) | 34 | 40 | 41 |
+| C. Discrepancia de grafía | 12 (6 pares) | 0 | 0 |
+| D. Colgante | 4 | 3 | 0 |
+| Destinos de memoria escritos con guion | 19 | 13 | 0 |
+| Scripts fantasma | 0 | 0 | 0 |
+| Skills con frontmatter defectuoso | 0 | 0 | 0 |
 
+- Ronda 1: reparaciones inequívocas (cubo C y `[[nombre]]`).
+- Ronda 2: las 5 decisiones de la sección 4, aprobadas por Francisco el 2026-09-26.
 - Ningún enlace interno a skill está roto: los 137 destinos internos resuelven a carpeta existente.
 - Ningún enlace a memoria se borró, se redirigió ni se convirtió en texto.
-- Quedan 5 decisiones marcadas como **requiere criterio de Francisco** (sección 4).
+- Todos los cambios son de texto dentro del repo. No se ejecutó nada en el computador del usuario;
+  los comandos de la sección 8 son de solo lectura.
 
 ## 2. Clasificación de los 187 destinos únicos (estado previo a la reparación)
 
@@ -121,9 +124,9 @@ de memoria con guion; si esa salida se usó para escribir enlaces nuevos, explic
 | `skill-anterior` | `llave-maestra-autoaprendizaje-ia:286` | `gemini-active-use` (12) | Marcador de plantilla dentro de una instrucción. Ver 4.2 |
 | `wikilink` | `regla-del-primer-tropiezo:317` | `gemini-active-use` (14) | Marcador de plantilla en tabla. Ver 4.2 |
 
-Colgantes reales tras la reparación: **3**, y ninguno apunta a una skill que falte escribir.
+Colgantes tras la ronda 1: **3**. Tras la ronda 2: **0** (`nombre`, `skill-anterior` y `wikilink` eliminados como marcadores; `arquitectura-financiera-escalonada` reclasificada en B). Ninguno apuntaba a una skill que falte escribir.
 
-## 3. Reparaciones aplicadas
+## 3. Reparaciones aplicadas — ronda 1
 
 | # | Archivo | Línea | Antes | Después | Motivo |
 |---:|---|---:|---|---|---|
@@ -140,35 +143,29 @@ Colgantes reales tras la reparación: **3**, y ninguno apunta a una skill que fa
 - El grafo que calcula `mapear_red_skills.py` no cambia (su `slug()` ya unificaba las grafías): 158 nodos,
   606 aristas, 1 racimo, 0 huérfanas antes y después.
 
-## 4. Requiere criterio de Francisco
+## 4. Decisiones de criterio — ronda 2 (aprobadas, aplicadas)
 
-### 4.1 Trece destinos de memoria con guion y sin par (cubo B2)
-- **Opción A:** pasarlos a guion bajo, igual que el cubo C.
-- **Opción B:** dejarlos como están.
-- **Recomendación:** A, pero solo después de comprobar en disco que el archivo existe con guion bajo.
-  No se aplicó porque no hay evidencia en el repo de cómo se llama cada archivo.
+| # | Decisión | Opción aplicada | Cambio |
+|---:|---|---|---|
+| 4.1 | 13 destinos de memoria con guion y sin par (cubo B2) | Pasar a guion bajo | 17 menciones en 11 archivos (tabla B2, mismas líneas) |
+| 4.2 | Marcadores `[[skill-anterior]]` y `[[wikilink]]` | Quitar corchetes, conservar la instrucción | `llave-maestra-autoaprendizaje-ia:285-286`, `regla-del-primer-tropiezo:317` |
+| 4.3 | `[[arquitectura-financiera-escalonada]]` | Tratar como nota de memoria sin prefijo (pasa a B) | Sin cambio de texto |
+| 4.4 | Ruta relativa en `compra-fruta-semanal-qvp:37` | Ruta completa a la skill dueña | `python "$env:USERPROFILE\.claude\skills\gmail-attachments\scripts\download_all_zip.py"` |
+| 4.4 | Ruta relativa en `agente-gui-autoaprobado-windows:87` | Dejar (la misma línea nombra `[[excel-macro-vba-embebido-gui]]`) | Sin cambio |
+| 4.5 | Cifra oficial de skills | 158, la verificada en el repo | `README.md`: «67 skills publicadas» pasa a «158 skills publicadas» |
 
-### 4.2 Marcadores `[[skill-anterior]]` y `[[wikilink]]`
-- **Opción A:** quitarles los corchetes igual que a `[[nombre]]` (por ejemplo, «con un enlace
-  wikilink a la skill anterior»).
-- **Opción B:** dejarlos, porque son instrucciones que enseñan la sintaxis.
-- **Recomendación:** A. `mapear_red_skills.py` los cuenta como enlaces rotos en cada regeneración.
-  No se aplicó porque la orden solo cubría `[[nombre]]`.
+Texto exacto de 4.2:
 
-### 4.3 `[[arquitectura-financiera-escalonada]]`
-- **Opción A:** es una nota de memoria sin prefijo: dejarla (quedaría en B).
-- **Opción B:** es una skill pendiente de escribir: dejarla como colgante hasta crearla.
-- **Recomendación:** A, confirmando que existe `arquitectura-financiera-escalonada.md` en `memory\`.
+| Archivo | Antes | Después |
+|---|---|---|
+| `llave-maestra-autoaprendizaje-ia/SKILL.md` | ``con un enlace `[[skill-anterior]]`.`` | `con un wikilink al nombre de carpeta de la skill anterior.` |
+| `regla-del-primer-tropiezo/SKILL.md` | ``Agregar `[[wikilink]]` recíproco`` | `Agregar wikilink recíproco` |
 
-### 4.4 Dos rutas relativas de scripts que pertenecen a otra skill
-- `agente-gui-autoaprobado-windows:87` cita `scripts/vbe_window.ps1`, que vive en `excel-macro-vba-embebido-gui/scripts/`.
-- `compra-fruta-semanal-qvp:37` ejecuta `python scripts/download_all_zip.py`, que vive en `gmail-attachments/scripts/`.
-- **Opción A:** escribir la ruta completa, como ya hacen otras 9 skills.
-- **Opción B:** dejarlas; el contexto inmediato nombra la skill dueña.
-- **Recomendación:** A en `compra-fruta-semanal-qvp`, porque es un comando ejecutable y falla si se lanza desde otra carpeta.
-
-### 4.5 Cifra oficial de skills
-Ver sección 7: decidir si el número de referencia es el del índice (154) o el del repo (158) y regenerar el índice.
+Pendiente fuera del repo (no se puede hacer desde aquí):
+- 4.1 y 4.3 dan por hecho que los archivos de `memory\` usan guion bajo y que existe
+  `arquitectura-financiera-escalonada.md`. **No verificado.** Comando de comprobación en la sección 8.
+- 4.5: regenerar `skills_index.md` con 158 entradas. Después, actualizar la cifra «154» que citan
+  `regla-del-primer-tropiezo` (descripción y §9); hoy describe fielmente al índice, por eso no se tocó.
 
 ## 5. Scripts fantasma
 
@@ -178,7 +175,7 @@ Ver sección 7: decidir si el número de referencia es el del índice (154) o el
 | Pares únicos (skill, script) | 78 |
 | Resueltos en la propia skill | 67 |
 | Resueltos con ruta explícita a otra skill | 9 |
-| Resueltos por contexto en otra skill (ruta relativa, ver 4.4) | 2 |
+| Resueltos por contexto en otra skill (ruta relativa, ver 4.4) | 2 (1 tras la ronda 2) |
 | **Fantasma (no existen en el repo)** | **0** |
 
 Referencias cruzadas con ruta explícita, todas existentes:
@@ -223,7 +220,7 @@ citado en `triage-inbox-rapido-jjmobijuesa` sin ruta `scripts/`.
   Ejecutar hoy el propio `mapear_red_skills.py` sobre el repo da **158 nodos y 606 aristas**. El índice y el
   mapa de memoria son anteriores al contenido actual del repo.
 
-**Conclusión:** la causa más probable es **4 skills sin registrar en `skills_index.md`**, incorporadas
+**Decisión (ronda 2):** la cifra oficial es 158. **Conclusión sobre la causa:** la causa más probable es **4 skills sin registrar en `skills_index.md`**, incorporadas
 después de su última regeneración. No puedo nombrarlas: el índice está fuera del repo y **no se pudo
 verificar**. Para obtener los nombres exactos en la máquina del usuario:
 
@@ -238,7 +235,28 @@ Get-ChildItem "C:\Users\datos\.claude\skills" -Directory |
 Si el comando devuelve 4 nombres, esa es la respuesta. Si devuelve 0, la diferencia está en carpetas del
 repo que ya no existen en disco (la sincronización añade pero no borra).
 
-## 8. Método
+## 8. Comandos de verificación para el computador del usuario
+
+Los tres son de solo lectura: listan, no modifican ni borran nada.
+
+Enlaces a memoria del repo que no tienen archivo en `memory\` (valida 4.1 y 4.3):
+
+```powershell
+$mem = "C:\Users\datos\.claude\projects\C--Users-datos-Downloads\memory"
+$sk  = "C:\Users\datos\.claude\skills"
+Get-ChildItem $sk -Filter SKILL.md -Recurse -Depth 1 |
+  Select-String -Pattern '\[\[([^\]|#]+)' -AllMatches |
+  ForEach-Object { $_.Matches.Groups | Where-Object Name -eq 1 } |
+  ForEach-Object Value | Sort-Object -Unique |
+  Where-Object { -not (Test-Path (Join-Path $sk $_)) -and -not (Test-Path (Join-Path $mem "$_.md")) }
+```
+
+Resultado esperado: vacío, o solo `anthropic-skills:notebooklmskill` (skill de plugin). Cualquier otro
+nombre es una nota que no existe con esa grafía: avisar antes de tocar nada.
+
+Skills del disco que no figuran en `skills_index.md` (valida la sección 7): ver el comando de la sección 7.
+
+## 9. Método
 
 - Extracción: regex `\[\[([^\]]*)\]\]` sobre los 158 `SKILL.md`; el destino es el texto antes de `|` o `#`.
 - Cubo C: agrupación por destino en minúsculas, sin acentos y con `_` igual a `-`.

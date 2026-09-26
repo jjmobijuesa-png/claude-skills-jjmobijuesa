@@ -209,7 +209,7 @@ además del flujo de caja contable; en el modelo de factibilidad del Edificio Vi
 utilidad caja USD −423 K vs utilidad TOTAL USD 447 K es exactamente el delta que Altimira
 describe entre caja y resultado patrimonial.
 
-Fuente: Jordi Altimira, LinkedIn (`activity-7472573800476340224`). Detalle: [[reference-tipos-flujo-caja-jordialtimira]].
+Fuente: Jordi Altimira, LinkedIn (`activity-7472573800476340224`). Detalle: [[reference_tipos_flujo_caja_jordialtimira]].
 
 ## V-novies. Retiros del socio + ratios como preguntas + EBITDA radiografía (R27–R29)
 - **R27 — Retiros del gerente-propietario (Gavilánez).** En PyME/empresa familiar los retiros del
@@ -217,12 +217,12 @@ Fuente: Jordi Altimira, LinkedIn (`activity-7472573800476340224`). Detalle: [[re
   (iliquidez, dependencia de préstamos, conflictos, crecimiento estancado). Regla: asignar al
   propietario un **sueldo de mercado** (como un empleado más) y recalcular la utilidad para ver si el
   negocio es rentable de verdad; separar **sueldo / dividendo / devolución de capital**. → skill
-  dedicada [[politica-retiros-socio-propietario]]. Detalle: [[reference-retiros-socio-gavilanez]].
+  dedicada [[politica-retiros-socio-propietario]]. Detalle: [[reference_retiros_socio_gavilanez]].
 - **R28 — Ratios como preguntas de gestión (Da Costa).** Los ratios no son cálculos: son preguntas.
   3 funciones (señal temprana · conectar operación-finanzas · datos→decisiones) y 3 áreas: liquidez
   (¿cubro el corto plazo sin tensionar la operación?), eficiencia (días cobranza/pago/inventario =
   capital de trabajo) y rentabilidad (ROA/ROE leídos con riesgo, apalancamiento y calidad de
-  utilidades). Converge con el panel de 12 KPIs (§V-quinquies). Detalle: [[reference-ratios-preguntas-gestion-dacosta]].
+  utilidades). Converge con el panel de 12 KPIs (§V-quinquies). Detalle: [[reference_ratios_preguntas_gestion_dacosta]].
 - **R29 — EBITDA como radiografía de eficiencia (Zevallos).** Vender mucho ≠ ganar: facturación récord
   con destrucción de valor operativo. Vigilar señales (costos creciendo más que ventas, descuentos
   excesivos, logística/compras ineficientes, sobrecostos ocultos) y monitorear **EBITDA mensual**.
@@ -230,7 +230,7 @@ Fuente: Jordi Altimira, LinkedIn (`activity-7472573800476340224`). Detalle: [[re
 
 ## V-decies. Lote LinkedIn fedphd — IA en finanzas + unit economics (R30–R31)
 Destilado del bucket finanzas-control (163 posts) de los guardados de LinkedIn de fedphd
-([[reference-linkedin-finanzas-lote-fedphd]]); el resto del bucket ya estaba cubierto por R17–R29.
+([[reference_linkedin_finanzas_lote_fedphd]]); el resto del bucket ya estaba cubierto por R17–R29.
 - **R30 — IA aplicada a finanzas / FP&A con IA (Nicolas Boucher).** «La mayoría de los equipos de
   finanzas usan el 5% de lo que la IA puede hacer»: automatizar cierre, conciliaciones, análisis y
   reporting con IA libera el 95% restante. Ata con el control QVP: la **IA local** debe automatizar los
