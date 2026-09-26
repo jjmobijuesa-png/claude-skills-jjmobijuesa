@@ -2,11 +2,11 @@
 
 | Campo | Valor |
 |---|---|
-| **TURNO** | PC |
+| **TURNO** | NUBE |
 | Principal | Sesión local "Flujo de caja y proyección Mobijuesa" (PC) |
 | Espejo | Sesión nube "Espejo — Flujo de caja y proyección Mobijuesa" |
-| Último checkpoint | 2026-09-26 — PC toma la posta: sube el modelo real (9 hojas) + resuelve S5 y el alcance |
-| Motivo del último relevo | La PC retomó tras el avance del espejo (directriz + hoja de ruta S1–S7) |
+| Último checkpoint | 2026-09-26 00:50 (Guayaquil) — espejo nube: toma de posta, lectura del Excel de 9 hojas |
+| Motivo del último relevo | toma automática: PC detenida |
 
 ## Tema / objetivo del hilo
 Flujo de caja **CORPORATIVO de Inmobiliaria Juez & Juez «MOBIJUESA» S.A.** (Banco Pichincha),
