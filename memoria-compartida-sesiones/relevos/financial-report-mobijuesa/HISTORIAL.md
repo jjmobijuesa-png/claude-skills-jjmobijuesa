@@ -4,3 +4,4 @@
 |---|---|---|---|
 | 2026-09-26 | — → PC | Creación del hilo | Espejo en la nube creado; esperando primer volcado de la PC |
 | 2026-09-26 00:31 | PC → NUBE | toma automática: PC detenida | Sin volcado de la PC; el espejo prepara el marco del informe sin cifras reales |
+| 2026-09-26 (PC retoma) | NUBE → PC | La PC volvió y volcó el estado real | Modelo San Sebastián actualizado (flujo estresado, MEMORIA §23/§24, PPTX robusto, PDFs A4); puntero + estado + políticas en `archivos/san-sebastian-modelo.md`; nube queda equipada para continuar si la PC se detiene |
