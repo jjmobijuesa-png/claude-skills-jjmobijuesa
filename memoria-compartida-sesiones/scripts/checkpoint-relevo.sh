@@ -1,14 +1,18 @@
 #!/usr/bin/env bash
-# Checkpoint en caliente: si cambió algo en memoria-compartida-sesiones/, commit + push.
-# Pensado para un hook Stop (se ejecuta al terminar cada respuesta de Claude).
-# Activación aprobada por el usuario el 2026-09-26 (relevo automático, opción 2).
+# Checkpoint en caliente del relevo PC ⇄ nube (aprobado por el usuario, 2026-09-26).
+# Se ejecuta desde hooks PostToolUse (cada Write/Edit) y Stop (fin de respuesta),
+# y el agente puede llamarlo a mano en medio de una respuesta.
+# Si cambió algo en memoria-compartida-sesiones/: commit, integra origin/main y
+# publica en main (canal único del relevo) y en la rama actual.
 DIR="$(cd "$(dirname "$0")/.." && pwd)"
 REPO="$(cd "$DIR/.." && pwd)"
 cd "$REPO" || exit 0
-if [ -n "$(git status --porcelain -- memoria-compartida-sesiones)" ]; then
-  git add memoria-compartida-sesiones >/dev/null 2>&1
-  git commit -q -m "relevo: checkpoint automático $(date '+%Y-%m-%d %H:%M')" >/dev/null 2>&1
-  git pull -q --rebase >/dev/null 2>&1
-  git push -q >/dev/null 2>&1
-fi
+[ -n "$(git status --porcelain -- memoria-compartida-sesiones)" ] || exit 0
+git add memoria-compartida-sesiones >/dev/null 2>&1
+git commit -q -m "relevo: checkpoint en caliente $(date '+%Y-%m-%d %H:%M:%S')" >/dev/null 2>&1
+git fetch -q origin main >/dev/null 2>&1
+git merge -q --no-edit origin/main >/dev/null 2>&1 || git merge --abort >/dev/null 2>&1
+git push -q origin HEAD:main >/dev/null 2>&1
+BR="$(git rev-parse --abbrev-ref HEAD)"
+[ "$BR" != "main" ] && git push -q origin "HEAD:$BR" >/dev/null 2>&1
 exit 0
