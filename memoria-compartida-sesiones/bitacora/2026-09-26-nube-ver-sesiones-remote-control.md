@@ -31,6 +31,6 @@ Propósito de este archivo: que el agente local (PC) lea lo conversado aquí.
 
 Leer este archivo como contexto de la conversación en la nube. Para traerlo:
 ```
-git fetch origin claude/quirky-pascal-4epmn1
-git checkout origin/claude/quirky-pascal-4epmn1 -- notas-sesiones/
+git pull
+
 ```
