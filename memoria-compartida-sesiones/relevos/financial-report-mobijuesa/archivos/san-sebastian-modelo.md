@@ -24,8 +24,12 @@
 - **Guía para no financieros:** MEMORIA §24 (cada cálculo con su fórmula, lenguaje sencillo).
 - **Controles del sistema = 0**: PRESUPUESTO G13, FLUJO B57/B58, BALANCE C18, tabla de amortización.
 - **Comentarios de celda ocultos** (solo al seleccionar).
-- **PPTX robusto:** los 2 gráficos de la lámina de estadística son IMÁGENES (no gráficos nativos con Excel
-  embebido) — eso resolvió el cierre de PowerPoint al abrir/proyectar. Charts nativos = 0.
+- **PPTX — cierre al proyectar RESUELTO (26-sep):** el disparador NO era el archivo sino el ENTORNO de la máquina.
+  WER: `POWERPNT.EXE` caía en `mso20win32client.dll` (offset `0x00304902`), intermitente. Arreglo (reversible):
+  (1) vaciada la cola OTele de PowerPoint; (2) `DisableHardwareAcceleration=1` en `HKCU\...\Office\16.0\Common\Graphics`.
+  Verificado: 5 aperturas + 2 proyecciones de 28 láminas = 0 caídas. Detalle en la memoria local
+  `project_diagnostico_explorador_windows.md` (§2026-09-26). Respaldo garantizado: PDF de 28 láminas en `02 Financiero`.
+  (Los 2 gráficos de estadística ya eran imágenes; charts nativos = 0 — eso no era el problema.)
 
 ## 🚦 Pendiente único de afinar
 - `C5` (fracción de obra gravada con IVA, hoy 0,65) con la **APU detallada de la vivienda** del constructor
