@@ -29,18 +29,18 @@ la directriz se aplique en minutos y con un criterio ya acordado._
 6. **ESCENARIOS** base / optimista / pesimista con una sola celda selectora.
 7. **CONTROLES** (todos deben dar 0) y hoja de cambios (qué supuesto nuevo entró y por qué).
 
-## 3. Plantilla para aplicar la directriz de la publicación (se llena cuando llegue)
+## 3. Aplicación de la directriz de la publicación (llenada el 2026-09-26 por el espejo)
 
 | Campo | Contenido |
 |---|---|
-| Autor / fecha / enlace | _pendiente (PC)_ |
-| Tesis de la publicación en una línea | _pendiente_ |
-| Método o fórmula que propone | _pendiente_ |
-| Métricas nuevas | _pendiente_ |
-| ¿Ya está en alguna skill? (R1–R31 de `memoria-financiera-inteligenciada`) | _pendiente_; si es nueva, se registra como R32 |
-| Brecha contra el modelo actual | _pendiente_ |
-| Cambio concreto al modelo (hoja, fila, fórmula) | _pendiente_ |
-| Supuesto nuevo y su fuente | _pendiente_ |
+| Autor / fecha / enlace | Autor y fecha no constan (infografía upbizor, ref. Julián Mac Loughlin) · urn:li:activity:7508480383286452224 · ver `linkedin-post-7508480383286452224.md` |
+| Tesis de la publicación en una línea | La IA agrega valor en finanzas cuando deja de ser una conversación y se vuelve un sistema: contexto + instrucciones + formato + repetición |
+| Método o fórmula que propone | Histórico → drivers → hipótesis en números → PyG, Balance, Cash Flow → escenarios base/optimista/pesimista → actualizar el forecast |
+| Métricas nuevas | La publicación no trae ninguna; el espejo agrega el error del forecast por horizonte (S4) y la cobertura contra la caja mínima (S5) |
+| ¿Ya está en alguna skill? (R1–R31 de `memoria-financiera-inteligenciada`) | El método sí (R17 y `modelo-tres-estados-integrado`); la disciplina operativa no → se propone **R32** |
+| Brecha contra el modelo actual | _Pendiente del Excel real._ Contra el esqueleto §2: faltan PLAN-VS-REAL con error %, la acción disparadora por escenario y el ritual semanal |
+| Cambio concreto al modelo (hoja, fila, fórmula) | Hojas PLAN-VS-REAL y CONCLUSIONES-ACCIÓN; columna "acción si se activa" en ESCENARIOS (detalle en `directriz-hoja-de-ruta-flujo-caja.md` §4) |
+| Supuesto nuevo y su fuente | S1–S7 en `directriz-hoja-de-ruta-flujo-caja.md` §3 |
 | Prueba de vida tras el cambio | cambiar una palanca → recalcular → verificar → revertir |
 
 ## 4. Criterios de aceptación de cualquier cambio
