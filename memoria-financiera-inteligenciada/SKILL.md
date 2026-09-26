@@ -124,7 +124,7 @@ muy por encima de la RE del activo en 2024–2025 → apalancamiento **negativo*
 de 2025 y con que la deuda se come el 82 % del margen. Aplicación **transversal**: en bancabilidad y en
 toda lectura de EEFF, separar deuda con costo de pasivo operativo, usar saldos promedio y base
 después de impuestos, y **marcar la alarma cuando i > RE**. Soporte: modelo Excel reproducible (15
-hojas, 215 fórmulas) descrito en la fuente. Detalle: [[reference-apalancamiento-financiero-lopezmartin]].
+hojas, 215 fórmulas) descrito en la fuente. Detalle: [[reference_apalancamiento_financiero_lopezmartin]].
 
 ## V-quinquies. Panel de 12 KPIs predictivos del CEO (R19 — Orlando Saucedo Vaca)
 Doctrina: **la mayoría de los CEOs siguen ingresos y utilidad** —métricas **retrospectivas**—; para
@@ -226,7 +226,7 @@ Fuente: Jordi Altimira, LinkedIn (`activity-7472573800476340224`). Detalle: [[re
 - **R29 — EBITDA como radiografía de eficiencia (Zevallos).** Vender mucho ≠ ganar: facturación récord
   con destrucción de valor operativo. Vigilar señales (costos creciendo más que ventas, descuentos
   excesivos, logística/compras ineficientes, sobrecostos ocultos) y monitorear **EBITDA mensual**.
-  Detalle: [[reference-ebitda-radiografia-zevallos]].
+  Detalle: [[reference_ebitda_radiografia_zevallos]].
 
 ## V-decies. Lote LinkedIn fedphd — IA en finanzas + unit economics (R30–R31)
 Destilado del bucket finanzas-control (163 posts) de los guardados de LinkedIn de fedphd

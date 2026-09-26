@@ -103,7 +103,7 @@ Complemento aplicado a las 5 capas académicas, destilado de los guardados de Li
   para el expediente EcuaLedger. `activity:7460184880434360322`.
 
 ## Ejemplo de referencia real: Palantir (ontología + AIP + Apollo + FDE)
-Del cuaderno NotebookLM «Palantir» ([[reference-cuaderno-palantir]]): materializa varias capas del
+Del cuaderno NotebookLM «Palantir» ([[reference_cuaderno_palantir]]): materializa varias capas del
 stack en producción — **Ontología** (gemelo digital = memoria *semantic* de la capa 3), **AIP**
 (orquestación de LLMs/agentes anclados en hechos deterministas, anti-alucinación = capa 4), **Apollo**
 (despliegue autónomo air-gapped por «tirón declarativo» = capa 5) y **Forward-Deployed Engineers**

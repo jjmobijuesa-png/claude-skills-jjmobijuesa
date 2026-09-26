@@ -28,7 +28,7 @@ metadata:
 
 ## Acerca de mí (cargar al arrancar)
 Lee `C:\Users\datos\.claude\projects\C--Users-datos-Downloads\memory\user_role.md` y `MEMORY.md`.
-**Política solo-Edge** ([[feedback-solo-edge]]). Esta cuenta es **fedphd@gmail.com**, distinta de la de
+**Política solo-Edge** ([[feedback_solo_edge]]). Esta cuenta es **fedphd@gmail.com**, distinta de la de
 X (@fdc_ec) y de NotebookLM (mobijuesa360) → es un **corpus aparte**. Hasta ahora el usuario me pasaba
 sus posts guardados de a uno (Gavilánez, Da Costa, Zevallos, Cervantes, Saucedo, López Martín…); esta
 skill **automatiza ese flujo en lote**.
@@ -44,7 +44,7 @@ que el agente autorreflexivo de bookmarks de X, sobre otra fuente y otra cuenta.
 - 🚦 **LinkedIn = solo lectura.** NUNCA publicar, comentar, reaccionar, conectar ni enviar mensajes. Leer y resumir, sí.
 - **Curar ≠ firmar:** no atribuir al usuario las opiniones de los autores; siempre **citar la URL** del post.
 - **No guardar credenciales** en la skill ni en el corpus. La sesión vive en Edge; aquí solo se leen cookies vía CDP.
-- **No `Read` el `guardados.json` completo** si es grande → usar `scripts\clasificar_guardados.py` (igual que [[feedback-uso-bookmarks-archivo]]).
+- **No `Read` el `guardados.json` completo** si es grande → usar `scripts\clasificar_guardados.py` (igual que [[feedback_uso_bookmarks_archivo]]).
 - No inventar posts ni autores: si un campo no se extrae, dejarlo vacío y marcarlo.
 
 ## Protocolo paso a paso

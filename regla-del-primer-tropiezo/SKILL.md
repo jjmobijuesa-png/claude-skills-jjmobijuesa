@@ -297,7 +297,7 @@ racimos (vecindades temáticas), las huérfanas (capital muerto) y los enlaces r
    `cuantificar-antes-de-pedir` (17), `metodo-hamming-preguntas-fundamentales` (17).
 3. Revisar las **huérfanas**: una skill que nadie enlaza suele contener justo lo que nadie
    recordaba tener.
-4. Mirar los **enlaces rotos** del área: un `[[nombre]]` que apunta a una skill inexistente
+4. Mirar los **enlaces rotos** del área: un wikilink que apunta a una skill inexistente
    es un problema que ya se detectó antes y quedó sin escribir.
 
 ## 10. Plasticidad — la red se recompone, no solo se amplía
