@@ -1,0 +1,24 @@
+# CANDADO DE DATOS — no quitar sin decisión explícita de Francisco Duque.
+#
+# POR QUÉ: el hook PostToolUse publica esta carpeta en `main` de forma
+# automática, silenciosa y sin revisión. Lo que entra aquí sale del computador
+# al instante y queda en el historial de GitHub, donde ya no se retira limpio.
+#
+# REGLA: `archivos/` transporta RESÚMENES Y PUNTEROS en Markdown, nunca el
+# documento fuente. El relevo necesita saber DÓNDE está el archivo y QUÉ se
+# concluyó de él; no necesita el archivo.
+#
+# Rige [[gobernanza-datos-financieros-ia]]: qué dato puede salir del computador
+# y hacia dónde. Los expedientes (cédulas, nombres de personas, escrituras) y
+# las cifras financieras (DSCR, deudas, cierres, modelos) NO salen.
+
+# Todo bloqueado por defecto
+*
+
+# Salvo lo que se escribe a propósito para el relevo
+!.gitignore
+!.gitkeep
+!*.md
+
+# Y ni siquiera en Markdown se pegan volcados de estos formatos:
+# si necesita mover un documento, deje la RUTA LOCAL y un resumen.
