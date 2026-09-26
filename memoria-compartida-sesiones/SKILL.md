@@ -21,6 +21,10 @@ trigger_phrases:
   - "qué hablamos en el otro chat"
   - "cierra sesión"
   - "sincroniza memoria"
+  - "pasa la posta"
+  - "toma la posta"
+  - "retoma la posta"
+  - "agente espejo"
 
 idioma_de_salida: español neutro
 nivel_madurez: aplicada
@@ -49,7 +53,10 @@ memoria-compartida-sesiones/
 ├── SKILL.md              # esta doctrina
 ├── MEMORIA.md            # estado vivo: proyectos, archivo principal, pendientes
 ├── bitacora/             # AAAA-MM-DD-<origen>-<tema>.md, una por sesión
-└── scripts/cargar-memoria.sh   # hook SessionStart: pull + imprime memoria
+├── RELEVO.md             # protocolo de posta PC ⇄ nube (agente espejo)
+├── PROMPT-agente-local.md # prompt para activar el relevo en la PC
+├── relevos/<hilo>/       # ESTADO.md (TURNO), archivos/, HISTORIAL.md
+└── scripts/              # cargar-memoria.sh (SessionStart), checkpoint-relevo.sh (Stop)
 ```
 
 ## Protocolo de INICIO (automático o manual)
@@ -96,3 +103,11 @@ que ejecuta `scripts/cargar-memoria.sh` (requiere que esté en la rama `main`).
 (Usa el `bash` de Git for Windows. Si ya hay otros hooks, añadir este dentro de la lista existente.)
 
 El cierre no es automático: pedir "guarda la sesión" o "cierra sesión" al final.
+
+## Relevo automático con agente espejo
+
+Para hilos largos que no deben cortarse por límites de uso, ver `RELEVO.md`:
+un agente principal (PC) y un espejo (nube) se pasan la posta a través de
+`relevos/<hilo>/ESTADO.md` (campo TURNO). El hook `Stop` ejecuta
+`scripts/checkpoint-relevo.sh` y sube cada avance en caliente.
+Hilo activo: `relevos/agente-ia-local-autoreflexivo/`.

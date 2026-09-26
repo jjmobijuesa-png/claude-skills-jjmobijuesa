@@ -12,7 +12,10 @@ _Última actualización: 2026-09-26 (sesión nube "Ver otras sesiones de Claude 
 ## Archivo principal en trabajo
 - _Pendiente de identificar_ — subirlo al repo para que esté en PC y nube.
 
+## Hilos con relevo
+- `relevos/agente-ia-local-autoreflexivo/` — principal: PC · espejo: nube
+
 ## Pendientes
 - [ ] Identificar y subir el archivo principal.
-- [ ] Instalar el hook SessionStart en `~/.claude/settings.json` de la PC.
+- [ ] Pegar `PROMPT-agente-local.md` en la sesión local (instala hooks SessionStart + Stop y hace el primer checkpoint).
 - [ ] Revisar rama `claude/awesome-einstein-6h3af4`.
