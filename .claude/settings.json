@@ -19,6 +19,27 @@
           }
         ]
       }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/memoria-compartida-sesiones/scripts/sincronizar-relevo.sh\""
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/memoria-compartida-sesiones/scripts/checkpoint-relevo.sh\""
+          }
+        ]
+      }
     ]
   }
 }

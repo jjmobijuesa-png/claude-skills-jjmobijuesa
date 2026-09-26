@@ -5,7 +5,8 @@ _Última actualización: 2026-09-26 (sesión nube "Ver otras sesiones de Claude 
 ## Estado actual
 - Sesiones locales visibles en app/teléfono vía `claude remote-control` (funciona).
 - Bloqueo de uso: **tope de gasto mensual** (subir en claude.ai/settings/usage).
-- Memoria compartida creada: esta skill + hook SessionStart.
+- Memoria compartida + relevo en caliente activos en `main` (hooks SessionStart, UserPromptSubmit, PostToolUse, Stop).
+- Estrategia: la nube tiene más saldo; la PC vuelca en caliente y el espejo toma la posta sin comandos.
 - Sesión nube "Skills repository link integrity audit": grafo de skills refactorizado
   en rama `claude/awesome-einstein-6h3af4`, pendiente de revisión/merge.
 

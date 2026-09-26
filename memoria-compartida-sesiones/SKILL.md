@@ -107,12 +107,13 @@ que ejecuta `scripts/cargar-memoria.sh` (requiere que esté en la rama `main`).
 
 El cierre no es automático: pedir "guarda la sesión" o "cierra sesión" al final.
 
-## Relevo automático con agente espejo
+## Relevo en caliente con agente espejo
 
-Para hilos largos que no deben cortarse por límites de uso, ver `RELEVO.md`:
-un agente principal (PC) y un espejo (nube) se pasan la posta a través de
-`relevos/<hilo>/ESTADO.md` (campo TURNO). El hook `Stop` ejecuta
-`scripts/checkpoint-relevo.sh` y sube cada avance en caliente.
+Ver `RELEVO.md`. La PC vuelca razonamiento y archivos a `relevos/<hilo>/` **mientras
+elabora cada respuesta** (hook PostToolUse → push a `main` al instante). El espejo en la
+nube toma la posta **con cualquier mensaje del usuario**, sin comandos; la PC la recupera
+igual al volver. Hooks: SessionStart (cargar), UserPromptSubmit (sincronizar antes de cada
+respuesta), PostToolUse Write|Edit y Stop (checkpoint).
+
 **Un hilo = un agente de la PC = una carpeta = un chat espejo.** Un chat coordinador
-lleva la tabla de hilos en `MEMORIA.md` y crea espejos con "crea espejo para <agente>"
-(ver `RELEVO.md` › Coordinador).
+lleva la tabla de hilos en `MEMORIA.md` y crea espejos con "crea espejo para <agente>".

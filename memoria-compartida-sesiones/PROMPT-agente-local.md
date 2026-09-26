@@ -25,26 +25,27 @@ Te pongo al día de lo que hice en una sesión de Claude Code en la nube (claude
 ## Lo que tienes que hacer ahora
 1. **Trae lo creado.** `cd ~/.claude/skills && git pull origin main`. Si no aparece la carpeta `memoria-compartida-sesiones/` (porque el PR aún no está fusionado), ejecuta `git fetch origin claude/quirky-pascal-4epmn1 && git merge --no-edit origin/claude/quirky-pascal-4epmn1 && git push origin HEAD:main`. Muéstrame el resultado antes del push.
 2. **Lee** `SKILL.md`, `RELEVO.md`, `MEMORIA.md` y las entradas de `bitacora/`, y aplica la skill desde ahora.
-3. **Instala los hooks** en `~/.claude/settings.json`, sin borrar los que ya existen:
-   - `SessionStart` → `bash ~/.claude/skills/memoria-compartida-sesiones/scripts/cargar-memoria.sh`
-   - `Stop` → `bash ~/.claude/skills/memoria-compartida-sesiones/scripts/checkpoint-relevo.sh`
-   Usa el bash de Git for Windows y muéstrame el JSON final antes de guardarlo.
-4. **Haz el primer checkpoint** en `relevos/agente-ia-local-autoreflexivo/`:
-   - Copia a `archivos/` los documentos y archivos centrales en los que trabajamos en esta sesión y marca cuál es el **archivo principal**. No subas credenciales, cookies ni `.env`.
-   - Completa `ESTADO.md`: tema, **razonamiento en curso** (lo suficiente para que el espejo continúe sin leer esta conversación), archivos centrales, siguiente paso concreto y pendientes. Deja TURNO = PC.
-   - Actualiza `MEMORIA.md` con el archivo principal y agrega una fila a `HISTORIAL.md`.
-   - Commit y push a `main`.
-5. **Desde ahora**, actualiza `ESTADO.md` y `archivos/` después de cada avance significativo (el hook Stop se encarga de subirlos). Si ves un aviso de límite de uso, de cupo o crédito por agotarse, o te digo "pasa la posta", entrega la posta: TURNO = NUBE, motivo, fila en HISTORIAL, push, y avísame para que abra el espejo.
-6. Cuando te diga **"retoma la posta"**: `git pull origin main`, lee `ESTADO.md`, `HISTORIAL.md` y lo que el espejo cambió en `archivos/`, copia esos cambios a tu ubicación de trabajo y continúa desde el siguiente paso registrado.
+3. **Instala estos hooks** en `~/.claude/settings.json`, sin borrar los que ya existen. Muéstrame el JSON final antes de guardarlo:
+   ```json
+   "SessionStart":     [{"hooks":[{"type":"command","command":"bash ~/.claude/skills/memoria-compartida-sesiones/scripts/cargar-memoria.sh"}]}],
+   "UserPromptSubmit": [{"hooks":[{"type":"command","command":"bash ~/.claude/skills/memoria-compartida-sesiones/scripts/sincronizar-relevo.sh"}]}],
+   "PostToolUse":      [{"matcher":"Write|Edit","hooks":[{"type":"command","command":"bash ~/.claude/skills/memoria-compartida-sesiones/scripts/checkpoint-relevo.sh"}]}],
+   "Stop":             [{"hooks":[{"type":"command","command":"bash ~/.claude/skills/memoria-compartida-sesiones/scripts/checkpoint-relevo.sh"}]}]
+   ```
+   Usa el bash de Git for Windows.
+4. **Primer volcado** en `relevos/agente-ia-local-autoreflexivo/`:
+   - Copia a `archivos/` los documentos y archivos centrales en los que trabajamos en esta sesión y marca el **archivo principal**. No subas credenciales, cookies ni `.env`.
+   - Completa `ESTADO.md` para un lector que no vio esta conversación: tema, **razonamiento en curso**, decisiones, siguiente paso exacto y pendientes. TURNO = PC.
+   - Actualiza `MEMORIA.md` con el archivo principal y agrega una fila a `HISTORIAL.md`. Commit y push a `main`.
+5. **Checkpoint en caliente, siempre y sin que te lo pida.** Hoy la nube tiene más saldo que la PC, así que tu hilo se cortará y el espejo debe continuar sin comandos. Mientras elaboras CADA respuesta, después de cada paso significativo (conclusión, cálculo, tabla, sección, archivo guardado), actualiza `archivos/` y `ESTADO.md` (lo recién hecho, el siguiente paso exacto y la hora). El hook PostToolUse lo publica en `main` al instante. No esperes al final: el corte puede llegar en medio de una respuesta.
+6. **Al inicio de cada respuesta**, lee `ESTADO.md`. Si TURNO = NUBE, el espejo avanzó mientras estabas detenido: lee su resumen y sus cambios en `archivos/`, cópialos a tu ubicación de trabajo, pon TURNO = PC, agrega una fila a HISTORIAL y continúa. No hace falta que te lo diga.
 
-Al terminar, confírmame: qué archivos subiste, cuál es el archivo principal, cuál es el siguiente paso registrado y si los dos hooks quedaron instalados.
+Al terminar, confírmame: qué archivos subiste, cuál es el archivo principal, cuál es el siguiente paso registrado y si los cuatro hooks quedaron instalados.
 ---
 
-## Frases de control (en cualquier dispositivo)
-| Dónde | Frase | Efecto |
-|---|---|---|
-| PC | "pasa la posta" | Checkpoint + TURNO = NUBE |
-| Nube (espejo) | "toma la posta" | Pull de `main`, lee ESTADO y continúa |
-| Nube (espejo) | "devuelve la posta" | Checkpoint + TURNO = PC + push a `main` |
-| PC | "retoma la posta" | Pull, lee cambios del espejo y continúa |
-| Cualquiera | "guarda la sesión" | Entrada en `bitacora/` + MEMORIA + push |
+## Funcionamiento sin comandos
+| Dónde escribe el usuario | Qué pasa automáticamente |
+|---|---|
+| PC (cada respuesta) | Sincroniza; si el espejo avanzó, recupera la posta; checkpoint en caliente en cada paso |
+| Chat espejo (cualquier mensaje) | Sincroniza; toma la posta (TURNO = NUBE) y continúa desde el siguiente paso |
+| Cualquiera: "guarda la sesión" | Entrada en `bitacora/` + MEMORIA + push |
