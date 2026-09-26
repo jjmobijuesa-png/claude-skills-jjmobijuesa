@@ -5,7 +5,7 @@
 | **TURNO** | NUBE |
 | Principal | Sesión local "Flujo de caja y proyección Mobijuesa" (PC) |
 | Espejo | Sesión nube "Espejo — Flujo de caja y proyección Mobijuesa" |
-| Último checkpoint | 2026-09-26 00:52 (Guayaquil) — espejo: auditoría del Excel lista (`archivos/auditoria-excel-07-09-2026.md`) |
+| Último checkpoint | 2026-09-26 01:05 (Guayaquil) — espejo: Excel v2 con correcciones + hoja ESCENARIOS |
 | Motivo del último relevo | toma automática: PC detenida |
 
 ## Tema / objetivo del hilo
@@ -54,6 +54,20 @@ ruta entregada al usuario en el chat (4 pilares → artefactos → ritual semana
 - Repetición (fase 5): 🔴 el salto clave → que Marta (CPA) sea la dueña del ritual semanal con error medido.
 
 ## Siguiente paso concreto
+> **ENTREGA DEL ESPEJO (2026-09-26 01:05) — para la PC:**
+> Archivo nuevo: `archivos/FLUJO DE CAJA MOBIJUESA - 07-09-2026 v2 (correcciones espejo 26-09).xlsx`
+> (el original queda intacto al lado). Cambios, cada uno con comentario «ESPEJO 26-09-2026» en la celda:
+> 1. Fila 8 (SEM 40→16): ingreso vinculado a PARAMETROS!E15:H15 (29 celdas). SEM 37-39 sin tocar.
+> 2. T56/U56: retiradas fórmulas de control que se sumaban como egreso (+3.450 de caja). U57 = 2.643,85 fijo (confirmar semana).
+> 3. AJ62:AJ65 ya no suman el $/m² de la columna C.
+> 4. RESUMEN Y ALERTA B18/B19/B21 → 'FLUJO SEMANAL (2)' fila 76 (antes hoja vieja oculta).
+> 5. PARAMETROS filas 51-54 (sección 8) + hoja nueva **ESCENARIOS** (A actual / B fijos PARAMETROS / C B+sept normal).
+> Resultados verificados (motor Python `formulas`, 0 errores; LibreOffice no funciona en la nube):
+> A: mín 22.515, final 30.623, fondeo extra 2.371 · B: final −63.301, 17 sem. negativas, fondeo extra 88.187 ·
+> C: final −104.611, fondeo extra 129.497.
+> **PC:** abrir en Excel (recalcula solo: fullCalcOnLoad), revisar formato y los 2 gráficos, guardar y subir a Drive
+> reemplazando la versión vigente si el usuario lo aprueba. Luego copiar el PPTX del hilo a `archivos/`.
+
 1. **PC (requiere Edge):** completar autor y fecha de la publicación en
    `archivos/linkedin-post-7508480383286452224.md` (el texto ya está; falta la cabecera del post).
    Skill `linkedin-guardados-fedphd`, solo lectura. — PENDIENTE, requiere confirmación del usuario.
