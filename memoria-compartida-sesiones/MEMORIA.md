@@ -19,7 +19,7 @@ Un hilo = un agente de la PC = una carpeta en `relevos/` = un chat espejo en la 
 | Hilo (carpeta en `relevos/`) | Agente principal (PC) | Espejo (nube) | TURNO | Siguiente paso |
 |---|---|---|---|---|
 | `agente-ia-local-autoreflexivo` | Agente IA Local autoreflexivo | "Ver otras sesiones de Claude Code" (coordinador) | PC | Primer checkpoint desde la PC |
-| `flujo-caja-proyeccion-mobijuesa` | Flujo de caja y proyección Mobijuesa | "Espejo — Flujo de caja y proyección Mobijuesa" | PC | PC extrae publicación LinkedIn 7508480383286452224 → espejo la aplica |
+| `flujo-caja-proyeccion-mobijuesa` | Flujo de caja y proyección Mobijuesa | "Espejo — Flujo de caja y proyección Mobijuesa" | NUBE | Directriz y hoja de ruta listas; falta que la PC suba el Excel del modelo y los datos de la fase 0 |
 | `financial-report-mobijuesa` | Financial report for Mobijuesa | "Espejo — Financial report for Mobijuesa" | PC | Primer volcado en caliente desde la PC |
 
 ## Pendientes
