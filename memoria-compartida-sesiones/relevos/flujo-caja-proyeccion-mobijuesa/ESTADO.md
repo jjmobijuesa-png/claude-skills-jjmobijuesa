@@ -19,6 +19,11 @@ _(La PC los copia a `archivos/`.)_
 - `archivos/linkedin-post-7508480383286452224.md` — publicación guardada de LinkedIn (pendiente de extraer).
 
 ## Siguiente paso concreto
+> **Estado al checkpoint del espejo:** marco listo en `archivos/marco-aplicacion-skills-financieras.md`.
+> El espejo **no puede avanzar** en el paso 3 hasta que la PC ejecute el paso 1. Cuando la PC vuelva:
+> hacer el paso 1, subir el modelo actual, responder las preguntas abiertas de la §5 del marco y
+> dejar TURNO = NUBE para que el espejo aplique la directriz con la plantilla de la §3.
+
 **Buscar, crear y aplicar el contenido y la directriz de la publicación guardada de LinkedIn**
 (cuenta fedphd@gmail.com, sesión abierta en Edge):
 https://www.linkedin.com/feed/update/urn:li:activity:7508480383286452224/
