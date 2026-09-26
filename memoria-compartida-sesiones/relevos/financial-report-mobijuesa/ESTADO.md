@@ -2,11 +2,11 @@
 
 | Campo | Valor |
 |---|---|
-| **TURNO** | PC |
+| **TURNO** | NUBE |
 | Principal | Sesión local "Financial report for Mobijuesa" (PC) |
 | Espejo | Sesión nube "Espejo — Financial report for Mobijuesa" |
-| Último checkpoint | 2026-09-26 — hilo creado por el coordinador (nube); esperando primer volcado de la PC |
-| Motivo del último relevo | — |
+| Último checkpoint | 2026-09-26 00:31 — espejo nube toma la posta; redactando `archivos/marco-informe-financiero.md` |
+| Motivo del último relevo | toma automática: PC detenida (sin volcado previo de la PC) |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
 `archivos/` transporta **resúmenes y punteros en Markdown, nunca el documento fuente**
