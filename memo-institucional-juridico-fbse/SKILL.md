@@ -187,3 +187,16 @@ Quevedo, Los Ríos | mobijuesa360@gmail.com
 - `redaccion-humana-legislativa` — filtro QA post-redacción.
 - `estrategia-implementacion-juridica` — para producir el anexo
   técnico maestro que acompaña al paquete.
+
+## Vecindad en la red
+
+Racimo jurídico-legislativo. Es el producto escrito; la articulación entre comisiones es su destino y la entrega física en Quito es su último kilómetro.
+
+- [[articulacion-inter-comision-legislativa]]
+- [[entrega-fisica-diplomatica-quito]]
+- [[redaccion-humana-legislativa]]
+- [[estrategia-implementacion-juridica]]
+- [[defensa-apologetica-juridica]]
+- [[aprendizaje-pareto-juridico]]
+
+> Enganchada a la red el 9-sep-2026, vuelta 1 de la espiral de [[regla-del-primer-tropiezo]] §10. Antes era huérfana: existía y la red no la alcanzaba.

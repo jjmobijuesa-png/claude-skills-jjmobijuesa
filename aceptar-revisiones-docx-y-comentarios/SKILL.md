@@ -236,3 +236,15 @@ Cualquier paquete de cartas o documentos legislativos revisados por
 un asesor con track changes y comentarios. En la Matriz de Acuerdos,
 las cartas a la próxima instancia recibirán revisiones análogas. La
 skill se ejecuta una vez y deja la carpeta lista para envío.
+
+## Vecindad en la red
+
+Racimo documental. Es el paso que recibe el DOCX ya revisado por un humano; aguas arriba está la redacción, aguas abajo el encuadre y la paginación del entregable.
+
+- [[redaccion-humana-legislativa]]
+- [[documentos-encuadrados-margenes]]
+- [[numeracion-paginas-informes]]
+- [[correccion-ortografica-rae-espanol]]
+- [[humanizacion-texto-sin-firma-ia]]
+
+> Enganchada a la red el 9-sep-2026, vuelta 1 de la espiral de [[regla-del-primer-tropiezo]] §10. Antes era huérfana: existía y la red no la alcanzaba.

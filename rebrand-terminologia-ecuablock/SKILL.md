@@ -196,3 +196,14 @@ clichés ni términos sensibles.
   rebrand.
 - `tutor-mit-ecuablock`: si el rebrand afecta el material de estudio,
   re-ejecutar la metodología MIT sobre el cuaderno renombrado.
+
+## Vecindad en la red
+
+Racimo EcuaLedger / EcuaBlock. Aplica sobre el corpus lo que el glosario define, y toca los mismos cuadernos de NotebookLM que usa el tutor.
+
+- [[glosario-ecualedger-corrector]]
+- [[tutor-mit-ecuablock]]
+- [[entrenador-experto-notebooklm-ecualedger]]
+- [[notebooklm-reorganize]]
+
+> Enganchada a la red el 9-sep-2026, vuelta 1 de la espiral de [[regla-del-primer-tropiezo]] §10. Antes era huérfana: existía y la red no la alcanzaba.

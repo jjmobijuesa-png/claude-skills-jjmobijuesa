@@ -194,6 +194,26 @@ que esta llave maestra impone desde ahora:
    natural para hacer `git add . && git commit && git push` sobre el
    repo de skills antes de apagar.
 
+### Doctrina 10 · Ninguna skill EXTERNA entra sin auditoría
+
+Fuente: SkillSpector (NVIDIA, open-source; publicación de @dr_cintas
+2026-07-22). Operacionalizada en [[auditar-skills-antes-de-instalar]].
+
+> Una skill es **código ejecutable que corre con el mismo acceso que
+> tú**: puede leer tus variables de entorno, tus API keys y tus
+> cookies, y enviarlas a un servidor. Una skill que te ahorra 10
+> minutos también puede robarte las claves.
+
+**Consecuencia obligatoria:** las skills que NACEN en este computador
+(destiladas por esta llave maestra) están exentas. Pero **toda skill de
+TERCEROS** (GitHub, zip, archivo compartido) pasa por
+[[auditar-skills-antes-de-instalar]] ANTES de copiarse a
+`~/.claude/skills/`:
+1. Descargar a cuarentena (NO a la carpeta de skills).
+2. Correr `auditar_skill.py` → puntaje 0-100 + veredicto.
+3. Leer el código si sale PRECAUCIÓN o NO INSTALAR.
+4. Solo entonces mover a `~/.claude/skills/` y registrar en `MEMORY.md`.
+
 ## Protocolo de aprendizaje en seis pasos
 
 Aplicar este protocolo cada vez que se detecte una brecha. El

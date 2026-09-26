@@ -51,6 +51,12 @@ Para responder a una pregunta del usuario sobre este tema con su propia voz:
 
 ## Relacionado
 
+- **Dónde estudiar de verdad (no bookmarks, sino fuentes universitarias verificadas):**
+  [[universidad-abierta-catalogo]] — 50 recursos abiertos catalogados en 8 pilares.
+- **Cómo convertir un tema en un plan con entregables:** [[programa-estudio-profundo-mit]].
+- **Quién lo ejecuta:** agente `estudios-generales`.
+- 🚦 Distinción que no debe perderse: esta skill expone lo que el usuario **curó** en X;
+  aquéllas exponen lo que la academia **publicó en abierto**. Curar no es estudiar.
 - Skill maestra: [[llave-maestra-autoaprendizaje-ia]]
 - Pipeline que la generó: [[agente-local-autoreflexivo-bookmarks]]
 - Helper de consulta: `E:\vars\var 5\X-com guardados\consultar_intereses.py`

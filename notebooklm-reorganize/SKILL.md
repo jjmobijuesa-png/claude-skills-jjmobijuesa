@@ -87,3 +87,15 @@ Step 2 in a notebook that already has manual labels does NOT trigger AI auto-cat
 | `Locator.click: element is not visible` | The element has class `show-on-hover` — hover its parent container |
 | Subject input not found | A dropdown is overlaying — use `force=True` to bypass the overlap check |
 | `innerHTML` raises TrustedHTML error | Use `textContent` + `createElement('br')` instead — Gmail/NotebookLM use CSP Trusted Types |
+
+## Vecindad en la red
+
+Racimo NotebookLM. Es la pieza de mantenimiento del corpus: ordena etiquetas y fuentes que las otras tres skills de NotebookLM crean y consumen.
+
+- [[auditor-integral-notebooklm]]
+- [[notebooklm-login-reauth]]
+- [[notebooklm-video-corto-estudio]]
+- [[metodo-mit-notebooklm-riguroso]]
+- [[regla-del-primer-tropiezo]]
+
+> Enganchada a la red el 9-sep-2026, vuelta 1 de la espiral de [[regla-del-primer-tropiezo]] §10. Antes era huérfana: existía y la red no la alcanzaba.

@@ -270,3 +270,14 @@ Cuando la exposición de motivos lo permita, hacer explícita la
 - **Tiempo de generación**: 3-8 minutos por ley íntegra.
 - **Verificación recomendada**: cruzar con NotebookLM tras la
   generación.
+
+## Vecindad en la red
+
+Skills que dependen de esta y que antes no la citaban de vuelta:
+
+- [[memo-institucional-juridico-fbse]]
+- [[articulacion-inter-comision-legislativa]]
+- [[correccion-ortografica-rae-espanol]]
+- [[aceptar-revisiones-docx-y-comentarios]]
+
+> Retroenlaces añadidos el 9-sep-2026 ([[regla-del-primer-tropiezo]] §10, movimiento «enlazar»).

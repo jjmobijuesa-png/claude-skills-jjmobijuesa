@@ -20,11 +20,76 @@ La CLI `notebooklm-py` guarda cookies de Google en `~/.notebooklm/profiles/<perf
 - `notebooklm --profile X list` (o `ask`, `use`) → **falla** con:
   `Unexpected error: Authentication expired or invalid. Redirected to: https://accounts.google.com/...`
 
-## 2. Por qué el agente NO puede resolverlo solo
+## 1.bis ⭐ LA RECETA QUE FUNCIONA (verificada 2026-09-09) — leer ANTES que el resto
 
-El comando de login (`notebooklm --profile X login --browser msedge`) abre un **navegador headed** (visible). Desde el sandbox del agente, lanzar Chromium/Edge headed falla con `spawn UNKNOWN` (restricción del entorno para GUI). Ver `feedback-aprendido §6`.
+Dos datos que ahorran veinte minutos y seis intentos:
 
-**Conclusión:** el login lo dispara el usuario en su propia terminal. El agente prepara el comando, lo entrega, y detecta cuándo terminó.
+1. **El CLI lee `~/.notebooklm/profiles/default/storage_state.json`**, aunque se le pase
+   `--profile mobijuesa360@gmail.com`. Escribir SIEMPRE en los dos destinos.
+2. **El perfil vivo es `~/.notebooklm/profiles/<perfil>/browser_profile`** —el que crea el
+   propio comando `login`— y NO `~/.notebooklm-<perfil>/browser_profile` ni
+   `~/.notebooklm/browser_profile_edge`, que suelen estar muertos. El §2 de abajo apunta al
+   perfil equivocado: corregirlo mentalmente al aplicarlo.
+3. **Un `login` que expira por timeout puede haber dejado la sesión VIVA igual.** La CLI
+   solo falló en *detectarla*. Cerrado el navegador, cosechar del perfil.
+
+Script listo, con soltado de `SingletonLock` huérfanos y escritura en ambos destinos:
+`C:\Users\datos\war_room_tmp\cosechar_nlm.py`.
+
+**Lo que NO funciona, no reintentar:** `login --browser-cookies edge` →
+*Could not decrypt edge cookies* (app-bound encryption de Chromium 127+). El Edge normal del
+usuario tampoco sirve: la CLI abre un perfil aislado propio.
+
+**Para que el usuario pueda iniciar sesión**, la ventana de la CLI suele quedar detrás o en
+otro monitor. Traerla al frente por pid:
+
+```powershell
+Get-CimInstance Win32_Process -Filter "Name='msedge.exe'" |
+  Where-Object { $_.CommandLine -like "*notebooklm\profiles\<perfil>*" } |
+  ForEach-Object { (Get-Process -Id $_.ProcessId).MainWindowHandle }
+# y aplicar MoveWindow + ShowWindow + SetForegroundWindow sobre ese handle
+```
+
+Ver [[feedback-reauth-notebooklm-cosecha]] y [[regla-del-primer-tropiezo]].
+
+## 2. PRIMERO intentar el refresh automático (el agente SÍ puede)
+
+**Descubrimiento 2026-07-12:** en la mayoría de los casos el agente puede refrescar la sesión **sin intervención del usuario**. La razón: el `storage_state.json` que exporta la CLI es un *snapshot* que caduca, pero el **`browser_profile` persistente** (`~/.notebooklm-<perfil>/browser_profile`) mantiene la sesión Google viva mucho más tiempo. Abriendo Edge **headless** contra ese perfil y re-exportando cookies frescas, se revive la sesión.
+
+```python
+# refresh_nlm_session.py  — correr con el python del venv de notebooklm
+import json, time
+from pathlib import Path
+from playwright.sync_api import sync_playwright
+
+PROFILE_NAME = "mobijuesa360@gmail.com"   # <-- perfil
+BROWSER_PROFILE = Path.home() / f".notebooklm-{PROFILE_NAME}" / "browser_profile"
+STORAGE = Path.home() / ".notebooklm" / "profiles" / PROFILE_NAME / "storage_state.json"
+EDGE = r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
+STORAGE.parent.mkdir(parents=True, exist_ok=True)
+
+with sync_playwright() as p:
+    ctx = p.chromium.launch_persistent_context(
+        user_data_dir=str(BROWSER_PROFILE), executable_path=EDGE, headless=True,
+        args=["--disable-blink-features=AutomationControlled"])
+    page = ctx.pages[0] if ctx.pages else ctx.new_page()
+    page.goto("https://notebooklm.google.com/", wait_until="domcontentloaded", timeout=45000)
+    time.sleep(8)
+    if "accounts.google.com" in page.url or "signin" in page.url.lower():
+        print("SESSION_DEAD"); ctx.close(); raise SystemExit(2)
+    STORAGE.write_text(json.dumps(ctx.storage_state()), encoding="utf-8")
+    print("REFRESHED"); ctx.close()
+```
+
+Clave: `executable_path=msedge.exe` (NO el Chromium bundled, que falla con spawn UNKNOWN) + `headless=True` (NO headed, que también falla en el sandbox).
+
+**Si el refresh imprime `REFRESHED`** → verificar con `notebooklm --profile X list` y continuar. Sesión resuelta sin tocar al usuario.
+
+**Si imprime `SESSION_DEAD`** → el perfil persistente también caducó; recién ahí pasar al login manual (§3).
+
+## 3. Login manual (solo si el refresh automático falla)
+
+El comando de login (`notebooklm --profile X login --browser msedge`) abre un **navegador headed** (visible). Desde el sandbox del agente, lanzar Chromium/Edge headed falla con `spawn UNKNOWN`. Por eso el login **headed** lo dispara el usuario; el agente prepara el comando, lo entrega, y detecta cuándo terminó.
 
 ## 3. Protocolo de la skill
 

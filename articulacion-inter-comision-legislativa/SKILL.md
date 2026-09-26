@@ -202,3 +202,15 @@ Cláusula puente incorporada en cada proyecto.
 
 Resultado: cero patologías de superposición, cero zonas grises de
 competencia, dos comisiones con misión clara y distinguida.
+
+## Vecindad en la red
+
+Racimo jurídico-legislativo. Diseña la coordinación entre comisiones; el memo que entra a esas comisiones y la estrategia que lo sostiene son sus vecinos naturales.
+
+- [[memo-institucional-juridico-fbse]]
+- [[redaccion-humana-legislativa]]
+- [[estrategia-implementacion-juridica]]
+- [[mapa-mental-disertacion-juridica]]
+- [[inteligencia-politica-estrategica-multivectorial]]
+
+> Enganchada a la red el 9-sep-2026, vuelta 1 de la espiral de [[regla-del-primer-tropiezo]] §10. Antes era huérfana: existía y la red no la alcanzaba.

@@ -45,7 +45,50 @@ la mitad del valor. Esta skill agrega la capacidad activa:
 4. **Persiste** en `Perplexity-consultas/` con fecha + slug + URL del
    hilo creado.
 
-## Pre-requisitos
+## ⭐ Método PRIMARIO (verificado 2026-07-12): Playwright directo
+
+La extensión Claude-in-Chrome **bloquea** la navegación a `perplexity.ai`
+(`Navigation to this domain is not allowed`). El método que SÍ funciona
+—y el que se debe usar por defecto— es Playwright directo sobre el perfil
+persistente ya logueado, exactamente como las skills de Gmail/bookmarks:
+
+```
+python "C:\Users\datos\.claude\skills\perplexity-active-use\scripts\ask_perplexity_playwright.py" "<pregunta>" <slug>
+```
+
+- Perfil: `C:\Users\datos\.notebooklm\browser_profile_jjm` (jjmobijuesa@gmail.com).
+- Requiere solo `pip install playwright` (usa `channel="msedge"`, sin binarios).
+- Abre Edge headed fuera de pantalla, inyecta la query en el
+  `div[contenteditable]`, espera estabilidad del `innerText`, extrae la
+  respuesta (`div.prose`) + URLs citadas, y persiste el `.md`.
+- Luego Claude lee el `.md` y destila el 20% accionable.
+
+El flujo por Chrome MCP de abajo queda como **fallback histórico** (solo
+si algún día se habilita `perplexity.ai` en la allowlist de la extensión).
+
+## ⭐ Leer un hilo YA EXISTENTE de la biblioteca (verificado 2026-09-05)
+
+Distinto de preguntar: aquí se recupera una conversación que el usuario ya tuvo.
+
+- **Perfil según la cuenta:** `browser_profile_edge` = **mobijuesa360** (el mismo de NotebookLM);
+  `browser_profile_jjm` = jjmobijuesa. Elegir el que corresponda a la cuenta que pide el usuario.
+- La biblioteca vive en `https://www.perplexity.ai/library`.
+- 🚦 **Los `<a>` de la biblioteca tienen `innerText` VACÍO.** Filtrar anchors por texto devuelve
+  cero resultados y `get_by_text(...).click()` da timeout. El título está en un `div` hermano, no
+  dentro del enlace.
+- **Lo que sí funciona:** recolectar `href` de `a[href*="/search/"]` — vienen **en el mismo orden
+  que el panel lateral** — y navegar directo a `https://www.perplexity.ai/search/<uuid>`.
+  Verificar con `pg.title()`, que sí trae el título del hilo.
+- Tomar un `screenshot` de la biblioteca es la forma más rápida de mapear título ↔ posición y de
+  confirmar qué cuenta está logueada (aparece abajo a la izquierda).
+- Rechazar cookies opcionales antes de interactuar (`get_by_role("button", name="Rechazar
+  opcionales")`); el banner intercepta clics.
+- Para volcar el hilo completo: subir con `mouse.wheel(0,-5000)` varias veces, luego bajar hasta
+  que `document.body.innerText.length` se estabilice.
+
+Script de referencia: `scratchpad/pplx_leer_hilo.py` del proyecto donde se usó.
+
+## Pre-requisitos (método fallback por extensión)
 
 - Edge debug corriendo en `localhost:9222` con sesión Perplexity
   logueada (perfil `mobijuesa JJ`). Si no está, correr

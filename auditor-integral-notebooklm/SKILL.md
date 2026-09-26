@@ -107,9 +107,33 @@ with sync_playwright() as p:
 PY
 ```
   Cerrar Edge si el perfil está bloqueado. Otra cuenta: perfil `browser_profile_jjm` (jjmobijuesa@gmail.com).
-- **`UnknownTypeWarning` / "No completed <tipo> artifacts found":** el CLI v0.3.4 no reconoce un tipo
-  nuevo de artefacto (p. ej. cierto mapa o quiz). Workaround: descargar otro tipo equivalente, o
-  regenerarlo (`generate mind-map`, 🚦), o leer la fuente origen.
+- **`UnknownTypeWarning` / "No completed <tipo> artifacts found":** el CLI (v0.3.4 y aún v0.5.0)
+  no reconoce tipos nuevos de artefacto: **tablas de datos xlsx/csv = tipo 10, cierto mapa mental =
+  tipo 4**. Workaround: descargar otro tipo equivalente, pedir el contenido como texto por `ask`,
+  regenerarlo (`generate …`, 🚦), o leer la fuente origen.
+- **`RPC response exceeded 52428800 bytes` en `ask` (verificado 13-sep-2026):** el transporte del CLI
+  aborta cualquier respuesta mayor de 50 MiB (`MAX_RPC_RESPONSE_BYTES` en `_authed_transport.py`,
+  ligado como *default* de `stream_post_with_size_cap`). Ocurre en cuadernos con muchas fuentes y chat
+  largo (KleperBook: 63 fuentes, 9 turnos). Solución probada: envoltorio
+  `C:\Users\datos\war_room_tmp\nlm_ask_big.py`, que sube el tope a 600 MiB parcheando
+  `__kwdefaults__` y lanza el entry point real `notebooklm.notebooklm_cli:main`:
+  ```bash
+  "$HOME/.notebooklm-venv/Scripts/python.exe" "C:/Users/datos/war_room_tmp/nlm_ask_big.py" \
+    --profile "mobijuesa360@gmail.com" ask "<pregunta>" --json > respuesta.json
+  ```
+  (No existe `notebooklm.cli.main`; el módulo es `notebooklm_cli`.) Con el envoltorio, la misma
+  pregunta devolvió 7.506 caracteres con citas [n].
+- **`history --json` sí devuelve los turnos completos** (`qa_pairs[].question/answer`); la tabla de
+  `history` solo muestra previsualizaciones. Exportar a markdown para leerlo entero.
+- **Carga masiva de archivos (verificado 19-sep-2026, 31 fuentes en un cuaderno nuevo):**
+  (1) `source add <archivo> --title X` **ignora el título**: la fuente nace con el nombre del archivo
+  → renombrar después con `source rename <id> "<título>"` y deduplicar por nombre de archivo, no por
+  título. (2) Si la subida corta con `AssertionError: Data should not be empty` (asyncio
+  `_write_send`), **queda igual una fuente muerta** en estado 5 «preparing» con tipo desconocido, que
+  nunca se procesa: `source delete <id> -y` y volver a subir; el reintento entra a la primera.
+  (3) `--json` viene precedido de líneas «Matched:» y WARNING: extraer el primer objeto con
+  `json.JSONDecoder().raw_decode`. Cargador listo y idempotente:
+  `E:\vars\var 5\Universidad-Abierta\subir_aula_notebooklm.py` (add + wait + rename + registro).
 
 ## Portabilidad (revisar el 20% al reusar)
 Rutas/cuenta/canal de navegador (`browser_profile_edge` vs `_jjm`), versión del CLI (`notebooklm-py`)
@@ -130,3 +154,11 @@ Cuaderno **DARPA** (`4ffb0407-cb75-490c-b15c-2173925e8de8`, mobijuesa360): 38 fu
 6 artefactos Studio (2 audio, 1 vídeo, 2 slide-decks, 1 mapa), 8 turnos de chat; `ask` analítico
 devolvió la tesis "Alfa Lab = modelo DARPA transpuesto a la UTEQ para la soberanía EcuaLedger"
 con citas [1]–[23] y 5 riesgos. Reauth aplicada con éxito (80 cookies, SID válido).
+
+## Vecindad en la red
+
+Skills que dependen de esta y que antes no la citaban de vuelta:
+
+- [[notebooklm-reorganize]]
+
+> Retroenlaces añadidos el 9-sep-2026 ([[regla-del-primer-tropiezo]] §10, movimiento «enlazar»).

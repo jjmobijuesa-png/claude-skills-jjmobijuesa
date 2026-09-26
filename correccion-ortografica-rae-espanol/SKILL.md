@@ -242,3 +242,15 @@ oficial.
   no jurídico que no detecta este corrector ortográfico.
 - `memo-institucional-juridico-fbse` — generador del DOCX que pasa
   por esta skill.
+
+## Vecindad en la red
+
+Racimo documental. Es el filtro final de todo texto que sale de esta casa, y por eso debe engancharse a quien produce ese texto y a quien fija su voz.
+
+- [[humanizacion-texto-sin-firma-ia]]
+- [[voz-y-tono-usuario]]
+- [[redaccion-humana-legislativa]]
+- [[aceptar-revisiones-docx-y-comentarios]]
+- [[glosario-ecualedger-corrector]]
+
+> Enganchada a la red el 9-sep-2026, vuelta 1 de la espiral de [[regla-del-primer-tropiezo]] §10. Antes era huérfana: existía y la red no la alcanzaba.

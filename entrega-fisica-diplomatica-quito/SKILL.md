@@ -302,3 +302,14 @@ Al final de la jornada:
   → San Francisco → Carondelet → Iñaquito
 - Tiempo total: 3 horas operativas + 1 hora margen
 - Presupuesto operativo en Quito: $22 USD
+
+## Vecindad en la red
+
+Racimo jurídico-legislativo, extremo logístico. Un memo que no llega no existe: esta skill cierra la cadena que empieza en la redacción institucional.
+
+- [[memo-institucional-juridico-fbse]]
+- [[correo-relay-adjuntos]]
+- [[estrategia-implementacion-juridica]]
+- [[articulacion-inter-comision-legislativa]]
+
+> Enganchada a la red el 9-sep-2026, vuelta 1 de la espiral de [[regla-del-primer-tropiezo]] §10. Antes era huérfana: existía y la red no la alcanzaba.

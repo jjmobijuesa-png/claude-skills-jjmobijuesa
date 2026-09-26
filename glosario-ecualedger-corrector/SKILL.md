@@ -240,3 +240,14 @@ Reportar residuales para revisión humana.
 - `memo-institucional-juridico-fbse` — generador del DOCX que pasa
   por esta skill.
 - `aceptar-revisiones-docx-y-comentarios` — limpieza de TC antes.
+
+## Vecindad en la red
+
+Racimo EcuaLedger / EcuaBlock. El glosario y el renombrado terminológico son dos caras del mismo control de vocabulario del programa.
+
+- [[rebrand-terminologia-ecuablock]]
+- [[tutor-mit-ecuablock]]
+- [[entrenador-experto-notebooklm-ecualedger]]
+- [[correccion-ortografica-rae-espanol]]
+
+> Enganchada a la red el 9-sep-2026, vuelta 1 de la espiral de [[regla-del-primer-tropiezo]] §10. Antes era huérfana: existía y la red no la alcanzaba.

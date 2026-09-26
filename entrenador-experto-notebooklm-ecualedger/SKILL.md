@@ -322,3 +322,13 @@ LinkedIn (`activity-7472679931739725825`).
 - ❌ No persistir el manual como fuente anexa.
 - ❌ Mencionar personas naturales (asambleístas) cuando la audiencia
   sea Pleno o prensa.
+
+## Vecindad en la red
+
+Skills que dependen de esta y que antes no la citaban de vuelta:
+
+- [[tutor-mit-ecuablock]]
+- [[glosario-ecualedger-corrector]]
+- [[rebrand-terminologia-ecuablock]]
+
+> Retroenlaces añadidos el 9-sep-2026 ([[regla-del-primer-tropiezo]] §10, movimiento «enlazar»).

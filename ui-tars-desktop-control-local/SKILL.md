@@ -83,26 +83,22 @@ grounding y exponía un token en claro. Se reemplazó por el endpoint
 local. Si ese token `hf_...` se usó en otro lado, conviene rotarlo en
 https://huggingface.co/settings/tokens.
 
-## ⚠️ GOTCHA DE MONITOR (verificado 2026-07-11)
+## Monitor (RESUELTO 2026-07-11)
 
-Esta máquina tiene DOS monitores: **"Built-in Display"** (pantalla del
-portátil, marcada como PRIMARIA pero normalmente **APAGADA**) y
-**"LG HD"** (monitor externo donde el usuario TRABAJA).
+Esta máquina tiene DOS monitores. **LG HD (`\\.\DISPLAY2`) es ahora el
+PRINCIPAL** (fijado el 2026-07-11 con `ChangeDisplaySettingsEx`), así
+que UI-TARS Desktop y cualquier app nueva **abren directamente en el
+monitor visible**. Ya no hace falta ningún rodeo.
 
-Windows abre las ventanas nuevas en el monitor PRIMARIO → aparecen en
-la pantalla del portátil apagada, **invisibles**. Una captura del
-primario sale toda **negra** (no es un bug de render de UI-TARS ni de
-la app; es que ese monitor está apagado).
-
-**Solución** al lanzar UI-TARS Desktop (o cualquier app que aparezca
-"en negro"):
-1. Con la ventana enfocada, pulsar **`Win + Shift + ←`** (o `→`) para
-   moverla al monitor visible LG HD.
-2. O fijar LG HD como monitor principal en Configuración → Pantalla,
-   de una vez y para siempre.
-
-Sin esto, parece que la app "no abre" cuando en realidad está corriendo
-en la pantalla apagada.
+**Regresión posible:** si se desconecta/reconecta el portátil o el
+LG HD, Windows puede revertir el primario al Built-in (que suele estar
+APAGADO). Síntoma: la app "no abre" y la captura sale **negra** (está
+en la pantalla apagada). Arreglo:
+- Rápido: con la ventana enfocada, `Win + Shift + ←` la trae a LG HD;
+  y `switch_display "LG HD"` para capturarla.
+- Permanente: re-fijar LG HD como principal (Configuración → Sistema →
+  Pantalla, o el P/Invoke `ChangeDisplaySettingsEx` con DISPLAY2 →
+  `CDS_SET_PRIMARY`). Ver [[feedback-monitor-primario-apagado]].
 
 ## Qué NO hacer / compuertas 🚦
 

@@ -406,3 +406,16 @@ Cuando el usuario invoque el skill sin precisión, Claude ofrece:
   satisface esta condición.
 - El podcast se genera en español y no admite cambio de voces en
   esta versión.
+
+## Vecindad en la red
+
+Racimo EcuaLedger / EcuaBlock + racimo de aprendizaje. Usa el método MIT y los artefactos de Studio sobre el expediente EcuaBlock.
+
+- [[metodo-mit-notebooklm-riguroso]]
+- [[entrenador-experto-notebooklm-ecualedger]]
+- [[programa-estudio-profundo-mit]]
+- [[glosario-ecualedger-corrector]]
+- [[rebrand-terminologia-ecuablock]]
+- [[winston-how-to-speak-mit]]
+
+> Enganchada a la red el 9-sep-2026, vuelta 1 de la espiral de [[regla-del-primer-tropiezo]] §10. Antes era huérfana: existía y la red no la alcanzaba.

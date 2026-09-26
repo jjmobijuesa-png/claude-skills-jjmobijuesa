@@ -146,3 +146,17 @@ Requiere Edge en 9222 logueado como fedphd; si no, falla sin ruido y reintenta l
 - «Cosecha todos mis guardados de LinkedIn y agrúpalos por tema.»
 - «¿Qué conceptos financieros tengo guardados que aún no estén en mis skills? Destílalos.»
 - «Actualiza mi corpus de guardados de LinkedIn y dime los candidatos a skill nueva.»
+
+## Vecindad en la red
+
+Skills que dependen de esta y que antes no la citaban de vuelta:
+
+- [[intereses-lkd-blockchain-fintech]]
+- [[intereses-lkd-cognicion-metacognicion]]
+- [[intereses-lkd-ia-agentes]]
+- [[intereses-lkd-juridico-legislativo]]
+- [[intereses-lkd-liderazgo-estrategia]]
+- [[intereses-lkd-empresa-familiar-pyme]]
+- [[intereses-lkd-finanzas-control]]
+
+> Retroenlaces añadidos el 9-sep-2026 ([[regla-del-primer-tropiezo]] §10, movimiento «enlazar»).

@@ -69,3 +69,14 @@ python "C:/Users/datos/.claude/skills/linkedin-guardados-fedphd/scripts/clasific
 - Solo lectura de guardados públicos. Nunca publicar.
 - Citar URL canónica (`linkedin.com/feed/update/urn:li:activity:...`).
 - No atribuir opinión del autor curado al usuario.
+
+## Vecindad en la red
+
+Bucket de LinkedIn (cuenta fedphd). Su cosechador es `linkedin-guardados-fedphd`; su destilación alimenta la suite EcuaLedger.
+
+- [[linkedin-guardados-fedphd]]
+- [[intereses-blockchain-web3]]
+- [[glosario-ecualedger-corrector]]
+- [[llave-maestra-autoaprendizaje-ia]]
+
+> Enganchada a la red el 9-sep-2026, vuelta 1 de la espiral de [[regla-del-primer-tropiezo]] §10. Antes era huérfana: existía y la red no la alcanzaba.
