@@ -2,57 +2,82 @@
 
 | Campo | Valor |
 |---|---|
-| **TURNO** | NUBE |
+| **TURNO** | PC |
 | Principal | Sesión local "Flujo de caja y proyección Mobijuesa" (PC) |
 | Espejo | Sesión nube "Espejo — Flujo de caja y proyección Mobijuesa" |
-| Último checkpoint | 2026-09-26 — espejo nube: publicación guardada + directriz destilada + hoja de ruta (S1–S7) |
-| Motivo del último relevo | toma automática: PC detenida (sin volcado previo de la PC) |
+| Último checkpoint | 2026-09-26 — PC toma la posta: sube el modelo real (9 hojas) + resuelve S5 y el alcance |
+| Motivo del último relevo | La PC retomó tras el avance del espejo (directriz + hoja de ruta S1–S7) |
 
 ## Tema / objetivo del hilo
-Flujo de caja y proyección financiera de Mobijuesa. _(La PC completa el detalle en el primer checkpoint.)_
+Flujo de caja **CORPORATIVO de Inmobiliaria Juez & Juez «MOBIJUESA» S.A.** (Banco Pichincha),
+enfocado en financiar la construcción de bodegas nuevas sin ahogar la caja ni recurrir al banco.
+Objetivo de este hilo: aplicar la directriz «IA como sistema, no chat» (4 pilares) para volver el
+flujo de caja un sistema vivo que se controla y actualiza cada semana.
 
-## Razonamiento en curso
-_(La PC lo completa: supuestos del modelo, horizonte, escenarios, decisiones tomadas.)_
+## ⚠️ Corrección de alcance (para el espejo)
+Este modelo es el **corporativo de Mobijuesa sobre BANCO PICHINCHA**, NO el flujo personal de
+Francisco (ese corre en Produbanco). Por tanto:
+- S2/S7 del espejo mencionan Produbanco y "cuota Mobijuesa 942": pertenecen al **modelo PERSONAL**,
+  no a este. No aplicarlos aquí.
+- La conciliación de caja aquí es contra el extracto de **Banco Pichincha** (una sola cuenta operativa).
 
-## Archivos centrales
-- `archivos/linkedin-post-7508480383286452224.md` — publicación completa (texto + infografía). ✅ La pegó el usuario en el chat espejo.
-- `archivos/directriz-hoja-de-ruta-flujo-caja.md` — directriz, lectura crítica, supuestos S1–S7 y hoja de ruta en 6 fases. ✅
-- `archivos/marco-aplicacion-skills-financieras.md` — §3 llenada. ✅
-- **Archivo principal (Excel del modelo): aún no está** → lo sube la PC.
+## Razonamiento en curso (estado real del modelo)
+Archivo principal: `archivos/FLUJO DE CAJA MOBIJUESA - ACTUALIZADO AL 07-09-2026.xlsx` (92,7 KB).
+Ya evolucionó a **9 hojas**: PORTADA · INSTRUCTIVO CPA · PARAMETROS · FLUJO SEMANAL · Estadística ·
+RESUMEN Y ALERTA · FLUJO SEMANAL (2) · GANTT OBRAS · Estadística (2). Horizonte SEM 37→52.
+
+Cifras del corte 07-sep-2026 (Banco Pichincha):
+- Saldo real de caja: **19.669,46**
+- Ingreso operativo semanal estimado: 6.089,59 (concentrado en semanas 2-3 del mes)
+- Egresos fijos semanales: 3.818,26
+- Generación operativa NETA semanal: **2.271,33**
+- Caja mínima de seguridad (1,5× gasto fijo mensual): **24.885,54**  ← esto resuelve S5
+- **Colchón HOY: −5.216,08 (la caja está POR DEBAJO del mínimo)**
+- Ritmo histórico de gasto en obra: 10.088,13/semana (4× la generación)
+
+Contexto de obra ya modelado en hilos previos: dos frentes en paralelo — **bodega 22** (patio 1,
+Agustín Parte 2 con descuento = 27.210 sin IVA / 31.292 con IVA) y **bodegas 16-21** (patio 2,
+1.296 m²; total consolidado 154.297, unitario 119,06/m²; acabado real 24.708). Regla de caja:
+material a crédito, mano de obra desde la operación, pagos fuertes en semanas 2-3.
+Ingreso programado: capitalización del préstamo del gerente (~13.180) en septiembre.
+
+## Directriz destilada y hoja de ruta
+Ya redactadas por el espejo en `archivos/directriz-hoja-de-ruta-flujo-caja.md` (6 fases 0-5) y
+`archivos/marco-aplicacion-skills-financieras.md`. La PC confirma que convergen con la hoja de
+ruta entregada al usuario en el chat (4 pilares → artefactos → ritual semanal con error medido).
+**Mapeo contra el modelo real (dónde estamos):**
+- Contexto (fase 0): 🟡 parcial → PARAMETROS existe; falta `CONTEXTO-mobijuesa.md` formal.
+- Instrucciones (fase 1): 🟡 parcial → INSTRUCTIVO CPA existe; falta que las validaciones sean automáticas.
+- Formato (fase 2): 🟢 avanzado → RESUMEN Y ALERTA + Estadística + GANTT OBRAS. Falta hoja ESCENARIOS.
+- Drivers (fase 3): 🟡 parcial → ingreso con curva semanal; falta articular 3 estados a 12-36 meses.
+- Escenarios (fase 4): 🔴 pendiente.
+- Repetición (fase 5): 🔴 el salto clave → que Marta (CPA) sea la dueña del ritual semanal con error medido.
 
 ## Siguiente paso concreto
-> **Checkpoint del espejo (2026-09-26):** paso 1 resuelto (el usuario pegó la publicación). Paso 3 hecho
-> **contra el esqueleto del marco**, porque falta el Excel real. **Falta:** que la PC suba el modelo actual
-> + los datos de §6 de la hoja de ruta. Con eso el espejo verifica la brecha real y arranca la fase 0 (CONTEXTO-mobijuesa.md).
-
-**Buscar, crear y aplicar el contenido y la directriz de la publicación guardada de LinkedIn**
-(cuenta fedphd@gmail.com, sesión abierta en Edge):
-https://www.linkedin.com/feed/update/urn:li:activity:7508480383286452224/
-
-1. **PC** (la nube no tiene acceso a LinkedIn): abrir la publicación en Edge (skill
-   `linkedin-guardados-fedphd`), extraer autor, fecha, texto completo, imágenes/carrusel
-   descritos y enlaces, y guardarlo en `archivos/linkedin-post-7508480383286452224.md`.
-   Copiar además el modelo actual de flujo de caja/proyección a `archivos/`.
-2. **PC**: TURNO = NUBE, push a `main`.
-3. **Espejo**: destilar la directriz de la publicación (qué propone, método, métricas),
-   contrastarla con el modelo actual, y crear/aplicar los cambios al flujo de caja y a la
-   proyección en `archivos/`, documentando cada supuesto nuevo.
-4. **Espejo**: devolver la posta (TURNO = PC) con resumen de cambios.
+1. **PC (requiere Edge):** completar autor y fecha de la publicación en
+   `archivos/linkedin-post-7508480383286452224.md` (el texto ya está; falta la cabecera del post).
+   Skill `linkedin-guardados-fedphd`, solo lectura. — PENDIENTE, requiere confirmación del usuario.
+2. **Fase 0 (arrancar):** crear `archivos/CONTEXTO-mobijuesa.md` con modelo de negocio, cuentas
+   (Banco Pichincha), top clientes/proveedores con plazos, calendario SRI, deuda, caja mínima
+   (ya = 1,5 meses / 24.885,54) y KPIs (DSO/DPO/DIO, ciclo de caja, DSCR, generación semanal).
+3. **Fase 2 (cerrar):** añadir hoja ESCENARIOS (base/optimista/pesimista + estrés) con acción disparadora.
+4. Instalar los 4 hooks del relevo en `~/.claude/settings.json` — PENDIENTE de mostrar el JSON y confirmar.
 
 ## Bloqueantes
-- ✅ ~~Publicación LinkedIn~~: resuelto el 2026-09-26 (la pegó el usuario). Faltan autor y fecha; la PC puede completarlos.
-- 🟠 **Modelo actual de flujo de caja/proyección**: aún no está en `archivos/` (lo sube la PC).
-- 🟠 Datos para la fase 0: extractos del trimestre, antigüedad de cartera CxC/CxP, caja mínima (S5), qué es Mobijuesa en el modelo (S7).
+- ✅ ~~Modelo actual en `archivos/`~~: RESUELTO 2026-09-26 (subido, 9 hojas).
+- ✅ ~~Caja mínima (S5)~~: RESUELTO — el modelo ya la fija en 1,5 meses de gasto fijo = 24.885,54.
+- 🟠 Autor/fecha de la publicación LinkedIn (requiere Edge; contenido ya pegado).
+- 🟠 Fase 0 necesita: antigüedad de cartera CxC/CxP y calendario SRI reales (los aporta el usuario/contadora).
+- 🟠 Hooks del relevo aún no instalados (cambio de configuración; requiere confirmación).
 
-## Avance del espejo (nube)
-- Tomó la posta sin volcado de la PC.
-- 2026-09-26: guardó la publicación y destiló la directriz: 4 pilares + método histórico → drivers → 3 estados → escenarios → actualizar.
-  Lectura crítica: los "30 min" de setup se corrigen a 2–4 semanas; se agregan conciliación previa, 13 semanas por método directo y error medido.
-  Se propone R32 «Sistema, no chat» para `memoria-financiera-inteligenciada` (pendiente de aprobación).
-- Preparó `archivos/marco-aplicacion-skills-financieras.md`: qué aporta cada skill financiera
-  del repo y una plantilla de cómo aplicar la directriz de la publicación al modelo.
+## Avance del espejo (nube) — conservado
+- 2026-09-26: guardó la publicación, destiló la directriz (4 pilares + histórico→drivers→3 estados→
+  escenarios→actualizar), lectura crítica (los "30 min" reales son 2-4 semanas; conciliación previa;
+  13 semanas método directo; error medido). Propuso R32 «Sistema, no chat» para
+  `memoria-financiera-inteligenciada` (pendiente de aprobación del usuario).
 
 ## Pendientes / preguntas abiertas
-- Identificar el archivo principal del modelo (¿Excel?).
-- Skills relacionadas para consultar: `cfo-mensual-con-claude`, `memoria-financiera-inteligenciada`,
+- Aprobar R32 en `memoria-financiera-inteligenciada`.
+- Confirmar si se hace la extracción LinkedIn (autor/fecha) y la instalación de hooks.
+- Skills a consultar: `cfo-mensual-con-claude`, `memoria-financiera-inteligenciada`,
   `modelo-tres-estados-integrado`, `modelo-excel-sistema-vivo`, `control-financiero-semanal-qvp`.
