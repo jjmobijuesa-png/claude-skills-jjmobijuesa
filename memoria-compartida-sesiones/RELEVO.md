@@ -49,6 +49,24 @@ crédito casi agotado, el usuario dice "pasa la posta", o la PC se va a apagar.
 - Nada de credenciales, cookies ni `.env` en `archivos/`.
 - El espejo usa la cuenta y el crédito del propio usuario.
 
-## Hilos nuevos
-Copiar `relevos/agente-ia-local-autoreflexivo/` con el nombre del nuevo hilo
-y registrarlo en `MEMORIA.md`.
+## Un espejo por hilo (regla)
+Cada agente de la PC tiene **su propia carpeta** en `relevos/` y **su propio chat espejo**
+en la nube. Un chat nunca razona dos hilos: así no se mezclan ideas ni contenidos.
+La continuidad vive en `ESTADO.md`, no en el chat: si un espejo se archiva, cualquier
+sesión nueva que diga "toma la posta de <hilo>" continúa igual.
+
+## Coordinador
+Un chat de la nube (hoy: "Ver otras sesiones de Claude Code") que **no razona los temas**:
+- Lee la tabla de hilos de `MEMORIA.md` y el TURNO de cada `ESTADO.md`; informa qué hilo espera en la nube.
+- Crea hilos y espejos cuando el usuario dice **"crea espejo para <agente>"**.
+- Mantiene actualizada la tabla de hilos.
+
+## Crear un hilo nuevo ("crea espejo para <agente>")
+1. Copiar `relevos/_plantilla/` a `relevos/<hilo-en-kebab-case>/` y completar `ESTADO.md`
+   (nombre, principal, espejo, tema, siguiente paso conocido).
+2. Generar `relevos/<hilo>/PROMPT-pc.md` desde la plantilla y agregar la fila en la tabla de `MEMORIA.md`.
+3. Commit + push.
+4. Crear la sesión espejo en la nube (título "Espejo — <nombre>", repo `claude-skills-jjmobijuesa`)
+   con la instrucción: leer `SKILL.md`, `RELEVO.md` y `relevos/<hilo>/`, trabajar SOLO ese hilo,
+   y si TURNO = PC, esperar a "toma la posta".
+5. Dar al usuario el `PROMPT-pc.md` para pegarlo en el agente de la PC.

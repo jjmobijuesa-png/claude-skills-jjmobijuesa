@@ -25,6 +25,8 @@ trigger_phrases:
   - "toma la posta"
   - "retoma la posta"
   - "agente espejo"
+  - "crea espejo para"
+  - "qué hilos esperan"
 
 idioma_de_salida: español neutro
 nivel_madurez: aplicada
@@ -55,7 +57,8 @@ memoria-compartida-sesiones/
 ├── bitacora/             # AAAA-MM-DD-<origen>-<tema>.md, una por sesión
 ├── RELEVO.md             # protocolo de posta PC ⇄ nube (agente espejo)
 ├── PROMPT-agente-local.md # prompt para activar el relevo en la PC
-├── relevos/<hilo>/       # ESTADO.md (TURNO), archivos/, HISTORIAL.md
+├── relevos/_plantilla/   # plantilla para hilos nuevos (ESTADO, HISTORIAL, PROMPT-pc)
+├── relevos/<hilo>/       # ESTADO.md (TURNO), archivos/, HISTORIAL.md, PROMPT-pc.md
 └── scripts/              # cargar-memoria.sh (SessionStart), checkpoint-relevo.sh (Stop)
 ```
 
@@ -110,4 +113,6 @@ Para hilos largos que no deben cortarse por límites de uso, ver `RELEVO.md`:
 un agente principal (PC) y un espejo (nube) se pasan la posta a través de
 `relevos/<hilo>/ESTADO.md` (campo TURNO). El hook `Stop` ejecuta
 `scripts/checkpoint-relevo.sh` y sube cada avance en caliente.
-Hilo activo: `relevos/agente-ia-local-autoreflexivo/`.
+**Un hilo = un agente de la PC = una carpeta = un chat espejo.** Un chat coordinador
+lleva la tabla de hilos en `MEMORIA.md` y crea espejos con "crea espejo para <agente>"
+(ver `RELEVO.md` › Coordinador).

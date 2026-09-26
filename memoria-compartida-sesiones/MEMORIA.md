@@ -13,9 +13,15 @@ _Última actualización: 2026-09-26 (sesión nube "Ver otras sesiones de Claude 
 - _Pendiente de identificar_ — subirlo al repo para que esté en PC y nube.
 
 ## Hilos con relevo
-- `relevos/agente-ia-local-autoreflexivo/` — principal: PC · espejo: nube
+Un hilo = un agente de la PC = una carpeta en `relevos/` = un chat espejo en la nube. Nunca mezclar hilos en un mismo chat.
+
+| Hilo (carpeta en `relevos/`) | Agente principal (PC) | Espejo (nube) | TURNO | Siguiente paso |
+|---|---|---|---|---|
+| `agente-ia-local-autoreflexivo` | Agente IA Local autoreflexivo | "Ver otras sesiones de Claude Code" (coordinador) | PC | Primer checkpoint desde la PC |
+| `flujo-caja-proyeccion-mobijuesa` | Flujo de caja y proyección Mobijuesa | "Espejo — Flujo de caja y proyección Mobijuesa" | PC | PC extrae publicación LinkedIn 7508480383286452224 → espejo la aplica |
 
 ## Pendientes
 - [ ] Identificar y subir el archivo principal.
 - [ ] Pegar `PROMPT-agente-local.md` en la sesión local (instala hooks SessionStart + Stop y hace el primer checkpoint).
+- [ ] Pegar `relevos/flujo-caja-proyeccion-mobijuesa/PROMPT-pc.md` en la sesión local de flujo de caja.
 - [ ] Revisar rama `claude/awesome-einstein-6h3af4`.
