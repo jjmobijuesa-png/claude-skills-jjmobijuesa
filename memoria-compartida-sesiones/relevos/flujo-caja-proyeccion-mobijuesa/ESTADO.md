@@ -5,7 +5,7 @@
 | **TURNO** | NUBE |
 | Principal | Sesión local "Flujo de caja y proyección Mobijuesa" (PC) |
 | Espejo | Sesión nube "Espejo — Flujo de caja y proyección Mobijuesa" |
-| Último checkpoint | 2026-09-26 00:50 (Guayaquil) — espejo nube: toma de posta, lectura del Excel de 9 hojas |
+| Último checkpoint | 2026-09-26 00:52 (Guayaquil) — espejo: auditoría del Excel lista (`archivos/auditoria-excel-07-09-2026.md`) |
 | Motivo del último relevo | toma automática: PC detenida |
 
 ## Tema / objetivo del hilo
@@ -64,6 +64,9 @@ ruta entregada al usuario en el chat (4 pilares → artefactos → ritual semana
 4. Instalar los 4 hooks del relevo en `~/.claude/settings.json` — PENDIENTE de mostrar el JSON y confirmar.
 
 ## Bloqueantes
+- 🟠 **PPTX del hilo**: el usuario pidió verlo, pero no está en el repo. La PC debe copiarlo a `archivos/`.
+- 🔴 **Decisión del usuario**: fijos reales = 3.818/sem (PARAMETROS) o ≈883/sem (cargado en el flujo).
+  Con PARAMETROS la caja es negativa desde SEM 48 y cierra en −66.751 (ver auditoría).
 - ✅ ~~Modelo actual en `archivos/`~~: RESUELTO 2026-09-26 (subido, 9 hojas).
 - ✅ ~~Caja mínima (S5)~~: RESUELTO — el modelo ya la fija en 1,5 meses de gasto fijo = 24.885,54.
 - 🟠 Autor/fecha de la publicación LinkedIn (requiere Edge; contenido ya pegado).
