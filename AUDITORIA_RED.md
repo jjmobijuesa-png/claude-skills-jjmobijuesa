@@ -152,7 +152,7 @@ Colgantes tras la ronda 1: **3**. Tras la ronda 2: **0** (`nombre`, `skill-anter
 | 4.3 | `[[arquitectura-financiera-escalonada]]` | Tratar como nota de memoria sin prefijo (pasa a B) | Sin cambio de texto |
 | 4.4 | Ruta relativa en `compra-fruta-semanal-qvp:37` | Ruta completa a la skill dueña | `python "$env:USERPROFILE\.claude\skills\gmail-attachments\scripts\download_all_zip.py"` |
 | 4.4 | Ruta relativa en `agente-gui-autoaprobado-windows:87` | Dejar (la misma línea nombra `[[excel-macro-vba-embebido-gui]]`) | Sin cambio |
-| 4.5 | Cifra oficial de skills | 158, la verificada en el repo | `README.md`: «67 skills publicadas» pasa a «158 skills publicadas» |
+| 4.5 | Cifra oficial de skills | La verificada en el repo | `README.md`: «67 skills publicadas» pasa a «159 skills publicadas» (158 auditadas más `memoria-compartida-sesiones`, llegada desde `main`) |
 
 Texto exacto de 4.2:
 
@@ -164,7 +164,7 @@ Texto exacto de 4.2:
 Pendiente fuera del repo (no se puede hacer desde aquí):
 - 4.1 y 4.3 dan por hecho que los archivos de `memory\` usan guion bajo y que existe
   `arquitectura-financiera-escalonada.md`. **No verificado.** Comando de comprobación en la sección 8.
-- 4.5: regenerar `skills_index.md` con 158 entradas. Después, actualizar la cifra «154» que citan
+- 4.5: regenerar `skills_index.md` con 159 entradas. Después, actualizar la cifra «154» que citan
   `regla-del-primer-tropiezo` (descripción y §9); hoy describe fielmente al índice, por eso no se tocó.
 
 ## 5. Scripts fantasma
@@ -220,7 +220,7 @@ citado en `triage-inbox-rapido-jjmobijuesa` sin ruta `scripts/`.
   Ejecutar hoy el propio `mapear_red_skills.py` sobre el repo da **158 nodos y 606 aristas**. El índice y el
   mapa de memoria son anteriores al contenido actual del repo.
 
-**Decisión (ronda 2):** la cifra oficial es 158. **Conclusión sobre la causa:** la causa más probable es **4 skills sin registrar en `skills_index.md`**, incorporadas
+**Decisión (ronda 2):** la cifra oficial es la del repo: 159 tras incorporar `main` (ver sección 7.1). **Conclusión sobre la causa:** la causa más probable es **4 skills sin registrar en `skills_index.md`**, incorporadas
 después de su última regeneración. No puedo nombrarlas: el índice está fuera del repo y **no se pudo
 verificar**. Para obtener los nombres exactos en la máquina del usuario:
 
@@ -234,6 +234,21 @@ Get-ChildItem "C:\Users\datos\.claude\skills" -Directory |
 
 Si el comando devuelve 4 nombres, esa es la respuesta. Si devuelve 0, la diferencia está en carpetas del
 repo que ya no existen en disco (la sincronización añade pero no borra).
+
+### 7.1 Incorporación de `main` (2026-09-27)
+
+`main` añadió una skill: `memoria-compartida-sesiones`. Comprobada con los mismos criterios:
+
+| Comprobación | Resultado |
+|---|---|
+| Frontmatter (`name:` igual a carpeta, `description:`) | Correcto |
+| Enlaces `[[ ]]` propios | 0 |
+| Enlaces `[[ ]]` que la citan desde otras skills | 0 |
+| Grafo con `mapear_red_skills.py` | 159 nodos, 606 aristas, 2 racimos, **1 huérfana** |
+
+La huérfana es `memoria-compartida-sesiones`: nadie la enlaza y ella no enlaza a nadie. No se tocó, porque
+enlazarla es añadir contenido. Queda como decisión pendiente de Francisco. El resto de cifras de este
+informe (cubos, scripts, frontmatter) no cambian: sigue habiendo 178 destinos únicos y 0 colgantes.
 
 ## 8. Comandos de verificación para el computador del usuario
 
