@@ -172,3 +172,56 @@ Skills de mantenimiento que dependen de esta y que antes no la citaban de vuelta
 - [[escanear-a-pdf-sin-dependencias]]
 
 > Puente tendido el 9-sep-2026: este racimo estaba conectado entre sí pero desprendido del cuerpo principal ([[regla-del-primer-tropiezo]] §10).
+
+## Política de actualizaciones: seguridad SÍ, drivers NO (27-sep-2026)
+
+**La pregunta no es «¿actualizo o no?». Es «¿qué tipo de actualización?»** —
+Windows las mezcla a propósito y tienen riesgos opuestos.
+
+| Tipo | Qué hacer | Por qué |
+|---|---|---|
+| **Seguridad** (`KB` + «Security Update») | **Siempre, sin excepción** | Tapan agujeros que ya se explotan. Desactivarlas no ahorra latencia: abre la puerta |
+| **Drivers por Windows Update** | **Excluir** | Microsoft sirve versiones genéricas, a veces MÁS VIEJAS que las instaladas, y pisan lo que ya funciona |
+| **Funciones** (saltos de versión anuales) | **Diferir semanas**, no rechazar | Los fallos gordos salen los primeros días |
+
+### La prueba de que los drivers de WU son un retroceso
+En este Dell Inspiron 15 3520, Windows Update ofrecía un driver del monitor LG
+cuyo propio detalle decía **«released in March, 2016»** — diez años de atraso
+sobre el genérico que ya funcionaba. Junto a él, un Intel Display de 525 MB que
+tocaría justo el monitor principal (ver `feedback_monitor_primario_apagado`).
+
+### El ajuste quirúrgico
+`scripts/` no lo lleva; el script vive en el scratchpad de la sesión
+(`drivers_fuera_de_wu.ps1`, con `-Revertir` y respaldo en JSON). Son dos valores,
+ambos en HKLM y ambos con administrador:
+
+| Llave | Valor | Efecto |
+|---|---|---|
+| `…\Policies\Microsoft\Windows\WindowsUpdate` → `ExcludeWUDriversInQualityUpdate` | `1` | Los drivers no viajan en las actualizaciones de calidad |
+| `…\CurrentVersion\DriverSearching` → `SearchOrderConfig` | `0` | No buscar drivers en Windows Update |
+
+🚦 **`ExcludeWUDriversInQualityUpdate` es directiva de Windows Update for
+Business y esta máquina es Windows 11 HOME, que a veces las ignora.** La que sí
+funciona con seguridad en Home es `SearchOrderConfig = 0`. No dar por hecho el
+efecto de la primera: la prueba es de comportamiento, con el tiempo.
+
+### Cómo comprobar el estado sin instalar nada
+La búsqueda por COM es de solo lectura y separa los dos canales:
+
+```powershell
+$sr = (New-Object -ComObject Microsoft.Update.Session).CreateUpdateSearcher()
+$sr.Search("IsInstalled=0 and IsHidden=0 and Type='Software'").Updates.Count  # seguridad
+$sr.Search("IsInstalled=0 and IsHidden=0 and Type='Driver'").Updates.Count    # drivers
+```
+
+Mirar además `AutoSelectOnWebSites` e `IsMandatory` de cada uno: si ambos son
+`False`, ese driver **es opcional** y Windows no lo iba a instalar solo. El
+riesgo real entonces no es Windows, es pulsar «instalar todo» en la ventana.
+
+### Contrapartida que hay que decirle al usuario
+Al cortar esta vía, **revisar Dell SupportAssist o Intel DSA una o dos veces al
+año pasa a ser tarea suya**. El olvido es el riesgo de esta opción, y hay que
+nombrarlo al recomendarla.
+
+Relacionado: [[forense-cuelgues-y-caidas-windows]] ·
+`feedback_monitor_primario_apagado` · `feedback_camara_bloqueada_es_camara_virtual`.
