@@ -30,6 +30,14 @@
   Verificado: 5 aperturas + 2 proyecciones de 28 láminas = 0 caídas. Detalle en la memoria local
   `project_diagnostico_explorador_windows.md` (§2026-09-26). Respaldo garantizado: PDF de 28 láminas en `02 Financiero`.
   (Los 2 gráficos de estadística ya eran imágenes; charts nativos = 0 — eso no era el problema.)
+- **PPTX rebuild 26-sep (tarde):** (a) las 3 **fachadas** reemplazadas por las nuevas con **adoquinado de colores en el portal**
+  (fuente `05 Comercial y Marketing\Modelos de Viv y Dep\FACHADA *`, actualizadas 21:5x); (b) **lámina 27** corregida:
+  «Instalaciones sanitarias con tubería de PVC empotrada; agua fría y caliente en duchas y lavamanos (salvo baño de visitas),
+  llaves monocomando» — **sin marca comercial** (el usuario pidió no citar FV/EDESA); (c) en `build_pptx_v3.py` el `rect()` ahora
+  **elimina el nodo `<p:style>`** en vez de `shadow.inherit=False` → **0 `<a:effectLst/>` vacíos** en todo el deck (se retiró el
+  sospechoso de caída que quedaba). Tres entregables en `02 Financiero`: editable (1,95 MB), **«CEO (robusta, imagenes).pptx»**
+  (solo-imágenes, a prueba de caídas por contenido) y PDF (1,42 MB). 🚦 La caída al proyectar en la lámina 2 NO se reprodujo por
+  COM en 4 vías; queda por confirmar con el usuario si la versión solo-imágenes también cae (→ sería controlador de video, no el archivo).
 
 ## 🚦 Pendiente único de afinar
 - `C5` (fracción de obra gravada con IVA, hoy 0,65) con la **APU detallada de la vivienda** del constructor
