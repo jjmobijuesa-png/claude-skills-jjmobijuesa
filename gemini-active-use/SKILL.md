@@ -119,3 +119,45 @@ estabilidad de la respuesta y persiste el `.md`. Luego Claude lee el `.md` y des
 - [[deepseek-active-use]] — tercer modelo delegable.
 - [[llave-maestra-autoaprendizaje-ia]] — registra esta capacidad activa.
 - [[feedback_solo_edge]] — solo Edge, canal msedge, perfil de automatización.
+
+## 🚦 RECTIFICACIÓN del perfil (27-sep-2026) — leer antes de tocar nada
+
+**Lo que dice arriba es falso hoy: `~/.notebooklm/browser_profile_edge` NO tiene
+sesión de Gemini.** Abrirlo devuelve la portada de invitado («Acceder»,
+«Condiciones de Google») y la detección de cuenta sale vacía.
+
+**La sesión viva de mobijuesa360 está en otra carpeta:**
+
+```
+C:\Users\datos\.notebooklm\profiles\mobijuesa360@gmail.com\browser_profile
+```
+
+Con ese perfil, `detect_accounts()` devuelve `['mobijuesa360@gmail.com']` y el
+panel lateral entrega los 26 hilos. Es el mismo que `cosechar_nlm.py` pone
+primero en su lista de `CANDIDATOS`, y el único que dio `vivo=True SID=True`.
+
+### Cómo diagnosticarlo en un vistazo, sin perder intentos
+No es un problema de selectores: **si `detect_accounts()` vuelve vacío, no hay
+sesión.** Y el delator definitivo es el contenido del panel: cuando salen
+«Acceder», «Suscripciones», «Para empresas», «Condiciones de Google», eso **es
+la portada pública**, no un sidebar que no se supo leer.
+
+Comprobación barata antes de cualquier otra cosa:
+
+```python
+print('CUENTA:', detect_accounts(pg))   # vacio = perfil sin sesion, cambiar de perfil
+```
+
+### Listar los hilos (no solo preguntar)
+`ask_gemini.py` sirve para escribir; para inventariar los hilos valen sus mismos
+selectores de `open_thread()`, filtrando el ruido de interfaz («Images»,
+«Videos», «Library», «New notebook», «All notebooks»):
+
+```python
+items = pg.query_selector_all('[data-test-id="conversation"], div.conversation, [role="button"], a, div[role="listitem"]')
+```
+
+Script de trabajo: `listar_chats_gemini3.py` en el scratchpad de la sesión.
+
+Relacionado: [[feedback_reauth_notebooklm_cosecha]] — cuando la sesión caduque,
+cosechar con `notebooklm-login-reauth/cosechar_nlm.py` antes de nada.
