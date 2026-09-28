@@ -2,11 +2,23 @@
 
 | Campo | Valor |
 |---|---|
-| **TURNO** | PC |
+| **TURNO** | NUBE |
 | Principal | Sesión local «Agente IA Local autoreflexivo» (PC, Remote Control activo) |
 | Espejo | Sesión nube «Agente IA Local autoreflexivo - en la nube» (también coordinador de hilos) |
-| Último checkpoint | 2026-09-26 — primer volcado real de la PC; recupera la posta |
-| Motivo del último relevo | El espejo tomó la posta el 26-sep 00:18 por tope de gasto mensual en la PC, sin volcado previo. La PC vuelve y corrige. |
+| Último checkpoint | 2026-09-28 10:34 (Guayaquil) — espejo: estado real de PR #1 + hipótesis de guiones verificada |
+| Motivo del último relevo | toma automática: el usuario escribió en el espejo. La PC recupera la posta al volver (ver «Para la PC al volver»). |
+
+## ▶ Para la PC al volver (leer primero)
+PR #1 avanzó el 27-sep y **ya cerró por decisión de Francisco 4 de las 5 cuestiones**.
+Lo único que queda antes de fusionarlo **solo lo puede hacer la PC**:
+1. Ejecutar los dos comandos PowerShell **de solo lectura** de `AUDITORIA_RED.md` (rama
+   `claude/awesome-einstein-6h3af4`, secciones 7 y 8):
+   - Sección 8 → enlaces a memoria sin archivo en `memory\`. Esperado: vacío o solo
+     `anthropic-skills:notebooklmskill`. Cualquier otro nombre = nota con otra grafía: avisar antes de tocar.
+   - Sección 7 → skills del disco que no están en `skills_index.md`. Esperado: ~4 nombres.
+2. Registrar aquí los resultados (solo nombres de notas/skills; nada sensible).
+3. Si la sección 8 sale limpia → Francisco fusiona PR #1. Si no → corregir la grafía y repetir.
+4. Decisión pendiente de Francisco: enlazar la huérfana `memoria-compartida-sesiones` (ver abajo).
 
 ## 🚦 Regla de datos que rige este canal — leer antes de escribir aquí
 
