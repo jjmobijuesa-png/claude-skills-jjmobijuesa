@@ -39,6 +39,18 @@
   (solo-imágenes, a prueba de caídas por contenido) y PDF (1,42 MB). 🚦 La caída al proyectar en la lámina 2 NO se reprodujo por
   COM en 4 vías; queda por confirmar con el usuario si la versión solo-imágenes también cae (→ sería controlador de video, no el archivo).
 
+## Ajustes por las observaciones al informe (28-sep-2026)
+Revisión externa «Observaciones a las presentaciones» — solo San Sebastián. El revisor no halló errores de
+cálculo de fondo; sí de terminología, denominador y prudencia tributaria. Aplicado al libro y a los entregables:
+- **«Utilidad bruta» → «Resultado antes de particip. e IR»** (los $1.055.336 llevan ya todos los costos + financiero).
+  La utilidad bruta contable REAL es `PyG!C24` = **$3.412.866 (24%)**, ahora surfaciada en el deck.
+- **Márgenes sobre VENTAS ($13,54 M)**, no sobre ventas+IVA: neto **10,1%** (con IVA) y **4,97%** (sin IVA). El 9,6%
+  anterior salía de dividir entre $14,23 M.
+- **EBITDA retirado del deck** (se armaba sobre ingresos+IVA; no se reconstruía de lo visible). Queda en el libro.
+- **Escenarios de IVA A/B/C** en `ESTADÍSTICA A54:D58` y en la lámina 7: A pleno neta $1,37 M (10,1%) · B sin IVA
+  $0,67 M (5,0%) · C 50% $1,02 M (7,5%). El proyecto es rentable aun sin la devolución.
+- **MEMORIA §25** documenta cada cambio y su motivo. Controles = 0 tras editar. Respaldo del libro en `_Versiones anteriores`.
+
 ## 🚦 Pendiente único de afinar
 - `C5` (fracción de obra gravada con IVA, hoy 0,65) con la **APU detallada de la vivienda** del constructor
   (materiales / mano de obra / equipo por m²). Cuando llegue, recalcular y recascadear a deck/PDFs.
