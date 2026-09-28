@@ -146,8 +146,8 @@ solo falta la verificación en disco.)_
 - **PR #1 sin fusionar** — decisiones tomadas; falta la verificación en disco (§7, §8).
 - **PR #2** — ✅ fusionado por Francisco el 26-sep 04:36 UTC. Nada que cerrar.
 - **Excel reales en el repo** (hilo flujo de caja, sin candado de datos): dos `.xlsx` de
-  Mobijuesa en `relevos/flujo-caja-proyeccion-mobijuesa/archivos/`. Francisco decide si es
-  excepción o se aplica la regla de datos. No se tocan desde este hilo.
+  Mobijuesa en `relevos/flujo-caja-proyeccion-mobijuesa/archivos/`. ✅ Resuelto el 28-sep:
+  **excepción aprobada por Francisco**, registrada en `MEMORIA.md` y en el ESTADO de ese hilo.
 - **Dos espejos activos** para flujo de caja; Francisco debe elegir uno.
 - **Notas de Gemini de la reunión del 22-sep** — nunca se recogieron; deberían
   estar en `G:\Mi unidad\Meet Recordings` como
