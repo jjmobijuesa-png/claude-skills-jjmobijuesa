@@ -18,7 +18,11 @@ Lo único que queda antes de fusionarlo **solo lo puede hacer la PC**:
    - Sección 7 → skills del disco que no están en `skills_index.md`. Esperado: ~4 nombres.
 2. Registrar aquí los resultados (solo nombres de notas/skills; nada sensible).
 3. Si la sección 8 sale limpia → Francisco fusiona PR #1. Si no → corregir la grafía y repetir.
-4. Decisión pendiente de Francisco: enlazar la huérfana `memoria-compartida-sesiones` (ver abajo).
+4. ✅ **Aplicado el 28-sep con aprobación de Francisco** (commit `8912cdf` en `main`):
+   `memoria-compartida-sesiones` enlazada desde `skills-versionado-git-github`, y `slug()` de
+   `mapear_red_skills.py` conserva `_`. Grafo verificado: 159 skills, 607 aristas, 0 huérfanas.
+   **En la PC:** `git pull` y volver a ejecutar `mapear_red_skills.py` para regenerar
+   `memory/skills_network.md` (hoy dice 592 aristas y lista enlaces con guion).
 
 ## 🚦 Regla de datos que rige este canal — leer antes de escribir aquí
 
