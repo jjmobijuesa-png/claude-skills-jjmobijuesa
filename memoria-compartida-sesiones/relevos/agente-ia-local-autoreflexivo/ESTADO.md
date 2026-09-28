@@ -70,10 +70,32 @@ ser del mecanismo.
 | 4 | Dos rutas relativas de scripts que apuntan a otra skill | PC o nube |
 | 5 | Qué cifra de skills es la oficial (154 vs 158) | **PC** — `skills_index.md` vive en `memory/` |
 
-**Hipótesis del espejo sobre el origen de las grafías con guion**, que conviene
-verificar: `mapear_red_skills.py` convierte guion bajo en guion al listar
-enlaces rotos; si esa lista se usó para escribir enlaces nuevos, explicaría las
-variantes. **Sin verificar.**
+**Hipótesis del espejo sobre el origen de las grafías con guion — ✅ mecanismo verificado
+en el código (28-sep).** En `regla-del-primer-tropiezo/mapear_red_skills.py`,
+`slug()` es `re.sub(r"[^a-z0-9\-]", "-", …)`: convierte **todo `_` en `-`**. Cada
+`[[nota_con_guion_bajo]]` de memoria se registra como destino inexistente y la sección
+«Enlaces rotos» de `memory/skills_network.md` lo imprime como `[[nota-con-guion]]`.
+Copiar desde esa lista produce exactamente las variantes que PR #1 corrigió.
+Que se haya copiado de ahí sigue siendo inferencia, pero el mecanismo existe.
+
+**Consecuencia:** el script seguirá listando como «rotos» todos los enlaces a memoria
+(con la grafía equivocada) y puede reintroducir el error. **Propuesta para Francisco**
+(no aplicada): que `slug()` conserve `_` (`[^a-z0-9_\-]`) y que la sección se llame
+«Destinos fuera del repo (memoria o rotos)». Es un cambio de 1 línea en la skill
+`regla-del-primer-tropiezo`.
+
+### Estado real de las 5 cuestiones de PR #1 (leído del PR el 28-sep)
+| # | Cuestión | Estado |
+|---|---|---|
+| 1 | 13 notas con guion → guion bajo | ✅ Hecho en la ronda 2, aprobada por Francisco. **Falta verificar en disco** (comando §8) |
+| 2 | `[[skill-anterior]]`, `[[wikilink]]` | ✅ Eran marcadores de plantilla; eliminados |
+| 3 | `[[arquitectura-financiera-escalonada]]` | ✅ Tratada como nota de memoria sin prefijo. **Falta verificar que el archivo existe** (comando §8) |
+| 4 | Rutas de scripts a otra skill | ✅ `compra-fruta-semanal-qvp` usa la ruta completa a `gmail-attachments\scripts\download_all_zip.py` |
+| 5 | 154 vs 158 | ✅ Cifra oficial = la del repo: **159** (158 + `memoria-compartida-sesiones`). Los nombres no registrados en el índice salen con el comando §7 |
+
+Grafo actual: 159 nodos, 606 aristas; **huérfana: `memoria-compartida-sesiones`**
+(nadie la enlaza). Candidatas naturales para enlazarla: `skills-versionado-git-github`
+y `llave-maestra-autoaprendizaje-ia`. Decisión de Francisco.
 
 ## Lo que construyó el espejo en este hilo (26-sep)
 
