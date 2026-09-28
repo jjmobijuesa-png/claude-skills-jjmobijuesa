@@ -22,6 +22,15 @@ Un hilo = un agente de la PC = una carpeta en `relevos/` = un chat espejo en la 
 | `flujo-caja-proyeccion-mobijuesa` | Flujo de caja y proyección Mobijuesa | "Espejo — Flujo de caja y proyección Mobijuesa" | NUBE | Directriz y hoja de ruta listas; falta que la PC suba el Excel del modelo y los datos de la fase 0 |
 | `financial-report-mobijuesa` | Financial report for Mobijuesa | "Espejo — Financial report for Mobijuesa" | PC | Primer volcado en caliente desde la PC |
 
+## Regla de datos y excepciones
+- Regla general: `relevos/<hilo>/archivos/` solo lleva resúmenes y punteros en `.md`
+  (candado `.gitignore`; rige `gobernanza-datos-financieros-ia`).
+- **Excepción aprobada por Francisco (2026-09-28):** el hilo `flujo-caja-proyeccion-mobijuesa`
+  puede guardar el Excel real de flujo de caja de Mobijuesa en su `archivos/` (repo privado),
+  para que el espejo trabaje sobre el modelo real. Ningún agente debe borrarlo ni ponerle
+  candado a esa carpeta por su cuenta. La excepción no se extiende a otros hilos ni a otros datos
+  (cédulas, escrituras, expediente COAC, Belén, San Sebastián).
+
 ## Pendientes
 - [ ] Identificar y subir el archivo principal.
 - [ ] Pegar `PROMPT-agente-local.md` en la sesión local (instala hooks SessionStart + Stop y hace el primer checkpoint).
