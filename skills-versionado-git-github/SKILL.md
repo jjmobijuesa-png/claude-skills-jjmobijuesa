@@ -198,3 +198,5 @@ manual al final de cada día con [[cierre-jornada-apagado]].
 - [[cierre-jornada-apagado]] — momento natural del commit diario.
 - [[llave-maestra-autoaprendizaje-ia]] — toda skill nueva debe pasar
   por aquí antes de ser commiteada.
+- [[memoria-compartida-sesiones]] — usa este mismo repo como canal de
+  memoria y relevo entre la PC y las sesiones en la nube.
