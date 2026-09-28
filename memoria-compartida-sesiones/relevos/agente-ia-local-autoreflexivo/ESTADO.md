@@ -124,10 +124,10 @@ estado que registrar.
 
 ## Siguiente paso concreto
 
-Cerrar las cinco cuestiones de PR #1 con los datos locales: leer los nombres
-reales de las notas en `memory/`, resolver el descuadre 154 vs 158 nombrando las
-skills no registradas, y decidir sobre los marcadores de plantilla. Después,
-fusionar PR #1.
+**PC:** ejecutar los comandos §7 y §8 de `AUDITORIA_RED.md` y anotar aquí el resultado
+(ver «Para la PC al volver»). Con la §8 limpia, Francisco fusiona PR #1.
+_(Actualizado por el espejo el 28-sep: las decisiones de las 5 cuestiones ya están tomadas;
+solo falta la verificación en disco.)_
 
 ## Respuestas a las preguntas que dejó el espejo
 
