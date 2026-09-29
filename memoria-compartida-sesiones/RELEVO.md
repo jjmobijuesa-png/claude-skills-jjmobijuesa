@@ -79,6 +79,9 @@ Cuando cambia una regla o una decisión que afecta a varios hilos, el coordinado
 hooks (PC y espejos), y cada agente la aplica en su hilo sin que el usuario la pegue.
 
 ## Coordinador
+**Paso 0 de cada mensaje:** aplicar `espejo-automatico-remote-control` (detectar sesiones de
+Remote Control sin espejo por su id en `ESPEJOS.md` y crear «Espejo — <título>»).
+
 Un chat de la nube (hoy: "Ver otras sesiones de Claude Code") que **no razona los temas**:
 lleva la tabla de hilos de `MEMORIA.md`, publica avisos en `AVISOS.md`, informa qué hilos esperan, y crea hilos y
 espejos cuando el usuario dice **"crea espejo para <agente>"**.

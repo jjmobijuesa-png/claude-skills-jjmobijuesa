@@ -55,6 +55,7 @@ memoria-compartida-sesiones/
 ├── SKILL.md              # esta doctrina
 ├── MEMORIA.md            # estado vivo: proyectos, archivo principal, pendientes
 ├── bitacora/             # AAAA-MM-DD-<origen>-<tema>.md, una por sesión
+├── ESPEJOS.md            # registro sesión PC ↔ hilo ↔ espejo (evita duplicados)
 ├── AVISOS.md             # avisos vigentes del coordinador; el hook los muestra en cada respuesta
 ├── RELEVO.md             # protocolo de posta PC ⇄ nube (agente espejo)
 ├── PROMPT-agente-local.md # prompt para activar el relevo en la PC
@@ -118,3 +119,7 @@ respuesta), PostToolUse Write|Edit y Stop (checkpoint).
 
 **Un hilo = un agente de la PC = una carpeta = un chat espejo.** Un chat coordinador
 lleva la tabla de hilos en `MEMORIA.md` y crea espejos con "crea espejo para <agente>".
+
+## Espejo automático
+Cada sesión nueva de `claude remote-control` recibe su espejo «Espejo — <título>» mediante
+[[espejo-automatico-remote-control]], que ejecuta el coordinador y registra en `ESPEJOS.md`.
