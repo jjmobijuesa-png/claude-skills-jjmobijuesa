@@ -21,7 +21,7 @@ Un hilo = un agente de la PC = una carpeta en `relevos/` = un chat espejo en la 
 | `agente-ia-local-autoreflexivo` | Agente IA Local autoreflexivo | "Agente IA Local autoreflexivo - en la nube" (también coordinador) | NUBE | PC: comandos §7/§8 de `AUDITORIA_RED.md`, regenerar `skills_network.md`; luego fusionar PR #1 |
 | `flujo-caja-proyeccion-mobijuesa` | Flujo de caja y proyección Mobijuesa | "Espejo — Flujo de caja y proyección Mobijuesa" (hay un duplicado "(en caliente)"; ver aviso A4) | NUBE | Ver su ESTADO (Excel v2 + ESCENARIOS) |
 | `financial-report-mobijuesa` | Financial report for Mobijuesa | "Espejo — Financial report for Mobijuesa" | PC | Ver su ESTADO (modelo San Sebastián, PPTX, PDFs A4) |
-| `agente-integrado-estudios-generales` | Agente integrado de estudios generales | "Espejo — Agente integrado de estudios generales" | PC | Primer volcado en caliente desde la PC |
+| `agente-integrado-estudios-generales` | Agente integrado de estudios generales | "Espejo — Agente integrado de estudios generales" | NUBE | Espejo: redactar el MC3 (estadística) tras el OK de Francisco; base en `archivos/volcado-pc-01.md` |
 | `ingenieria-de-prompts` | Ingienería de prompts | "Espejo — Ingienería de prompts" | PC | Primer volcado en caliente desde la PC |
 
 Avisos vigentes para todos los agentes: `AVISOS.md` (el hook los muestra en cada respuesta).
