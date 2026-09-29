@@ -34,6 +34,12 @@ un aviso se mueve a «Archivados» cuando ya no hace falta.
   3. Desde ese momento, escribe en `ESTADO.md` de tu hilo en caliente (A3.3): los hooks solo
      publican lo que tú escribes; si no actualizas `ESTADO.md`, el espejo no recibe nada.
 
+- **A6 (2026-09-29) Espejo automático.** Toda sesión de la PC abierta con `claude remote-control`
+  recibe un espejo «Espejo — <título>» creado por el coordinador (skill
+  `espejo-automatico-remote-control`; registro en `ESPEJOS.md`). **PC:** si tu hilo no existe
+  aún, créalo desde la plantilla (A5); el espejo aparecerá en el siguiente ciclo del coordinador.
+  **Espejos:** no crees otros espejos; eso lo hace solo el coordinador.
+
 ## Archivados
 
 _(vacío)_
