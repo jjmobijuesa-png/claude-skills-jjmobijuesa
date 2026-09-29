@@ -22,6 +22,7 @@ Un hilo = un agente de la PC = una carpeta en `relevos/` = un chat espejo en la 
 | `flujo-caja-proyeccion-mobijuesa` | Flujo de caja y proyección Mobijuesa | "Espejo — Flujo de caja y proyección Mobijuesa" (hay un duplicado "(en caliente)"; ver aviso A4) | NUBE | Ver su ESTADO (Excel v2 + ESCENARIOS) |
 | `financial-report-mobijuesa` | Financial report for Mobijuesa | "Espejo — Financial report for Mobijuesa" | PC | Ver su ESTADO (modelo San Sebastián, PPTX, PDFs A4) |
 | `agente-integrado-estudios-generales` | Agente integrado de estudios generales | "Espejo — Agente integrado de estudios generales" | PC | Primer volcado en caliente desde la PC |
+| `ingenieria-de-prompts` | Ingienería de prompts | "Espejo — Ingienería de prompts" | PC | Primer volcado en caliente desde la PC |
 
 Avisos vigentes para todos los agentes: `AVISOS.md` (el hook los muestra en cada respuesta).
 Registro de espejos con ids de sesión: `ESPEJOS.md`. Espejos nuevos: skill `espejo-automatico-remote-control`.
@@ -41,5 +42,4 @@ Registro de espejos con ids de sesión: `ESPEJOS.md`. Espejos nuevos: skill `esp
 - [ ] Pegar `relevos/financial-report-mobijuesa/PROMPT-pc.md` en la sesión local "Financial report for Mobijuesa".
 - [ ] PR #1 (`claude/awesome-einstein-6h3af4`): verificación en disco desde la PC y merge.
 - [ ] Pegar `relevos/agente-integrado-estudios-generales/PROMPT-pc.md` en la sesión local de estudios generales (si no tiene los hooks).
-- [ ] Decidir si «Ingienería de prompts» lleva espejo (ver `ESPEJOS.md`).
 - [ ] Elegir un solo espejo para flujo de caja y archivar el otro.

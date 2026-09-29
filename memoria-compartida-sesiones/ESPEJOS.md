@@ -10,11 +10,12 @@ Lo mantiene el coordinador con la skill `espejo-automatico-remote-control`.
 | Flujo de caja y proyección Mobijuesa | `session_01MPrrUQZTExm7eLGkDT311a` | `flujo-caja-proyeccion-mobijuesa` | Espejo — Flujo de caja y proyección Mobijuesa | `session_01EpBjgLiJyTXRQKhZzqWcp4` | activo (hubo un duplicado; ver A4) |
 | Financial report for Mobijuesa | `session_01NnZrdtN7X8p17qMeg6GAib` | `financial-report-mobijuesa` | Espejo — Financial report for Mobijuesa | `session_01XWL8yVcPLX5GHyVvbnguCD` | activo |
 | Agente integrado de estudios generales | `session_01JSarGTUMKzdRtJ9A3tWnQx` | `agente-integrado-estudios-generales` | Espejo — Agente integrado de estudios generales | `session_01AguoXGhX3USeg2VFUHUhvc` | activo |
+| Ingienería de prompts | `session_01MphM19RtWVBQR6kak85J96` | `ingenieria-de-prompts` | Espejo — Ingienería de prompts | `session_01VKd5te4nGrry5W4YwmTubA` | activo |
 
 ## Sesiones de la PC sin espejo (detectadas, pendientes de confirmar)
 | Sesión PC | Id | Detectada | Decisión |
 |---|---|---|---|
-| Ingienería de prompts | `session_01MphM19RtWVBQR6kak85J96` | 2026-09-29 | pendiente de Francisco |
+| _(ninguna)_ | | | |
 
 ## Excluidas (no llevan espejo)
 - Sesiones archivadas.
