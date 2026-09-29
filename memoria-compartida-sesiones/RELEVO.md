@@ -29,7 +29,7 @@ información caliente para continuar **sin que nadie dé un comando**.
 | Hook | Script | Qué hace |
 |---|---|---|
 | `SessionStart` | `cargar-memoria.sh` | Al abrir la sesión: pull + muestra MEMORIA y bitácora |
-| `UserPromptSubmit` | `sincronizar-relevo.sh` | **Antes de cada respuesta**: trae lo último de `main` y muestra el TURNO de cada hilo |
+| `UserPromptSubmit` | `sincronizar-relevo.sh` | **Antes de cada respuesta**: trae lo último de `main`, muestra el TURNO de cada hilo y los **avisos vigentes** de `AVISOS.md` |
 | `PostToolUse` (Write/Edit) | `checkpoint-relevo.sh` | **Después de cada edición**: si cambió el relevo, commit + push a `main` |
 | `Stop` | `checkpoint-relevo.sh` | Al terminar la respuesta: último checkpoint |
 
@@ -73,9 +73,14 @@ Cada agente de la PC tiene **su propia carpeta** en `relevos/` y **su propio cha
 Un chat nunca razona dos hilos. La continuidad vive en `ESTADO.md`: si un espejo se archiva,
 cualquier sesión nueva del repo continúa el hilo igual.
 
+## Avisos (actualizaciones sin comandos)
+Cuando cambia una regla o una decisión que afecta a varios hilos, el coordinador la escribe en
+`AVISOS.md` › Vigentes. El hook la muestra antes de cada respuesta en **todas** las sesiones con
+hooks (PC y espejos), y cada agente la aplica en su hilo sin que el usuario la pegue.
+
 ## Coordinador
 Un chat de la nube (hoy: "Ver otras sesiones de Claude Code") que **no razona los temas**:
-lleva la tabla de hilos de `MEMORIA.md`, informa qué hilos esperan, y crea hilos y
+lleva la tabla de hilos de `MEMORIA.md`, publica avisos en `AVISOS.md`, informa qué hilos esperan, y crea hilos y
 espejos cuando el usuario dice **"crea espejo para <agente>"**.
 
 ## Crear un hilo nuevo ("crea espejo para <agente>")

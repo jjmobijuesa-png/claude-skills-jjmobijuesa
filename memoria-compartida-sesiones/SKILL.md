@@ -55,6 +55,7 @@ memoria-compartida-sesiones/
 ├── SKILL.md              # esta doctrina
 ├── MEMORIA.md            # estado vivo: proyectos, archivo principal, pendientes
 ├── bitacora/             # AAAA-MM-DD-<origen>-<tema>.md, una por sesión
+├── AVISOS.md             # avisos vigentes del coordinador; el hook los muestra en cada respuesta
 ├── RELEVO.md             # protocolo de posta PC ⇄ nube (agente espejo)
 ├── PROMPT-agente-local.md # prompt para activar el relevo en la PC
 ├── relevos/_plantilla/   # plantilla para hilos nuevos (ESTADO, HISTORIAL, PROMPT-pc)
