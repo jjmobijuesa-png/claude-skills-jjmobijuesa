@@ -1,6 +1,6 @@
 # MEMORIA — estado vivo
 
-_Última actualización: 2026-09-26 (sesión nube "Ver otras sesiones de Claude Code")_
+_Última actualización: 2026-09-29 (coordinador: sesión nube "Agente IA Local autoreflexivo - en la nube")_
 
 ## Estado actual
 - Sesiones locales visibles en app/teléfono vía `claude remote-control` (funciona).
@@ -18,13 +18,28 @@ Un hilo = un agente de la PC = una carpeta en `relevos/` = un chat espejo en la 
 
 | Hilo (carpeta en `relevos/`) | Agente principal (PC) | Espejo (nube) | TURNO | Siguiente paso |
 |---|---|---|---|---|
-| `agente-ia-local-autoreflexivo` | Agente IA Local autoreflexivo | "Ver otras sesiones de Claude Code" (coordinador) | PC | Primer checkpoint desde la PC |
-| `flujo-caja-proyeccion-mobijuesa` | Flujo de caja y proyección Mobijuesa | "Espejo — Flujo de caja y proyección Mobijuesa" | NUBE | Directriz y hoja de ruta listas; falta que la PC suba el Excel del modelo y los datos de la fase 0 |
-| `financial-report-mobijuesa` | Financial report for Mobijuesa | "Espejo — Financial report for Mobijuesa" | PC | Primer volcado en caliente desde la PC |
+| `agente-ia-local-autoreflexivo` | Agente IA Local autoreflexivo | "Agente IA Local autoreflexivo - en la nube" (también coordinador) | NUBE | PC: comandos §7/§8 de `AUDITORIA_RED.md`, regenerar `skills_network.md`; luego fusionar PR #1 |
+| `flujo-caja-proyeccion-mobijuesa` | Flujo de caja y proyección Mobijuesa | "Espejo — Flujo de caja y proyección Mobijuesa" (hay un duplicado "(en caliente)"; ver aviso A4) | NUBE | Ver su ESTADO (Excel v2 + ESCENARIOS) |
+| `financial-report-mobijuesa` | Financial report for Mobijuesa | "Espejo — Financial report for Mobijuesa" | PC | Ver su ESTADO (modelo San Sebastián, PPTX, PDFs A4) |
+| `agente-integrado-estudios-generales` | Agente integrado de estudios generales | "Espejo — Agente integrado de estudios generales" | NUBE | Espejo: redactar el MC3 (estadística) tras el OK de Francisco; base en `archivos/volcado-pc-01.md` |
+| `ingenieria-de-prompts` | Ingienería de prompts | "Espejo — Ingienería de prompts" | PC | Primer volcado en caliente desde la PC |
+
+Avisos vigentes para todos los agentes: `AVISOS.md` (el hook los muestra en cada respuesta).
+Registro de espejos con ids de sesión: `ESPEJOS.md`. Espejos nuevos: skill `espejo-automatico-remote-control`.
+
+## Regla de datos y excepciones
+- Regla general: `relevos/<hilo>/archivos/` solo lleva resúmenes y punteros en `.md`
+  (candado `.gitignore`; rige `gobernanza-datos-financieros-ia`).
+- **Excepción aprobada por Francisco (2026-09-28):** el hilo `flujo-caja-proyeccion-mobijuesa`
+  puede guardar el Excel real de flujo de caja de Mobijuesa en su `archivos/` (repo privado),
+  para que el espejo trabaje sobre el modelo real. Ningún agente debe borrarlo ni ponerle
+  candado a esa carpeta por su cuenta. La excepción no se extiende a otros hilos ni a otros datos
+  (cédulas, escrituras, expediente COAC, Belén, San Sebastián).
 
 ## Pendientes
 - [ ] Identificar y subir el archivo principal.
-- [ ] Pegar `PROMPT-agente-local.md` en la sesión local (instala hooks SessionStart + Stop y hace el primer checkpoint).
 - [ ] Pegar `relevos/flujo-caja-proyeccion-mobijuesa/PROMPT-pc.md` en la sesión local de flujo de caja.
 - [ ] Pegar `relevos/financial-report-mobijuesa/PROMPT-pc.md` en la sesión local "Financial report for Mobijuesa".
-- [ ] Revisar rama `claude/awesome-einstein-6h3af4`.
+- [ ] PR #1 (`claude/awesome-einstein-6h3af4`): verificación en disco desde la PC y merge.
+- [ ] Pegar `relevos/agente-integrado-estudios-generales/PROMPT-pc.md` en la sesión local de estudios generales (si no tiene los hooks).
+- [ ] Elegir un solo espejo para flujo de caja y archivar el otro.

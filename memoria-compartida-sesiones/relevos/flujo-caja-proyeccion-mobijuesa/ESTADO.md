@@ -8,6 +8,12 @@
 | Último checkpoint | 2026-09-26 01:05 (Guayaquil) — espejo: Excel v2 con correcciones + hoja ESCENARIOS |
 | Motivo del último relevo | toma automática: PC detenida |
 
+## 🚦 Excepción de datos (aprobada por Francisco, 2026-09-28 — nota del coordinador)
+Este hilo **sí puede** guardar el Excel real de flujo de caja de Mobijuesa en `archivos/`
+(repo privado). No borrarlo ni poner candado aquí sin nueva decisión de Francisco.
+La excepción cubre solo ese modelo: nada de cédulas, escrituras, expediente COAC ni datos
+de Belén o San Sebastián. Ver `MEMORIA.md` › Regla de datos y excepciones.
+
 ## Tema / objetivo del hilo
 Flujo de caja **CORPORATIVO de Inmobiliaria Juez & Juez «MOBIJUESA» S.A.** (Banco Pichincha),
 enfocado en financiar la construcción de bodegas nuevas sin ahogar la caja ni recurrir al banco.

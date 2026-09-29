@@ -9,7 +9,9 @@ RAIZ = r"C:\Users\datos\.claude\skills"
 SALIDA_MD = r"C:\Users\datos\.claude\projects\C--Users-datos-Downloads\memory\skills_network.md"
 
 def slug(s):
-    return re.sub(r"[^a-z0-9\-]", "-", s.strip().lower()).strip("-")
+    # Conserva "_": las notas de memoria usan guion bajo y convertirlo en "-"
+    # imprimía enlaces con la grafía equivocada (ver AUDITORIA_RED.md, PR #1).
+    return re.sub(r"[^a-z0-9_\-]", "-", s.strip().lower()).strip("-")
 
 nodos, texto = {}, {}
 for d in sorted(os.listdir(RAIZ)):
@@ -90,8 +92,8 @@ L.append("Son capital muerto: existen pero la red no las alcanza. Candidatas a e
 for s in huerfanas:
     L.append("- `%s`" % nodos[s])
 
-L.append("\n## Enlaces rotos — apuntan a una skill que no existe\n")
-L.append("Cada uno es una skill pendiente de escribir, o un nombre a corregir.\n")
+L.append("\n## Destinos fuera del repo (notas de memoria o enlaces rotos)\n")
+L.append("Una nota de memoria o una skill que no existe. Comprobar en `memory/` antes de corregir.\n")
 n = 0
 for s in sorted(rotos):
     if rotos[s]:

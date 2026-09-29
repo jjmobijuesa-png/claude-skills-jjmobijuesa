@@ -2,11 +2,27 @@
 
 | Campo | Valor |
 |---|---|
-| **TURNO** | PC |
+| **TURNO** | NUBE |
 | Principal | Sesión local «Agente IA Local autoreflexivo» (PC, Remote Control activo) |
 | Espejo | Sesión nube «Agente IA Local autoreflexivo - en la nube» (también coordinador de hilos) |
-| Último checkpoint | 2026-09-26 — primer volcado real de la PC; recupera la posta |
-| Motivo del último relevo | El espejo tomó la posta el 26-sep 00:18 por tope de gasto mensual en la PC, sin volcado previo. La PC vuelve y corrige. |
+| Último checkpoint | 2026-09-28 10:34 (Guayaquil) — espejo: estado real de PR #1 + hipótesis de guiones verificada |
+| Motivo del último relevo | toma automática: el usuario escribió en el espejo. La PC recupera la posta al volver (ver «Para la PC al volver»). |
+
+## ▶ Para la PC al volver (leer primero)
+PR #1 avanzó el 27-sep y **ya cerró por decisión de Francisco 4 de las 5 cuestiones**.
+Lo único que queda antes de fusionarlo **solo lo puede hacer la PC**:
+1. Ejecutar los dos comandos PowerShell **de solo lectura** de `AUDITORIA_RED.md` (rama
+   `claude/awesome-einstein-6h3af4`, secciones 7 y 8):
+   - Sección 8 → enlaces a memoria sin archivo en `memory\`. Esperado: vacío o solo
+     `anthropic-skills:notebooklmskill`. Cualquier otro nombre = nota con otra grafía: avisar antes de tocar.
+   - Sección 7 → skills del disco que no están en `skills_index.md`. Esperado: ~4 nombres.
+2. Registrar aquí los resultados (solo nombres de notas/skills; nada sensible).
+3. Si la sección 8 sale limpia → Francisco fusiona PR #1. Si no → corregir la grafía y repetir.
+4. ✅ **Aplicado el 28-sep con aprobación de Francisco** (commit `8912cdf` en `main`):
+   `memoria-compartida-sesiones` enlazada desde `skills-versionado-git-github`, y `slug()` de
+   `mapear_red_skills.py` conserva `_`. Grafo verificado: 159 skills, 607 aristas, 0 huérfanas.
+   **En la PC:** `git pull` y volver a ejecutar `mapear_red_skills.py` para regenerar
+   `memory/skills_network.md` (hoy dice 592 aristas y lista enlaces con guion).
 
 ## 🚦 Regla de datos que rige este canal — leer antes de escribir aquí
 
@@ -58,10 +74,32 @@ ser del mecanismo.
 | 4 | Dos rutas relativas de scripts que apuntan a otra skill | PC o nube |
 | 5 | Qué cifra de skills es la oficial (154 vs 158) | **PC** — `skills_index.md` vive en `memory/` |
 
-**Hipótesis del espejo sobre el origen de las grafías con guion**, que conviene
-verificar: `mapear_red_skills.py` convierte guion bajo en guion al listar
-enlaces rotos; si esa lista se usó para escribir enlaces nuevos, explicaría las
-variantes. **Sin verificar.**
+**Hipótesis del espejo sobre el origen de las grafías con guion — ✅ mecanismo verificado
+en el código (28-sep).** En `regla-del-primer-tropiezo/mapear_red_skills.py`,
+`slug()` es `re.sub(r"[^a-z0-9\-]", "-", …)`: convierte **todo `_` en `-`**. Cada
+`[[nota_con_guion_bajo]]` de memoria se registra como destino inexistente y la sección
+«Enlaces rotos» de `memory/skills_network.md` lo imprime como `[[nota-con-guion]]`.
+Copiar desde esa lista produce exactamente las variantes que PR #1 corrigió.
+Que se haya copiado de ahí sigue siendo inferencia, pero el mecanismo existe.
+
+**Consecuencia:** el script seguirá listando como «rotos» todos los enlaces a memoria
+(con la grafía equivocada) y puede reintroducir el error. **Propuesta para Francisco**
+(no aplicada): que `slug()` conserve `_` (`[^a-z0-9_\-]`) y que la sección se llame
+«Destinos fuera del repo (memoria o rotos)». Es un cambio de 1 línea en la skill
+`regla-del-primer-tropiezo`.
+
+### Estado real de las 5 cuestiones de PR #1 (leído del PR el 28-sep)
+| # | Cuestión | Estado |
+|---|---|---|
+| 1 | 13 notas con guion → guion bajo | ✅ Hecho en la ronda 2, aprobada por Francisco. **Falta verificar en disco** (comando §8) |
+| 2 | `[[skill-anterior]]`, `[[wikilink]]` | ✅ Eran marcadores de plantilla; eliminados |
+| 3 | `[[arquitectura-financiera-escalonada]]` | ✅ Tratada como nota de memoria sin prefijo. **Falta verificar que el archivo existe** (comando §8) |
+| 4 | Rutas de scripts a otra skill | ✅ `compra-fruta-semanal-qvp` usa la ruta completa a `gmail-attachments\scripts\download_all_zip.py` |
+| 5 | 154 vs 158 | ✅ Cifra oficial = la del repo: **159** (158 + `memoria-compartida-sesiones`). Los nombres no registrados en el índice salen con el comando §7 |
+
+Grafo actual: 159 nodos, 606 aristas; **huérfana: `memoria-compartida-sesiones`**
+(nadie la enlaza). Candidatas naturales para enlazarla: `skills-versionado-git-github`
+y `llave-maestra-autoaprendizaje-ia`. Decisión de Francisco.
 
 ## Lo que construyó el espejo en este hilo (26-sep)
 
@@ -90,10 +128,10 @@ estado que registrar.
 
 ## Siguiente paso concreto
 
-Cerrar las cinco cuestiones de PR #1 con los datos locales: leer los nombres
-reales de las notas en `memory/`, resolver el descuadre 154 vs 158 nombrando las
-skills no registradas, y decidir sobre los marcadores de plantilla. Después,
-fusionar PR #1.
+**PC:** ejecutar los comandos §7 y §8 de `AUDITORIA_RED.md` y anotar aquí el resultado
+(ver «Para la PC al volver»). Con la §8 limpia, Francisco fusiona PR #1.
+_(Actualizado por el espejo el 28-sep: las decisiones de las 5 cuestiones ya están tomadas;
+solo falta la verificación en disco.)_
 
 ## Respuestas a las preguntas que dejó el espejo
 
@@ -105,9 +143,11 @@ fusionar PR #1.
 
 ## Pendientes / preguntas abiertas
 
-- **PR #1 sin fusionar** — pendiente de cerrar las cinco cuestiones.
-- **PR #2** (`claude/quirky-pascal-4epmn1`) — ya está en `main`; comprobar si
-  procede cerrarlo.
+- **PR #1 sin fusionar** — decisiones tomadas; falta la verificación en disco (§7, §8).
+- **PR #2** — ✅ fusionado por Francisco el 26-sep 04:36 UTC. Nada que cerrar.
+- **Excel reales en el repo** (hilo flujo de caja, sin candado de datos): dos `.xlsx` de
+  Mobijuesa en `relevos/flujo-caja-proyeccion-mobijuesa/archivos/`. ✅ Resuelto el 28-sep:
+  **excepción aprobada por Francisco**, registrada en `MEMORIA.md` y en el ESTADO de ese hilo.
 - **Dos espejos activos** para flujo de caja; Francisco debe elegir uno.
 - **Notas de Gemini de la reunión del 22-sep** — nunca se recogieron; deberían
   estar en `G:\Mi unidad\Meet Recordings` como

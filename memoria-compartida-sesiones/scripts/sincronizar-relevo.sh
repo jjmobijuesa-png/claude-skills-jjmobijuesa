@@ -14,4 +14,9 @@ for f in "$DIR"/relevos/*/ESTADO.md; do
   c="$(grep -m1 'Último checkpoint' "$f" | sed 's/.*Último checkpoint *| *//; s/ *|$//')"
   echo "[relevo] $h — TURNO: $t — último checkpoint: $c"
 done
+# Avisos vigentes del coordinador: todos los agentes los aplican sin comandos.
+if [ -f "$DIR/AVISOS.md" ]; then
+  echo "[avisos] Aplica estos avisos vigentes (memoria-compartida-sesiones/AVISOS.md):"
+  sed -n '/^## Vigentes/,/^## Archivados/p' "$DIR/AVISOS.md" | sed '1d;$d'
+fi
 exit 0
