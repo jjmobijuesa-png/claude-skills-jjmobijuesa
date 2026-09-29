@@ -24,6 +24,16 @@ un aviso se mueve a «Archivados» cuando ya no hace falta.
   el que recibió el último mensaje del usuario. Si el `HISTORIAL.md` muestra un checkpoint de
   otro espejo en los últimos 10 minutos, no escribas: avisa al usuario.
 
+- **A5 (2026-09-29) Sesión nueva (p. ej. abierta con `claude remote-control`).** Si tu
+  conversación no dice todavía a qué hilo perteneces:
+  1. Compara el título de tu sesión y el primer mensaje del usuario con la tabla de hilos de
+     `MEMORIA.md`. Si coincide claramente con uno, ese es tu hilo: dilo en una línea y sigue A3.
+  2. Si no coincide, pregunta al usuario en una línea: «¿Continúo un hilo existente
+     (lista) o abro uno nuevo?». Para uno nuevo, copia `relevos/_plantilla/` y agrega la fila
+     en `MEMORIA.md`.
+  3. Desde ese momento, escribe en `ESTADO.md` de tu hilo en caliente (A3.3): los hooks solo
+     publican lo que tú escribes; si no actualizas `ESTADO.md`, el espejo no recibe nada.
+
 ## Archivados
 
 _(vacío)_
