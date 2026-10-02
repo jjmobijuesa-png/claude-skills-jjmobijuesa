@@ -5,7 +5,7 @@
 | **TURNO** | NUBE |
 | Principal | Sesión local "Ecuador financial policy blockchain integration" (PC) — **aún no creada** |
 | Espejo | Sesión nube "Ecuador financial policy blockchain integration" (`session_01QzNJcA78UYwGtLdAE3Vzv9`) — hoy trabaja como principal |
-| Último checkpoint | 2026-10-02 12:43 (Guayaquil) — nube |
+| Último checkpoint | 2026-10-02 12:44 (Guayaquil) — nube |
 | Motivo del último relevo | Hilo abierto desde la nube (teléfono) |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -38,7 +38,7 @@ cuenta conectada) y, con el **texto del informe para primer debate**, construir 
 artículo por artículo: vigente | reforma | competencia de cada Junta | brecha frente a Basilea | aporte IBPP.
 
 ## Pendientes / preguntas abiertas
-- Acceso a la carpeta de Drive (compartir con la cuenta conectada o subir los archivos aquí).
+- Acceso a la carpeta de Drive `1yqBIExqB-YiTSCjYSeNC935R2Z_oesJC`: el usuario autorizó al 100 %, pero el bloqueo es técnico. (a) El conector de Drive (jjmobijuesa@gmail.com) no la ve: 'not found' → pertenece a otra cuenta o no está compartida con esta. (b) La red de la nube bloquea drive.google.com. Soluciones: compartir la carpeta con jjmobijuesa@gmail.com, subir los archivos al chat, o que la PC los lea y vuelque resúmenes.
 - Aclarar "excluida en una serie de reformas".
 - Identificar el documento de Basilea que se toma como "nuevas directrices".
 - Autor del PDF de puntos relevantes y qué se hace con él (responder, incorporar, rebatir).
