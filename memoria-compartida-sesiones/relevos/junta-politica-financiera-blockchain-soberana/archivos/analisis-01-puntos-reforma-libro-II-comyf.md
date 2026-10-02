@@ -62,6 +62,11 @@ pesarlo, no copiarlo.
 | 3 | Intermediación de bancos a través de casa de valores filial, o como intermediario directo con requisitos idénticos (capital, idoneidad, segregación) |
 | 4 | Operación directa solo por cuenta propia, con registro obligatorio y reporte a la SCVS |
 
+## Actualización (análisis 02)
+La matriz del 25-06-2026 muestra que los Arts. 3, 4 y 74 ya tienen texto a aprobarse igual al del
+asambleísta: estas objeciones no fueron acogidas. La delegación usa "Junta de Política y Regulación
+Financiera y Monetaria" (ver análisis 02 §3).
+
 ## Falta para cerrar el análisis
 - Texto completo del **informe para primer debate** (para citar literales exactos).
 - Texto vigente del Libro II COMYF en los Arts. 3, 4 y 74.

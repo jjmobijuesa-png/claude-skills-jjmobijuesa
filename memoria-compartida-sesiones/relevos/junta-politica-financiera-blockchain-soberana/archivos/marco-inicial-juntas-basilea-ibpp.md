@@ -22,8 +22,9 @@ COMYF/LMV/COPLAFIP), Plano III (reglamento IBPP, Ejecutivo).
 | SB / SEPS / SCVS | Supervisión de entidades; SCVS para valores tokenizados | CRE Art. 213; COMYF; LMV |
 | COSEDE | Seguro de depósitos y fondo de liquidez | COMYF |
 
-**Punto de redacción:** la sigla JPRFM corresponde a la Junta única del COMYF de 2014.
-Desde la reforma de 2021 son **dos juntas**. Todo texto dirigido a la Asamblea debe
+**Punto de redacción (corregido 2026-10-02 tras el análisis 02):** el texto a aprobarse usa cuatro
+denominaciones y su Disposición General Primera las reduce a "Junta de Política y Regulación
+Financiera y Monetaria". Hay que confirmar si hoy existe un órgano único o dos (reforma de 2021). Todo texto dirigido a la Asamblea debe
 asignar cada mandato a la junta correcta; un mandato a una junta inexistente es un
 defecto de técnica legislativa que la Comisión detectará. **[verificar si hubo reformas
 posteriores a 2021 que alteren esta división]**
