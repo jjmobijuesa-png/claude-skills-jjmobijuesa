@@ -110,7 +110,7 @@ Curación intelectual; no redistribuir.
 
 ## Tamaño
 
-- **67 skills publicadas** en este repo (58 + 9 saneadas en iter 2).
+- **159 skills publicadas** en este repo (158 de la iter 4 más `memoria-compartida-sesiones`, recuento de `SKILL.md` al 2026-09-27).
 - **9 skills con `private/`** cuya doctrina sí está en el repo pero los
   datos duros se quedan en disco.
 - Total disco (con `private/` incluido): ~1.6 MB.

@@ -85,12 +85,12 @@ Doctrina externa para citar textualmente al directorio cuando se justifica el r�
 mínimo 3,63 % y el costo de ventas máximo semanal:
 
 > **«Los bancos no financian historias; financian capacidad de pago.»**
-> — Walter Zevallos Bustamante, LinkedIn `activity-7472136518502010880` (R21 / [[reference-ebitda-bancabilidad-walterzevallos]]).
+> — Walter Zevallos Bustamante, LinkedIn `activity-7472136518502010880` (R21 / [[reference_ebitda_bancabilidad_walterzevallos]]).
 > Caso real: +40 % crecimiento de ventas con costos subiendo más rápido, margen en reducción,
 > EBITDA bajo presión y caja limitada → cuatro señales presentes simultáneamente en QVP 2024–2025.
 
 > **«EBITDA es para comparativas; OCF es para supervivencia.»**
-> — Síntesis de Jordi Altimira, LinkedIn `activity-7472573800476340224` (R25 / [[reference-tipos-flujo-caja-jordialtimira]]).
+> — Síntesis de Jordi Altimira, LinkedIn `activity-7472573800476340224` (R25 / [[reference_tipos_flujo_caja_jordialtimira]]).
 > Regla práctica derivada para la PLANTILLA ÚNICA: agregar columna **OCF mensual** además de la
 > caja contable; pregunta obligatoria en cualquier negociación de financiamiento: *"¿qué
 > entiende usted por flujo de caja libre?"* antes de firmar.

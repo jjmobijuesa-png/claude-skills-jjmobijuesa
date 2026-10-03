@@ -18,12 +18,12 @@ Para pasar un documento: **ruta local/Drive + resumen de lo concluido** (ver `ar
 ## Tema / objetivo del hilo
 Modelo financiero y entregables de la **Urbanización San Sebastián** (Mobijuesa S.A., Quevedo): libro Excel vivo
 (presupuesto, PyG, flujo, balance, tabla de amortización BDE, normativa MIT, memoria de cálculo), deck ejecutivo
-para el CEO Ing. Omar Juez Zambrano, PDFs y documentos comerciales.
+para el CEO, PDFs y documentos comerciales.
 
 ## Razonamiento en curso / estado
-- **Libro vivo actualizado** con: crédito BDE $1,8 M (palanca P60) a tasa 6,55% (P65) — independientes;
+- **Libro vivo actualizado** con: crédito BDE [cifra en local] (palanca P60) a tasa [cifra en local] (P65) — independientes;
   devolución de IVA no gravable; bono de capital 14 SBU (solo VIS 2.º, 90 deptos); **flujo estresado**
-  (cobranza 90 días después de terminar cada unidad; saldo mensual nunca negativo, mín +$30.000);
+  (cobranza 90 días después de terminar cada unidad; saldo mensual nunca negativo, mín +[cifra en local]);
   MEMORIA §23 (criterio matemático-legal del IVA) y §24 (guía para no financieros).
 - **Deck CEO (28 láminas)** con gráficos como imágenes (abre y proyecta sin cerrarse); PDFs A4 regenerados.
 - Detalle y cifras: en el libro de Drive y en la memoria local (ver `archivos/san-sebastian-modelo.md`).

@@ -87,7 +87,7 @@ fuente: paper arXiv:2606.24937 (Roitman, 2026-06-22) + paperswithcode.co/paper/2
 
 ## 6. Capa de adopción práctica (lote LinkedIn fedphd, 2026-06-27)
 Complemento aplicado a las 5 capas académicas, destilado de los guardados de LinkedIn de fedphd
-([[reference-linkedin-ia-cognicion-lote-fedphd]]):
+([[reference_linkedin_ia_cognicion_lote_fedphd]]):
 - **Mindset power-user (Tipo 1 vs Tipo 2)** — Kike Sanchis: el que usa la IA "como herramienta eléctrica"
   (atajos, config, features ocultas) construye ventaja; el que abre Claude y cierra la pestaña no.
   `activity:7476311006504329217`.
@@ -103,7 +103,7 @@ Complemento aplicado a las 5 capas académicas, destilado de los guardados de Li
   para el expediente EcuaLedger. `activity:7460184880434360322`.
 
 ## Ejemplo de referencia real: Palantir (ontología + AIP + Apollo + FDE)
-Del cuaderno NotebookLM «Palantir» ([[reference-cuaderno-palantir]]): materializa varias capas del
+Del cuaderno NotebookLM «Palantir» ([[reference_cuaderno_palantir]]): materializa varias capas del
 stack en producción — **Ontología** (gemelo digital = memoria *semantic* de la capa 3), **AIP**
 (orquestación de LLMs/agentes anclados en hechos deterministas, anti-alucinación = capa 4), **Apollo**
 (despliegue autónomo air-gapped por «tirón declarativo» = capa 5) y **Forward-Deployed Engineers**

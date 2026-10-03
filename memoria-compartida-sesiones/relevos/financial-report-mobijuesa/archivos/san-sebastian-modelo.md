@@ -6,7 +6,7 @@
 
 ## Dónde vive todo (Google Drive — misma cuenta)
 - **Libro vivo (fuente única):** `G:\Mi unidad\Urbanización San Sebastian\02 Financiero\San_Sebastian_Presupuesto_31Ago2026_Analisis_por_Rubro 12092026.xlsx` (28→ actualmente ~24 hojas de trabajo; sistema de fórmulas vivo).
-- **Deck CEO:** `…\02 Financiero\Presentacion Ejecutiva San Sebastian - CEO Omar Juez (25-09-2026).pptx` (28 láminas).
+- **Deck CEO:** `…\02 Financiero\Presentacion Ejecutiva San Sebastian - CEO … (25-09-2026).pptx` (28 láminas).
 - **PDFs A4:** `Presupuesto San Sebastian 13-09-2026 (A4).pdf`, `Resumen por Rubros San Sebastian (A4).pdf` (02 Financiero).
 - **Docs:** Manual de vivienda + Estrategia de mezcla social (05 Comercial y Marketing).
 - **Respaldos** de cada paso: `02 Financiero\_Versiones anteriores (MUPI 2023)`.
@@ -35,24 +35,24 @@
   «Instalaciones sanitarias con tubería de PVC empotrada; agua fría y caliente en duchas y lavamanos (salvo baño de visitas),
   llaves monocomando» — **sin marca comercial** (el usuario pidió no citar FV/EDESA); (c) en `build_pptx_v3.py` el `rect()` ahora
   **elimina el nodo `<p:style>`** en vez de `shadow.inherit=False` → **0 `<a:effectLst/>` vacíos** en todo el deck (se retiró el
-  sospechoso de caída que quedaba). Tres entregables en `02 Financiero`: editable (1,95 MB), **«CEO (robusta, imagenes).pptx»**
-  (solo-imágenes, a prueba de caídas por contenido) y PDF (1,42 MB). 🚦 La caída al proyectar en la lámina 2 NO se reprodujo por
+  sospechoso de caída que quedaba). Tres entregables en `02 Financiero`: editable ([cifra en local] MB), **«CEO (robusta, imagenes).pptx»**
+  (solo-imágenes, a prueba de caídas por contenido) y PDF ([cifra en local] MB). 🚦 La caída al proyectar en la lámina 2 NO se reprodujo por
   COM en 4 vías; queda por confirmar con el usuario si la versión solo-imágenes también cae (→ sería controlador de video, no el archivo).
 
 ## Ajustes por las observaciones al informe (28-sep-2026)
 Revisión externa «Observaciones a las presentaciones» — solo San Sebastián. El revisor no halló errores de
 cálculo de fondo; sí de terminología, denominador y prudencia tributaria. Aplicado al libro y a los entregables:
-- **«Utilidad bruta» → «Resultado antes de particip. e IR»** (los $1.055.336 llevan ya todos los costos + financiero).
-  La utilidad bruta contable REAL es `PyG!C24` = **$3.412.866 (24%)**, ahora surfaciada en el deck.
-- **Márgenes sobre VENTAS ($13,54 M)**, no sobre ventas+IVA: neto **10,1%** (con IVA) y **4,97%** (sin IVA). El 9,6%
-  anterior salía de dividir entre $14,23 M.
+- **«Utilidad bruta» → «Resultado antes de particip. e IR»** (los [cifra en local] llevan ya todos los costos + financiero).
+  La utilidad bruta contable REAL es `PyG!C24` = **[cifra en local] ([cifra en local])**, ahora surfaciada en el deck.
+- **Márgenes sobre VENTAS ([cifra en local])**, no sobre ventas+IVA: neto [cifra en local] (con IVA) y [cifra en local] (sin IVA). El margen
+  anterior salía de dividir entre [cifra en local].
 - **EBITDA retirado del deck** (se armaba sobre ingresos+IVA; no se reconstruía de lo visible). Queda en el libro.
-- **Escenarios de IVA A/B/C** en `ESTADÍSTICA A54:D58` y en la lámina 7: A pleno neta $1,37 M (10,1%) · B sin IVA
-  $0,67 M (5,0%) · C 50% $1,02 M (7,5%). El proyecto es rentable aun sin la devolución.
+- **Escenarios de IVA A/B/C** en `ESTADÍSTICA A54:D58` y en la lámina 7: A pleno neta [cifra en local] ([cifra en local]) · B sin IVA
+  [cifra en local] ([cifra en local]) · C 50% [cifra en local] ([cifra en local]). El proyecto es rentable aun sin la devolución.
 - **MEMORIA §25** documenta cada cambio y su motivo. Controles = 0 tras editar. Respaldo del libro en `_Versiones anteriores`.
 
 ## 🚦 Pendiente único de afinar
-- `C5` (fracción de obra gravada con IVA, hoy 0,65) con la **APU detallada de la vivienda** del constructor
+- `C5` (fracción de obra gravada con IVA, valor vigente en el libro local) con la **APU detallada de la vivienda** del constructor
   (materiales / mano de obra / equipo por m²). Cuando llegue, recalcular y recascadear a deck/PDFs.
 
 ## Reparto de trabajo PC ⇄ nube (IMPORTANTE)
