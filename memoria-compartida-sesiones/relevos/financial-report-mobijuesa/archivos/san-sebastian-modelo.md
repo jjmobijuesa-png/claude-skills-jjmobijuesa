@@ -62,7 +62,13 @@ siguiente condominio, por tramos y según demanda. Estudio de mercado ya disponi
   Los entregables anteriores (corrida completa, deck, PDFs) quedan **intactos**.
 - **Lectura:** criterio del CEO correcto — $0 de interés, autofinanciado, patrimonio en renta (yield 7,7%),
   infraestructura pesada lista para las 5 fases. Costo honesto: se renuncia a la devolución de IVA (requiere
-  fideicomiso), recuperable después. 🚦 Confirmar con el constructor el monto exacto de red eléctrica y de agua.
+  fideicomiso), recuperable después. Red eléctrica $47.058 y agua $35.000 = estimación aceptada hasta presupuesto real.
+- **Deck nuevo Fase 1 (12 láminas)** en la misma carpeta: `Presentacion Fase 1 Mz01 - Plan financiero y comercial`
+  (.pptx + .pdf + «(robusta, imagenes).pptx»): plan financiero + ventas/marketing + **recomendaciones al estudio
+  Gamboa** (E.G. & Asociados, Quito; propuesta 30-sep, $5.180+IVA, 45 días): medir demanda de RENTA en conjunto
+  cerrado, el concepto «múdese a la seguridad» (vender/alquilar la residencia anterior), rent-to-own y barreras.
+  Misma casa de estilo robusta (rect sin `<p:style>`, 0 effectLst). Estudio de mercado ya existe:
+  `05 Comercial\Estudio de Mercado 2026-2027\ESTUDIO INVESTIGACIÓN DEMANDA...pdf`.
 
 ## 🚦 Pendiente único de afinar
 - `C5` (fracción de obra gravada con IVA, hoy 0,65) con la **APU detallada de la vivienda** del constructor
