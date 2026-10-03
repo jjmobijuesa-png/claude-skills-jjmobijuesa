@@ -51,6 +51,19 @@ cálculo de fondo; sí de terminología, denominador y prudencia tributaria. Apl
   $0,67 M (5,0%) · C 50% $1,02 M (7,5%). El proyecto es rentable aun sin la devolución.
 - **MEMORIA §25** documenta cada cambio y su motivo. Controles = 0 tras editar. Respaldo del libro en `_Versiones anteriores`.
 
+## Giro estratégico — Fase 1 Mz 01 autofinanciada (3-oct-2026)
+Reunión CEO (Omar Juez) + promotor + constructor (Gallegos-Anda): se arranca por la **Manzana 01**,
+**con capital propio, SIN BDE y SIN fideicomiso inicial**. Alcance Fase 1: 1 condominio (18 deptos a-f,
+9 venta / 9 renta) + 1 vivienda 95 m² + área social completa + pozo (~$120k) + red de agua + circuito
+eléctrico que habilita la carga + 1 vendedora. De la venta/renta de los 18 deptos se financia el
+siguiente condominio, por tramos y según demanda. Estudio de mercado ya disponible (05 Comercial).
+- **Entregables nuevos (carpeta `02 Financiero\Fase 1 - Mz01 (autofinanciada sin BDE)`):**
+  `Analisis Financiero - Decision Fase 1 Mz01.docx` + `Analisis Financiero Fase 1 - Mz01.xlsx`.
+  Los entregables anteriores (corrida completa, deck, PDFs) quedan **intactos**.
+- **Lectura:** criterio del CEO correcto — $0 de interés, autofinanciado, patrimonio en renta (yield 7,7%),
+  infraestructura pesada lista para las 5 fases. Costo honesto: se renuncia a la devolución de IVA (requiere
+  fideicomiso), recuperable después. 🚦 Confirmar con el constructor el monto exacto de red eléctrica y de agua.
+
 ## 🚦 Pendiente único de afinar
 - `C5` (fracción de obra gravada con IVA, hoy 0,65) con la **APU detallada de la vivienda** del constructor
   (materiales / mano de obra / equipo por m²). Cuando llegue, recalcular y recascadear a deck/PDFs.
