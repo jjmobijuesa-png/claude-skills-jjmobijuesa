@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local **"JRPFM"** (PC, Claude Code desktop) — tomó la posta 2026-10-03 03:07 |
 | Espejo | Sesión nube **"JRPFM"** (antes "Ecuador financial policy blockchain integration", `session_01QzNJcA78UYwGtLdAE3Vzv9`) |
-| Último checkpoint | 2026-10-03 03:07 (Guayaquil) — PC: toma la posta; sigue memo a la Comisión + matriz de inserciones IBPP |
+| Último checkpoint | 2026-10-03 03:10 (Guayaquil) — PC: Drive JRPFM accesible por mobijuesa360 pero vacío; Remote Control activo |
 | Motivo del último relevo | Usuario abrió en la PC el chat «JRPFM» para continuar el de la nube |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -45,7 +45,7 @@ Redactar el memo para la Comisión (respuesta a las dos preguntas de las transit
 inserciones IBPP: T1.ª, T2.ª, Art. innum. post 73.7, Art. innum. post 72 (vigente | a aprobarse | propuesta | justificación).
 
 ## Pendientes / preguntas abiertas
-- Acceso a la carpeta de Drive `1yqBIExqB-YiTSCjYSeNC935R2Z_oesJC`: el usuario autorizó al 100 %, pero el bloqueo es técnico. (a) El conector de Drive (jjmobijuesa@gmail.com) no la ve: 'not found' → pertenece a otra cuenta o no está compartida con esta. (b) La red de la nube bloquea drive.google.com. Probado también con mobijuesa360@gmail.com (2026-10-02): de esa cuenta solo 3 elementos están compartidos con jjmobijuesa (Quevepalma War Room, DARPA report, una nota); la carpeta no. Soluciones: desde mobijuesa360 compartir la carpeta con jjmobijuesa@gmail.com, subir los archivos al chat, o que la PC los lea y vuelque resúmenes.
+- **Drive RESUELTO (2026-10-03 03:10, PC):** la carpeta `1yqBIExqB-YiTSCjYSeNC935R2Z_oesJC` se llama **«JRPFM»**, es de **mobijuesa360@gmail.com** (privada) y está sincronizada en la PC como `G:\Mi unidad\JRPFM`. Desde la PC se abre con el perfil Playwright `~/.notebooklm/profiles/mobijuesa360@gmail.com/browser_profile` (Edge). 🚦 **Hoy está VACÍA** (web y disco): falta que Francisco suba ahí los documentos (texto del proyecto, informe de primer debate, Excel 25-06, PDF del mercado). En cuanto aparezcan, la PC los lee y vuelca resúmenes `.md` aquí.
 - Aclarar "excluida en una serie de reformas".
 - Verificar en el Registro Oficial la denominación legal vigente de la(s) Junta(s).
 - Identificar el documento de Basilea que se toma como "nuevas directrices".
