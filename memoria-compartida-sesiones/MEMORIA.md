@@ -23,7 +23,7 @@ Un hilo = un agente de la PC = una carpeta en `relevos/` = un chat espejo en la 
 | `financial-report-mobijuesa` | Financial report for Mobijuesa | "Espejo — Financial report for Mobijuesa" | PC | Ver su ESTADO (modelo San Sebastián, PPTX, PDFs A4) |
 | `agente-integrado-estudios-generales` | Agente integrado de estudios generales | "Espejo — Agente integrado de estudios generales" | NUBE | Espejo: redactar el MC3 (estadística) tras el OK de Francisco; base en `archivos/volcado-pc-01.md` |
 | `ingenieria-de-prompts` | Ingienería de prompts | "Espejo — Ingienería de prompts" | PC | Primer volcado en caliente desde la PC |
-| `junta-politica-financiera-blockchain-soberana` | Ecuador financial policy blockchain integration (por crear en la PC) | La sesión nube del mismo nombre trabaja como principal | NUBE | Matriz artículo por artículo con el informe de primer debate; falta acceso a la carpeta de Drive |
+| `junta-politica-financiera-blockchain-soberana` | JRPFM (PC) | "JRPFM" (nube; antes "Ecuador financial policy blockchain integration") | PC | Matriz artículo por artículo con el informe de primer debate; falta acceso a la carpeta de Drive |
 | `ibpp-ecualedger-soberana` | IBPP - EcuaLedger Soberana (id PC pendiente) | "Espejo — IBPP - EcuaLedger Soberana" | PC | Primer volcado en caliente desde la PC; hilo hermano de `junta-politica-financiera-blockchain-soberana` |
 
 Avisos vigentes para todos los agentes: `AVISOS.md` (el hook los muestra en cada respuesta).
