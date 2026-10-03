@@ -2,11 +2,11 @@
 
 | Campo | Valor |
 |---|---|
-| **TURNO** | NUBE |
-| Principal | Sesión local "Ecuador financial policy blockchain integration" (PC) — **aún no creada** |
-| Espejo | Sesión nube "Ecuador financial policy blockchain integration" (`session_01QzNJcA78UYwGtLdAE3Vzv9`) — hoy trabaja como principal |
-| Último checkpoint | 2026-10-02 (Guayaquil) — nube: análisis 02 |
-| Motivo del último relevo | Hilo abierto desde la nube (teléfono) |
+| **TURNO** | PC |
+| Principal | Sesión local **"JRPFM"** (PC, Claude Code desktop) — tomó la posta 2026-10-03 03:07 |
+| Espejo | Sesión nube **"JRPFM"** (antes "Ecuador financial policy blockchain integration", `session_01QzNJcA78UYwGtLdAE3Vzv9`) |
+| Último checkpoint | 2026-10-03 03:07 (Guayaquil) — PC: toma la posta; sigue memo a la Comisión + matriz de inserciones IBPP |
+| Motivo del último relevo | Usuario abrió en la PC el chat «JRPFM» para continuar el de la nube |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
 `archivos/` transporta **resúmenes y punteros en Markdown, nunca el documento fuente**
@@ -50,4 +50,4 @@ inserciones IBPP: T1.ª, T2.ª, Art. innum. post 73.7, Art. innum. post 72 (vige
 - Verificar en el Registro Oficial la denominación legal vigente de la(s) Junta(s).
 - Identificar el documento de Basilea que se toma como "nuevas directrices".
 - Autor del PDF de puntos relevantes y qué se hace con él (responder, incorporar, rebatir).
-- Abrir la sesión de la PC con el mismo nombre y pegar `PROMPT-pc.md`.
+- ~~Abrir la sesión de la PC~~ hecho: «JRPFM» (hooks ya instalados en la PC).
