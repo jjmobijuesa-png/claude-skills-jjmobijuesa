@@ -11,6 +11,7 @@ Lo mantiene el coordinador con la skill `espejo-automatico-remote-control`.
 | Financial report for Mobijuesa | `session_01NnZrdtN7X8p17qMeg6GAib` | `financial-report-mobijuesa` | Espejo — Financial report for Mobijuesa | `session_01XWL8yVcPLX5GHyVvbnguCD` | activo |
 | Agente integrado de estudios generales | `session_01JSarGTUMKzdRtJ9A3tWnQx` | `agente-integrado-estudios-generales` | Espejo — Agente integrado de estudios generales | `session_01AguoXGhX3USeg2VFUHUhvc` | activo |
 | Ingienería de prompts | `session_01MphM19RtWVBQR6kak85J96` | `ingenieria-de-prompts` | Espejo — Ingienería de prompts | `session_01VKd5te4nGrry5W4YwmTubA` | activo |
+| IBPP - EcuaLedger Soberana | _pendiente_ (no aparece en la lista de sesiones al 2026-10-03) | `ibpp-ecualedger-soberana` | Espejo — IBPP - EcuaLedger Soberana | `session_01B5jvBkR3g2Hcu2uYkK42EW` | activo; **vincular id de la PC por título** |
 
 ## Sesiones de la PC sin espejo (detectadas, pendientes de confirmar)
 | Sesión PC | Id | Detectada | Decisión |

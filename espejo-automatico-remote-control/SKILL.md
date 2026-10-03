@@ -42,7 +42,9 @@ entre la PC y un espejo; esta crea el espejo sin que el usuario lo pida.
 ## Procedimiento del coordinador (paso 0 de cada mensaje o disparo)
 1. `list_sessions` (primeras 20). Candidatas: `tags` contiene `remote-control-sdk`,
    `session_status` ≠ `ARCHIVED`, y título que no esté en «Excluidas» de `ESPEJOS.md`.
-2. Descartar las que ya están en `ESPEJOS.md` (por **id** de la sesión de la PC).
+2. Descartar las que ya están en `ESPEJOS.md` (por **id** de la sesión de la PC). Si una fila
+   tiene el id **pendiente** y su título coincide exactamente con el de la candidata, no crear
+   otro espejo: **vincular** (anotar el id en `ESPEJOS.md` y en el ESTADO del hilo).
 3. Para cada candidata nueva:
    - **Si el usuario ya confirmó** («crea espejo para …», o la regla de abajo está activa):
      a. `hilo` = título en minúsculas, sin acentos, espacios → `-`.
@@ -62,6 +64,14 @@ entre la PC y un espejo; esta crea el espejo sin que el usuario lo pida.
 **Regla de confirmación:** por defecto se crea el espejo sin preguntar para toda sesión
 nueva de Remote Control, salvo las «Excluidas». Si el usuario prefiere confirmar cada una,
 anotarlo en `MEMORIA.md` y seguir la rama «sin confirmación».
+
+## Espejo anticipado (el usuario lo pide antes de que la sesión sea visible)
+Si el usuario pide «crea espejo para <título>» y esa sesión no aparece en `list_sessions`
+(PC apagada, título distinto en la app, o Remote Control aún sin registrar):
+1. Revisar también las páginas siguientes y las archivadas; informar las más parecidas.
+2. Crear igual hilo y espejo con el título pedido, con el id de la PC **pendiente**.
+3. En el siguiente ciclo, vincular por título exacto (paso 2). Si el título real difiere,
+   preguntar al usuario antes de vincular.
 
 ## Prompt del espejo (plantilla)
 > Eres el agente espejo en la nube del hilo `memoria-compartida-sesiones/relevos/<hilo>/`
