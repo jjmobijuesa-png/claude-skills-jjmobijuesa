@@ -144,3 +144,13 @@ Solo se corrige: Paraguay como referente comparado, títulos en español, «Rug 
 - autoría de la LOFPD v3: armonizarla;
 - confirmar el título del ministro;
 - revisar el video de 71 segundos (no revisado).
+
+## v8: solicitudes por correo y fechas (2026-10-04, PC)
+- Las cartas B-017 (Basantes) y B-018 (Ministro MDEP) llevan fecha «Quevedo, lunes 5 de octubre de 2026». Paquetes y unificados regenerados.
+- Correos de solicitud en .txt, con el mismo tenor del correo enviado a la Asambleísta (modelo de Francisco):
+  - `…\JRPFM\Dr Roberto Basantes - BCE\00_Solicitud_Audiencia_correo_Dr_Basantes.txt`, con adjunto `B-017_Solicitud_Audiencia_Dr_Basantes_JPRFM.pdf`;
+  - `…\Ministerio de Desarrollo Economico y Productivo - MDEP\00_Solicitud_Reunion_correo_Ministro_MDEP.txt`, con adjunto `B-018_Solicitud_Reunion_Ministro_MDEP.pdf`.
+  - Ventanas propuestas sin cruces entre sí ni con la cita de Farinango (jueves 8, 15h00):
+    - Basantes: 6 y 7-oct a las 15h, 9-oct a las 10h, 12-oct a las 10h;
+    - Ministro: 7-oct a las 10h, 9-oct a las 15h, 13 y 14-oct a las 10h.
+- 🚦 Firma: el correo modelo dice «Scolg.» y el B-011 y las cartas dicen «Sclog.». Hay que unificarlo.
