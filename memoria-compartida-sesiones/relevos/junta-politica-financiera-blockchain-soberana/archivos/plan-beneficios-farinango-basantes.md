@@ -78,3 +78,9 @@ Supuestos 1 y 2 confirmados por Francisco: logo PNG oficial y firma de Francisco
 - **Integrado al paquete Farinango:**
   - Verificado (Primicias y Asamblea, noticia 117475): la propia Comisión presentó la reforma al COMYF contra el anatocismo (mora solo sobre capital vencido, metodología de tasas transparente, liquidación de cooperativas); primer debate el 2-jul-2026.
   - Los beneficios suman «Fin del anatocismo, verificable» y «Protección del pequeño depositante», este último solo con cifras verificadas. El perfil y la lista de anexos de la carta también se actualizaron.
+
+## v4 — Decisión de Francisco sobre el costo (2026-10-04)
+**Fórmula oficial: «Cero costo, sin gas fees».** Para la ciudadanía no hay comisiones por transacción. La operación la sostienen los **nodos validadores no estatales del convenio FBSE, CNT EP y academia** (modalidad (b) del B-011), sin cargo al PGE.
+- Se eliminaron las expresiones «bajo costo» y «tarifas de los participantes» en ambos paquetes; los 10 PDF están auditados.
+- Coincide con la Ayuda Memoria («elimina el cobro de gas fees») y con la infografía de NotebookLM («cero gas fees»).
+- 🚦 El prompt maestro todavía dice «sin costo o de muy bajo costo»: debe corregirse en «Ingienería de prompts».

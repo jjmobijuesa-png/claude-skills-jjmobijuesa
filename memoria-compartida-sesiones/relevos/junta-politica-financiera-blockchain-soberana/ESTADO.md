@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local **"JRPFM"** (PC, Claude Code desktop) — tomó la posta 2026-10-03 03:07 |
 | Espejo | Sesión nube **"JRPFM"** (antes "Ecuador financial policy blockchain integration", `session_01QzNJcA78UYwGtLdAE3Vzv9`) |
-| Último checkpoint | 2026-10-04 14:58 (Guayaquil) — PC: v3 de los paquetes con entregables NotebookLM descargados, OCR del deck «Segundo Piso Digital» y gancho del anatocismo verificado; falta revisión y firma |
+| Último checkpoint | 2026-10-04 14:59 (Guayaquil) — PC: v4 de los paquetes, costo definido por Francisco como «Cero costo, sin gas fees» (nodos validadores no estatales, convenio FBSE-CNT EP-academia) |
 | Motivo del último relevo | Usuario abrió en la PC el chat «JRPFM» para continuar el de la nube |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -21,6 +21,7 @@ con los estándares del BIS/Comité de Basilea, e introducir los artículos que 
 Productos: análisis integral de las leyes, aportes de redacción y estrategia de implementación.
 
 ## Razonamiento en curso
+- **Decisión (Francisco, 2026-10-04): el mensaje de costo es «Cero costo, sin gas fees».** La operación corre a cargo de nodos validadores no estatales (convenio FBSE-CNT EP-academia); no se habla de tarifas ni de «bajo costo».
 - Marco inicial hecho (mapa institucional, Basilea, restricciones CRE, aportes A1-A8, fases).
 - Análisis del primer documento: posición del mercado de valores sobre el informe para primer
   debate del Libro II (Arts. 3, 4, 74). Idea central: el temor a perder **trazabilidad** se
