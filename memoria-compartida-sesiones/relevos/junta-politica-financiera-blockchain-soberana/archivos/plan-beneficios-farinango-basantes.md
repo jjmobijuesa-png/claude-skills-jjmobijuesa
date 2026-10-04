@@ -26,3 +26,26 @@
 3. Ley Fintech: verificar en el PDF y en fuente pública quién la impulsó; no se afirma sin dos fuentes.
 4. Cargo del Dr. Roberto Basantes en la Junta: verificar en fuente pública (BCE/Registro Oficial) antes de usarlo.
 5. Relación con el B-011: ¿la cita del 8-oct responde a ese informe? Si es así, la carta lo cita como antecedente.
+
+## Avance — entregables generados (2026-10-04, PC)
+Supuestos 1 y 2 confirmados por Francisco: logo PNG oficial y firma de Francisco Duque como Presidente. Todo sale como BORRADOR, Word + PDF, con hoja membretada.
+- **WS7 plantilla:** `…\1 Matriz de Acuerdos\JRPFM\Plantilla_Hoja_Membretada_FBSE.docx/.pdf`
+- **Farinango:** `…\Presentacion ASAMBLEA\Cita Farinango 08-oct-2026\`
+  - 01 Carta (B-016), 2 págs.
+  - 02 Beneficios para el usuario básico (B-016-A), 3 págs.
+  - 03 Anexo Ley Fintech (B-016-B)
+  - 04 Hoja de ruta (B-016-C)
+  - 05 Perfil público, USO INTERNO
+- **Basantes:** `…\JRPFM\Dr Roberto Basantes - BCE\`
+  - 01 Solicitud de audiencia (B-017)
+  - 02 Beneficios para la Junta (B-017-A)
+  - 03 Anexo Ley Fintech
+  - 04 Hoja de ruta
+  - 05 Perfil público, USO INTERNO
+- Generador reproducible: `fbse_lib.py` + `build_paquetes.py` (scratchpad de la sesión; copiar a la carpeta JRPFM si se quiere conservar).
+
+## Pendiente
+- Que Francisco revise y firme. Fecha y lugar de la carta a Basantes en blanco.
+- 🚦 Presidencia del Comité de Auditoría del BCE (Basantes): no verificada; consta así en su perfil interno.
+- WS1 incompleto: descargar los entregables del cuaderno NotebookLM «EcuaLedger Soberana - IBPP» y pasar por OCR el análisis SRI.
+- Beneficios en 3 páginas (el objetivo era de 1 a 2): recortar si Francisco lo pide.

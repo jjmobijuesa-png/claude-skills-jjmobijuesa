@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local **"JRPFM"** (PC, Claude Code desktop) — tomó la posta 2026-10-03 03:07 |
 | Espejo | Sesión nube **"JRPFM"** (antes "Ecuador financial policy blockchain integration", `session_01QzNJcA78UYwGtLdAE3Vzv9`) |
-| Último checkpoint | 2026-10-04 14:31 (Guayaquil) — PC: plan WS1-WS8 Beneficios para Farinango (cita 8-oct 15h00) y Basantes; logo FBSE localizado |
+| Último checkpoint | 2026-10-04 14:47 (Guayaquil) — PC: paquetes Farinango y Basantes generados (Word+PDF, borradores membretados); falta revisión y firma de Francisco |
 | Motivo del último relevo | Usuario abrió en la PC el chat «JRPFM» para continuar el de la nube |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
