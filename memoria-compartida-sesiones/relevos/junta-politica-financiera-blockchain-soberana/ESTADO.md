@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local **"JRPFM"** (PC, Claude Code desktop) — tomó la posta 2026-10-03 03:07 |
 | Espejo | Sesión nube **"JRPFM"** (antes "Ecuador financial policy blockchain integration", `session_01QzNJcA78UYwGtLdAE3Vzv9`) |
-| Último checkpoint | 2026-10-04 14:49 (Guayaquil) — PC: v2 de los paquetes, carta B-016 como seguimiento explícito del B-011; falta revisión y firma |
+| Último checkpoint | 2026-10-04 14:58 (Guayaquil) — PC: v3 de los paquetes con entregables NotebookLM descargados, OCR del deck «Segundo Piso Digital» y gancho del anatocismo verificado; falta revisión y firma |
 | Motivo del último relevo | Usuario abrió en la PC el chat «JRPFM» para continuar el de la nube |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí

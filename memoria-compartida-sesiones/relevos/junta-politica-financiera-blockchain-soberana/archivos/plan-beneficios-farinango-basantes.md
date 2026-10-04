@@ -59,3 +59,22 @@ Supuestos 1 y 2 confirmados por Francisco: logo PNG oficial y firma de Francisco
   - Total: 3 páginas.
 - Financiamiento alineado en todos los documentos con la fórmula del B-011: **modalidad (b), convenio FBSE, CNT EP y academia, con costos a cargo de nodos validadores no estatales** y tarifas de los participantes, sin cargo al PGE.
 - 🚦 El cronograma del B-011 preveía el segundo debate en ago-sep 2026; a octubre conviene confirmar en qué fase está el proyecto antes de la reunión.
+
+## v3 — NotebookLM + OCR (autorizado por Francisco vía «Ingienería de prompts»)
+- **Cuaderno «EcuaLedger Soberana - IBPP»** (`0bdb495d`, mobijuesa360): 53 fuentes y 51 artefactos de Studio. La sesión se cosechó con `war_room_tmp\cosechar_nlm.py`.
+  - Descargados 9 entregables a `…\Cita Farinango 08-oct-2026\06_Entregables_NotebookLM\`:
+    - 2 presentaciones de hoy: «Arquitectura Cívica Digital del Ecuador» y «Digital Sovereignty in Latin America» (esta en inglés).
+    - Infografía «Blockchains Públicas frente a IBPP».
+    - Video «Por qué la Blockchain Soberana blinda la economía nacional».
+    - Cuestionario.
+    - 3 informes: EcuaBlock IBPP, Reforma COMYF y Anteproyecto LOFPD.
+    - Matriz CSV de reforma al COMYF.
+  - Al paquete Basantes se copiaron los informes, la matriz y la infografía.
+  - 2 artefactos de tipo desconocido (`66754558` mapa RWA y `1ea8affe`) no son descargables con el CLI, que es una limitación conocida.
+  - 🚦 La infografía dice «Bug Pulix» (debe ser «Rug Pull») y «cero gas fees (gratuito)».
+- **El «análisis SRI» no es del SRI:** `Analisis de la nueva ley y eculedger.pdf` es una presentación de NotebookLM de 15 láminas, «El Segundo Piso Digital: Reformas al COMYF y EcuaLedger», dirigida a la Comisión de Régimen Económico. El OCR quedó en el scratchpad de la sesión (rapidocr, 15 páginas, 6 líneas de baja confianza).
+  - Une 4 trámites (419069 refinanciamiento; 434620 mora y anatocismo; 475535 cooperativas; AN-CPAE-2026 prelación de depósitos). Los números de trámite no están verificados.
+  - 🚦 Sus cifras de Acción Rural (USD 21,1 M, 1.301 familias, 40 fallecidos) **no se confirman**. Lo público: liquidada en ago-2015, unos 45.000 socios, más de mil depositantes sin recuperar sus ahorros.
+- **Integrado al paquete Farinango:**
+  - Verificado (Primicias y Asamblea, noticia 117475): la propia Comisión presentó la reforma al COMYF contra el anatocismo (mora solo sobre capital vencido, metodología de tasas transparente, liquidación de cooperativas); primer debate el 2-jul-2026.
+  - Los beneficios suman «Fin del anatocismo, verificable» y «Protección del pequeño depositante», este último solo con cifras verificadas. El perfil y la lista de anexos de la carta también se actualizaron.
