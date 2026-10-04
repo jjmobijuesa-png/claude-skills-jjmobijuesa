@@ -102,3 +102,13 @@ Carpeta: `…\Cita Farinango 08-oct-2026\06_Entregables_NotebookLM\`
   - la infografía dice «Bug Pulix»;
   - el título DS está en inglés.
 - **Skill actualizada:** `auditor-integral-notebooklm`, con el rescate de los tipos 11 y 4.
+
+## v6 — Decisión de Francisco: los absolutos SE MANTIENEN (2026-10-04)
+«Certeza jurídica absoluta», «grado militar», «riesgo nulo de ataque del 51 %», «erradicación de fraudes» y «blindaje absoluto» son la fortaleza de la propuesta. Se revirtió el matiz que la PC había aplicado.
+Solo se corrige: Paraguay como referente comparado, títulos en español, «Rug Pull» y «Cero costo, sin gas fees».
+- Lección reconstruida: restaurados los absolutos; queda solo la corrección de las leyes paraguayas.
+- Presentaciones: relanzadas en NotebookLM con la regla v2 (conservar absolutos y corregir el encuadre de Paraguay):
+  - `9a4b6d1e`: Arquitectura;
+  - `37eb9ee9`: Soberanía.
+  - Las generaciones `5ff3e96b` y `553222aa` (sin absolutos) se descartan: se renombrarán como «no usar», sin borrarlas.
+- LinkedIn: 6 publicaciones en `…\1 Matriz de Acuerdos\Publicaciones LinkedIn FBSE\`, con los absolutos como fortaleza (1.342 a 2.126 caracteres). Se esperan las presentaciones nuevas para adjuntarlas.
