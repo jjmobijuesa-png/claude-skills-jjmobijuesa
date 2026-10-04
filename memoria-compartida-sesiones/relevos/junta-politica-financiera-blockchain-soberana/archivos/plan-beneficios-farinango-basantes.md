@@ -154,3 +154,6 @@ Solo se corrige: Paraguay como referente comparado, títulos en español, «Rug 
     - Basantes: 6 y 7-oct a las 15h, 9-oct a las 10h, 12-oct a las 10h;
     - Ministro: 7-oct a las 10h, 9-oct a las 15h, 13 y 14-oct a las 10h.
 - 🚦 Firma: el correo modelo dice «Scolg.» y el B-011 y las cartas dicen «Sclog.». Hay que unificarlo.
+
+## v9: firma unificada (2026-10-04)
+Firma confirmada por Francisco: «Scolg. Francisco Duque, Mba.». Regenerados borradores, versiones finales, B-017, B-018 y los 3 unificados. Las B-011 a B-015 firmadas conservan «Sclog.» (históricas).
