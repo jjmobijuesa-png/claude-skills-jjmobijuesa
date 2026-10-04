@@ -111,6 +111,21 @@ PY
   no reconoce tipos nuevos de artefacto: **tablas de datos xlsx/csv = tipo 10, cierto mapa mental =
   tipo 4**. Workaround: descargar otro tipo equivalente, pedir el contenido como texto por `ask`,
   regenerarlo (`generate …`, 🚦), o leer la fuente origen.
+- **Artefactos `(UNKNOWN)` que el CLI no descarga: SÍ se rescatan (verificado 4-oct-2026, cuaderno IBPP).**
+  Volcar el listado crudo con la librería del venv: `async with NotebookLMClient.from_storage() as c:
+  raw = await c.artifacts._list_raw(NB)` y ubicar el artefacto por su id (`a[0]`), con el tipo en `a[2]`.
+  - **Tipo 11 = documento enriquecido (mime docx):** el texto completo viene embebido en el propio listado,
+    en `a[34][0][0][0]` (lista de párrafos). Título: `p[0] is None`, con texto en `p[2][0][0][2][0]`.
+    Párrafo: runs `p[2][0]` = `[ini, fin, [texto, [negrita, cursiva]]]`; viñeta si `p[2][1] == [None, 1]`.
+    **Artefacto incrustado:** párrafo de nulos con `p[12] = [<id_artefacto>, 1]`; no es texto perdido,
+    hay que insertar la pieza referida. Reconstruir con python-docx y pasar a PDF con Word COM.
+  - **Tipo 4 nuevo = mapa mental interactivo** (no figura en `list_mind_maps`, que solo trae los
+    respaldados por notas): `rpc_call(RPCMethod.GET_INTERACTIVE_HTML, [id], source_path=f"/notebook/{NB}",
+    allow_null=True)`; en `r[0][9][0]` viene un HTML cuyo atributo `data-app-data` (escapado en HTML)
+    trae el árbol JSON `{name, children}` completo. Dibujarlo en SVG y exportar con Edge headless
+    (`page.pdf(..., prefer_css_page_size=True, page_ranges="1")`).
+  - Scripts de referencia: `E:arsar 9 FBSE\Tokenizacion Activos Reales - RWA Matriz de Acuerdos\JRPFM\_generador_paquetes\` (`raw_art.py`, `mm2.py`, `build_nlm_pdfs.py`).
+  - Ojo: `download quiz` guarda **JSON** aunque el archivo termine en `.md`.
 - **`RPC response exceeded 52428800 bytes` en `ask` (verificado 13-sep-2026):** el transporte del CLI
   aborta cualquier respuesta mayor de 50 MiB (`MAX_RPC_RESPONSE_BYTES` en `_authed_transport.py`,
   ligado como *default* de `stream_post_with_size_cap`). Ocurre en cuadernos con muchas fuentes y chat

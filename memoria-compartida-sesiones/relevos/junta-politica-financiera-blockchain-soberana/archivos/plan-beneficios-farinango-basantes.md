@@ -84,3 +84,21 @@ Supuestos 1 y 2 confirmados por Francisco: logo PNG oficial y firma de Francisco
 - Se eliminaron las expresiones «bajo costo» y «tarifas de los participantes» en ambos paquetes; los 10 PDF están auditados.
 - Coincide con la Ayuda Memoria («elimina el cobro de gas fees») y con la infografía de NotebookLM («cero gas fees»).
 - 🚦 El prompt maestro todavía dice «sin costo o de muy bajo costo»: debe corregirse en «Ingienería de prompts».
+
+## v5 — Instrumentos de estudio NotebookLM + informe (pedido de Francisco, 2026-10-04)
+Carpeta: `…\Cita Farinango 08-oct-2026\06_Entregables_NotebookLM\`
+- **Informe:** `00_Informe_Instrumentos_de_Estudio_NotebookLM.docx/.pdf` (3 págs.): inventario, descripción, evaluación crítica y uso por momento de la ruta.
+- **Los 5 instrumentos pedidos:**
+  - Digital Sovereignty in Latin America: PDF + PPTX, 12 láminas, contenido en español.
+  - Arquitectura Cívica Digital del Ecuador: PDF + PPTX, 9 láminas.
+  - Blockchains Públicas frente a IBPP: PNG + PDF.
+  - Tokenización RWA Mapa Mental: PDF, árbol de 17 nodos extraído del HTML interactivo.
+  - La Blockchain Soberana: Arquitectura, Gobernanza y Seguridad: DOCX + PDF, 4 págs., reconstruido del artefacto tipo 11.
+- **Extra:** cuestionario de 10 preguntas convertido a PDF/DOCX (el `.md` era JSON).
+- **Hallazgo:** el documento es una lección que incrusta la infografía, el mapa, la presentación DS y el cuestionario. Un recurso `f9564680` no existe en el listado.
+- **🚦 Para usar con autoridades:**
+  - las leyes 6822/21 y 7572/25 aparecen como «marco legal» sin decir que son del Paraguay;
+  - hay afirmaciones absolutas («riesgo nulo», «erradicación de fraudes»);
+  - la infografía dice «Bug Pulix»;
+  - el título DS está en inglés.
+- **Skill actualizada:** `auditor-integral-notebooklm`, con el rescate de los tipos 11 y 4.

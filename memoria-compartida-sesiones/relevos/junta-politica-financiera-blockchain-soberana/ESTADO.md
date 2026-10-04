@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local **"JRPFM"** (PC, Claude Code desktop) — tomó la posta 2026-10-03 03:07 |
 | Espejo | Sesión nube **"JRPFM"** (antes "Ecuador financial policy blockchain integration", `session_01QzNJcA78UYwGtLdAE3Vzv9`) |
-| Último checkpoint | 2026-10-04 14:59 (Guayaquil) — PC: v4 de los paquetes, costo definido por Francisco como «Cero costo, sin gas fees» (nodos validadores no estatales, convenio FBSE-CNT EP-academia) |
+| Último checkpoint | 2026-10-04 15:19 (Guayaquil) — PC: v5, informe de instrumentos de estudio NotebookLM + 5 entregables en PDF/PPTX en 06_Entregables_NotebookLM |
 | Motivo del último relevo | Usuario abrió en la PC el chat «JRPFM» para continuar el de la nube |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
