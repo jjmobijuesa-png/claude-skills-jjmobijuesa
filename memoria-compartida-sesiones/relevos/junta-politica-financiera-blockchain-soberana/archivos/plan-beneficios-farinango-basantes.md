@@ -179,3 +179,11 @@ Firma confirmada por Francisco: «Scolg. Francisco Duque, Mba.». Regenerados bo
   - Política de Transformación Digital 2025-2030: nombra blockchain;
   - el Ecuador no está en la lista gris del GAFI.
 - 🚦 Titular del MINTEL: las fuentes discrepan.
+
+## v11: tesis de la secuencia en todos los entregables (2026-10-04)
+La cadena lógica que concluye (sorites papel→bit→token→comercialización ∴ comercializable con seguridad jurídica) va como salvaguarda de la seguridad jurídica y de la condición sin repudio, para evitar reformas aisladas o descoordinadas. Dónde quedó:
+- recuadro en los 3 documentos de beneficios y en la hoja de ruta;
+- párrafo en la carta B-016 y frase en B-017 y B-018;
+- recuadro rector en la Estrategia;
+- publicaciones 04 y 05 de LinkedIn.
+Regenerados: unificados de 44, 43 y 43 págs., adjuntos B-017 y B-018, y la Estrategia. Doctrina agregada a la skill `agenda-gobierno-noboa-alineacion-ibpp`.

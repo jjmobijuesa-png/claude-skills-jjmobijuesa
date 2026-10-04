@@ -90,3 +90,10 @@ fuente: hilo JRPFM, verificación web del 4-oct-2026
 [[mapa-estado-ecuador-ibpp]] · [[geopolitica-ibpp-ecuador]] ·
 [[inteligencia-politica-estrategica-multivectorial]] · [[estrategia-implementacion-juridica]] ·
 [[defensa-apologetica-juridica]] · [[redaccion-entre-iguales-no-peticion]]
+
+## Tesis rectora de la secuencia (decisión de Francisco Duque, 4-oct-2026)
+Va en **todo** entregable para autoridades:
+- Es una **cadena lógica que concluye (un sorites)**, no un silogismo suelto. Si el papel se hace bit (LOFPD), y el bit se hace token (reforma al COMYF, LMV y COPLAFIP), y el token se comercializa (comercialización tokenizada), **entonces el documento hecho bit y token puede comercializarse con seguridad jurídica**, tratándose de derechos patrimoniales susceptibles de circulación.
+- **Salvaguarda:** en cada eslabón pasa el **valor jurídico y la condición sin repudio**. Por eso las tres etapas avanzan **sincronizadas**. Las reformas aisladas, inconexas o descoordinadas en el tiempo rompen la cadena: el token deja de representar un derecho exigible.
+- La Primera Etapa va antes o en paralelo. Si se retrasa, una **norma puente** de equivalencia funcional (Disposición General Segunda) protege la secuencia.
+- Los pasos se llaman **«eslabones»**. Plantilla de texto: constante `TESIS` en `…\JRPFM\_generador_paquetes\build_paquetes.py`.
