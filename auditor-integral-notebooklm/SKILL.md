@@ -124,7 +124,7 @@ PY
     allow_null=True)`; en `r[0][9][0]` viene un HTML cuyo atributo `data-app-data` (escapado en HTML)
     trae el árbol JSON `{name, children}` completo. Dibujarlo en SVG y exportar con Edge headless
     (`page.pdf(..., prefer_css_page_size=True, page_ranges="1")`).
-  - Scripts de referencia: `E:arsar 9 FBSE\Tokenizacion Activos Reales - RWA Matriz de Acuerdos\JRPFM\_generador_paquetes\` (`raw_art.py`, `mm2.py`, `build_nlm_pdfs.py`).
+  - Scripts de referencia: `E:/vars/var 9 FBSE/Tokenizacion Activos Reales - RWA/1 Matriz de Acuerdos/JRPFM/_generador_paquetes/` (`raw_art.py`, `mm2.py`, `build_nlm_pdfs.py`).
   - Ojo: `download quiz` guarda **JSON** aunque el archivo termine en `.md`.
 - **`RPC response exceeded 52428800 bytes` en `ask` (verificado 13-sep-2026):** el transporte del CLI
   aborta cualquier respuesta mayor de 50 MiB (`MAX_RPC_RESPONSE_BYTES` en `_authed_transport.py`,
