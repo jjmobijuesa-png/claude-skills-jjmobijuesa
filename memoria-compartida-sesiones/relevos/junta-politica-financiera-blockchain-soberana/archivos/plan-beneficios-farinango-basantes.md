@@ -49,3 +49,13 @@ Supuestos 1 y 2 confirmados por Francisco: logo PNG oficial y firma de Francisco
 - 🚦 Presidencia del Comité de Auditoría del BCE (Basantes): no verificada; consta así en su perfil interno.
 - WS1 incompleto: descargar los entregables del cuaderno NotebookLM «EcuaLedger Soberana - IBPP» y pasar por OCR el análisis SRI.
 - Beneficios en 3 páginas (el objetivo era de 1 a 2): recortar si Francisco lo pide.
+
+## v2 — continuación explícita del B-011 (supuesto #5 confirmado por Francisco)
+- La carta B-016 queda como seguimiento del B-011 (27-jul-2026). Secciones:
+  - I. Lo que planteó el B-011: dos vacíos (equivalencia funcional, anotación en cuenta DLT) y el reparo fiscal de la T1.ª.
+  - II. Tabla con sus 4 recomendaciones y la propuesta de hoy: la «sesión técnica de la FBSE» se concreta como taller exclusivo.
+  - III. Beneficios.
+  - IV. Hoja de ruta.
+  - Total: 3 páginas.
+- Financiamiento alineado en todos los documentos con la fórmula del B-011: **modalidad (b), convenio FBSE, CNT EP y academia, con costos a cargo de nodos validadores no estatales** y tarifas de los participantes, sin cargo al PGE.
+- 🚦 El cronograma del B-011 preveía el segundo debate en ago-sep 2026; a octubre conviene confirmar en qué fase está el proyecto antes de la reunión.
