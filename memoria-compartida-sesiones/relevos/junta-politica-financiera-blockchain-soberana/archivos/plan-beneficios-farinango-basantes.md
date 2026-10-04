@@ -112,3 +112,35 @@ Solo se corrige: Paraguay como referente comparado, títulos en español, «Rug 
   - `37eb9ee9`: Soberanía.
   - Las generaciones `5ff3e96b` y `553222aa` (sin absolutos) se descartan: se renombrarán como «no usar», sin borrarlas.
 - LinkedIn: 6 publicaciones en `…\1 Matriz de Acuerdos\Publicaciones LinkedIn FBSE\`, con los absolutos como fortaleza (1.342 a 2.126 caracteres). Se esperan las presentaciones nuevas para adjuntarlas.
+
+## v7: entregables unificados y tercer destinatario (2026-10-04, PC)
+**PDF unificados, uno por destinatario.** Orden: portada con logo e ideograma (mapa del Ecuador, nodos y anillo 25-25-25-25), carta, índice, beneficios, hoja de ruta, anexo Fintech, separador y material de estudio. Van sin marca de borrador, con numeración global y en tamaño carta:
+- `…\Presentacion ASAMBLEA\Cita Farinango 08-oct-2026\ENTREGABLE_UNIFICADO_Asambleista_Farinango.pdf` (43 págs.)
+- `…\JRPFM\Dr Roberto Basantes - BCE\ENTREGABLE_UNIFICADO_Dr_Basantes_JPRFM.pdf` (42 págs.)
+- `…\Ministerio de Desarrollo Economico y Productivo - MDEP\ENTREGABLE_UNIFICADO_Ministro_MDEP.pdf` (42 págs.)
+
+**Tercer destinatario.** El MEF hoy es el **Ministerio de Desarrollo Económico y Productivo** (Decreto 425, 19-jun-2026). Su ministro es **Bernardo Antonio Cordovez**, designado el 28-sep-2026 (Infobae y Swissinfo). Su carta, la B-018, trata:
+- cero costo fiscal y modalidad (b) de la T1.ª;
+- deuda pública y Notas del Tesoro (COPLAFIP 144 y 171; art. 289);
+- desarrollo productivo (Decreto 425) y servicios tecnológicos (Decreto 387).
+
+**Encuadre aplicado:**
+- marco propio = tres leyes propuestas; Paraguay = solo modelo de referencia;
+- protagonismo: anuncio por la Presidenta de la Comisión, alineada con la iniciativa presidencial; la FBSE como origen y apoyo técnico;
+- visita técnica al Paraguay (fase 5);
+- sandbox sin tecnicismos (Ley Fintech);
+- términos en inglés con traducción;
+- se mantienen los absolutos.
+
+**Material vigente en `06_Entregables_NotebookLM`:**
+- Presentaciones `f22075fb` (Arquitectura) y `ae7b549e` (Soberanía), con corrección local de «Pública» y de «CoreRule Label».
+- Infografía v4 `afe68fb6`, con «Pública» corregida a mano.
+- Las versiones anteriores están en `_versiones_anteriores` y como «no usar» en el cuaderno.
+
+**LinkedIn:** 6 carpetas en `…\Publicaciones LinkedIn FBSE\`; se publican después del anuncio oficial.
+
+**🚦 Pendientes:**
+- cifras de infraestructura (provienen del B-014 de la FBSE): contrastarlas con CNT EP;
+- autoría de la LOFPD v3: armonizarla;
+- confirmar el título del ministro;
+- revisar el video de 71 segundos (no revisado).

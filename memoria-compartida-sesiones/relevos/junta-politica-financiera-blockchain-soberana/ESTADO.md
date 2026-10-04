@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local **"JRPFM"** (PC, Claude Code desktop) — tomó la posta 2026-10-03 03:07 |
 | Espejo | Sesión nube **"JRPFM"** (antes "Ecuador financial policy blockchain integration", `session_01QzNJcA78UYwGtLdAE3Vzv9`) |
-| Último checkpoint | 2026-10-04 15:19 (Guayaquil) — PC: v5, informe de instrumentos de estudio NotebookLM + 5 entregables en PDF/PPTX en 06_Entregables_NotebookLM |
+| Último checkpoint | 2026-10-04 16:12 (Guayaquil) — PC: v7, PDF unificados para Farinango, Basantes y el Ministro MDEP (Cordovez); 6 publicaciones de LinkedIn listas |
 | Motivo del último relevo | Usuario abrió en la PC el chat «JRPFM» para continuar el de la nube |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
