@@ -200,3 +200,9 @@ delega la redacción a las skills hijas.
 
 Resultado: paquete sólido, doctrinalmente coherente, codificado y
 listo para activar cinco frentes simultáneos del Estado.
+
+## Vecindad en la red (4-oct-2026)
+Hijas estratégicas añadidas en el hilo JRPFM, por la fusión con «Matriz de acuerdos FBSE»:
+- [[mapa-estado-ecuador-ibpp]]: qué órgano decide qué, puerta de entrada y titular verificado.
+- [[agenda-gobierno-noboa-alineacion-ibpp]]: alineación con las políticas de gobierno y rutas de implementación.
+- [[geopolitica-ibpp-ecuador]]: vectores internacionales (dólar, FMI, EE. UU., GAFI, CAN/MERCOSUR, Paraguay).

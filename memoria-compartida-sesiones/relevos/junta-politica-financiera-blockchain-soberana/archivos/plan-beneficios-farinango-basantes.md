@@ -157,3 +157,25 @@ Solo se corrige: Paraguay como referente comparado, títulos en español, «Rug 
 
 ## v9: firma unificada (2026-10-04)
 Firma confirmada por Francisco: «Scolg. Francisco Duque, Mba.». Regenerados borradores, versiones finales, B-017, B-018 y los 3 unificados. Las B-011 a B-015 firmadas conservan «Sclog.» (históricas).
+
+## v10: fusión con la sesión «Matriz de acuerdos FBSE» y estrategia de Estado (2026-10-04)
+- **Integrado desde la Matriz:**
+  - convenio con la Cámara Blockchain de Paraguay;
+  - convenio FBSE–UTEQ (código abierto, 2 proyectos prioritarios, 2 años renovables + 3 de confidencialidad);
+  - presentación para la UTEQ;
+  - 4 publicaciones + 4 videos cortos en «Nuevas Publicaciones IN»;
+  - skill `notebooklm-video-corto-estudio`;
+  - sorites papel→bit→token→comercialización, con su conclusión.
+- Reparto acordado por mensaje: JRPFM lleva la estrategia de Estado y las skills nuevas; la Matriz sigue con convenios, UTEQ, CAF y publicaciones.
+- **Skills nuevas:** `mapa-estado-ecuador-ibpp`, `agenda-gobierno-noboa-alineacion-ibpp` y `geopolitica-ibpp-ecuador`. Red: 166 skills, 646 aristas, 0 huérfanas.
+- **Documento:** `…\JRPFM\Estrategia_Implementacion_IBPP_Estado_Ecuador_2026.docx/.pdf` (4 págs., uso interno).
+- **Verificado el 4-oct-2026:**
+  - presidenta de la Asamblea: Mishel Mancheno (desde el 8-jun-2026);
+  - presidente de la JPRFM: Gustavo Camacho Dávila;
+  - gerente encargado del BCE: Jorge Ponce Donoso;
+  - FMI: 5.ª revisión aprobada el 22-abr-2026;
+  - Acuerdo de Comercio Recíproco con EE. UU.: firmado el 13-mar, no vigente;
+  - consulta de 2025: «No» en las 4 preguntas;
+  - Política de Transformación Digital 2025-2030: nombra blockchain;
+  - el Ecuador no está en la lista gris del GAFI.
+- 🚦 Titular del MINTEL: las fuentes discrepan.
