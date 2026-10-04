@@ -1,0 +1,28 @@
+# Plan — Beneficios EcuaLedger/IBPP para autoridades (Farinango · Basantes)
+
+**Origen:** pedido de la sesión local «Ingienería de prompts» (2026-10-04). Prompt maestro:
+`E:\vars\var 9 FBSE\Tokenizacion Activos Reales - RWA\1 Matriz de Acuerdos\JRPFM\PROMPT_Maestro_Beneficios_EcuaLedger_Asamblea_JRPFM_v1.md`.
+**Fecha dura:** cita con la Asambleísta, jueves 8-oct-2026, 15h00. Todo sale como BORRADOR; nada se envía.
+
+## Inventario verificado en disco (WS1, parcial)
+- **Logo oficial FBSE:** `…\1 Fundacion Blockchain Soberana del Ecuador\Eleccion Directiva FBSE\Reforma Estatuto\doc hist\Logo Fundacion Blockchain Soberana del Ecuador.png` (795.421 bytes). Es **el mismo** que lleva el encabezado del Paquete Diplomático (B-011…B-015): el membrete ya existe de hecho.
+- **Antecedente clave:** `…\JRPFM\Proyecto Marco Regulatorio Asamblea\00a Carta a Instancias\Paquete Diplomatico\B-011_Comision_Regimen_Economico_y_Tributario.docx`, informe ejecutivo del 27-jul-2026 ya dirigido a la Asambleísta Farinango (sumilla, diagnóstico, respuesta al reparo de gasto de la T1.ª). La carta nueva debe **continuarlo**, no repetirlo.
+- Ley Fintech: `…\Presentacion ASAMBLEA\Ley Fintech Ecuador.pdf` (falta leer).
+- Mensaje central: `…\Presentacion ASAMBLEA\Ayuda Memoria - Blockchain soberana - ECUADOR.docx`.
+- SRI y etapas: `…\BlockChain Soberana\Nuevas Publicaciones IN\` (01-04 .txt, PDFs Registrador/Magistrado/ASOBANCA, Ley 6822, LMV 7572).
+- Ya producido en JRPFM: Infraestructura IBPP (pdf/pptx/mp4), Propuesta Económica V1/V2, Riel de Certeza, Minuta a la Junta, Guía propuesta BCE, Memorando antilavado digital, Informe primer debate.
+
+## Orden de ejecución
+1. WS1 lectura completa (Ayuda Memoria, B-011, Ley Fintech, 4 .txt de etapas, cuaderno NotebookLM).
+2. WS7 plantilla membretada (docx) con el logo oficial, calcada del encabezado B-011.
+3. WS2 mensaje de beneficios (1-2 pág.) → WS3 perfil público + anexo Fintech → WS4 carpeta y carta Farinango (Word+PDF).
+4. WS6 hoja de ruta de inducción (compartida).
+5. WS5 paquete Basantes (reusa Propuesta V2 y Riel de Certeza).
+6. WS8 checkpoint en cada paso.
+
+## Supuestos a confirmar (🚦)
+1. Logo: usar el PNG oficial de arriba (no los de «Marketing Marca FS», que son de 2020).
+2. Firma de las cartas: ¿quién firma y con qué cargo en la FBSE?
+3. Ley Fintech: verificar en el PDF y en fuente pública quién la impulsó; no se afirma sin dos fuentes.
+4. Cargo del Dr. Roberto Basantes en la Junta: verificar en fuente pública (BCE/Registro Oficial) antes de usarlo.
+5. Relación con el B-011: ¿la cita del 8-oct responde a ese informe? Si es así, la carta lo cita como antecedente.
