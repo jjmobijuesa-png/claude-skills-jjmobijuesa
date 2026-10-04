@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local **"JRPFM"** (PC, Claude Code desktop) — tomó la posta 2026-10-03 03:07 |
 | Espejo | Sesión nube **"JRPFM"** (antes "Ecuador financial policy blockchain integration", `session_01QzNJcA78UYwGtLdAE3Vzv9`) |
-| Último checkpoint | 2026-10-03 03:10 (Guayaquil) — PC: Drive JRPFM accesible por mobijuesa360 pero vacío; Remote Control activo |
+| Último checkpoint | 2026-10-04 14:31 (Guayaquil) — PC: plan WS1-WS8 Beneficios para Farinango (cita 8-oct 15h00) y Basantes; logo FBSE localizado |
 | Motivo del último relevo | Usuario abrió en la PC el chat «JRPFM» para continuar el de la nube |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -41,6 +41,7 @@ Productos: análisis integral de las leyes, aportes de redacción y estrategia d
 - ⭐ `archivos/analisis-02-matriz-cambios-25-06-2026.md` — matriz vigente/propuesto/a aprobarse; puertas de entrada IBPP; respuesta a la Comisión.
 
 ## Siguiente paso concreto
+**PRIORIDAD (fecha dura 8-oct-2026 15h00):** ejecutar `archivos/plan-beneficios-farinango-basantes.md` (WS1→WS8) tras confirmar sus supuestos 🚦. Luego, lo anterior:
 Redactar el memo para la Comisión (respuesta a las dos preguntas de las transitorias) y la matriz de
 inserciones IBPP: T1.ª, T2.ª, Art. innum. post 73.7, Art. innum. post 72 (vigente | a aprobarse | propuesta | justificación).
 
