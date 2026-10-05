@@ -209,3 +209,10 @@ Regenerados: unificados de 44, 43 y 43 págs., adjuntos B-017 y B-018, y la Estr
 - **Doble ruta:** `espejo_var9_fbse.py` (E ⇄ G, /XO, sin borrar, excluye .gdoc), ejecutado sin errores.
 - Skills nuevas: `espejo-doble-ruta-var9-fbse` y `estilo-entregables-publicos-fbse`. Red: 168 skills, 658 aristas.
 - 🚦 El punto 9 del mensaje de Francisco llegó cortado.
+
+## v13: Cuaderno «Asesoría EcuaLedger - FBSE» (2026-10-05)
+- Creado en mobijuesa360 (id 050e64f2): 48 fuentes (leyes propuestas, derecho vigente desde la web, publicaciones, presentaciones, estrategia e instructivo) y chat personalizado de «asesor de asesores» (verdad con cita, tres planos: vigente, propuesta y referencia).
+- Instructivo (md, docx, pdf) y persona en `…\1 Matriz de Acuerdos\Cuaderno Asesoria EcuaLedger\`, con espejo en G:.
+- 🚦 Falta la copia en fundacionblockchainsoberana: la cuenta no tiene sesión en el perfil de Edge de la extensión.
+- 🚦 El CLI de NotebookLM quedó roto: el servicio pasó a notebook.google.com. Detalle en la memoria `reference_cuaderno_asesoria_ecualedger_fbse`.
+- Pendiente: prueba de calidad del chat y materiales de Studio (mapa de aplicaciones). Se cortó por el límite de uso.
