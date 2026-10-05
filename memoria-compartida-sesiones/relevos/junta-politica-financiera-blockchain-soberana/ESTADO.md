@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local **"JRPFM"** (PC, Claude Code desktop) — tomó la posta 2026-10-03 03:07 |
 | Espejo | Sesión nube **"JRPFM"** (antes "Ecuador financial policy blockchain integration", `session_01QzNJcA78UYwGtLdAE3Vzv9`) |
-| Último checkpoint | 2026-10-04 17:14 (Guayaquil) — PC: v11, tesis de la secuencia (sorites) como salvaguarda en todos los entregables |
+| Último checkpoint | 2026-10-05 04:00 (Guayaquil) — PC: v12, reformas a los 3 unificados (públicos), Riel v2 cuatripartito, doble ruta E⇄G, 2 skills nuevas |
 | Motivo del último relevo | Usuario abrió en la PC el chat «JRPFM» para continuar el de la nube |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí

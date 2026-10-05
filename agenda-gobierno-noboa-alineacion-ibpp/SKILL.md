@@ -97,3 +97,5 @@ Va en **todo** entregable para autoridades:
 - **Salvaguarda:** en cada eslabón pasa el **valor jurídico y la condición sin repudio**. Por eso las tres etapas avanzan **sincronizadas**. Las reformas aisladas, inconexas o descoordinadas en el tiempo rompen la cadena: el token deja de representar un derecho exigible.
 - La Primera Etapa va antes o en paralelo. Si se retrasa, una **norma puente** de equivalencia funcional (Disposición General Segunda) protege la secuencia.
 - Los pasos se llaman **«eslabones»**. Plantilla de texto: constante `TESIS` en `…\JRPFM\_generador_paquetes\build_paquetes.py`.
+
+Ver también: [[estilo-entregables-publicos-fbse]] (línea discursiva aplicada) · [[espejo-doble-ruta-var9-fbse]].

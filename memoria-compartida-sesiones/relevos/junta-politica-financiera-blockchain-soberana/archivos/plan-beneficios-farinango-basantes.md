@@ -187,3 +187,25 @@ La cadena lógica que concluye (sorites papel→bit→token→comercialización 
 - recuadro rector en la Estrategia;
 - publicaciones 04 y 05 de LinkedIn.
 Regenerados: unificados de 44, 43 y 43 págs., adjuntos B-017 y B-018, y la Estrategia. Doctrina agregada a la skill `agenda-gobierno-noboa-alineacion-ibpp`.
+
+## v12: reformas de Francisco a los entregables públicos (2026-10-04)
+1. Sin notas al autor (gris o cursiva) ni rótulos violeta de NotebookLM (modo `FBSE_PUBLICO=1`); códigos sin «propuesto».
+2. Línea del Nuevo Ecuador: sección propia en los beneficios y menciones en las cartas (PND 2025-2029, Política Digital 2025-2030, Decretos 387 y 425).
+3. Ley Fintech como antecedente positivo del Presidente: tramitó la ley, presentó su informe y la condujo hasta su aprobación. Se quitaron la «precisión de rigor» y la fila de Viteri.
+4. Gobernanza cuatripartita en todo. «El Riel de Certeza» v2 (`…\JRPFM\El_Riel_de_Certeza - JRPFM v2 (cuatripartita).pptx/.pdf`): lámina 9 rehecha a 25 % × 4 y rótulos en inglés traducidos. Va en el unificado de Basantes, antes del cuestionario.
+5. Identidad digital integral (incluye la firma electrónica), derecho universal, permanente y definitivo: sección propia en los beneficios.
+6. Firma con «Tel. +593 993 879 355» (también en los correos .txt).
+7. Hojas de ruta por institución:
+   - Junta: sesión, resolución, norma técnica secundaria, Codificación de Resoluciones…, Sistema Nacional de Pagos;
+   - MDEP: Viceministerio de Finanzas y sus subsecretarías, pronunciamiento del ente rector, viceministerios productivos.
+8. Sin la infografía suelta (ya va dentro de la lección).
+- Paso a paso de la tesis (orden, integridad, soberanía, compacidad) en todos los recuadros.
+- Cuestionario: primero sin respuestas y al final con la elección correcta.
+- Formato:
+  - tablas a 17,6 cm, indivisibles, con encabezado repetido y celdas sin justificar;
+  - texto justificado y títulos centrados;
+  - numeración abajo a la izquierda.
+- Unificados: Farinango 46 págs., Basantes 56 y MDEP 45.
+- **Doble ruta:** `espejo_var9_fbse.py` (E ⇄ G, /XO, sin borrar, excluye .gdoc), ejecutado sin errores.
+- Skills nuevas: `espejo-doble-ruta-var9-fbse` y `estilo-entregables-publicos-fbse`. Red: 168 skills, 658 aristas.
+- 🚦 El punto 9 del mensaje de Francisco llegó cortado.
