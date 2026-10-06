@@ -51,6 +51,17 @@ cálculo de fondo; sí de terminología, denominador y prudencia tributaria. Apl
   $0,67 M (5,0%) · C 50% $1,02 M (7,5%). El proyecto es rentable aun sin la devolución.
 - **MEMORIA §25** documenta cada cambio y su motivo. Controles = 0 tras editar. Respaldo del libro en `_Versiones anteriores`.
 
+## 🚦 CORRECCIÓN DE CRITERIO — IVA no depende del fideicomiso (6-oct-2026, orden de Francisco)
+La devolución del IVA de obra **NO requiere fideicomiso**: se tramita con la calificación del proyecto
+ante el MIT + las facturas del proyecto, y **la recibe el promotor (Mobijuesa)**. Esto CONTRADICE el
+«habilitante: fideicomiso al 100% del flujo» que decía MEMORIA §23 y las láminas del deck grande.
+- Corregido en el **deck Fase 1** (láminas 5 y 7): ya no se presenta el IVA como «cedido» ni como costo.
+- **Pendiente de alinear (siguen con el criterio viejo):** el `Analisis Financiero - Decision Fase 1.docx`
+  y el `.xlsx` (línea «IVA que se renuncia ~$55.800»), el hilo WA (msg 3), y el **modelo/deck grande de
+  San Sebastián** (MEMORIA §23, lámina de devolución de IVA y bono). Confirmar con Francisco antes de tocar
+  los entregables «anteriores».
+- Ruta del proyecto cambió a **`G:\Mi unidad\3 Urbanización San Sebastian`**.
+
 ## Giro estratégico — Fase 1 Mz 01 autofinanciada (3-oct-2026)
 Reunión CEO (Omar Juez) + promotor + constructor (Gallegos-Anda): se arranca por la **Manzana 01**,
 **con capital propio, SIN BDE y SIN fideicomiso inicial**. Alcance Fase 1: 1 condominio (18 deptos a-f,
