@@ -225,3 +225,52 @@ nombrarlo al recomendarla.
 
 Relacionado: [[forense-cuelgues-y-caidas-windows]] ·
 `feedback_monitor_primario_apagado` · `feedback_camara_bloqueada_es_camara_virtual`.
+
+## Geometría de pantallas: la trampa del DPI (15-oct-2026)
+
+🚦 **Antes de «corregir» la posición de un monitor, comprobar en qué unidades se
+está midiendo.** Medir mal aquí inventa problemas que no existen.
+
+En esta máquina el panel interno va al **125%**: mide 1920 × 1080 físicos pero
+un proceso **no consciente del DPI** lo lee como **1536 × 864**. En cambio la
+posición del segundo monitor (`X=1920`) viene en píxeles **físicos**. Comparar
+ambas cifras produjo un «hueco de 384 píxeles» **que no existía**: las dos
+pantallas estaban pegadas.
+
+### La vía que sí mide bien
+No hace falta marshalar `DEVMODE` ni `QueryDisplayConfig` — ambos fallaron aquí
+(salida vacía, nombres en blanco, `outputTechnology` absurdo). Basta **hacer el
+proceso consciente del DPI** y releer `Screen.AllScreens`:
+
+```powershell
+Add-Type -TypeDefinition @"
+using System; using System.Runtime.InteropServices;
+public class Dpi { [DllImport("user32.dll")]
+  public static extern bool SetProcessDpiAwarenessContext(IntPtr v); }
+"@ -Language CSharp
+[Dpi]::SetProcessDpiAwarenessContext([IntPtr](-4))   # PER_MONITOR_AWARE_V2
+Add-Type -AssemblyName System.Windows.Forms
+[System.Windows.Forms.Screen]::AllScreens | ForEach-Object { $_.DeviceName; $_.Bounds }
+```
+
+**Compuerta barata:** si el panel interno vuelve con su resolución nativa
+(1920 × 1080 aquí, no 1536 × 864), la conciencia de DPI funcionó y las cifras ya
+son comparables. Si no, no sirve seguir.
+
+### Hueco, solapamiento y desfase
+Con las cifras físicas: `hueco = X(derecha) − (X(izquierda) + ancho(izquierda))`.
+Cero = pegadas. Y alinear por arriba (`Y=0` en ambas) con pantallas de distinta
+altura deja un **borde invisible en el tercio inferior** de la más alta; para
+centrar, `Y = (alto_mayor − alto_menor) / 2`.
+
+### Brillo
+Solo el **panel interno** expone `WmiMonitorBrightnessMethods`. Los externos
+necesitan sus botones o DDC/CI. Fijarlo:
+
+```powershell
+$m = Get-CimInstance -Namespace 'root\wmi' -ClassName WmiMonitorBrightnessMethods
+Invoke-CimMethod -InputObject $m -MethodName WmiSetBrightness -Arguments @{Timeout=0; Brightness=[byte]30}
+```
+
+Relacionado: `feedback_monitor_primario_apagado` — 🚦 esa nota dice que el LG era
+la principal desde julio; **al 15-oct-2026 la principal es el panel interno**.
