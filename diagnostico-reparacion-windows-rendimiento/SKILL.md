@@ -274,3 +274,40 @@ Invoke-CimMethod -InputObject $m -MethodName WmiSetBrightness -Arguments @{Timeo
 
 Relacionado: `feedback_monitor_primario_apagado` — 🚦 esa nota dice que el LG era
 la principal desde julio; **al 15-oct-2026 la principal es el panel interno**.
+
+## Un divisor HDMI NUNCA extiende (15-oct-2026)
+
+🚦 **Si dos monitores externos muestran lo mismo y no hay forma de extenderlos,
+mirar el CABLE antes que la configuración.** Aquí se perdió tiempo buscando un
+ajuste de Windows para un problema que era físico.
+
+**El caso:** Francisco tenía un `HDTV SPLITTER 1x4 3D 4Kx2K` entre el portátil y
+dos monitores. Un divisor toma **una** señal y la **copia** a varias salidas: es
+su función, no un defecto. Windows veía dos pantallas (portátil + «un externo»)
+aunque físicamente hubiera tres.
+
+### Los tres delatores, en orden de coste
+1. **Varios EDID con la MISMA instancia.** Decisivo y barato:
+   ```powershell
+   Get-ChildItem 'HKLM:\SYSTEM\CurrentControlSet\Enum\DISPLAY' | ForEach-Object {
+     $e=$_.PSChildName; Get-ChildItem $_.PSPath | ForEach-Object { "$e  $($_.PSChildName)" } }
+   ```
+   Aquí `GSM5ACD`, `LRX2281` y `MAC0101` compartían `4&3b88f39d&0&UID4145`:
+   **tres monitores recordados en UNA sola salida**.
+2. **`DisplaySwitch.exe /extend` y volver a contar.** Si siguen siendo las
+   mismas pantallas, Windows ya extendía y el problema no es suyo.
+3. **La foto del escritorio.** Dos pantallas con contenido idéntico y la tercera
+   distinta = la pareja cuelga del divisor.
+
+### Qué SÍ crea una segunda salida
+- **Adaptador DisplayLink** (USB-A 3.0 a HDMI) + su software. La vía fiable
+  cuando solo hay un HDMI. Exigir la marca DisplayLink: los «USB a HDMI»
+  genéricos suelen ser capturadoras. Comprime el vídeo: bien para ofimática,
+  mal para vídeo a pantalla completa.
+- **USB-C con DisplayPort alt mode** + cable directo. 🚦 **Que no haya
+  Thunderbolt NO prueba que no haya vídeo** — son cosas distintas, y deducirlo
+  así es un error. Se confirma por el logotipo DP junto al puerto, o probando.
+
+### Vías que se comprobaron CERRADAS en esta máquina
+`EShare` solo tiene componentes de audio y cámara, sin vídeo; no hay ningún
+adaptador de pantalla virtual; y un único adaptador real (Intel Iris Xe).
