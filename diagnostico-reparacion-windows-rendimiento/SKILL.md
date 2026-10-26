@@ -311,3 +311,34 @@ aunque físicamente hubiera tres.
 ### Vías que se comprobaron CERRADAS en esta máquina
 `EShare` solo tiene componentes de audio y cámara, sin vídeo; no hay ningún
 adaptador de pantalla virtual; y un único adaptador real (Intel Iris Xe).
+
+### Capturadora ≠ adaptador de pantalla (26-oct-2026)
+
+🚦 **Segundo tropiezo del mismo caso: se compró una CAPTURADORA USB-HDMI
+creyendo que ampliaría la pantalla.** Van en sentidos opuestos y por fuera son
+idénticas: un pincho con USB de un lado y HDMI del otro.
+
+| | Capturadora | Adaptador DisplayLink |
+|---|---|---|
+| Dirección | HDMI **entra** al PC | PC **sale** al HDMI |
+| Se registra como | **clase `Camera`** (`USB2 Video`) + `USB2 Digital Audio` | **adaptador de pantalla** nuevo |
+| En la caja | *capture*, *grabber*, *OBS*, *streaming* | la palabra **`DisplayLink`** |
+| Precio | 8 a 15 USD | 30 a 60 USD |
+| Instalación | enchufar y listo (UVC) | **exige controlador** de displaylink.com |
+
+**El diagnóstico en un comando:** si el aparato aparece bajo `-Class Camera` y
+`Get-PnpDevice -Class Display` sigue mostrando un solo adaptador, es
+capturadora.
+
+```powershell
+Get-PnpDevice -Class Camera -Status OK | Select-Object FriendlyName
+Get-PnpDevice -Class Display | Select-Object Status, FriendlyName
+```
+
+**Al recomendar la compra, no basta con decir «adaptador USB a HDMI»:** hay que
+exigir la palabra `DisplayLink` y avisar de que el precio bajo delata la
+capturadora. Decirlo de pasada no evitó el error.
+
+🚦 Efecto colateral que confundió más: al desenchufar el HDMI para probar la
+capturadora, el recuento de pantallas bajó de 2 a 1. Antes de diagnosticar nada,
+confirmar qué sigue conectado.
