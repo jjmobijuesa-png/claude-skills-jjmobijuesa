@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "Financial report for Mobijuesa" (PC) |
 | Espejo | Sesión nube "Espejo — Financial report for Mobijuesa" [8a8198] |
-| Último checkpoint | 2026-10-26 (v2) — libro ampliado a 12 hojas: + agua $120k, OBRAS PRELIMINARES detalladas, PUENTE DE UTILIDAD, devolución IVA; pre-op 2 vendedoras $600 sin asistente; verificado Python+Wolfram |
+| Último checkpoint | 2026-10-26 (v3) — 13 hojas: SIN participación 15% (solo IR 25%); eléctrica global $300k; obras preliminares EXCLUIDAS (ya en contrato de obra); + NOTAS EXPLICATIVAS (recupera terreno $600k + urbanización $1,7M). Neta $3,24M (22,06%), 1.ª etapa +$62,9k. Verif. Python+Wolfram |
 | Motivo del último relevo | La PC retomó la posta y volcó el estado del modelo San Sebastián para que la nube pueda continuar si la PC se queda sin saldo |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
