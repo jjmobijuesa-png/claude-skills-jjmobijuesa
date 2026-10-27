@@ -20,6 +20,17 @@ Modelo financiero y entregables de la **Urbanización San Sebastián** (Mobijues
 (presupuesto, PyG, flujo, balance, tabla de amortización BDE, normativa MIT, memoria de cálculo), deck ejecutivo
 para el CEO Ing. Omar Juez Zambrano, PDFs y documentos comerciales.
 
+## ⭐ RETORNO REAL — "utilidad escondida" (registrado 27-10-2026, idea de Ing. Gallegos-Anda)
+Los $2.300.000 ya invertidos (terreno $600.000 + urbanización inicial $1.700.000) figuran como costo
+hundido, pero el modelo los **recupera dentro del PVP**: son capital que vuelve, no desembolso futuro.
+Por eso el retorno real no es solo la utilidad neta:
+- Utilidad neta (tras IR 25%): **$2.746.700** (19,42% s/ventas $14.144.499; verif. Python).
+- (+) Terreno + urbanización recuperados: **$2.300.000**.
+- = **RETORNO TOTAL DEL PROPIETARIO: $5.046.700** ("2,3 + 2,75 = 5,05 M").
+- (+) Devolución IVA construcción recuperable $681.345 → retorno $5.728.045.
+Entregado: **PDF A4 de una hoja** `02 Financiero\Resumen Ejecutivo A4 - Presupuesto General San Sebastián.pdf`
+(HTML→Edge headless, generador `scratchpad\resumen_a4_ss.html`). Hilo WA ejecutivo rehecho con esta lectura.
+
 ## Razonamiento en curso / estado
 - **NUEVO libro «PRESUPUESTO GENERAL REVISADO - Proyecto San Sebastián.xlsx»** (en `02 Financiero`),
   construido como **sistema cerrado de fórmulas** (script `build_sistema_cerrado.py`). 10 hojas:
