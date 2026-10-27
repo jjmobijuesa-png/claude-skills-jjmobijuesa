@@ -21,12 +21,19 @@ Modelo financiero y entregables de la **Urbanización San Sebastián** (Mobijues
 para el CEO Ing. Omar Juez Zambrano, PDFs y documentos comerciales.
 
 ## Razonamiento en curso / estado
-- **Libro vivo actualizado** con: crédito BDE $1,8 M (palanca P60) a tasa 6,55% (P65) — independientes;
-  devolución de IVA no gravable; bono de capital 14 SBU (solo VIS 2.º, 90 deptos); **flujo estresado**
-  (cobranza 90 días después de terminar cada unidad; saldo mensual nunca negativo, mín +$30.000);
-  MEMORIA §23 (criterio matemático-legal del IVA) y §24 (guía para no financieros).
-- **Deck CEO (28 láminas)** con gráficos como imágenes (abre y proyecta sin cerrarse); PDFs A4 regenerados.
-- Detalle y cifras: en el libro de Drive y en la memoria local (ver `archivos/san-sebastian-modelo.md`).
+- **NUEVO libro «PRESUPUESTO GENERAL REVISADO - Proyecto San Sebastián.xlsx»** (en `02 Financiero`),
+  construido como **sistema cerrado de fórmulas** (script `build_sistema_cerrado.py`). 10 hojas:
+  PARAMETROS (22 palancas), DEPARTAMENTOS (108 líneas/unidad), VIVIENDAS (87), PRE-OPERATIVOS, RUBROS
+  (composición+trazabilidad), PyG, BALANCE GENERAL (control=0), PRIMERA ETAPA, RESUMEN EJECUTIVO, CURVA S.
+- **Mezcla NUEVA 195 u** (108 dep en 7 condominios + 76 casas 95 + 11 casas 112); ubicaciones de condominios
+  validadas por Francisco (ver skill `lectura-planos-lotes-superpuestos`).
+- **Decisiones de Francisco 26-10:** SIN BDE (100% capital propio, costo financiero $0); terreno $600.000;
+  indirectos 9,75%; eléctrica extrapolada por unidades (34.681,35÷19×195, 🚦 estimada); área social e
+  infraestructura **al 100% sobre la 1.ª etapa, SIN prorratear** (confirmado).
+- **Resultado (Python=Wolfram):** proyecto ventas $14.693.608, costos $10.474.744, utilidad neta $2.689.526
+  (18,30%), ROE 20,43%. Primera etapa: ventas $1.188.470, costos $1.097.568, neta $57.950 (4,88%),
+  caja mínima $940,67 (mar-27). Construcción $7.642.635 = RESUMEN GENERAL.
+- Herramienta Wolfram (MCP) disponible para verificación/sensibilidad. (El libro BDE anterior queda como histórico.)
 
 ## Archivos centrales
 - `archivos/san-sebastian-modelo.md` — **principal** (puntero al libro/deck/PDF en Drive + estado + metodología).
