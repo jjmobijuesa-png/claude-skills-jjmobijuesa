@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "Financial report for Mobijuesa" (PC) |
 | Espejo | Sesión nube "Espejo — Financial report for Mobijuesa" [8a8198] |
-| Último checkpoint | 2026-10-26 (v4) — 14 hojas. Obras prelim RE-incluidas (sin comunal/parque); permiso constr $80/u; devol IVA tope 6,5% SRI; 24 meses; Cond.1 = 9 venta + 9 RENTA (retenidos); hoja ALQUILERES. Proyecto vende 99 dep+87 casas: neta $2,757M (19,49%); 1.ª etapa = fase inversión, aporte neto $559,8k. Verif. Python+Wolfram |
+| Último checkpoint | 2026-10-27 (v5) — 15 hojas. + FLUJO DE CAJA GENERAL arquitectónico 24m (nov26-oct28): nunca en rojo, APORTE PROPIO MÁX $1.865.089 (mes 6/abr-27), recupera oct-27. Ventas desde dic-26, mkt desde nov-26 ($1.355/mes 3m luego 1/3), comisión 50% al 5% + 50% al desembolso, devol IVA 90d, bono a escritura. Marketing a mensual → neta proyecto $2.746.700. Fuentes: Transcripción MIT Quito + presentación NES. Verif. Python |
 | Motivo del último relevo | La PC retomó la posta y volcó el estado del modelo San Sebastián para que la nube pueda continuar si la PC se queda sin saldo |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
