@@ -31,6 +31,12 @@ Por eso el retorno real no es solo la utilidad neta:
 Entregado: **PDF A4 de una hoja** `02 Financiero\Resumen Ejecutivo A4 - Presupuesto General San Sebastián.pdf`
 (HTML→Edge headless, generador `scratchpad\resumen_a4_ss.html`). Hilo WA ejecutivo rehecho con esta lectura.
 
+**Arranque de obra tentativo: diciembre de 2026** (Condominio 1; anticipo NES nov-26, obra física dic-26 → entrega may-27).
+Añadido al PDF general. **2.º PDF A4 — PRIMERA ETAPA** `02 Financiero\Resumen Ejecutivo A4 - Primera Etapa San Sebastián.pdf`
+(generador `scratchpad\resumen_a4_etapa1.html`). Cifras 1.ª etapa (verif. Python): ventas $639.360, costos $1.199.164,
+**capital de arranque $559.804**, que vuelve como activo de renta (9 deptos retenidos $549.110) + devolución IVA $56.584 +
+bono Yapa $60.732. Contrato de obra NES = $796.594 (edificación $628.710 + área social $167.884); caja de obra mínima $941 (mar-27).
+
 ## Razonamiento en curso / estado
 - **NUEVO libro «PRESUPUESTO GENERAL REVISADO - Proyecto San Sebastián.xlsx»** (en `02 Financiero`),
   construido como **sistema cerrado de fórmulas** (script `build_sistema_cerrado.py`). 10 hojas:
