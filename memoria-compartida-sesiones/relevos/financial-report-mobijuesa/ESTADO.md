@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "Financial report for Mobijuesa" (PC) |
 | Espejo | Sesión nube "Espejo — Financial report for Mobijuesa" [8a8198] |
-| Último checkpoint | 2026-09-26 — modelo San Sebastián actualizado (flujo estresado, MEMORIA §23/§24, PPTX robusto, PDFs A4) |
+| Último checkpoint | 2026-10-26 — NUEVO libro «PRESUPUESTO GENERAL REVISADO» como sistema cerrado (10 hojas, 195 unidades, SIN BDE); verificado Python+Wolfram |
 | Motivo del último relevo | La PC retomó la posta y volcó el estado del modelo San Sebastián para que la nube pueda continuar si la PC se queda sin saldo |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
