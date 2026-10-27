@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "Financial report for Mobijuesa" (PC) |
 | Espejo | Sesión nube "Espejo — Financial report for Mobijuesa" [8a8198] |
-| Último checkpoint | 2026-10-27 (v6) — FLUJO GENERAL con motor de financiamiento: desembolso banco 90d, construcción ajustada a venta 2 años, CAPITAL PROPIO FRESCO $0 (reinversión de utilidad) + APALANCAMIENTO mínimo (pico $1.545.226 feb-27, cancelado ago-27, interés $73k), caja nunca en rojo. Neta proyecto $2.746.700. Palancas: tope aporte $0, tasa apal 10%. Pendiente: hilo WA ejecutivo (en curso). Verif. Python |
+| Último checkpoint | 2026-10-27 (v6) — FLUJO GENERAL con motor de financiamiento: desembolso banco 90d, construcción ajustada a venta 2 años, CAPITAL PROPIO FRESCO $0 (reinversión de utilidad) + APALANCAMIENTO mínimo (pico $1.545.226 feb-27, cancelado ago-27, interés $73k), caja nunca en rojo. Neta proyecto $2.746.700. Palancas: tope aporte $0, tasa apal = BDE 6,55% (verificada en Fondos BDE: financia hasta 80% costos directos, gracia en construcción). Apal máx $1.535.068 feb-27, cancelado ago-27, interés $47.204. Hilo WA ejecutivo entregado. Verif. Python |
 | Motivo del último relevo | La PC retomó la posta y volcó el estado del modelo San Sebastián para que la nube pueda continuar si la PC se queda sin saldo |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
