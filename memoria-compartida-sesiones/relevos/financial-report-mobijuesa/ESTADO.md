@@ -25,7 +25,10 @@ para el CEO Ing. Omar Juez Zambrano, PDFs y documentos comerciales.
 Contenido actual: libro Excel (18 hojas), Resumen Ejecutivo A4 General (con Tablero de decisión), Resumen Ejecutivo A4 Primera Etapa,
 Lista de Precios por Unidad (PDF), y el deck `Presentacion Marketing y Ventas (16-10-2026).pptx` (19 láminas: precios en 7, decisión al cierre).
 Se eliminaron las copias v6 sueltas de la carpeta padre `02 Financiero`. El deck también vive (espejo de trabajo) en `05 Comercial y Marketing`
-con su respaldo `- respaldo pre-cuadro.pptx`. Generador y renders (`scratchpad\build_sistema_cerrado.py`, Edge headless) ya apuntan a v1.
+con su respaldo `- respaldo pre-cuadro.pptx`.
+**Estructura de v1 (organizada 28-10-2026):** `00 ENTREGABLES` (Excel, 2 PDF A4, Lista de Precios, deck .pptx) · `01 Fuentes - Presentaciones y cronograma`
+· `02 Fuentes - Áreas y planos` · `03 Fuentes - Costos y comercial` · `04 Fuentes - Legal y MIT` · `05 Versiones anteriores`.
+**El generador escribe el Excel en `00 ENTREGABLES`** (OUT actualizado); los renders de PDF deben apuntar a esa subcarpeta.
 
 ## ⭐⭐ v7 (27-10-2026) — RUTA CANÓNICA NUEVA + actualización mayor
 **Todos los entregables viven ahora en** `G:\Mi unidad\3 Urbanización San Sebastian\02 Financiero\Presupuesto Definitivo v1`
