@@ -20,7 +20,20 @@ Modelo financiero y entregables de la **Urbanización San Sebastián** (Mobijues
 (presupuesto, PyG, flujo, balance, tabla de amortización BDE, normativa MIT, memoria de cálculo), deck ejecutivo
 para el CEO Ing. Omar Juez Zambrano, PDFs y documentos comerciales.
 
-## ⭐ RETORNO REAL — "utilidad escondida" (registrado 27-10-2026, idea de Ing. Gallegos-Anda)
+## ⭐⭐ v7 (27-10-2026) — RUTA CANÓNICA NUEVA + actualización mayor
+**Todos los entregables viven ahora en** `G:\Mi unidad\3 Urbanización San Sebastian\02 Financiero\Presupuesto Definitivo v1`
+(libro Excel + 2 PDF A4 de una hoja). Fuentes de esa carpeta. Generador: `scratchpad\build_sistema_cerrado.py` (v7).
+Cambios v7:
+- **Fechas:** primer desembolso (anticipo NES $200k) **1-nov-2026**; inicio de obra **1-dic-2026**; entrega 1.ª etapa 29-may-2027 (pág. 2 de la Presentación Ejecutiva).
+- **Áreas REALES por unidad** (RESUMEN GENERAL ULTIMO 27-10, Hoja2): T1 (18 dep)=6/planta 64,68/64,68/61,33/43,14/43,14/61,33; T2 (12 dep)=4×60/planta; 3 plantas. PVP sobre área privada; costo sobre área bruta (ancla). DEPARTAMENTOS ahora tiene piso+condominio+dormitorios por unidad.
+- **Fiscalización de obra** $1.200/mes × 24 = $28.800 (rubro separado; se quitó "fiscaliz" de indirectos).
+- **Marketing:** meses 1-2 $1.355; desde mes 3 ADS $500 + activaciones $600.
+- **Flujo estacional equilibrado:** base estable bancable 60% + estacionalidad Quevedo 40%; **80% compradores bancables precalificados cobran a ~45 días, resto a 90 días** → **pico de crédito $1.590.916 (cancelado dic-27), interés $74.613**, caja nunca en rojo. (Palancas editables en PARAMETROS.)
+- **Hojas nuevas:** CONTRATO (resumen de blindaje NES, llave en mano, garantías a primer requerimiento — SIN fideicomiso por decisión) y PROCESO MIT (compra-venta; paso ★ de score crediticio apenas hay interés real y CON autorización expresa del cliente, antes de la reserva).
+- **Resultado v7 (verif. Python):** Ventas **$13.763.090**; Costos $10.513.238; Utilidad neta **$2.437.389 (17,71%)**; Retorno total (neta + $2,3M recuperado) **$4.737.389** (+IVA $683.360 → $5.420.750). 1.ª etapa: ventas $619.240, costos $1.217.218, capital de arranque **$597.978** (respaldado por 9 retenidos $485.910 + devIVA $56.584 + bono $60.732).
+🚦 Pendiente: anclar los % de segmentos (base estable / bancable) con el doc `Presentacion Marketing y Ventas San Sebastian (16-10-2026)` (lectura quedó interrumpida). Hilos WA aún sin rehacer con cifras v7.
+
+## RETORNO REAL — "utilidad escondida" (registrado 27-10-2026, idea de Ing. Gallegos-Anda)
 Los $2.300.000 ya invertidos (terreno $600.000 + urbanización inicial $1.700.000) figuran como costo
 hundido, pero el modelo los **recupera dentro del PVP**: son capital que vuelve, no desembolso futuro.
 Por eso el retorno real no es solo la utilidad neta:
