@@ -20,6 +20,14 @@ Modelo financiero y entregables de la **Urbanización San Sebastián** (Mobijues
 (presupuesto, PyG, flujo, balance, tabla de amortización BDE, normativa MIT, memoria de cálculo), deck ejecutivo
 para el CEO Ing. Omar Juez Zambrano, PDFs y documentos comerciales.
 
+## ⭐ NOMENCLATURA DE VERSIÓN (regla permanente, 28-10-2026)
+Todo entregable lleva en el nombre `… vN (AAAA-MM-DD).<ext>`. **Cada actualización sube N y refresca la fecha** (v1→v2…),
+para no confundir con versiones ya enviadas. Entregables vivos = **v1 (2026-10-28)** en `00 ENTREGABLES`:
+`PRESUPUESTO GENERAL REVISADO - Proyecto San Sebastián v1 (2026-10-28).xlsx`, `Resumen Ejecutivo A4 - Presupuesto General San Sebastián v1 (2026-10-28).pdf`,
+`Resumen Ejecutivo A4 - Primera Etapa San Sebastián v1 (2026-10-28).pdf`, `Lista de Precios por Unidad - San Sebastián v1 (2026-10-28).pdf`,
+`Presentacion Marketing y Ventas San Sebastian (16-10-2026) v1 (2026-10-28).pptx`. El generador (OUT) y los renders deben escribir con el `vN (fecha)` vigente.
+El PDF viejo del deck en `05 Comercial y Marketing` fue eliminado (carpeta sin entregables de este tema).
+
 ## ⭐⭐⭐ DESTINO ÚNICO DE ENTREGABLES (confirmado 28-10-2026)
 **TODO entregable de este tema va a** `G:\Mi unidad\3 Urbanización San Sebastian\02 Financiero\Presupuesto Definitivo v1`.
 Contenido actual: libro Excel (18 hojas), Resumen Ejecutivo A4 General (con Tablero de decisión), Resumen Ejecutivo A4 Primera Etapa,
