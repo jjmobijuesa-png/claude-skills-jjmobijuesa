@@ -33,8 +33,11 @@ de `junta-politica-financiera-blockchain-soberana` (marco legal y paquete diplom
 - Generador: scratchpad de la sesión b0584158, `cceati\build_cceati.py`.
 
 ## Siguiente paso concreto
-Firma FirmaEC del B-022 por el Presidente de la FBSE; confirmar destinatario y canal; exportar a PDF la
-presentación (PowerPoint estaba ocupado); renumerar los borradores del MIT (B-019 ya está usado).
+(Actualizado 28-oct-2026, tarde.) La solicitud pasó a **B-023**, reorientada a la línea de ONG: plan
+estratégico de acción de divulgación, sin línea empresarial ni contactos previos. Los borradores del
+MIT quedaron renumerados B-020 a B-022. E: y G: están sincronizados. Destinatario confirmado:
+info@cceati.com.ec, desde la cuenta de la Fundación. Falta la firma FirmaEC del B-023 y el canal de
+envío: el CDP 9222 de Edge no responde. Son 22 MB en total: conviene enviarlo en dos correos.
 
 ## Pendientes / preguntas abiertas
 - Envío a la CCEATI: solo con confirmación expresa de destinatario y contenido.
