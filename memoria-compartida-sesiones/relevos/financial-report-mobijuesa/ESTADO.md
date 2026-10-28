@@ -29,6 +29,7 @@ con su respaldo `- respaldo pre-cuadro.pptx`.
 **Estructura de v1 (organizada 28-10-2026):** `00 ENTREGABLES` (Excel, 2 PDF A4, Lista de Precios, deck .pptx) · `01 Fuentes - Presentaciones y cronograma`
 · `02 Fuentes - Áreas y planos` · `03 Fuentes - Costos y comercial` · `04 Fuentes - Legal y MIT` · `05 Versiones anteriores`.
 **El generador escribe el Excel en `00 ENTREGABLES`** (OUT actualizado); los renders de PDF deben apuntar a esa subcarpeta.
+**Deck (28-10): 20 diapositivas** — lista de precios (7), **especificaciones técnicas / acabados de entrega (8, fuente NES Arq. Ávila)**, tablero de decisión (cierre, 20). Vive SOLO en `00 ENTREGABLES`; se eliminaron la copia espejo y el respaldo de `05 Comercial y Marketing` (allí queda únicamente el PDF viejo 16-10, desactualizado). ⚠ Ojo con candados `~$...pptx` huérfanos de PowerPoint: bloquean el guardado aunque el archivo esté cerrado; borrarlos y reintentar.
 
 ## ⭐⭐ v7 (27-10-2026) — RUTA CANÓNICA NUEVA + actualización mayor
 **Todos los entregables viven ahora en** `G:\Mi unidad\3 Urbanización San Sebastian\02 Financiero\Presupuesto Definitivo v1`
