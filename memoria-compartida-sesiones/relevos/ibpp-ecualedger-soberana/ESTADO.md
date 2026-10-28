@@ -39,6 +39,10 @@ MIT quedaron renumerados B-020 a B-022. E: y G: están sincronizados. Destinatar
 info@cceati.com.ec, desde la cuenta de la Fundación. Falta la firma FirmaEC del B-023 y el canal de
 envío: el CDP 9222 de Edge no responde. Son 22 MB en total: conviene enviarlo en dos correos.
 
+B-024, carta a la Presidencia de la Comisión de Soberanía: aporte a su iniciativa contra el lavado de
+activos digitales y solicitud de audiencia, más 8 adjuntos de 8,2 MB y el correo. Lista; falta la firma
+FirmaEC y el correo institucional del destinatario. El siguiente código libre es B-025.
+
 ## Pendientes / preguntas abiertas
 - Envío a la CCEATI: solo con confirmación expresa de destinatario y contenido.
 - Disco `E:` desmontado: el espejo E:⇄G: queda pendiente.
