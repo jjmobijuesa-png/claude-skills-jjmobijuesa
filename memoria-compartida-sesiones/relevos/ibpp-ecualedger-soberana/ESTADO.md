@@ -43,6 +43,15 @@ B-024, carta a la Presidencia de la Comisión de Soberanía: aporte a su iniciat
 activos digitales y solicitud de audiencia, más 8 adjuntos de 8,2 MB y el correo. Lista; falta la firma
 FirmaEC y el correo institucional del destinatario. El siguiente código libre es B-025.
 
+**29-oct-2026 — línea empresarial (Alfa Lab Ecuador S.A.S., en constitución; Etriek salió).** En
+`…\Adm Alfa Lab\07 Proy AlfaLab - Emiratis\001-a` y `001-b` quedó el paquete para el equipo del Paraguay
+(Ing. Ricardo Prieto): carta ALB-CT-001 (Word y PDF firmado), MdE-001 con sus anexos A, C y D,
+especificaciones del edificio ALB-EE-001, requisitos ALB-RQ-001, B-025 (línea FBSE, va por separado) y
+el Plan Maestro ALB-PM-001. Todo está presupuestado, salvo el retorno financiero del equipo: ese lo
+determinan ellos en su propuesta económica. Índice de uso en
+`07 …\00a GUIA DE USO DE LOS DOCUMENTOS.docx`. E: y G: están espejados. Siguiente paso: enviar el
+paquete, con confirmación expresa de Francisco.
+
 ## Pendientes / preguntas abiertas
 - Envío a la CCEATI: solo con confirmación expresa de destinatario y contenido.
 - Disco `E:` desmontado: el espejo E:⇄G: queda pendiente.
