@@ -54,4 +54,4 @@ paquete, con confirmación expresa de Francisco.
 
 ## Pendientes / preguntas abiertas
 - Envío a la CCEATI: solo con confirmación expresa de destinatario y contenido.
-- Disco `E:` desmontado: el espejo E:⇄G: queda pendiente.
+- Disco `E:` montado y espejado (29-oct-2026).
