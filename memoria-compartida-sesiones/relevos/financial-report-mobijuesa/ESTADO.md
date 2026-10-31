@@ -126,3 +126,12 @@ bono Yapa $60.732. Contrato de obra NES = $796.594 (edificación $628.710 + áre
 - Cruce de consistencia `cruce_v2.py` (scratchpad): libro ⇄ PDFs → TODO CUADRA. Motor = Excel = Wolfram.
 - Veredicto: 2/4 umbrales (margen y TIR bajo el piso); palanca precios +3 % → 4/4.
 - Pendiente: presentación v2 (lámina de precios y de decisión), skills (auditoría v2.0, control de versiones, principios financieros), memoria.
+
+## Checkpoint 2026-10-31 — v2 completa (PC)
+- `00 ENTREGABLES - v2`: libro (canon $350 + IVA, límite línea BDE en INDICADORES fila 20) + 3 PDF A4 + presentación v2 (20 láminas;
+  7 y 20 re-renderizadas, gráfico de cuotas de la lámina 11 actualizado).
+- Fuente única `fuente_v2.json` → validador `cruce_v2.py`: TODO CUADRA (libro interno, 2 huellas de imagen, 40 conceptos × documento, 0 cifras v1).
+- Skills: `auditoria-corrida-financiera-inmobiliaria` v2.0 (16 criterios), NUEVAS `control-versiones-entregables` (con scripts) y
+  `principios-financieros-puros`; mecanismo nuevo en `barrer.py`; red 181 skills / 743 aristas / 0 huérfanas.
+- Memoria: corregida la nota del proyecto (la «utilidad escondida» $5,05 M era doble conteo) + feedback nuevo.
+- Pendiente del CEO: validar reparto de casas por etapa (plano de lotes) y el 9,75 % de indirectos; decidir palanca (precios +3 % o giro a 60 días).
