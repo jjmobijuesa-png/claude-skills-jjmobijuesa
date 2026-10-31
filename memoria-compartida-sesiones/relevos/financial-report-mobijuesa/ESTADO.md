@@ -119,3 +119,10 @@ bono Yapa $60.732. Contrato de obra NES = $796.594 (edificación $628.710 + áre
 ## Pendientes / preguntas abiertas
 - Confirmar la APU detallada de la vivienda (gobierna C5 y la magnitud de la devolución de IVA).
 - Relacionado: hilo `flujo-caja-proyeccion-mobijuesa` (misma empresa; no mezclar razonamiento).
+
+## Checkpoint 2026-10-30 — v2 (PC)
+- Carpeta `00 ENTREGABLES - v2`: libro v2 (21 hojas, recalculado y guardado por Excel COM, 0 errores) + 3 PDF A4 (resumen general, primera etapa, lista de precios).
+- Costeo completo: suelo + urbanización ejecutada ($144/m² × 16.482,69 m²) entran al costo; retorno = capital recuperado + utilidad neta.
+- Cruce de consistencia `cruce_v2.py` (scratchpad): libro ⇄ PDFs → TODO CUADRA. Motor = Excel = Wolfram.
+- Veredicto: 2/4 umbrales (margen y TIR bajo el piso); palanca precios +3 % → 4/4.
+- Pendiente: presentación v2 (lámina de precios y de decisión), skills (auditoría v2.0, control de versiones, principios financieros), memoria.
