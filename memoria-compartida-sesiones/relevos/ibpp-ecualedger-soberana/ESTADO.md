@@ -60,8 +60,14 @@ paquete, con confirmación expresa de Francisco.
 
 Entregable: `…\07 Proy AlfaLab - Emiratis\001-b\ALB-HR-001` (Word y matriz Excel). Norma verificada en texto
 oficial: Ley Fintech, JPRF-T-2025-0156, SB-2025-2852 y Decreto 387. La decisión que destraba: la puerta
-del entorno de pruebas (Superintendencia de Bancos o SCVS), que define el objeto de Etriek. Faltan por
-escuchar las notas de voz de Carlos Gordillo.
+del entorno de pruebas (Superintendencia de Bancos o SCVS), que define el objeto de Etriek.
+Audios de Carlos Gordillo y del Ing. Prieto transcritos e integrados (v2 de ALB-HR-001, 10 págs., 33
+acciones). Lo nuevo:
+- la membresía solo requiere el pago;
+- reunión con Agustín para la hoja de ruta conjunta;
+- proyecto completo antes de ir a los inversionistas;
+- otras fuentes además de los EAU;
+- IBM y HP sin representación: el ingreso es consultoría y nodos.
 
 ## Pendientes / preguntas abiertas
 - Envío a la CCEATI: solo con confirmación expresa de destinatario y contenido.
