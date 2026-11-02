@@ -135,3 +135,13 @@ bono Yapa $60.732. Contrato de obra NES = $796.594 (edificación $628.710 + áre
   `principios-financieros-puros`; mecanismo nuevo en `barrer.py`; red 181 skills / 743 aristas / 0 huérfanas.
 - Memoria: corregida la nota del proyecto (la «utilidad escondida» $5,05 M era doble conteo) + feedback nuevo.
 - Pendiente del CEO: validar reparto de casas por etapa (plano de lotes) y el 9,75 % de indirectos; decidir palanca (precios +3 % o giro a 60 días).
+
+## Checkpoint 2026-11-02 — v2.1 (PC)
+- Reservas desde feb-27 (criterio conservador indicado en v7: «ingresos por ventas desde el mes 4») hasta oct-28; curva = fases del
+  Plan de Ventas (cap. 12) × FESTIVIDADES QUEVEDO (`03 Fuentes - Costos y comercial\Plan de Ventas y Actividades de Promoción.xlsx`).
+  Hoja nueva PLAN DE VENTAS (22 hojas). Aporte propio sube a $717.259,58.
+- CEO: $1.000 × m² de ÁREA VENDIBLE (incluye áreas comunales; alícuota aparte); casas $950. Listado por unidad v2 = correcto.
+- Al centavo: área de costo sin redondear (construcción $7.642.635,55 = ancla; E1 = contrato NES $796.593,82); sin redondeos
+  intermedios; PDF leen el libro; validador tol $0,005 → TODO CUADRA (73 controles). Wolfram confirma neta $1.924.506,90.
+- v2 (30-oct) movida a `00 ENTREGABLES - v2\Versiones anteriores`.
+- 🚦 Ritmo resultante unas 9 u/mes vs 3-3,25 u/mes del plan (2023) y 5 cierres/mes del deck.
