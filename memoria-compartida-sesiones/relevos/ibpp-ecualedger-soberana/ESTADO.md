@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-10-29 — paquete Alfa Lab para el equipo del Paraguay cerrado + guía de uso ALB-GU-001 |
+| Último checkpoint | 2026-11-02 — Etriek socio de la CCEATI; hoja de ruta empresarial ALB-HR-001 en 001-b |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
