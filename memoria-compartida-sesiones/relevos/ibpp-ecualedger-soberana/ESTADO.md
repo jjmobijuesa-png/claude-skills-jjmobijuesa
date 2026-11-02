@@ -74,7 +74,7 @@ Francisco Duque al 100 %. La SAS se reparte 60 % Etriek y 40 % Gordillo, con bli
 Prieto es aliado de productos y Dubái queda con mayoría de Etriek. Los fabricantes son solo proveedores y no
 aparecen en ningún documento. En 001-b quedaron ALB-SO-001 (Art. 2 de Etriek), ALB-SO-002 (estatuto de la
 SAS), ALB-EC-001 (reservado) y ALB-HR-001 v3. El MdE-001 y el Plan Maestro están alineados y sin marcas.
-Falta en G: la carta ALB-CT-001 en Word; está en E:.
+La carta ALB-CT-001 en Word quedó restaurada en G: desde E: (copia idéntica); 001-a está igual en G: y E:.
 
 ## Pendientes / preguntas abiertas
 - Envío a la CCEATI: solo con confirmación expresa de destinatario y contenido.
