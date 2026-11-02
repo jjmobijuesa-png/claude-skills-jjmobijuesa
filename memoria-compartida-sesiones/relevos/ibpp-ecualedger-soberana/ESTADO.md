@@ -52,6 +52,17 @@ determinan ellos en su propuesta económica. Índice de uso en
 `07 …\00a GUIA DE USO DE LOS DOCUMENTOS.docx`. E: y G: están espejados. Siguiente paso: enviar el
 paquete, con confirmación expresa de Francisco.
 
+**2-nov-2026 — hoja de ruta empresarial.** Etriek Ecuador S.A. es socio activo de la CCEATI desde el
+30-oct-2026. Arquitectura acordada:
+- **Etriek:** software y ejecutor del entorno de pruebas.
+- **Alfa Lab Ecuador S.A.S.:** usuaria de zona franca y receptora del financiamiento.
+- **Dubái:** espejo.
+
+Entregable: `…\07 Proy AlfaLab - Emiratis\001-b\ALB-HR-001` (Word y matriz Excel). Norma verificada en texto
+oficial: Ley Fintech, JPRF-T-2025-0156, SB-2025-2852 y Decreto 387. La decisión que destraba: la puerta
+del entorno de pruebas (Superintendencia de Bancos o SCVS), que define el objeto de Etriek. Faltan por
+escuchar las notas de voz de Carlos Gordillo.
+
 ## Pendientes / preguntas abiertas
 - Envío a la CCEATI: solo con confirmación expresa de destinatario y contenido.
 - Disco `E:` montado y espejado (29-oct-2026).
