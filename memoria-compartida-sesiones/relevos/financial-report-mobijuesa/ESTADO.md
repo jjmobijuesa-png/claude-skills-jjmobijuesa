@@ -145,3 +145,11 @@ bono Yapa $60.732. Contrato de obra NES = $796.594 (edificación $628.710 + áre
   intermedios; PDF leen el libro; validador tol $0,005 → TODO CUADRA (73 controles). Wolfram confirma neta $1.924.506,90.
 - v2 (30-oct) movida a `00 ENTREGABLES - v2\Versiones anteriores`.
 - 🚦 Ritmo resultante unas 9 u/mes vs 3-3,25 u/mes del plan (2023) y 5 cierres/mes del deck.
+
+## Checkpoint 2026-11-02 — Contrato NES v2.1 (PC)
+- `00 ENTREGABLES - v2\Contrato de Construcción NES - San Sebastián v2.1 (2026-11-02).docx` (generador `gen_contrato_v21.py`, parte del
+  borrador `04 Fuentes - Legal y MIT\18.Contrato…docx`; montos en letras generados del mismo número). 1.ª etapa $796.593,82 = condominio
+  1.098,22 m² $582.539,82 + casa modelo $46.170 + área social $167.884 (comunal $98.000 + piscina/pérgolas $69.884, del libro); pagos
+  200.000 + 100.000×3 + 183.000 + 100.000 + 13.593,82; plazo 179 días (1-dic-26 → 29-may-27); garantía 5 % $39.829,69; totalidad $7.810.519,55.
+- Hoja CONTRATO del libro alineada. Validador incluye el contrato: TODO CUADRA.
+- 🚦 Sin tocar (decisión legal): INMOJUEZ vs Mobijuesa (RUC 0990798702001 en CANOA), referencias a FIDEICOMISO, «Ciudad del Río», fecha 19-oct, RUC/representante/fiscalizador en blanco.
