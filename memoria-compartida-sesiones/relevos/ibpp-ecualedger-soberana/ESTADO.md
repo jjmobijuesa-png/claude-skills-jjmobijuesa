@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-02 — Etriek socio de la CCEATI; hoja de ruta empresarial ALB-HR-001 en 001-b |
+| Último checkpoint | 2026-11-03 — Manual ALB-MG-001 con capítulo aplicado a la SAS; UD-001 v2; 001-b en seis subcarpetas |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -103,6 +103,13 @@ de Francisco. Se creó ALB-UD-002, el «Sistema de Gestión de la Innovación de
 
 Subido al cuaderno AlbaLab - CCEATI, que ahora tiene 103 fuentes, junto con la guía de uso actualizada.
 
+
+**3-nov-2026 (tarde).**
+- ALB-UD-001 v2 sin mención de la fuente aplicada.
+- Nuevo ALB-MG-001, Manual de Gerencia del Centro de Datos como I+D permanente. Su capítulo 14 aplica el sistema de innovación a los
+  casos de uso de la SAS en zona franca.
+- 001-b quedó ordenada en seis subcarpetas de nombre corto, porque Excel 2019 no abre rutas de más de 218 caracteres.
+- La guía tiene 18 fichas. El cuaderno AlbaLab - CCEATI llegó a 104 fuentes.
 ## Pendientes / preguntas abiertas
 - Envío a la CCEATI: solo con confirmación expresa de destinatario y contenido.
 - Disco `E:` montado y espejado (29-oct-2026).
