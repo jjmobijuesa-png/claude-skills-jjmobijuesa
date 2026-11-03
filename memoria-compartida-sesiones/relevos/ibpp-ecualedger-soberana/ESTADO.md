@@ -83,6 +83,9 @@ La carta ALB-CT-001 en Word quedó restaurada en G: desde E: (copia idéntica); 
 - PDF de lectura de los 8 Excel.
 - Se quitaron las referencias a los audios, que son confidenciales.
 - 24 PDF subidos al cuaderno «AlbaLab - CCEATI» (privado).
+- ALB-UD-001 «Unidad en la diversidad»: la diáspora al estilo Nubank más la guía de las Constituciones de la
+  Compañía de Jesús (cuaderno JHS). Está en 001-b en Word y PDF.
+- Subidos al cuaderno ALB-UD-001 y la matriz B-023-C en PDF; ahora tiene 102 fuentes.
 
 ## Pendientes / preguntas abiertas
 - Envío a la CCEATI: solo con confirmación expresa de destinatario y contenido.
