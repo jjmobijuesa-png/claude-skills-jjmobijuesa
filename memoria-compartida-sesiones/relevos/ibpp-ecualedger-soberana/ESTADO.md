@@ -76,6 +76,14 @@ aparecen en ningún documento. En 001-b quedaron ALB-SO-001 (Art. 2 de Etriek), 
 SAS), ALB-EC-001 (reservado) y ALB-HR-001 v3. El MdE-001 y el Plan Maestro están alineados y sin marcas.
 La carta ALB-CT-001 en Word quedó restaurada en G: desde E: (copia idéntica); 001-a está igual en G: y E:.
 
+**2-nov-2026 (noche).**
+- ALB-CE-001 Consolidado Estratégico: realidad tecnológica del Ecuador, capital de resistencia de USD 1,25 M a
+  2,14 M, marketing, ventas y perfil del vendedor.
+- Guía ALB-GU-001 v2.
+- PDF de lectura de los 8 Excel.
+- Se quitaron las referencias a los audios, que son confidenciales.
+- 24 PDF subidos al cuaderno «AlbaLab - CCEATI» (privado).
+
 ## Pendientes / preguntas abiertas
 - Envío a la CCEATI: solo con confirmación expresa de destinatario y contenido.
 - Disco `E:` montado y espejado (29-oct-2026).
