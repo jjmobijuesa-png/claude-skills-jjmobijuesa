@@ -87,6 +87,14 @@ La carta ALB-CT-001 en Word quedó restaurada en G: desde E: (copia idéntica); 
   Compañía de Jesús (cuaderno JHS). Está en 001-b en Word y PDF.
 - Subidos al cuaderno ALB-UD-001 y la matriz B-023-C en PDF; ahora tiene 102 fuentes.
 
+**🚦 2-nov-2026, 23 h — regla nueva: nada de lo creado va a carpetas compartidas.**
+- Lo hecho: todo se trasladó a una ruta privada del Drive de la PC, con espejo local. Se vaciaron las dos
+  carpetas que eran públicas (001-a y la Base Documental de la CCEATI); la de la Base Documental ya está en la
+  papelera.
+- Pendiente de Francisco: dejar en «Restringido», o enviar a la papelera, la carpeta vacía de 001-a desde su
+  cuenta.
+- Aviso: el enlace de la carta B-023 dejó de servir, así que a la CCEATI se le enviará por correo.
+
 ## Pendientes / preguntas abiertas
 - Envío a la CCEATI: solo con confirmación expresa de destinatario y contenido.
 - Disco `E:` montado y espejado (29-oct-2026).
