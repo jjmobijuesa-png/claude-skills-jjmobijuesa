@@ -95,6 +95,14 @@ La carta ALB-CT-001 en Word quedó restaurada en G: desde E: (copia idéntica); 
   cuenta.
 - Aviso: el enlace de la carta B-023 dejó de servir, así que a la CCEATI se le enviará por correo.
 
+**3-nov-2026.** La carpeta reservada está ahora en `…\CCEATI\00 RESERVADO FD - Ecosistema IBPP`, por decisión
+de Francisco. Se creó ALB-UD-002, el «Sistema de Gestión de la Innovación de los Miembros»:
+- 8 etapas, indicadores de detección temprana y 5 rutas de destino;
+- acuerdos legales y protocolo de expansión de Etriek;
+- base jesuita solo en el anexo, junto con DARPA, Palantir y Gerko.
+
+Subido al cuaderno AlbaLab - CCEATI, que ahora tiene 103 fuentes, junto con la guía de uso actualizada.
+
 ## Pendientes / preguntas abiertas
 - Envío a la CCEATI: solo con confirmación expresa de destinatario y contenido.
 - Disco `E:` montado y espejado (29-oct-2026).
