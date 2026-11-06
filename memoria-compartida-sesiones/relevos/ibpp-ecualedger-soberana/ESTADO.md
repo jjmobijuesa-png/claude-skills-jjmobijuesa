@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-03 — Manual ALB-MG-001 con capítulo aplicado a la SAS; UD-001 v2; 001-b en seis subcarpetas |
+| Último checkpoint | 2026-11-05 — Nota ALB-NR-001 para la reunión con Ontaneda; SAS Etriek y Ciarcu en revisión |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -110,6 +110,10 @@ Subido al cuaderno AlbaLab - CCEATI, que ahora tiene 103 fuentes, junto con la g
   casos de uso de la SAS en zona franca.
 - 001-b quedó ordenada en seis subcarpetas de nombre corto, porque Excel 2019 no abre rutas de más de 218 caracteres.
 - La guía tiene 18 fichas. El cuaderno AlbaLab - CCEATI llegó a 104 fuentes.
+**5-nov-2026.** Reunión con Agustín Ontaneda el viernes 6-nov a las 17h00 por Meet. Preparada la nota reservada ALB-NR-001 en `001-b\04 Reservado FD`, con investigación
+preliminar: zona franca de Riobamba sin autorización pública hallada, fondos sin respaldo público y condiciones para la SAS con Ciarcu. Nada enviado; el borrador de
+mensaje a Gordillo espera la decisión de Francisco.
+
 ## Pendientes / preguntas abiertas
 - Envío a la CCEATI: solo con confirmación expresa de destinatario y contenido.
 - Disco `E:` montado y espejado (29-oct-2026).
