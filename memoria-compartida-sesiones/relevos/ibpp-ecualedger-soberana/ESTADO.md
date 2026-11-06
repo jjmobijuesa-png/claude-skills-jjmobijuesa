@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-05 — Nota ALB-NR-001 para la reunión con Ontaneda; SAS Etriek y Ciarcu en revisión |
+| Último checkpoint | 2026-11-06 — SAS verificada; contrato constitutivo, estatuto v2 y dictamen en 03 Societario |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -113,6 +113,9 @@ Subido al cuaderno AlbaLab - CCEATI, que ahora tiene 103 fuentes, junto con la g
 **5-nov-2026.** Reunión con Agustín Ontaneda el viernes 6-nov a las 17h00 por Meet. Preparada la nota reservada ALB-NR-001 en `001-b\04 Reservado FD`, con investigación
 preliminar: zona franca de Riobamba sin autorización pública hallada, fondos sin respaldo público y condiciones para la SAS con Ciarcu. Nada enviado; el borrador de
 mensaje a Gordillo espera la decisión de Francisco.
+
+**6-nov-2026.** Verificado: la SAS admite varios socios y personas jurídicas. Hechos ALB-SO-002 v2, ALB-SO-003 (contrato constitutivo) y ALB-SO-004 (dictamen) en `001-b\03 Societario`.
+Corrección importante: el Reglamento General exige compañía nueva y objeto exclusivo, y autoriza el usuario operador. Falta corregir ALB-HR-001, ALB-PM-001 y ALB-EC-001.
 
 ## Pendientes / preguntas abiertas
 - Envío a la CCEATI: solo con confirmación expresa de destinatario y contenido.
