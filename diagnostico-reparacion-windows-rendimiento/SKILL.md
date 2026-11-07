@@ -275,6 +275,88 @@ Invoke-CimMethod -InputObject $m -MethodName WmiSetBrightness -Arguments @{Timeo
 Relacionado: `feedback_monitor_primario_apagado` — 🚦 esa nota dice que el LG era
 la principal desde julio; **al 15-oct-2026 la principal es el panel interno**.
 
+## Latencia de arranque: cuente las entradas de `Run` ANTES de culparlas (07-nov-2026)
+
+🚦 **Si las entradas de arranque son dos y las aplicaciones que se abren son treinta,
+el problema no está en las entradas: está en UN interruptor.**
+
+### El caso
+Francisco pidió corregir la latencia de arranque. `HKCU\…\Run` tenía **2 valores**
+(Claude y Edge). El tren real de inicio de sesión, reconstruido desde los procesos
+vivos, traía **unas 30 aplicaciones a lo largo de 5 min 43 s**: Fathom, Read AI,
+BlueStacks, Claude, WhatsApp, Chrome, LinkedIn, Copilot, ChatGPT, Codex, Photoshop
+Express, Edge con su sesión… Buscar treinta configuraciones habría sido el error.
+
+**El culpable es `RestartApps`:** «Reiniciar automáticamente las aplicaciones
+reiniciables al volver a iniciar sesión». **Cuando el valor NO existe, Windows 11
+reabre igual** — el valor ausente no significa apagado. Un solo DWORD:
+
+```powershell
+Set-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced' `
+  -Name RestartApps -Value 0 -Type DWord
+```
+
+### Cómo reconstruir el tren de arranque sin ser administrador
+El registro `Diagnostics-Performance` (eventos 100 y 101-110, lo que lee el
+Administrador de tareas para su columna «Impacto de inicio») **exige elevación**:
+sin ella da `UnauthorizedAccessException` y `wevtutil` responde «Acceso denegado».
+La vía sin elevación: **los procesos vivos conservan su hora de creación**.
+
+```powershell
+$boot = (Get-CimInstance Win32_OperatingSystem).LastBootUpTime
+$logon = (Get-CimInstance Win32_Process -Filter "Name='explorer.exe'" |
+          Sort-Object CreationDate | Select-Object -First 1).CreationDate
+Get-CimInstance Win32_Process | Where-Object { $_.CreationDate -ge $logon -and $_.CreationDate -le $logon.AddMinutes(6) } |
+  Sort-Object CreationDate | ForEach-Object {
+    "+{0,4}s {1,5} MB  {2}" -f [int](($_.CreationDate-$logon).TotalSeconds), [int]($_.WorkingSetSize/1MB), $_.Name }
+```
+
+🚦 **Separe arranque de inicio de sesión.** Medir desde `LastBootUpTime` solo da el
+tramo del núcleo; si el usuario inició sesión horas después, el tren que él *siente*
+cuelga de `explorer.exe`, no del arranque. Aquí `explorer.exe` arrancó **+167 352 s**
+tras el arranque: dos tramos distintos que no deben mezclarse.
+
+### Las apps de la Tienda no están en `Run`
+Catorce de ellas tenían **tarea de inicio propia**, invisible a `Win32_StartupCommand`:
+
+```powershell
+reg query "HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppModel\SystemAppData" /s /v State
+```
+
+Mapa de `State` **verificado por comportamiento** en esta máquina (no por documentación,
+que circula contradictoria): **`0` = no arranca · `1` = activada por el usuario ·
+`2` = activada por omisión**. La comprobación barata: `YourPhone=1` y `CrossDevice=1`
+sí arrancaron; `Todos=0`, `WindowsTerminal=0` y `Xbox=0` no. Poner `0` apaga, y si el
+mapa estuviera mal el peor caso es que siga arrancando: nada se rompe.
+
+🚦 **`Win32_StartupCommand` miente por exceso:** listó 12 entradas en el hive del
+usuario donde `reg query` mostraba 2. Arrastra residuos de `StartupApproved`. La
+lectura autorizada es `reg query` sobre la clave `Run`.
+
+### Lo que de verdad pesa en el arranque del equipo
+A los **+107 s** entraron de golpe **14 procesos de Dell** (TechHub, Optimizer,
+Instrumentation, Analytics, DataManager, CoreServices, UCA, Titan, Customer Connect…)
+sumando **1,2 GB** y una tormenta de disco. Son telemetría y actualización: a **Manual**
+se siguen pudiendo abrir a mano. Mismo tratamiento para McAfee WebAdvisor, Adobe ARM,
+Autodesk, FlexNet, Wondershare, HP Print Scan Doctor, EShare y Prezi.
+
+### Lo que NO se toca, y por qué
+| Pieza | Razón |
+|---|---|
+| **Waves MaxxAudio** (`WavesSysSvc64`, 230 MB) | Es el APO de audio del Dell. El audio ya costó una sesión entera (`feedback_audio_dispositivos_predeterminados`) |
+| Intel, Realtek | Mismo riesgo sobre audio y vídeo |
+| Defender | Seguridad |
+| `Office Automatic Updates 2.0` | Lleva los parches; se apagan solo sus hermanas de *logon* |
+| Servicio **AnyDesk** | Acceso remoto desde el iPad. Se retira solo el acceso directo del Inicio; el servicio queda |
+| **KMSpico** | Apagarlo puede desactivar Windows u Office. Se **informa**, no se decide |
+
+### Guion y reversión
+`C:\Users\datos\Downloads\ARRANQUE_filo_de_navaja_USUARIO.ps1` (sin elevación, con
+`-Revertir`) y `ARRANQUE_filo_de_navaja_ADMIN.bat` + `REVERTIR_ARRANQUE_ADMIN.bat`
+(un clic, respaldo en JSON, `-SoloInforme` para medir sin cambiar nada).
+
+Relacionado: [[forense-cuelgues-y-caidas-windows]] · `feedback_audio_dispositivos_predeterminados`.
+
 ## Un divisor HDMI NUNCA extiende (15-oct-2026)
 
 🚦 **Si dos monitores externos muestran lo mismo y no hay forma de extenderlos,
