@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-07 — Propuesta de holding ALB-HO-001 y consulta al abogado ALB-HO-002 |
+| Último checkpoint | 2026-11-07 — Blindaje contractual ALB-BL-001 con base legal verificada |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -118,6 +118,9 @@ mensaje a Gordillo espera la decisión de Francisco.
 Corrección importante: el Reglamento General exige compañía nueva y objeto exclusivo, y autoriza el usuario operador. Falta corregir ALB-HR-001, ALB-PM-001 y ALB-EC-001.
 
 **7-nov-2026.** Propuesta ALB-HO-001 (holding y blindaje, reservada) y hoja ALB-HO-002 para el abogado societario. Wordrich sería la administradora de la zona: sin registro público hallado. Nada enviado.
+
+**7-nov-2026.** ALB-BL-001 (blindaje contractual con el equipo desarrollador): nueve normas verificadas en textos oficiales y cláusulas
+12, 14, 14 bis, 14 ter, 14 quáter y 17 sustitutas del MdE-001. Nada enviado. Pendiente: revisión del abogado y MdE-001 v2.
 
 ## Pendientes / preguntas abiertas
 - Envío a la CCEATI: solo con confirmación expresa de destinatario y contenido.
