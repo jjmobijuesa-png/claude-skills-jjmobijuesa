@@ -20,7 +20,7 @@ description: |
   caso.
 
   Y no es solo un índice de consulta: el §4 enseña a CREAR la solución nueva a
-  partir de lo que ya existe —buscar por mecanismo y no por síntoma, los cuatro
+  partir de lo que ya existe —buscar por mecanismo y no por síntoma, los cinco
   operadores de transferencia, y la regla del salto A → C con su compuerta de
   verificación—. El objetivo no es evitar repetir trabajo: es deducir la salida
   desde material adyacente y llegar antes.
@@ -35,9 +35,9 @@ idioma_de_salida: español neutro
 nivel_madurez: constitucional
 metadata:
   type: meta
-  version: 1.2
+  version: 1.3
   created: 2026-09-09
-  actualizada: 2026-09-09 (v1.1 §4 salto A→C · v1.2 §9 la red como grafo + §10 plasticidad; alcance global vía ~/.claude/CLAUDE.md)
+  actualizada: 2026-10-11 (v1.1 §4 salto A→C · v1.2 §9 la red como grafo + §10 plasticidad · v1.3 el barrido AUTOMATIZADO en `barrer.py` con tabla de mecanismos ejecutable, §3 y §6.bis; alcance global vía ~/.claude/CLAUDE.md)
   origen: fallo real de reautenticación NotebookLM en la sesión del costeo QVP semana 37
   relacionada: llave-maestra-autoaprendizaje-ia, eficiencia-generacion-respuestas, baculo-mision-soberana
 ---
@@ -78,28 +78,38 @@ Quevepalma, Mobijuesa, Belén, EcuaLedger…).
 **Paso 0 · Parar.** No lanzar la segunda variante. Nombrar en voz alta, para
 uno mismo, qué falló exactamente.
 
-**Paso 1 · Barrer el índice de skills** (es el más barato y el que más rinde):
+**Pasos 1-3 · UN SOLO COMANDO.** El barrido de los tres niveles está
+automatizado desde el 11-oct-2026. No volver a teclear tres greps:
 
 ```bash
-grep -i -n "<palabra clave>" "C:/Users/datos/.claude/projects/C--Users-datos-Downloads/memory/skills_index.md"
+python "C:/Users/datos/.claude/skills/regla-del-primer-tropiezo/barrer.py" "<qué falló, en palabras llanas>"
 ```
 
-**Paso 2 · Barrer la memoria compartida:**
+Barre el índice de skills, el mapa de la red, la constitución, los 78 archivos
+de `memory/` y **el cuerpo entero** de las skills (`SKILL.md` + sus `.py`).
+Hace tres cosas que el grep a mano no hacía, y cuya ausencia costó caro:
+
+| Qué añade | Por qué importa |
+|---|---|
+| **Expande el síntoma a mecanismos** (§4.1) | «no encuentra el botón» se busca además como *shadow dom · iframe · virtualizada · render diferido*. El síntoma es local; el mecanismo transfiere. Tabla completa: `barrer.py --mecanismos` |
+| **Devuelve el fragmento, no el nombre** | El fallo típico es obtener una lista de rutas y no leerlas. El texto con contexto viene en la salida |
+| **Prioriza «Cómo depurar si falla»** y extrae comandos y rutas | Multiplica ×1,9 las coincidencias en secciones de depuración y ×1,5 las líneas con comando o ruta ejecutable: es lo que de verdad resuelve |
+
+Opciones: `--n <k>` archivos a mostrar · `--todo` sin recortar · `--mecanismos`
+para ver la tabla. Si devuelve `SIN COINCIDENCIAS`, improvisar está permitido y
+queda abierto el deber del paso 6.
+
+Respaldo manual, solo si el script no corre:
 
 ```bash
-grep -ril "<palabra clave>" "C:/Users/datos/.claude/projects/C--Users-datos-Downloads/memory/"
+INV="C:/Users/datos/.claude/projects/C--Users-datos-Downloads/memory"
+grep -i -n "<clave>" "$INV/skills_index.md"            # 1. el índice
+grep -ril "<clave>" "$INV/"                             # 2. la memoria
+grep -ril "<clave>" "C:/Users/datos/.claude/skills/"    # 3. el CUERPO de las skills
 ```
 
 Leer `MEMORY.md` completo si el término aparece ahí: sus banderas 🚦 suelen
 contener justamente la trampa en la que se acaba de caer.
-
-**Paso 3 · Barrer el cuerpo de las skills**, no solo sus nombres. La solución
-casi siempre vive en una sección «Cómo depurar si falla» de una skill que se
-llama de otra cosa:
-
-```bash
-grep -ril "<palabra clave>" "C:/Users/datos/.claude/skills/"
-```
 
 **Paso 4 · Leer ENTERA la skill que aparezca.** No los primeros 2.000
 caracteres. El fallo del 9-sep-2026 ocurrió por leer una skill a medias y
@@ -137,7 +147,16 @@ mecanismo** además del término literal. Si el síntoma es «el selector no
 encuentra nada», los mecanismos candidatos son *lista virtualizada*, *DOM
 cambiado*, *iframe*, *render diferido*.
 
-### 4.2 Los cuatro operadores de transferencia
+⭐ **Esa expansión ya no se hace de memoria: está codificada.** La tabla
+síntoma → mecanismos vive en `barrer.py` (constante `MECANISMOS`) y es su
+activo principal: nueve familias que cubren sesiones, automatización de
+navegador, subidas, límites de transporte, ofimática por COM, lectura de
+documentos, red, pérdida de datos y cifras que no cuadran. Verla con
+`barrer.py --mecanismos`. **Cuando un caso nuevo revele un mecanismo que no
+está en la tabla, agregarlo ahí** — es el movimiento «elevar» del §10 aplicado
+al propio barrido, y es lo que hace que la espiral suba.
+
+### 4.2 Los cinco operadores de transferencia
 
 | Operador | En qué consiste | Ejemplo real de esta casa |
 |---|---|---|
@@ -145,7 +164,7 @@ cambiado*, *iframe*, *render diferido*.
 | **Por estructura** | Misma forma de problema, dominio distinto | «Lista virtualizada → captura acumulativa con scroll» resolvió WhatsApp; sirve igual para LinkedIn, X y cualquier feed |
 | **Por inversión** | La herramienta dice que falló; preguntar si su **precondición** realmente falló | El `login` expiró por timeout **y aun así la sesión estaba viva dentro del perfil** |
 | **Por composición** | Dos medias respuestas en dos skills distintas forman una entera | `auditor-integral` dio la ruta correcta (`profiles/default`) + `login-reauth` dio la técnica (cosecha del persistente) |
-
+| **Por control** | Repetir la operación con un INSUMO QUE YA SE SABE BUENO, para separar «es el dato» de «es el entorno» | Subir a NotebookLM un PDF que ya había entrado, copiado con otro nombre: entró a la primera, lo que descartó de golpe sesión, cuaderno y cargador y dejó al archivo como único sospechoso (12-oct-2026) |
 ### 4.3 La regla del salto A → C
 
 **Sí, saltar.** Cuando el mecanismo está identificado, no hay que recorrer los
@@ -245,6 +264,49 @@ Script de referencia: `C:\Users\datos\war_room_tmp\cosechar_nlm.py`.
 **La lección transferible, que va más allá de NotebookLM:** cuando una
 herramienta «no detecta» un estado, ese estado puede existir igual. Verificar
 el estado real antes de concluir que la operación falló.
+
+## 6.bis El caso que obligó a AUTOMATIZAR el barrido (11 de octubre de 2026)
+
+El 9-sep el fallo fue no barrer. Un mes después, con la regla escrita y activa,
+**volvió a ocurrir en la misma herramienta** — y eso es el dato interesante.
+
+**Tarea:** subir 18 PDF del expediente CIARCU al cuaderno «AlbaLab - CCEATI».
+
+**Lo que el agente hizo mal — cuatro intentos de uploader propio en Playwright:**
+
+1. `aria-label "Add source"` → casó con el **selector de emoji** del cuaderno.
+2. Un **modal de novedades** tapaba la página y desviaba los clics.
+3. `expect_file_chooser` → timeout; el selector del sistema nunca abre.
+4. Botón por geometría → el diálogo correcto abre, pero `input[type=file]`
+   seguía en `False`. Siguiente variante planeada: clic por coordenadas.
+
+**Lo que dijo el usuario:** *«utiliza las skills con que lo hiciste antes…
+recuerda tus redes y las skills de autoaprendizaje»*. Y después, la orden que
+produjo este apartado: *«esa acción debes automatizar… la skill cero»*.
+
+**Dónde estaba la respuesta:** `auditor-integral-notebooklm`, última viñeta de
+«Cómo depurar si falla» — *Carga masiva de archivos (verificado 19-sep-2026)*,
+con la receta `source add` + `wait` + `rename`, las tres trampas conocidas y la
+ruta del **cargador idempotente ya escrito**,
+`E:\vars\var 5\Universidad-Abierta\subir_aula_notebooklm.py`. No se sube por
+DOM: se sube por CLI.
+
+**Por qué falló la regla estando activa.** No por desconocimiento de la
+doctrina, sino por **fricción**: el barrido eran tres greps a mano que devuelven
+nombres de archivo, y un agente a mitad de una tarea los saltea o lee solo el
+primero. Una regla que depende de la disciplina en el peor momento —justo
+cuando algo acaba de fallar— no se cumple.
+
+**La lección transferible, y es de diseño:** una compuerta de comportamiento
+que no está automatizada es una recomendación. **Si una regla de la casa se
+incumple dos veces por el mismo motivo, el arreglo no es reescribir la regla:
+es convertirla en un comando.** De ahí `barrer.py` y la tabla de mecanismos
+ejecutable del §4.1.
+
+**Verificación de aceptación:** `barrer.py "notebooklm subir fuente al
+cuaderno"` devuelve `auditor-integral-notebooklm` en el primer puesto, con las
+líneas 143-151 —la receta y la ruta del cargador— entre los fragmentos
+mostrados. Es decir: devuelve en un comando lo que costó cuatro intentos.
 
 ## 7. La métrica
 

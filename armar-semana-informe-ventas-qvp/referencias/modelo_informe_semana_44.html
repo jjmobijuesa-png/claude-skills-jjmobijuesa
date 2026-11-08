@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>QVP Semana 44</title>
+<style>
+:root{
+  --tinta:#13212e; --gris:#5a6b7a; --linea:#d4dde5; --fondo:#ffffff;
+  --azul:#1d4e78; --azul-l:#e8f0f7;
+  --ok:#1a7a4c;  --ok-l:#e6f4ec;
+  --mal:#b3261e; --mal-l:#fbeae9;
+  --avi:#a86a00; --avi-l:#fdf3e2;
+}
+@page{ size:A4 portrait; margin:8mm 9mm 6mm 9mm; }
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;background:var(--fondo);}
+body{font-family:"Segoe UI",Calibri,Arial,sans-serif; color:var(--tinta);
+     font-size:6.8pt; line-height:1.25; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+.page{width:192mm; margin:0 auto; text-align:justify;}
+.hoja2{page-break-before:always; padding-top:1mm;}
+h1,h2,h3{margin:0; font-weight:700;}
+
+header{border-bottom:.9mm solid var(--azul); padding-bottom:1.1mm; margin-bottom:2mm; text-align:center;}
+header .emp{font-size:6.3pt; letter-spacing:.9pt; color:var(--azul); font-weight:700; text-transform:uppercase;}
+header h1{font-size:12.2pt; line-height:1.1; margin:.4mm 0 .5mm;}
+header .sub{font-size:6.6pt; color:var(--gris);}
+header .meta{font-size:5.8pt; color:var(--gris); margin-top:.4mm;}
+.cinta{background:var(--azul); color:#fff; font-size:6.6pt; font-weight:700; letter-spacing:.5pt;
+       padding:1mm 2.2mm; border-radius:1mm; margin-bottom:2mm; text-transform:uppercase;}
+
+.veredicto{display:grid; grid-template-columns:1fr 1fr 1fr; gap:2.1mm; margin-bottom:2mm;}
+.veredicto>div{padding:1.4mm 1.8mm; border-radius:1mm; border-left:1.8mm solid; min-width:0;}
+.veredicto .q{font-size:7.4pt; font-weight:700; line-height:1.1; display:block; margin-bottom:.6mm;}
+.v1{background:var(--ok-l);  border-color:var(--ok);}  .v1 .q{color:var(--ok);}
+.v2{background:var(--avi-l); border-color:var(--avi);} .v2 .q{color:var(--avi);}
+.v3{background:var(--mal-l); border-color:var(--mal);} .v3 .q{color:var(--mal);}
+
+.kpis{display:grid; grid-template-columns:repeat(4,1fr); gap:2.1mm; margin-bottom:2mm;}
+.kpi{border:.25mm solid var(--linea); border-top:1.1mm solid var(--azul); border-radius:1mm;
+     padding:1.1mm 1.5mm; text-align:center; min-width:0;}
+.kpi .n{font-size:11pt; font-weight:700; line-height:1.02; color:var(--azul);}
+.kpi .t{font-size:5.6pt; color:var(--gris); text-transform:uppercase; letter-spacing:.3pt; margin-top:.6mm;}
+.kpi .d{font-size:5.9pt; margin-top:.3mm;}
+.pos{color:var(--ok); font-weight:700;} .neg{color:var(--mal); font-weight:700;}
+
+h2{font-size:7.7pt; color:var(--azul); margin:0 0 1mm;
+   border-bottom:.25mm solid var(--linea); padding-bottom:.45mm;}
+section{margin-bottom:2mm;}
+p{margin:.9mm 0 0;}
+
+table{width:100%; border-collapse:collapse; font-size:6.1pt; table-layout:fixed;}
+th,td{padding:.5mm .85mm; border-bottom:.2mm solid var(--linea); text-align:right;}
+th{background:var(--azul-l); color:var(--azul); font-weight:700; font-size:5.8pt;
+   text-transform:uppercase; letter-spacing:.2pt;}
+th:first-child,td:first-child{text-align:left; white-space:nowrap;}
+tbody tr:last-child td{border-bottom:none;}
+tr.sep td{border-top:.4mm solid var(--linea);}
+tr.tot td{border-top:.4mm solid var(--azul); font-weight:700; background:#f4f8fb;}
+td.b,th.b{font-weight:700;}
+.nota{font-size:5.7pt; color:var(--gris); margin-top:.7mm; line-height:1.2;}
+
+.cols{display:grid; grid-template-columns:1fr 1fr; gap:3.2mm;}
+.cols>*{min-width:0;}
+.c64{display:grid; grid-template-columns:1.45fr 1fr; gap:3.2mm;}
+.c64>*{min-width:0;}
+.c46{display:grid; grid-template-columns:1fr 1.45fr; gap:3.2mm;}
+.c46>*{min-width:0;}
+
+.areas{display:grid; grid-template-columns:1fr 1fr 1fr; gap:2.4mm;}
+.areas>div{background:#f7fafc; border-left:1.3mm solid var(--azul); border-radius:1mm;
+           padding:1.2mm 1.6mm; min-width:0;}
+.areas b{color:var(--azul); display:block; font-size:6.4pt; margin-bottom:.4mm;}
+
+.aviso{background:var(--avi-l); border-left:1.6mm solid var(--avi); border-radius:1mm;
+       padding:1.4mm 1.9mm; margin-bottom:2mm;}
+.aviso b{color:var(--avi);}
+
+.decisiones{background:var(--ok-l); border-left:1.8mm solid var(--ok); border-radius:1mm;
+            padding:1.5mm 2mm;}
+.decisiones h3{font-size:7.6pt; color:var(--ok); margin-bottom:.9mm;}
+.decisiones .tres{display:grid; grid-template-columns:1fr 1fr 1fr; gap:3mm;}
+.decisiones .tres>div{min-width:0;}
+
+footer{margin-top:1.6mm; padding-top:.8mm; border-top:.25mm solid var(--linea);
+       font-size:5.2pt; color:var(--gris); text-align:left; line-height:1.24;}
+</style>
+</head>
+<body>
+
+<!-- ================= HOJA 1 ================= -->
+<div class="page">
+
+<header>
+  <div class="emp">Extractora Quevepalma S.A.</div>
+  <h1>Informe ejecutivo semanal &middot; Semana 44</h1>
+  <div class="sub">Cartera, precios y competencia — evolución de las semanas 41 a 44 de 2026</div>
+  <div class="meta">Resumen para la Presidencia del Directorio &middot; Documento confidencial de uso interno &middot; 28 de octubre de 2026</div>
+</header>
+
+<div class="veredicto">
+  <div class="v1">
+    <span class="q">El margen de la guineensis se recuperó de verdad</span>
+    El costo bajó otros $30,90 y el precio a DISEBAJ no se movió: el margen real pasa de $49,52 a <b>$80,42 por tonelada</b>, el mejor del semestre. Cuatro semanas atrás esa misma tonelada perdía $3.
+  </div>
+  <div class="v2">
+    <span class="q">Pero el alto oleico se dio vuelta</span>
+    Su costo saltó $90 en una semana, de $1.190 a $1.280, y el margen cae de $130 a <b>$40</b>. Es la línea más grande en toneladas, así que el beneficio de la guineensis se compensa casi por completo.
+  </div>
+  <div class="v3">
+    <span class="q">La brecha contra el mercado nacional se duplicó</span>
+    En oleína G el mercado bajó a una banda de $1.260 a $1.310 y nosotros seguimos en <b>$1.320</b>: somos los más caros de los seis. La diferencia contra el promedio pasó de $20 a <b>$40</b> por tonelada.
+  </div>
+</div>
+
+<div class="kpis">
+  <div class="kpi"><div class="n">$80,42</div><div class="t">Margen real oleína G / t</div>
+      <div class="d">era <span class="neg">&minus;$3,00</span> en la semana 41</div></div>
+  <div class="kpi"><div class="n">$1.320</div><div class="t">Precio a DISEBAJ / t</div>
+      <div class="d">congelado desde la semana 41</div></div>
+  <div class="kpi"><div class="n">+$40</div><div class="t">Sobre el promedio nacional</div>
+      <div class="d">el más caro de <b>seis</b> proveedores</div></div>
+  <div class="kpi"><div class="n">57,7 %</div><div class="t">Peso de DISEBAJ en la cartera</div>
+      <div class="d">$3.686.009 &middot; <b>67 días</b></div></div>
+</div>
+
+<section>
+  <h2>1 &middot; Evolución de precios y márgenes, semanas 41 a 44</h2>
+  <table>
+    <colgroup><col style="width:28%"><col span="4" style="width:11.5%"><col style="width:26%"></colgroup>
+    <thead><tr><th>Dólares por tonelada</th><th>Sem 41</th><th>Sem 42</th><th>Sem 43</th><th>Sem 44</th><th>Lectura de las cuatro semanas</th></tr></thead>
+    <tbody>
+      <tr><td>Precio de venta a DISEBAJ</td><td>1.320,00</td><td>1.320,00</td><td>1.320,00</td><td class="b">1.320,00</td><td>cuatro semanas sin moverse</td></tr>
+      <tr><td>Precio de Colombia (referente)</td><td>1.320,00</td><td>1.300,00</td><td>1.280,00</td><td class="b">1.280,00</td><td><span class="neg">&minus;$40</span> &middot; se estabilizó en la 43</td></tr>
+      <tr><td>Premium de DISEBAJ vs Colombia</td><td>0,00</td><td>+20,00</td><td>+40,00</td><td class="b">+40,00</td><td>pasivo: lo produjo la caída del referente</td></tr>
+      <tr class="sep"><td>Costo oleína guineensis (G)</td><td>1.323,00</td><td>1.270,26</td><td>1.270,48</td><td class="b">1.239,58</td><td><span class="pos">&minus;$83,42</span> en cuatro semanas</td></tr>
+      <tr><td><b>Margen real sobre la venta a DISEBAJ (G)</b></td><td class="neg">&minus;3,00</td><td class="pos">+49,74</td><td class="pos">+49,52</td><td class="b pos">+80,42</td><td class="b pos">6,09 % del precio</td></tr>
+      <tr class="sep"><td>Costo oleína alto oleico (H)</td><td>1.189,00</td><td>1.256,45</td><td>1.190,00</td><td class="b neg">1.280,00</td><td><span class="neg">+$90 en una semana</span></td></tr>
+      <tr><td><b>Margen real sobre la venta a DISEBAJ (H)</b></td><td class="pos">+131,00</td><td class="pos">+63,55</td><td class="pos">+130,00</td><td class="b neg">+40,00</td><td class="b">3,03 % del precio</td></tr>
+    </tbody>
+  </table>
+  <div class="nota"><b>Lo que hay que mirar junto.</b> Las dos líneas se movieron en sentido contrario la misma semana y por la misma razón: el costo, no el precio. En cuatro semanas no hemos cambiado el precio a DISEBAJ ni una vez, de modo que todo el resultado del período lo decidió la materia prima. <b>Advertencia sobre la hoja:</b> la fila «Margen de Venta a DSJ vs Oleína G» del libro sigue calculándose contra el precio de Colombia y no contra el que se le cobra a DISEBAJ —esta semana reporta $40,42 cuando el margen real es $80,42, y la diferencia es exactamente el premium—. Este cuadro está recalculado sobre el precio facturado.</div>
+</section>
+
+<div class="c64">
+  <section>
+    <h2>2 &middot; El granel contra la competencia nacional — semana 44</h2>
+    <table>
+      <colgroup><col style="width:17%"><col style="width:13%"><col span="5" style="width:14%"></colgroup>
+      <thead><tr><th>$ / tonelada</th><th class="b">QVP</th><th>La Fabril</th><th>Ales</th><th>DANEC</th><th>EPACEM</th><th>Oleana</th></tr></thead>
+      <tbody>
+        <tr><td>Oleína G</td><td class="b neg">1.320</td><td>1.310</td><td>1.290</td><td>1.270</td><td>1.270</td><td>1.260</td></tr>
+        <tr><td>Oleína alto oleico</td><td class="b neg">1.310</td><td>1.300</td><td>1.290</td><td>1.280</td><td>1.280</td><td>1.270</td></tr>
+        <tr class="sep"><td>Promedio de los otros cinco</td><td colspan="2" style="text-align:left;">G: <b>1.280</b> &middot; AO: <b>1.284</b></td><td colspan="4" style="text-align:left;">somos <b class="neg">+$40</b> en G y <b class="neg">+$26</b> en AO</td></tr>
+      </tbody>
+    </table>
+    <p>En la semana 43 estábamos $20 por encima de DANEC y La Fabril. En la 44 el mercado se movió hacia abajo —DANEC bajó de $1.300 a $1.270— y nosotros no, de modo que la diferencia se duplicó. Somos el proveedor más caro del país en las dos oleínas, frente a seis competidores con precio informado. Conviene decidir si esa diferencia se sostiene con un argumento de servicio o si se corrige antes de que la pida el comprador, porque cualquier cliente de granel tiene ahora entre $40 y $60 por tonelada de razón para pedir una revisión.</p>
+  </section>
+
+  <section>
+    <h2>3 &middot; DISEBAJ en la góndola</h2>
+    <table>
+      <colgroup><col style="width:42%"><col style="width:18%"><col style="width:19%"><col style="width:21%"></colgroup>
+      <thead><tr><th>Producto</th><th>DISEBAJ</th><th>Promedio</th><th>Diferencia</th></tr></thead>
+      <tbody>
+        <tr><td>Botella 900 cc Rica Palma</td><td class="b">22,65</td><td>21,09</td><td class="neg">+7,4 %</td></tr>
+        <tr><td>Funda 1 litro Rica Palma</td><td class="b">18,95</td><td>17,15</td><td class="neg">+10,5 %</td></tr>
+        <tr><td>Funda 900 cc Doña Patty</td><td class="b">17,25</td><td>16,30</td><td class="neg">+5,8 %</td></tr>
+        <tr><td>Galón 5 litros Rica Palma</td><td class="b">32,20</td><td>30,69</td><td class="neg">+4,9 %</td></tr>
+        <tr><td>Bidón 20 litros Rica Palma</td><td class="b">32,20</td><td>30,75</td><td class="neg">+4,7 %</td></tr>
+      </tbody>
+    </table>
+    <p>Sin variación desde la semana 41. DISEBAJ sigue siendo el más caro en los cinco productos comparables frente a EPACEM, Monarca, Joyasol, Casero y Pura Palma, y su propia hoja de costos lo explica: la materia prima de $1.320 es el 80 % del costo de la botella de 900 cc y su margen al mayorista es de 2,7 % ahí y 4,5 % en la Doña Patty.</p>
+  </section>
+</div>
+
+<section>
+  <h2>4 &middot; Evolución de la cartera, semanas 41 a 44 — cuatro bajas seguidas</h2>
+  <div class="c46">
+    <div>
+      <table>
+        <colgroup><col style="width:34%"><col span="4" style="width:16.5%"></colgroup>
+        <thead><tr><th>Cartera de la empresa</th><th>Sem 41</th><th>Sem 42</th><th>Sem 43</th><th>Sem 44</th></tr></thead>
+        <tbody>
+          <tr><td>Saldo de cartera</td><td>7.258.230</td><td>6.826.574</td><td>6.385.815</td><td class="b pos">6.190.365</td></tr>
+          <tr><td>Por vencer</td><td>&mdash;</td><td>&mdash;</td><td>5.537.126</td><td class="b">5.542.675</td></tr>
+          <tr><td>Vencido</td><td>&mdash;</td><td>&mdash;</td><td>846.688</td><td class="b pos">647.690</td></tr>
+          <tr><td>Vencido sobre cartera</td><td>&mdash;</td><td>&mdash;</td><td>13,3 %</td><td class="b pos">10,5 %</td></tr>
+          <tr class="sep"><td>Recuperado en la semana</td><td>1.031.651</td><td>1.334.616</td><td class="b pos">977.982</td><td>&mdash;</td></tr>
+          <tr><td>Meta de recuperación</td><td>&mdash;</td><td>&mdash;</td><td>599.966</td><td>&mdash;</td></tr>
+          <tr><td>Cumplimiento</td><td>&mdash;</td><td>&mdash;</td><td class="b pos">163,0 %</td><td>&mdash;</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <p><b>Cuatro semanas de baja sostenida.</b> La cartera cayó de $7.258.230 a $6.190.365, <b>$1.067.865 menos</b> en cuatro semanas, un 14,7 %. El vencido bajó a $647.690 y pesa ya solo el 10,5 % de la cartera, cuando en la semana 41 era el 30,3 %. La cobranza de la semana 43 cumplió el <b>163 %</b> de su meta: $977.982 contra $599.966 presupuestados. Es, de lejos, el mejor desempeño del trimestre y conviene reconocerlo en el Comité.</p>
+      <p><b>Lo que no cambió y sigue pesando.</b> El último corte con detalle por cliente es el de la semana 43: DISEBAJ en <b>$3.686.009</b>, el 57,7 % de la cartera, a 67 días, con $158.074 vencidos. En trece semanas su crédito nunca bajó de $3,59 millones y el cupo de $2.000.000 sigue excedido en $1.686.009. Y esta semana su despacho pasa de 45 a <b>60 días</b> de plazo.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>5 &middot; Las demás áreas, en una línea cada una</h2>
+  <div class="areas">
+    <div><b>Cobranzas y caja</b>La recuperación de la semana 43 llegó a $977.982, el <b>163 %</b> de la meta, y los ingresos reales superaron la provisión en 63 %. Los egresos se cumplieron casi exactos, 104 %.</div>
+    <div><b>Compra de fruta</b>Proyección de la semana 44 sobre una base de <b>$190 por tonelada</b> más transporte, con costo puesto en planta de $195,66 a $215,50 según el acopio y un promedio de <b>$209,96</b> incluido Grupo Juez.</div>
+    <div><b>Compra de materiales</b>$88.028 en la semana y $2.278.980 acumulados en 2026. <b>El combustible es $46.635, el 53 % de la semana</b>, y $657.890 en el año: la línea a vigilar.</div>
+    <div><b>Control de calidad</b>Cumplimiento global de indicadores en <b>64,3 %</b>. Una sola no conformidad: 0,045 toneladas de pasta de palmiste a Pronaca por saco roto, sin queja. Focos: hierro y turbidez en agua clarificada.</div>
+    <div><b>Mantenimiento</b>Extractora por encima de objetivo en las tres métricas: disponibilidad <b>95,72 %</b>, eficiencia 90,14 % y MTTR de 1,12 horas contra un objetivo de 2. <b>Refinería en 75 % de cumplimiento contra un objetivo de 90 %.</b> Pendiente el transformador de CNEL.</div>
+  </div>
+</section>
+<footer>
+Fuentes de la hoja 1, carpeta «Sem ven 44 · área comercial»: «Seguimiento Precio DSJ vs Colombia vs Costo Oleína G - H Año 2026 SEMANA 44.xlsx», hojas «seguimiento precios» (filas 5 a 11, columnas de las semanas 41 a 44), «PRECIOS OLEINAS» (precios de la semana 44 de DANEC, Ales, La Fabril, EPACEM, Quevepalma y Oleana) y «Precios DSB vs Competencia». Cartera: cuadro «Evolución de cartera semanal» y «Estado de cartera» de los reportes del área financiera y de cartera (carpeta «área financiera y cartera»), más «MACRO - Resumen del control semanal de cartera QVP 43.xlsm», hoja «Resumen de Cartera», para el detalle por cliente de la semana 43. Sección 5: fotografías de los reportes semanales de las áreas de compra de fruta, compra de materiales, control de calidad, mantenimiento y financiera, en sus carpetas respectivas. Los márgenes reales están recalculados sobre el precio facturado a DISEBAJ; los promedios de competencia son promedios simples de las marcas con precio informado en cada línea.
+</footer>
+</div>
+
+<!-- ================= HOJA 2 ================= -->
+<div class="page hoja2">
+
+<div class="cinta">Semana 44 &middot; hoja 2 de 2 &mdash; resultados de la semana 43, programa de la 44 y las demás áreas</div>
+
+<div class="kpis">
+  <div class="kpi"><div class="n">$1,89 M</div><div class="t">Vendido en la semana 43</div>
+      <div class="d">97,8 % de la meta de $1,94 M</div></div>
+  <div class="kpi"><div class="n">5,82 %</div><div class="t">Margen real de la semana 43</div>
+      <div class="d">$110.351 sobre 2.676 toneladas</div></div>
+  <div class="kpi"><div class="n">$1,87 M</div><div class="t">Programado para la semana 44</div>
+      <div class="d"><span class="pos">+$31.682</span> sobre la meta</div></div>
+  <div class="kpi"><div class="n">81 %</div><div class="t">Del programa sale a crédito</div>
+      <div class="d">era 66 % &middot; <span class="neg">caja proyectada en rojo</span></div></div>
+</div>
+
+<section>
+  <h2>6 &middot; Ventas contra la meta, semanas 38 a 43 — la recuperación es real</h2>
+  <table>
+    <colgroup><col style="width:22%"><col span="6" style="width:10.5%"><col style="width:15%"></colgroup>
+    <thead><tr><th>Millones de dólares</th><th>Sem 38</th><th>Sem 39</th><th>Sem 40</th><th>Sem 41</th><th>Sem 42</th><th>Sem 43</th><th>Tendencia</th></tr></thead>
+    <tbody>
+      <tr><td>Meta semanal</td><td>1,845</td><td>1,855</td><td>1,915</td><td>1,875</td><td>1,895</td><td>1,936</td><td>sube sostenido</td></tr>
+      <tr><td>Vendido real</td><td>1,58</td><td class="neg">5,34</td><td>1,51</td><td>1,41</td><td>1,61</td><td class="b pos">1,89</td><td class="pos">+34 % desde la 41</td></tr>
+      <tr><td>Cumplimiento</td><td>86 %</td><td class="neg">&mdash;</td><td>79 %</td><td class="neg">75 %</td><td>85 %</td><td class="b pos">97,8 %</td><td class="pos">el mejor del período</td></tr>
+      <tr class="sep"><td>Toneladas vendidas</td><td>2.084</td><td class="neg">5.450</td><td>1.679</td><td>1.897</td><td>2.409</td><td class="b">2.676</td><td class="pos">+41 % desde la 41</td></tr>
+    </tbody>
+  </table>
+  <div class="nota">El acumulado del año va en <b>$84,47 millones</b> sobre una meta de $100 millones: <b>84,47 %</b>. La recta final de octubre viene en franca mejora —de 75 % de cumplimiento en la semana 41 a 97,8 % en la 43— y el programa de la 44 ya supera la meta. <b>Una observación sobre el dato de la semana 39:</b> registra $5,34 millones y 5.450 toneladas, casi el triple de cualquier otra semana y muy por encima de su propia meta de $1,855 millones. Tiene toda la apariencia de un doble conteo en el acumulado; conviene que Sistemas lo revise antes de que distorsione el cierre del año.</div>
+</section>
+<div class="c64">
+  <section>
+    <h2>7 &middot; Lo que dejó realmente la semana 43, producto por producto</h2>
+    <table>
+      <colgroup><col style="width:31%"><col style="width:14%"><col style="width:10%"><col style="width:12%"><col style="width:12%"><col style="width:12%"><col style="width:9%"></colgroup>
+      <thead><tr><th>Producto</th><th>Vendido US$</th><th>Tonel.</th><th>Precio / t</th><th>Costo / t</th><th class="b">Margen US$</th><th>%</th></tr></thead>
+      <tbody>
+        <tr><td>Oleína alto oleico</td><td>611.357</td><td>468,9</td><td>1.303,78</td><td>1.148,46</td><td class="b pos">+72.833</td><td class="pos">11,9</td></tr>
+        <tr><td>Oleína guineensis</td><td>503.286</td><td>382,4</td><td>1.316,16</td><td class="neg">1.310,12</td><td class="b">+2.309</td><td class="neg">0,5</td></tr>
+        <tr><td>Palmiste guineense</td><td>153.056</td><td>474,0</td><td>322,92</td><td>301,84</td><td class="b pos">+9.992</td><td class="pos">6,5</td></tr>
+        <tr><td>Estearina refinada guineensis</td><td>134.405</td><td>129,1</td><td>1.041,33</td><td>1.054,72</td><td class="b neg">&minus;1.728</td><td class="neg">&minus;1,3</td></tr>
+        <tr><td>Aceite de palmiste</td><td>128.387</td><td>67,9</td><td>1.890,27</td><td>1.734,46</td><td class="b pos">+10.582</td><td class="pos">8,2</td></tr>
+        <tr><td>Aceite refinado de soya</td><td>104.322</td><td>66,0</td><td>1.580,63</td><td>1.650,00</td><td class="b neg">&minus;4.578</td><td class="neg">&minus;4,4</td></tr>
+        <tr><td>Estearina refinada híbrida</td><td>99.148</td><td>96,5</td><td>1.027,87</td><td>907,22</td><td class="b pos">+11.638</td><td class="pos">11,7</td></tr>
+        <tr><td>Palmiste híbrido</td><td>58.046</td><td>284,4</td><td>204,11</td><td>196,45</td><td class="b pos">+2.178</td><td class="pos">3,8</td></tr>
+        <tr><td>Margarinas</td><td>32.080</td><td>25,3</td><td>1.270,00</td><td>1.034,53</td><td class="b pos">+5.948</td><td class="pos">18,5</td></tr>
+        <tr><td>Ácido graso</td><td>30.087</td><td>33,6</td><td>896,78</td><td>909,62</td><td class="b neg">&minus;431</td><td class="neg">&minus;1,4</td></tr>
+        <tr><td>Mantecas</td><td>19.050</td><td>15,0</td><td>1.270,00</td><td>1.310,28</td><td class="b neg">&minus;604</td><td class="neg">&minus;3,2</td></tr>
+        <tr class="tot"><td>Total de la semana 43</td><td>1.894.696</td><td>2.676,3</td><td>&mdash;</td><td>&mdash;</td><td>+110.351</td><td>5,82</td></tr>
+      </tbody>
+    </table>
+    <div class="nota"><b>Tres cosas que este cuadro deja ver y las hojas de precios no.</b>
+    <b>Primera:</b> cuatro productos se vendieron por debajo del costo —soya, estearina guineensis, ácido graso y mantecas— por <b>$7.341</b> en conjunto. La soya sola perdió $4.578 sobre $104.322 vendidos.
+    <b>Segunda, y es la más importante:</b> el costo contable de la oleína guineensis en la semana 43 fue <b>$1.310,12</b> por tonelada, no los $1.270,48 que trae la hoja de seguimiento. Con el costo real, esa línea dejó <b>$6,04 por tonelada</b> y no los $49,52 que calculamos la semana pasada: sobre 382 toneladas son <b>$15.155</b> de diferencia. Conviene conciliar las dos fuentes antes de volver a fijar precio con la hoja de seguimiento.
+    <b>Tercera:</b> el margen de la semana entera, 5,82 %, lo sostienen el alto oleico y el palmiste; el 72 % de lo vendido en toneladas dejó menos del 7 %.</div>
+  </section>
+
+  <section>
+    <h2>8 &middot; El programa de la semana 44</h2>
+    <table>
+      <colgroup><col style="width:34%"><col style="width:14%"><col style="width:16%"><col style="width:18%"><col style="width:18%"></colgroup>
+      <thead><tr><th>Línea</th><th>Tonel.</th><th>Precio prom.</th><th>Total US$</th><th>A crédito</th></tr></thead>
+      <tbody>
+        <tr><td>Oleína guineensis</td><td>719,0</td><td>1.317,33</td><td class="b">947.160</td><td>69 %</td></tr>
+        <tr><td>Aceite crudo guineensis</td><td>471,0</td><td>1.144,16</td><td>538.900</td><td class="neg">100 %</td></tr>
+        <tr><td>Estearina guineensis</td><td>224,0</td><td>1.040,00</td><td>232.960</td><td>85 %</td></tr>
+        <tr><td>Palmistería</td><td>32,0</td><td>1.900,00</td><td>60.800</td><td class="neg">100 %</td></tr>
+        <tr><td>CPO híbrido</td><td>32,0</td><td>1.180,00</td><td>37.760</td><td class="neg">100 %</td></tr>
+        <tr><td>Ácido graso</td><td>33,0</td><td>900,00</td><td>29.700</td><td class="neg">100 %</td></tr>
+        <tr><td>Torta, lodos y cascarilla</td><td>800,0</td><td>&mdash;</td><td>20.600</td><td class="pos">0 %</td></tr>
+        <tr class="tot"><td>Total programado</td><td>2.311,0</td><td>&mdash;</td><td>1.867.880</td><td class="neg">81 %</td></tr>
+      </tbody>
+    </table>
+    <div class="nota"><b>Por primera vez el programa supera la meta</b> —$1.867.880 contra $1.836.198, un excedente de <b>$31.682</b>— y aparecen tres clientes nuevos pagando de contado: <b>Goodmarcom</b> (96 t de guineensis a $1.320), <b>Estrapal</b> (128 t a $1.300) y <b>Agrocomodities</b> (32 t de estearina). Es la mejor noticia comercial del mes.
+    <b>El reverso:</b> el crédito sube del 66 % al <b>81 %</b> —$1.517.630 en una sola semana— y el despacho a DISEBAJ pasa de 45 a <b>60 días</b> sin contrapartida de precio. SEMVRA baja de 95 a 10 toneladas.</div>
+  </section>
+</div>
+
+
+<section>
+  <h2>9 &middot; Transporte de fruta — quién mueve la fruta y cuánta capacidad queda ociosa</h2>
+  <div class="c46">
+    <div>
+      <table>
+        <colgroup><col style="width:48%"><col style="width:29%"><col style="width:23%"></colgroup>
+        <thead><tr><th>Quién mueve la fruta</th><th>Toneladas</th><th>Peso</th></tr></thead>
+        <tbody>
+          <tr><td><b>Omar Juez</b></td><td class="b">25.960,63</td><td class="b">29,3 %</td></tr>
+          <tr><td>Cristhian Falconi</td><td>15.180,38</td><td>17,1 %</td></tr>
+          <tr><td><b>David Juez</b></td><td>9.863,83</td><td>11,1 %</td></tr>
+          <tr><td><b>Noelia Juez</b></td><td>8.591,29</td><td>9,7 %</td></tr>
+          <tr><td>Andrés Quintuña</td><td>5.945,26</td><td>6,7 %</td></tr>
+          <tr><td>Mauricio Villavicencio</td><td>4.954,78</td><td>5,6 %</td></tr>
+          <tr><td>Gloria Zambrano</td><td>4.772,57</td><td>5,4 %</td></tr>
+          <tr class="sep"><td><b>Familia Juez (Omar, David y Noelia)</b></td><td class="b">44.415,75</td><td class="b">50,2 %</td></tr>
+          <tr><td>Los siete primeros</td><td>75.268,74</td><td class="b">85,0 %</td></tr>
+          <tr class="tot"><td>Total movido</td><td>88.572,38</td><td>100 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <p><b>Quevepalma no tiene flota propia</b>, de modo que la lectura correcta de este capítulo no es de eficiencia interna sino de a quién se le está dando el trabajo. Y la respuesta está concentrada: <b>la familia Juez mueve la mitad de toda la fruta</b> —44.415,75 toneladas de 88.572,38— y Don Omar por sí solo el <b>29,3 %</b>, más que los doce últimos proveedores juntos. Con Falconi, los siete primeros llegan al 85 %.</p>
+      <p><b>La tendencia favorece a la flota interna.</b> Entre las semanas 39 y 43 movió 6.252 toneladas contra 5.955 de los transportistas externos, y la brecha se abrió justo al final: en la semana 43 la interna llevó <b>1.430,83 toneladas</b> y la externa 993,53. En cinco semanas la interna creció 48 % y la externa cayó 24 %.</p>
+      <p><b>El punto que conviene resolver.</b> En esa misma semana la flota interna rodó al <b>40,74 %</b> de su capacidad —once vueltas de veintisiete posibles, con cuatro de nueve unidades sin salir— mientras se pagaban 993,53 toneladas de flete externo. Hay capacidad ociosa y gasto externo conviviendo en la misma semana: antes de contratar un viaje de fuera conviene que la asignación agote primero la flota interna. Y sobre la merma, 4,73 toneladas en 133 viajes del 19 al 26 de octubre, <b>dos compañías concentran el 67 %</b>: ahí hay una conversación puntual, no un problema general.</p>
+    </div>
+  </div>
+</section>
+<div class="aviso" style="background:var(--mal-l); border-left-color:var(--mal);">
+  <b style="color:var(--mal);">La alerta que no puede esperar a la próxima reunión: el flujo planificado entra en rojo.</b> El flujo de caja proyectado arranca la semana 44 con <b>&minus;$68.757</b> y la planificación de las tres semanas siguientes abre con saldos negativos de <b>&minus;$1.497.502</b> en la 45, <b>&minus;$1.482.254</b> en la 46 y <b>&minus;$586.976</b> en la 47. El motor del hueco se ve en el mismo cuadro: la compra de palma sube a más de $1,9 millones semanales y aparece un anticipo a Expalma-Pasternak de <b>$1.122.000</b>, mientras el programa de ventas de esta semana manda el <b>81 %</b> a crédito. Dicho de otro modo: vendemos por encima de la meta y aun así la caja se aprieta, porque el 81 % de esa venta no entra esta semana. La decisión de fondo no es comercial sino de calce: o se adelanta cobranza, o se escalona el anticipo, o se contrata el préstamo bancario que la propia proyección ya contempla.
+</div>
+<div class="aviso">
+  <b>Planta de jabonería: la Jefatura Comercial pide decisión esta semana.</b> Se evaluaron las dos propuestas de estudio de mercado y prefactibilidad para la inversión estimada de <b>US$ 1 millón</b>. La recomendación es <b>DATUM · SurveyData por etapas</b>, con puntaje de 4,10 contra 2,65 de Elecé: aprobar hoy solo la <b>Fase 1 por US$ 12.000 más IVA</b> (anticipo de US$ 6.000, cuatro semanas) y decidir el resto a fines de noviembre con evidencia en mano. La diferencia de fondo no es el precio sino el alcance: la propuesta de Elecé cuesta US$ 18.300 y <b>no incluye el modelo financiero</b> —CAPEX, OPEX, TIR y VAN quedan para una «Fase 3» sin cotizar—, mientras DATUM entrega Excel editable con demanda a cinco años, CAPEX clase 4 y sensibilidades, con 61 entrevistas B2B, 780 hogares y 20 clientes ocultos. Lo que se pide a la Presidencia: aprobar la Fase 1, autorizar el NDA y la entrega de costos por línea, designar un interlocutor único de planta y <b>fijar los umbrales de decisión —margen mínimo, TIR y plazo de recuperación— antes del gate</b>, que es lo que evita que el estudio llegue y la decisión siga abierta.
+</div>
+
+<div class="decisiones">
+  <h3>Decisiones que se desprenden</h3>
+  <div class="tres">
+    <div><b>1 &middot; Conciliar los dos costos antes de fijar precio.</b> La hoja de seguimiento dice $1.270,48 y la contabilidad $1.310,12 para la misma tonelada de la misma semana. Son $39,64 de diferencia y con ellos el margen de la guineensis pasa de 3,75 % a 0,46 %. Mientras no se concilien, ninguna decisión de precio está apoyada en el número correcto.</div>
+    <div><b>2 &middot; El plazo a DISEBAJ subió sin que nadie lo cobrara.</b> Pasó de 45 a 60 días esta semana. Quince días más sobre $595.320 cuestan $2.430 al 9,80 %. O se revierte el plazo, o se traslada al precio, o se registra como la concesión que es. Y el cupo de $2.000.000 sigue excedido en $1.686.009.</div>
+    <div><b>3 &middot; Aprobar la Fase 1 del estudio y fijar los umbrales.</b> US$ 12.000 para no decidir a ciegas una inversión de US$ 1 millón es 1,2 % del monto. El punto fino no es aprobar el estudio: es fijar antes del gate el margen mínimo, la TIR y el plazo de recuperación que harán que la respuesta sea sí o no.</div>
+  </div>
+</div>
+
+<footer>
+Fuentes de la hoja 2, carpeta «Sem ven 44»: «área comercial / Comite ejecutivo semana 44.pptx» —lámina 2 para los resultados reales de la semana 43 por producto y el margen totalizado, láminas 3 a 5 para el programa de despachos del 26 de octubre al 1 de noviembre y el resumen por forma de pago, láminas 7 y 8 para las gestiones comerciales—; «área comercial / Evaluacion_Propuestas_Estudio_Mercado_Planta_Jabon 2.pptx» para el comparativo de propuestas y la recomendación; Transporte de fruta: «LOGISTICA - SEMANA #43.pdf» y «ACOPIOS.pdf» fotografiados en la carpeta «área logística» —tabla de concentración por proveedor (total 88.572,38 toneladas), cuadro «Fruta Transportada por Vehículos (Interno/Externo)» de las semanas 39 a 43 y control de vueltas por placa—. Los pesos porcentuales de la tabla y los crecimientos de cinco semanas son cálculo propio sobre esas cifras. El costo financiero de los quince días adicionales a DISEBAJ es cálculo propio a la tasa de sobregiro del 9,80 % sobre base de 360 días. Los porcentajes de crédito por línea del cuadro 6 son cálculo propio sobre las condiciones de pago de cada cliente en el programa.
+</footer>
+</div>
+
+</body>
+</html>

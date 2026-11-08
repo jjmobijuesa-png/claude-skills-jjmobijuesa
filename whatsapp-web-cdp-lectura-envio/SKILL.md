@@ -136,3 +136,7 @@ Vincular WhatsApp Web **puede desvincular la app nativa de Windows** (límite de
 - `E:\vars\var 13 RedSerAk\SAS-Agua-Cerebro-Operativo\_archived_skills\sas-agua-whatsapp-envio\` — antecesora.
 - [[feedback-aprendido]] §8 (envío verificado) y §9 (revisar lo archivado antes de declarar imposible).
 - Scripts de referencia en el scratchpad de la sesión 2026-07-19 (`wa_v3.py`, `wa_kleper.py`, `wa_alvimar_send.py`).
+
+## 10. Leer sin CDP: WhatsApp Escritorio por computer-use (16-oct-2026)
+
+Si el usuario tiene WhatsApp abierto en su **Edge principal**, el puerto 9222 no responde aunque la línea de comando diga `--remote-debugging-port=9222` (Chromium 136+ lo bloquea en el perfil por defecto, §1). En computer-use, Edge solo se concede en modo **ver** (sin clics). La vía que funcionó para **leer** un grupo: pedir acceso a **WhatsApp** (app de escritorio, misma cuenta) **y a `msedgewebview2.exe`** — sin este último la ventana sale como un rectángulo negro, porque la dibuja WebView2. Con ambos: maximizar, desplazar el panel del chat hacia arriba hasta el inicio y bajar leyendo con `zoom`. Solo lectura: nunca escribir en la caja de texto sin orden expresa (§8).

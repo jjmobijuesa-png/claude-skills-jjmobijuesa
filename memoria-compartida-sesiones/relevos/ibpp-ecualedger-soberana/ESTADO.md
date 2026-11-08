@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-07 — B-026 FBSE, preguntas técnicas ALB-GR-002 y presentación ALB-PR-001 |
+| Último checkpoint | 2026-11-08 — Presentación FBSE B-027; jornada cerrada |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -129,6 +129,8 @@ Corrección importante: el Reglamento General exige compañía nueva y objeto ex
 
 **7-nov-2026 (noche, 2).** ALB-GR-002 (preguntas técnicas), B-026 (FBSE, carpeta 002) y ALB-PR-001 (presentación de 17 láminas) en G: y E:.
 Guía 00a: 27 fichas. Nada enviado. Pendiente: conciliar cláusula 12 (código abierto frente a productora) en el MdE-001 v2.
+
+**8-nov-2026 (madrugada).** B-027, presentación corta de la FBSE (10 láminas), en 002 FBSE Divulgacion (G: y E:). Guía 00a: 28 fichas. Nada enviado. Jornada cerrada con apagado a pedido de Francisco.
 
 ## Pendientes / preguntas abiertas
 - Envío a la CCEATI: solo con confirmación expresa de destinatario y contenido.

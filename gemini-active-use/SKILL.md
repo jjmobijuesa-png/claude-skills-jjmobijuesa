@@ -161,3 +161,25 @@ Script de trabajo: `listar_chats_gemini3.py` en el scratchpad de la sesión.
 
 Relacionado: [[feedback_reauth_notebooklm_cosecha]] — cuando la sesión caduque,
 cosechar con `notebooklm-login-reauth/cosechar_nlm.py` antes de nada.
+
+## 🚦 Lanzar Deep Research por automatización (VERIFICADO 2026-11-05)
+
+`ask_gemini.py` **solo envía mensajes normales**; NO activa Deep Research. La
+ruta real del UI (perfil `mob`, channel msedge), hallada por inspección del DOM:
+
+1. **Nuevo chat:** clic en `[aria-label="New chat"]`.
+2. **Activar modo:** `[aria-label="Upload & tools"]` → **"More tools"**
+   (aria-label) → opción **"Deep Research"** (vive en el submenú *More tools*,
+   NO es chip directo; por eso buscar solo "Deep Research" al inicio falla). Al
+   activarlo, el input muestra `aria-label="Deselect Deep research"`.
+3. **Pegar el prompt** en `div.ql-editor[contenteditable]` y enviar (Enter).
+4. Gemini genera un **plan de investigación** y NO arranca solo. El botón es
+   **`aria-label="Empezar la investigación"`** (ojo: "Empezar", NO
+   "Iniciar/Comenzar/Start" — un matcher con esas palabras lo pierde). Al lado:
+   "Modificar plan" y "Try again without Deep Research".
+5. Corre ~10–15 min leyendo decenas de sitios; NO esperar síncrono. Guardar la
+   URL del hilo y releer con `leer_gemini_hilo.py` cuando termine; re-ingestar el
+   informe al cuaderno con `notebooklm source add <informe.md>`.
+
+Plantillas de prompt en `E:\vars\var 5\Gemini-Pro\`. Usado por
+[[biohacking-agente-longevidad]] y [[observatorio-ficciones-geopoliticas]].

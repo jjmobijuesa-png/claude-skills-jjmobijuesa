@@ -357,6 +357,78 @@ Autodesk, FlexNet, Wondershare, HP Print Scan Doctor, EShare y Prezi.
 
 Relacionado: [[forense-cuelgues-y-caidas-windows]] · `feedback_audio_dispositivos_predeterminados`.
 
+## «Se agotó el tiempo de espera del semáforo»: mire la energía, no el disco (07-nov-2026)
+
+El Explorador falló al abrir `E:\vars\var 8\1 Urb San Sebastian\Legal SS` con
+**«Ubicación no disponible — Se agotó el tiempo de espera del semáforo»**.
+Ese texto es `ERROR_SEM_TIMEOUT` (121): **una petición de E/S al dispositivo
+venció**. No dice «disco dañado»; dice «el dispositivo no contestó a tiempo».
+
+### El mecanismo que transfiere
+
+**Un disco mecánico USB que Windows apaga cada 30 segundos se desconecta del
+bus al despertar.** El puente USB-SATA no aguanta el arranque del motor dentro
+del plazo de E/S, devuelve timeout y Windows lo retira. Vuelve solo en segundos.
+
+La prueba más limpia de que era eso y no avería: **`Get-Disk` lo vio una vez y
+no la siguiente, con un minuto entre consultas.** Ante esta sospecha, consulte
+`Get-Disk` dos veces separadas; un disco que aparece y desaparece no está roto,
+está durmiendo.
+
+### Los tres ajustes que se acumulan
+
+| Ajuste | Valor hallado | Default de Windows | Qué aporta al desastre |
+|---|---|---|---|
+| `SUB_DISK / DISKIDLE` | **30 s** (CA y CC) | 1200 s (20 min) | **La causa.** El motor para y rearranca sin parar |
+| Suspensión selectiva USB | Habilitado | Habilitado | El puerto también duerme; refuerza la anterior |
+| `UserWriteCacheSetting` | **1** (activada) | 0 en discos externos | Convierte la desconexión en **pérdida de datos** |
+
+Los dos primeros se corrigen **sin elevación**; el tercero y los concentradores
+exigen administrador.
+
+```powershell
+$g=[regex]::Match((powercfg /getactivescheme|Out-String),'([0-9a-fA-F-]{36})').Value
+powercfg /setacvalueindex $g SUB_DISK DISKIDLE 0
+powercfg /setdcvalueindex $g SUB_DISK DISKIDLE 0
+powercfg /setacvalueindex $g 2a737441-1930-4402-8d77-b2bebba308a3 48e6b7a6-50f5-4782-a5d4-53bb8f07e226 0
+powercfg /setdcvalueindex $g 2a737441-1930-4402-8d77-b2bebba308a3 48e6b7a6-50f5-4782-a5d4-53bb8f07e226 0
+powercfg /setactive SCHEME_CURRENT
+```
+
+🚦 **El GUID de la suspensión selectiva que circula en la red está mal.** No
+use `48e6b7a6-50f5-4782-9c41-9a4e3f5ad3cf`: `powercfg` responde «Parámetros no
+válidos». Léalo de la máquina con
+`powercfg /query $g 2a737441-1930-4402-8d77-b2bebba308a3`.
+
+### Cómo leer el daño
+
+`Ntfs` **evento 50** = «Error en la escritura demorada». Aquí salieron **56, todos
+en el mismo segundo**: una sola caída vaciando la caché sucia. Agrupe por marca
+de tiempo — muchos eventos en un instante son **una** desconexión, no 56 fallos.
+
+Lo decisivo es **qué NO aparece**: cero eventos de `disk` (Id 7 bloque dañado,
+Id 11 error de controladora) y cero de `storahci`. Un disco que muere los
+produce. Su ausencia descarta la avería de medio y deja la energía.
+
+```powershell
+Get-WinEvent -FilterHashtable @{LogName='System'; StartTime=(Get-Date).AddHours(-12)} |
+  Where-Object { $_.ProviderName -match 'disk|Ntfs|storahci|USBSTOR|volmgr|Kernel-PnP|usbhub' }
+```
+
+### La comprobación barata que cierra el caso
+
+Si vuelve a caerse **con el apagado del disco ya desactivado**, entonces sí es
+hardware: cable, puerto o caja. Esa es la línea divisoria, y se formula antes
+de tocar nada.
+
+### Herramientas dejadas
+
+- `C:\Users\datos\Downloads\REPARAR_DISCO_USB_ADMIN.bat` — caché de escritura a
+  «extracción rápida», concentradores USB sin apagado automático y `chkdsk /scan`
+  de solo lectura en D: y E:. Revertir: `REVERTIR_DISCO_USB_ADMIN.bat`.
+- Respaldos: `respaldo_energia_disco_usb.json` (usuario) y
+  `respaldo_disco_usb_sistema.json` (sistema).
+
 ## Un divisor HDMI NUNCA extiende (15-oct-2026)
 
 🚦 **Si dos monitores externos muestran lo mismo y no hay forma de extenderlos,

@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>QVP Semana 43</title>
+<style>
+:root{
+  --tinta:#13212e; --gris:#5a6b7a; --linea:#d4dde5; --fondo:#ffffff;
+  --azul:#1d4e78; --azul-l:#e8f0f7;
+  --ok:#1a7a4c;  --ok-l:#e6f4ec;
+  --mal:#b3261e; --mal-l:#fbeae9;
+  --avi:#a86a00; --avi-l:#fdf3e2;
+}
+@page{ size:A4 portrait; margin:8mm 9mm 6mm 9mm; }
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;background:var(--fondo);}
+body{
+  font-family:"Segoe UI",Calibri,Arial,sans-serif;
+  color:var(--tinta); font-size:6.9pt; line-height:1.26;
+  -webkit-print-color-adjust:exact; print-color-adjust:exact;
+}
+.page{width:192mm; margin:0 auto; text-align:justify;}
+h1,h2,h3{margin:0; font-weight:700;}
+
+/* ---------- cabecera ---------- */
+header{border-bottom:.9mm solid var(--azul); padding-bottom:1.2mm; margin-bottom:2.1mm; text-align:center;}
+header .emp{font-size:6.6pt; letter-spacing:.9pt; color:var(--azul); font-weight:700; text-transform:uppercase;}
+header h1{font-size:12.4pt; line-height:1.1; margin:.5mm 0 .6mm;}
+header .sub{font-size:6.7pt; color:var(--gris);}
+header .meta{font-size:5.9pt; color:var(--gris); margin-top:.5mm;}
+
+/* ---------- franja de veredicto ---------- */
+.veredicto{display:grid; grid-template-columns:1fr 1fr 1fr; gap:2.2mm; margin-bottom:2.1mm;}
+.veredicto>div{padding:1.5mm 1.9mm; border-radius:1mm; border-left:1.9mm solid;}
+.veredicto .q{font-size:7.6pt; font-weight:700; line-height:1.12; display:block; margin-bottom:.7mm;}
+.v1{background:var(--ok-l);  border-color:var(--ok);}  .v1 .q{color:var(--ok);}
+.v2{background:var(--avi-l); border-color:var(--avi);} .v2 .q{color:var(--avi);}
+.v3{background:var(--mal-l); border-color:var(--mal);} .v3 .q{color:var(--mal);}
+
+/* ---------- kpis ---------- */
+.kpis{display:grid; grid-template-columns:repeat(4,1fr); gap:2.2mm; margin-bottom:2.2mm;}
+.kpi{border:.28mm solid var(--linea); border-top:1.3mm solid var(--azul); border-radius:1mm;
+     padding:1.2mm 1.6mm; text-align:center;}
+.kpi .n{font-size:11.4pt; font-weight:700; line-height:1.02; color:var(--azul);}
+.kpi .t{font-size:5.8pt; color:var(--gris); text-transform:uppercase; letter-spacing:.3pt; margin-top:.7mm;}
+.kpi .d{font-size:6pt; margin-top:.4mm;}
+.pos{color:var(--ok); font-weight:700;} .neg{color:var(--mal); font-weight:700;}
+
+/* ---------- secciones ---------- */
+h2{font-size:7.9pt; color:var(--azul); margin:0 0 1.1mm;
+   border-bottom:.25mm solid var(--linea); padding-bottom:.5mm;}
+section{margin-bottom:2.1mm;}
+p{margin:1mm 0 0;}
+
+/* ---------- tablas ---------- */
+table{width:100%; border-collapse:collapse; font-size:6.2pt; table-layout:fixed;}
+th,td{padding:.55mm .9mm; border-bottom:.2mm solid var(--linea); text-align:right;}
+th{background:var(--azul-l); color:var(--azul); font-weight:700; font-size:5.9pt;
+   text-transform:uppercase; letter-spacing:.2pt;}
+th:first-child,td:first-child{text-align:left; white-space:nowrap;}
+tbody tr:last-child td{border-bottom:none;}
+tr.sep td{border-top:.4mm solid var(--linea);}
+td.b,th.b{font-weight:700;}
+.nota{font-size:5.8pt; color:var(--gris); margin-top:.8mm; line-height:1.22;}
+
+/* ---------- dos columnas ---------- */
+.cols{display:grid; grid-template-columns:1fr 1fr; gap:3.4mm;}
+.cols>*{min-width:0;}
+
+/* ---------- franja alternativa ---------- */
+.alterna{background:var(--azul-l); border-left:1.6mm solid var(--azul); border-radius:1mm;
+         padding:1.5mm 2mm; margin-bottom:2.1mm;}
+.alterna b{color:var(--azul);}
+
+/* ---------- decisiones ---------- */
+.decisiones{background:var(--ok-l); border-left:1.9mm solid var(--ok); border-radius:1mm;
+            padding:1.6mm 2.1mm;}
+.decisiones h3{font-size:7.8pt; color:var(--ok); margin-bottom:1mm;}
+.decisiones .tres{display:grid; grid-template-columns:1fr 1fr 1fr; gap:3.2mm;}
+.decisiones .tres>div{min-width:0;}
+
+footer{margin-top:1.8mm; padding-top:.9mm; border-top:.25mm solid var(--linea);
+       font-size:5.3pt; color:var(--gris); text-align:left; line-height:1.26;}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <div class="emp">Extractora Quevepalma S.A.</div>
+  <h1>Informe semanal de ventas &middot; Semana 43</h1>
+  <div class="sub">Cartera, precios y competencia — evolución de las semanas 40 a 43 de 2026</div>
+  <div class="meta">Resumen ejecutivo para la Presidencia del Directorio &middot; Documento confidencial de uso interno &middot; 20 de octubre de 2026</div>
+</header>
+
+<div class="veredicto">
+  <div class="v1">
+    <span class="q">La cartera se descargó, y fue DISEBAJ</span>
+    La cartera total bajó $873.790 en dos semanas. De esa baja, $841.181 —el 96 %— es DISEBAJ. Su vencido cayó de $1.030.563 a $158.074: 85 % menos en tres semanas. Es el mejor dato del trimestre.
+  </div>
+  <div class="v2">
+    <span class="q">El margen volvió, pero no por el precio</span>
+    La guineensis pasó de perder $23 por tonelada a ganar $49,52, pero no subimos el precio: el costo bajó $52,52. El precio a DISEBAJ lleva tres semanas congelado en $1.320.
+  </div>
+  <div class="v3">
+    <span class="q">Hoy somos los más caros del país</span>
+    DANEC y La Fabril venden la oleína G a $1.300; nosotros a $1.320. El premium de $40 sobre Colombia no lo ganamos: lo produjo la caída del referente colombiano.
+  </div>
+</div>
+
+<div class="kpis">
+  <div class="kpi"><div class="n">$6,39 M</div><div class="t">Cartera total QVP</div>
+      <div class="d"><span class="pos">&minus;12,0 %</span> contra la semana 41</div></div>
+  <div class="kpi"><div class="n">57,7 %</div><div class="t">Peso de DISEBAJ</div>
+      <div class="d">era 62,4 % &middot; <span class="pos">67 días</span></div></div>
+  <div class="kpi"><div class="n">$49,52</div><div class="t">Margen real oleína G / t</div>
+      <div class="d">era <span class="neg">&minus;$23,00</span> en la semana 40</div></div>
+  <div class="kpi"><div class="n">$1.320</div><div class="t">Precio a DISEBAJ / t</div>
+      <div class="d">sin cambio desde la semana 41</div></div>
+</div>
+
+<section>
+  <h2>1 &middot; Evolución de la cartera — el piso que no se toca</h2>
+  <table>
+    <colgroup><col style="width:30%"><col span="4" style="width:11.5%"><col style="width:24%"></colgroup>
+    <thead><tr><th>Control de crédito DISEBAJ</th><th>Sem 40</th><th>Sem 41</th><th>Sem 42</th><th>Sem 43</th><th>Lectura</th></tr></thead>
+    <tbody>
+      <tr><td>Crédito total</td><td>4.527.190</td><td>3.610.169</td><td>4.431.784</td><td class="b">3.686.009</td><td>nunca bajó de $3,59 M en 13 semanas</td></tr>
+      <tr><td>Valor vencido</td><td>889.894</td><td>1.030.562</td><td>606.539</td><td class="b">158.074</td><td><span class="pos">&minus;85 % en tres semanas</span></td></tr>
+      <tr><td>Cupo autorizado</td><td>2.000.000</td><td>2.000.000</td><td>2.000.000</td><td class="b">2.000.000</td><td>excedido las 13 semanas, sin excepción</td></tr>
+      <tr class="sep"><td>Exceso sobre el cupo</td><td>2.527.190</td><td>1.610.169</td><td>2.431.784</td><td class="b">1.686.009</td><td>el crédito es 1,84 veces el cupo</td></tr>
+    </tbody>
+  </table>
+  <div class="cols" style="margin-top:1.4mm;">
+    <div>
+      <table>
+        <colgroup><col style="width:46%"><col style="width:27%"><col style="width:27%"></colgroup>
+        <thead><tr><th>Cartera de toda la empresa</th><th>Semana 41</th><th>Semana 43</th></tr></thead>
+        <tbody>
+          <tr><td>Cartera total</td><td>7.259.604</td><td class="b">6.385.815</td></tr>
+          <tr><td>Vencido total</td><td>2.202.082</td><td class="b">809.847</td></tr>
+          <tr><td>Vencido sobre cartera</td><td>30,3 %</td><td class="b">12,7 %</td></tr>
+          <tr><td>DISEBAJ sobre la cartera</td><td>62,4 %</td><td class="b">57,7 %</td></tr>
+          <tr><td>Segundo deudor (La Fabril)</td><td>7,4 %</td><td class="b">11,5 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <p><b>Lo que la mejora no borra.</b> El crédito bajó de nivel pero no de naturaleza: en trece semanas nunca descendió de $3,59 millones. Se movió el vencido, no el piso. Con el cupo autorizado en $2.000.000, el saldo de la semana 43 lo supera en $1.686.009 y el piso de $3,59 millones equivale a 1,80 veces ese cupo.</p>
+      <p><b>Un dato aparte.</b> El crédito más caro ya no es el de DISEBAJ. JJ&amp;K Bossbran debe $193.535, todo vencido, con 1.609 días de mora: cuesta <b>$67.469</b> al año, más que los $53.509 de DISEBAJ, que es diecinueve veces mayor. Entre los dos consumen el 36 % del costo financiero de la cartera.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>2 &middot; Evolución de precios y márgenes — semanas 40 a 43</h2>
+  <table>
+    <colgroup><col style="width:30%"><col span="4" style="width:11.5%"><col style="width:24%"></colgroup>
+    <thead><tr><th>Dólares por tonelada</th><th>Sem 40</th><th>Sem 41</th><th>Sem 42</th><th>Sem 43</th><th>Del 40 al 43</th></tr></thead>
+    <tbody>
+      <tr><td>Precio de venta a DISEBAJ</td><td>1.300,00</td><td>1.320,00</td><td>1.320,00</td><td class="b">1.320,00</td><td>+$20 &middot; congelado hace 3 semanas</td></tr>
+      <tr><td>Precio de Colombia (referente)</td><td>1.320,00</td><td>1.320,00</td><td>1.300,00</td><td class="b">1.280,00</td><td><span class="neg">&minus;$40</span> &middot; el referente está cediendo</td></tr>
+      <tr><td>Premium de DISEBAJ vs Colombia</td><td>&minus;20,00</td><td>0,00</td><td>+20,00</td><td class="b">+40,00</td><td>pasivo: lo produjo la caída, no nosotros</td></tr>
+      <tr class="sep"><td>Costo oleína guineensis (G)</td><td>1.323,00</td><td>1.323,00</td><td>1.270,26</td><td class="b">1.270,48</td><td><span class="pos">&minus;$52,52</span> &middot; de aquí sale la mejora</td></tr>
+      <tr><td><b>Margen real sobre la venta a DISEBAJ (G)</b></td><td class="neg">&minus;23,00</td><td class="neg">&minus;3,00</td><td class="pos">+49,74</td><td class="b pos">+49,52</td><td>3,75 % del precio</td></tr>
+      <tr class="sep"><td>Costo oleína alto oleico (H)</td><td>1.189,00</td><td>1.189,00</td><td>1.256,45</td><td class="b">1.190,00</td><td>volvió al nivel de septiembre</td></tr>
+      <tr><td><b>Margen real sobre la venta a DISEBAJ (H)</b></td><td class="pos">+111,00</td><td class="pos">+131,00</td><td class="pos">+63,55</td><td class="b pos">+130,00</td><td>9,85 % del precio</td></tr>
+    </tbody>
+  </table>
+  <div class="nota"><b>Advertencia sobre la hoja de seguimiento.</b> La fila «Margen de Venta a DSJ vs Oleína G» no calcula el margen contra el precio que se le cobra a DISEBAJ sino contra el de Colombia: reporta $9,52 cuando el margen real es $49,52, y la diferencia es exactamente el premium de $40. La fila de la oleína H sí usa el precio a DISEBAJ. Este cuadro está recalculado sobre el precio facturado.</div>
+</section>
+
+<div class="cols">
+  <section>
+    <h2>3 &middot; El granel contra la competencia nacional</h2>
+    <table>
+      <colgroup><col style="width:28%"><col span="4" style="width:18%"></colgroup>
+      <thead><tr><th>Semana 43</th><th class="b">QVP</th><th>DANEC</th><th>La Fabril</th><th>Ales</th></tr></thead>
+      <tbody>
+        <tr><td>Oleína G</td><td class="b">1.320</td><td>1.300</td><td>1.300</td><td>N/D</td></tr>
+        <tr><td>Oleína H</td><td class="b">1.330</td><td>1.310</td><td>1.315</td><td>1.320</td></tr>
+        <tr class="sep"><td>Diferencia G</td><td class="b neg">+1,5 %</td><td colspan="3" style="text-align:left;">somos $20 más caros que los dos</td></tr>
+        <tr><td>Diferencia H</td><td class="b neg">+0,8 a +1,5 %</td><td colspan="3" style="text-align:left;">somos los más caros de los cuatro</td></tr>
+      </tbody>
+    </table>
+    <p>Es el hecho nuevo de la semana y cambia el marco. Veníamos midiéndonos contra Colombia, que es un referente de importación. Contra quien compite aquí por el mismo cliente, Quevepalma es hoy el proveedor más caro del país en las dos oleínas, y cualquier comprador de granel —DISEBAJ incluido— tiene veinte dólares por tonelada de razón para pedir una revisión.</p>
+  </section>
+
+  <section>
+    <h2>4 &middot; DISEBAJ en la góndola, y su propio costo</h2>
+    <table>
+      <colgroup><col style="width:40%"><col style="width:17%"><col style="width:20%"><col style="width:23%"></colgroup>
+      <thead><tr><th>Producto</th><th>DISEBAJ</th><th>Promedio</th><th>Diferencia</th></tr></thead>
+      <tbody>
+        <tr><td>Botella 900 cc Rica Palma</td><td class="b">22,65</td><td>21,09</td><td class="neg">+7,4 %</td></tr>
+        <tr><td>Funda 1 litro Rica Palma</td><td class="b">18,95</td><td>17,15</td><td class="neg">+10,5 %</td></tr>
+        <tr><td>Funda 900 cc Doña Patty</td><td class="b">17,25</td><td>16,30</td><td class="neg">+5,8 %</td></tr>
+        <tr><td>Galón 5 litros Rica Palma</td><td class="b">32,20</td><td>30,69</td><td class="neg">+4,9 %</td></tr>
+        <tr><td>Bidón 20 litros Rica Palma</td><td class="b">32,20</td><td>30,75</td><td class="neg">+4,7 %</td></tr>
+      </tbody>
+    </table>
+    <p>Sin cambio contra la semana 41: DISEBAJ sigue siendo el más caro en los cinco comparables, frente a EPACEM, Monarca, Joyasol, Casero y Pura Palma. Su propia hoja de costos explica por qué no baja: la materia prima de $1.320 es el 80 % del costo de la botella de 900 cc y su margen al mayorista es de <b>2,7 %</b> ahí y 4,5 % en la Doña Patty; solo el galón y el bidón le dejan 12,6 %. Su problema en el anaquel no es el precio que le cobramos: es su envase y su transporte.</p>
+  </section>
+</div>
+
+<div class="alterna">
+  <b>La alternativa ya está sobre la mesa, y tiene número propio.</b> La matriz costeada para La Oriental en la semana 42 dice que la misma tonelada embotellada deja entre <b>$128 y $179</b> —de 7,8 % a 10,6 %— con materia prima, maquila, empaque y flete incluidos, frente al <b>3,75 %</b> de la guineensis vendida a granel a DISEBAJ. El canal de mantecas y margarinas que la Gerencia tiene costeado apunta en la misma dirección: <b>11,24 %</b>, $159,90 por tonelada sobre un costo de $1.423,10. La conversación con Odesa Oils es sobre este mismo mecanismo, aunque las cifras de ese borrador son todavía un ejemplo por validar.
+</div>
+
+<div class="decisiones">
+  <h3>Decisiones que se desprenden</h3>
+  <div class="tres">
+    <div><b>1 &middot; Fijar por escrito lo que se ganó.</b> El vencido bajó 85 % en tres semanas: este es el momento de formalizar, no después. Convenio de pago sobre el piso de $3,59 millones, con plazo, tasa y garantía, antes de que el saldo vuelva a subir como ya pasó entre las semanas 41 y 42.</div>
+    <div><b>2 &middot; Cambiar el referente del precio.</b> Medirnos contra DANEC y La Fabril, que compiten por el mismo cliente, y no contra Colombia. Hoy estamos $20 por encima de los dos: o se sostiene esa diferencia con un argumento de servicio, o se corrige antes de que la pida el comprador.</div>
+    <div><b>3 &middot; Mover volumen fuera del granel.</b> Entre el 3,75 % del granel y el 7,8 % a 10,6 % de la matriz de La Oriental hay una diferencia que ninguna negociación de precio con DISEBAJ va a igualar. Es el mismo mecanismo que se conversa con Odesa Oils: el paso siguiente es costear ahí maquila y comisión con datos reales.</div>
+  </div>
+</div>
+
+<footer>
+Fuentes, todas de la carpeta «I Inf Sem Ventas · sem ven 43»: «Seguimiento Precio DSJ vs Colombia vs Costo Oleína G - H Año 2026 SEMANA 43.xlsx» (hojas «seguimiento precios», «Precios DSB vs Competencia», «Vtas Aceites DBJ», «venta mantecas» y «2 SEMESTRE 2026 - CRED DSJ»); «MACRO - Resumen del control semanal de cartera QVP 43.xlsm» (149 clientes, corte semana 43); «Precios Aceite la competencia 43.png». Matriz costeada de La Oriental: «neg la oriental.jpeg» y «neg la oriental b.jpeg», carpeta «sem ven 42». La propuesta a Odesa Oils se cita solo como mecanismo: sus cifras son ilustrativas y están por validar. El comparativo de cartera es contra el macro de la semana 41. Los márgenes de la sección 2 y los porcentajes de la sección 4 están recalculados sobre los precios y costos de las hojas; los promedios de la sección 4 son el promedio simple de las marcas con precio informado en cada línea. El crédito de DISEBAJ de la semana 43 viene del macro de cartera: la hoja «CRED DSJ» llega hasta la semana 42 y proyecta las siguientes.
+</footer>
+
+</div>
+</body>
+</html>

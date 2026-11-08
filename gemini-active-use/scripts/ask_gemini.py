@@ -20,11 +20,14 @@ sys.stdout.reconfigure(encoding="utf-8")
 from playwright.sync_api import sync_playwright
 
 PROFILES = {
+    # mob = perfil VIVO de mobijuesa360 (rectificacion 27-sep-2026: browser_profile_edge
+    # quedo SIN sesion; la sesion viva esta bajo profiles/<cuenta>/browser_profile).
+    "mob":    r"C:\Users\datos\.notebooklm\profiles\mobijuesa360@gmail.com\browser_profile",
     "edge":   r"C:\Users\datos\.notebooklm\browser_profile_edge",
     "jjm":    r"C:\Users\datos\.notebooklm\browser_profile_jjm",
     "fedphd": r"C:\Users\datos\.notebooklm\browser_profile_fedphd",
 }
-PROF_KEY = os.environ.get("GEM_PROFILE","edge").strip().lower()
+PROF_KEY = os.environ.get("GEM_PROFILE","mob").strip().lower()
 PROF     = PROFILES.get(PROF_KEY, PROFILES["edge"])
 OUTDIR   = r"E:\vars\var 5\Gemini-consultas"
 OPEN_T   = os.environ.get("GEM_OPEN_TITLE","").strip()

@@ -228,3 +228,10 @@ Copiar la estructura de las clases existentes (`01-winston-how-to-speak.html` en
 - Exposición: [[winston-how-to-speak-mit]] · [[neuro-oratoria-presentacion-persuasiva]]
 - Costo antes de comprometerse: [[cuantificar-antes-de-pedir]]
 - Agente que lo ejecuta: `estudios-generales`
+
+## Serie destilada de los documentos núcleo de Claude Code (12-oct-2026)
+Las clases 17 a 20 del Aula dejaron cuatro skills operativas:
+[[arnes-agentico-bucle-y-contexto]] · [[memoria-agente-claude-md-reglas]] ·
+[[mcp-conexion-ambitos-y-frontera]] · [[skills-empaquetar-procedimiento]].
+Nacieron de la auditoría de la clase 16, que midió cuáles de los 13 enlaces de un hilo
+viral tenían sustancia suficiente para una clase propia.

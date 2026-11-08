@@ -89,6 +89,80 @@ Pedir `--json` si se quieren las referencias [n] mapeadas a fuentes.
 mapa de artefactos Studio) + recomendaciones. Persistir en la carpeta del proyecto que corresponda.
 
 ## Cómo depurar si falla
+
+- **Fuente URL que nace con título «Checking your browser - reCAPTCHA»** (18-oct-2026): PubMed y otros sitios con muro anti-bots devuelven la página del captcha y `source add` la registra como `ready`. **Revisar los títulos después de cada carga por URL.** Arreglo: borrar la fuente y subir un PDF hecho desde la API oficial (PubMed: E-utilities `efetch ... rettype=abstract`, renderizado con Edge headless). Nunca intentar pasar el captcha. Precedente: `G:\Mi unidad\5 Clases-Magistrales-HTML\08-teoria-sintergica-grinberg\fuentes\04-08`.
+
+- ⭐ **`CSRF token not found in HTML. Final URL: https://notebook.google.com/` — EL CLI NO ESTÁ
+  ROTO, ESTÁ DESAPUNTADO (resuelto 11-oct-2026).** NotebookLM se mudó a
+  `notebook.google.com` («Cuaderno Géminis») y el CLI 0.5.0 solo admite
+  `notebooklm.google.com` en su lista blanca (`notebooklm/_env.py`, `_ALLOWED_BASE_HOSTS`).
+  **El token sí existe** en el HTML del dominio nuevo (`SNlM0e`, 42 caracteres, dentro de
+  `WIZ_global_data`): se comprobó con `war_room_tmp/sondeo_csrf.py`. Hacen falta **las dos
+  mitades** —el host y las cookies—, y por separado ninguna sirve:
+
+  1. **Envoltorio de dominio** `C:\Users\datos\war_room_tmp\nlm_dominio.py`: amplía
+     `_ALLOWED_BASE_HOSTS`, fija `NOTEBOOKLM_BASE_URL` y de paso compone el parche del tope
+     de 50 MiB. Se usa igual que el CLI, y `--diag` muestra el host resuelto.
+     ```bash
+     "$HOME/.notebooklm-venv/Scripts/python.exe" "C:/Users/datos/war_room_tmp/nlm_dominio.py" \
+       --profile "mobijuesa360@gmail.com" list
+     ```
+  2. **Cosechar contra el dominio VIGENTE:** `war_room_tmp/cosechar_nlm.py` ya visita
+     `notebook.google.com` (antes iba al viejo, que solo redirige). Sin esto el
+     `storage_state` no lleva cookies de ese host y el HTML llega sin sesión.
+
+  🚦 **Corrige lo que decía [[reference_cuaderno_asesoria_ecualedger_fbse]]**: la vía de la
+  extensión sobre Edge fue el apaño del 4-oct, no la única salida. Con el CLI vivo vuelve a
+  estar disponible todo el arsenal (`source add/wait/rename`, `ask`, `artifact`, `download`).
+
+- ⭐ **CUOTA DIARIA DE GENERACIÓN DE ARTEFACTOS (descubierta el 11-oct-2026).** El Studio no
+  es ilimitado: `generate` empieza a devolver *«Daily quota may be exceeded. Try again in
+  1-24 hours»* y rechaza todo lo que venga después. En la prueba entraron **15 encargos y se
+  rechazaron 17** en la misma tanda, sobre un cuaderno que ya tenía 18 artefactos.
+  Consecuencias prácticas:
+  - **Encargar en lote con `--no-wait` es mucho más rápido** que esperar pieza a pieza —el
+    Studio procesa en paralelo— pero **agota la cuota de golpe** y deja ver el techo. Encargar
+    de forma secuencial lo consume despacio y nunca choca, a costa de horas de espera.
+  - **Priorizar el orden del lote:** lo barato y rápido primero (informe, infografía) y los
+    vídeos al final, porque son los que más tardan y los primeros en perderse si la cuota cae.
+  - `--retry N` reintenta con espera exponencial, pero no sirve contra un tope **diario**.
+  - 🚦 **El fallo no es de la sesión.** No confundirlo con el CSRF: ahí el mensaje habla de
+    estructura de página; aquí habla de cuota. Recosechar no lo arregla.
+
+- ⭐⭐ **`AssertionError: Data should not be empty` ES INTERMITENTE, Y PUEDE REPETIRSE VARIAS VECES SEGUIDAS (12-oct-2026).** La nota de 19-sep decía «el reintento entra a la primera»; eso es cierto *casi* siempre, pero no es garantía. Caso medido: `index.pdf` falló **cuatro veces consecutivas**, y en una tanda posterior de cuatro archivos subidos con el mismo comando y en los mismos segundos, **tres entraron y uno falló**; ese uno entró al reintentar. Tasa observada: alrededor de 1 de cada 4-5 intentos.
+  - **Protocolo correcto:** borrar la fuente muerta (estado 5 «preparing») y reintentar, **hasta tres veces**, antes de sospechar del archivo. Es barato: cada intento cuesta entre 12 y 26 s.
+  - 🚦 **Trampa del reintento (2-nov-2026):** si el cargador corta en `add_error` y se relanza tal cual, responde «ya estaban» y no sube nada, porque su índice por título cuenta como presente la fuente muerta. Antes de relanzar, `source list --json`, borrar con `source delete <id> -n <nb> -y` las que estén en `preparing` y subir de una en una. Con eso entraron a la primera los 4 PDF que habían fallado (24 de 24).
+  - 🚦 **Hipótesis que NO se confirmó, anotada para que nadie la repita:** se creyó que el fallo lo causaba un `&` en el título del PDF (metadato que Chrome copia de `document.title`), porque al quitarlo la subida entró. **Falso**: en la tanda siguiente, un PDF *sin* `&` y con exactamente los mismos caracteres especiales que tres que sí entraron volvió a fallar. La coincidencia era el reintento, no el carácter. *(En `aula_a_pdf.py` quedó la sustitución del `&` como precaución inocua; no es la cura.)*
+  - ⭐ **El discriminador que sí vale, y que conviene correr antes de insistir:** subir un PDF **que ya se sabe que funciona**, copiado con otro nombre. Si entra, la sesión, el cuaderno y el cargador están bien; si no entra, el problema es de estado o de sesión. Un minuto, y separa «es el archivo» de «es el entorno».
+  - **Descartados por medición en el mismo caso:** no es el nombre del archivo, ni la ruta (larga, con espacios, en Drive o en disco local), ni la estructura del PDF (reescribirlo con `fitz.save(garbage=4, clean=True)` no cambia nada), ni que el tamaño sea múltiplo exacto del bloque de subida, ni que la fuente «preparing» madure sola si se la deja (no madura).
+  - ⭐⭐ **LA VARIABLE QUE SÍ SEPARA LOS CASOS: UN ARCHIVO POR INVOCACIÓN (29-oct-2026).** Medición limpia, con el discriminador por control aplicado bien: un PDF subido **solo** entró a la primera; **los mismos dos PDF en una sola invocación fallaron los dos, dos veces seguidas**; borradas las fuentes muertas y subidos **de uno en uno**, entraron los dos a la primera. Y después un tercero, también solo, a la primera. Cuatro de cuatro solos; cero de cuatro en lote.
+    **Regla práctica: subir de uno en uno.** Cuesta unos 15 s por archivo y evita el ciclo de fallo, limpieza y reintento, que cuesta mucho más. El glob del cargador sigue sirviendo para planificar con `--dry`; para subir de verdad, un archivo por comando.
+    🚦 Esto **no falsa** la nota de intermitencia de arriba —`index.pdf` falló cuatro veces estando solo—, la **acota**: hay un fallo de fondo poco frecuente, y encima el lote lo dispara de forma sistemática. Primero quitar el lote; solo si persiste estando solo, aplicar el protocolo de los tres reintentos.
+  - 🚦 **Nunca reconstruir un id completo a partir del truncado que imprime la tabla.** La tabla muestra `07c610ce-7fc6-…`; el id real terminaba distinto del que se dedujo. `source delete` **aceptó el id inventado y respondió «Deleted source: …» sin borrar nada** — un éxito falso que solo se detectó al volver a listar. **Pasar el prefijo corto** (`07c610ce`) y confiar en el emparejamiento parcial del CLI, que además imprime una línea `Matched:` con el título: esa línea es la única confirmación válida de qué se está borrando. Y **siempre volver a listar después de borrar**.
+
+- ⭐⭐ **`UNEXPECTED_ERROR` QUE SE EXTIENDE A `source delete` = LA SESIÓN SE DEGRADÓ A MITAD DE TANDA (7-nov-2026).** Hay que separarlo del `Data should not be empty` intermitente, porque el remedio es otro y el bucle de borrar-y-reintentar no lo arregla nunca.
+  - **La firma que los distingue:** el intermitente solo afecta a `source add` y el `delete` sigue funcionando. Cuando **`source delete` también devuelve `Unexpected error:` en blanco**, ya no es el fallo del cargador: es la sesión. Caso medido: tras varias subidas y borrados seguidos en la misma tanda, `add` falló dos veces y luego `delete` falló con el mismo error genérico.
+  - **El remedio:** **recosechar en caliente**, `python ~/.claude/skills/notebooklm-login-reauth/cosechar_nlm.py`, y repetir la operación. En el caso medido, el `delete` que acababa de fallar entró a la primera después de recosechar, y la subida también.
+  - **La comprobación de una línea antes de recosechar:** *«si es la sesión, el `delete` que acaba de fallar funcionará justo después de la cosecha»*. Barata y concluyente.
+  - 🚦 **No basta con cosechar al arrancar el día.** La nota de `feedback_notebooklm_rpc_50mib` dice que hay que cosechar antes del primer comando, y es cierto, pero **no es suficiente**: en una tanda larga de subidas y borrados la sesión se degrada igual. Recosechar es barato; hacerlo en cuanto el error se extiende a otra operación ahorra la ronda completa de reintentos.
+  - 🚦 **Si se borró la fuente buena para reemplazarla, el cuaderno queda sin ella hasta que entre la nueva.** Al sustituir una fuente por una versión corregida, no dar por terminada la operación hasta volver a listar y verla en `ready`.
+
+- ⭐ **Cargador genérico de fuentes (11-oct-2026):**
+  `~/.claude/skills/auditor-integral-notebooklm/scripts/subir_fuentes_notebooklm.py` —
+  idempotente, acepta globs o carpetas, pone prefijo al título, renombra tras subir, limpia
+  la fuente muerta y llama al CLI **por el envoltorio de dominio**. Generaliza
+  `subir_aula_notebooklm.py`, que estaba atado al manifiesto del Aula.
+  ```bash
+  python subir_fuentes_notebooklm.py --nb <id> "C:/ruta/*.pdf" --prefijo "[CIARCU] " --dry
+  ```
+
+- 🚦 **No subir por DOM con Playwright.** El `input[type=file]` del diálogo «Add sources» es
+  **efímero**: el JS lo crea, lo clickea y lo descarta en el mismo tick, así que
+  `query_selector('input[type=file]')` devuelve siempre `False` y el selector del sistema
+  nunca abre. Si no hay más remedio que ir por la interfaz, el mecanismo es parchear
+  `HTMLInputElement.prototype.click` para capturar ese input antes de pulsar. El 11-oct-2026
+  se quemaron cuatro intentos por aquí teniendo el CLI a mano.
+
 - **`auth check` pasa pero `list` redirige a accounts.google.com** (cookies presentes pero token
   expirado): refrescar el `storage_state.json` del CLI desde el perfil Edge vivo. El Chromium de
   Playwright falla con «spawn UNKNOWN» en esta máquina → usar **canal msedge**:
@@ -171,6 +245,10 @@ devolvió la tesis "Alfa Lab = modelo DARPA transpuesto a la UTEQ para la sobera
 con citas [1]–[23] y 5 riesgos. Reauth aplicada con éxito (80 cookies, SID válido).
 
 ## Vecindad en la red
+
+Doctrina general del protocolo que esta skill aplica a un caso concreto:
+[[mcp-conexion-ambitos-y-frontera]] (transportes, precedencia, frontera de inyección).
+
 
 Skills que dependen de esta y que antes no la citaban de vuelta:
 

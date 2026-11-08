@@ -383,3 +383,8 @@ merece mantenimiento o si fue una necesidad puntual.
   folder de esta skill).
 - Índice global de memoria:
   `C:\Users\datos\.claude\projects\C--Users-datos-Downloads\memory\MEMORY.md`
+
+## Cómo se archiva una capacidad nueva (12-oct-2026)
+El «archivar» de esta llave maestra tiene ahora su manual de autoría:
+[[skills-empaquetar-procedimiento]] — criterio de repetición, decisión de tres vías
+(regla / skill / hook), los cinco límites numéricos y el fallo silencioso del listado.

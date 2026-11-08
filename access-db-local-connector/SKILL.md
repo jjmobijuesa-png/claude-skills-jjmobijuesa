@@ -50,6 +50,7 @@ Ejecutarlo siempre con el Python de 64 bits del sistema:
 Autoprueba de punta a punta: `python scripts\access_connector.py` (crea base temporal, inserta, consulta, exporta y cierra → imprime "CONECTOR VERIFICADO").
 
 ## Cómo depurar si falla
+- **Crear CONSULTAS guardadas (querydefs):** `CREATE VIEW` **falla** vía `CurrentDb.Execute` (Jet no-ANSI). Para guardar una consulta usar DAO: `cdb = db._db(); cdb.CreateQueryDef('V_Nombre', sql)` — crea y persiste de inmediato; aparece en `list_queries()` y se consulta con `db.query("SELECT * FROM V_Nombre")`. Verificado 3-oct-2026 (base Club Shaylí: 4 consultas por CreateQueryDef).
 - **`TransferText` revienta** con *"el separador de campos coincide con el separador decimal"*: es la **configuración regional** (coma decimal en Ecuador). NO usar `TransferText`; usar `to_excel` (TransferSpreadsheet a XLSX) o `to_csv` (que exporta vía pandas). Ya resuelto en el módulo.
 - **Ruido de pandas** `tslibs ... total_seconds` al leer fechas: los `datetime` de COM traen tz que rompe a pandas → el módulo los normaliza con `_clean` a `datetime` nativo. Si aparece con otro tipo, ampliar `_clean`.
 - **`OpenCurrentDatabase` se cuelga o pide contraseña**: pasar la base sin abrir en Access a la vez; para bases protegidas, abrir con `visible=True` una vez y desbloquear, o parametrizar la contraseña.

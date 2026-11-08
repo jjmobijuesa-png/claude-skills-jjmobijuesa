@@ -48,14 +48,15 @@ fuente: hilo JRPFM (junta-politica-financiera-blockchain-soberana), fusionado co
 | **Presidencia de la República** (Función Ejecutiva) | Iniciativa legislativa; **calificación de urgencia económica** (art. 140 CRE: 30 días); decretos y reglamentos (art. 147.13) | Secretaría General Jurídica / despacho | Invitación o síntesis de una página ([[sintesis-ejecutiva-mesa-presidencial]]) | Daniel Noboa Azín |
 | **Asamblea Nacional: Presidencia** | Agenda del Pleno; calificación por el CAL | Consejo de Administración Legislativa (CAL) | Memo B-013 (CAL) | Mishel Mancheno (desde el 8-jun-2026) |
 | **Comisión de Régimen Económico y Tributario** | Comisión técnica de las 3 leyes (COMYF, LMV, COPLAFIP, Código Tributario) | Presidencia de la Comisión | Informe ejecutivo B-011, carta B-016 | Nathaly Farinango Delgado, presidenta 2025-2029 |
-| **Junta de Política y Regulación Financiera y Monetaria** | Regulación secundaria del sistema de pagos y de valores; entorno de pruebas (sandbox) con el BCE y las superintendencias | Miembros de la Junta | Solicitud de audiencia B-017, nota técnica | Presidente: Gustavo Camacho Dávila · Miembro: Roberto Javier Basantes Romero |
+| **Junta de Política y Regulación Financiera y Monetaria** | Regulación secundaria del sistema de pagos y de valores; entorno de pruebas (sandbox) con el BCE y las superintendencias. **Dictó la norma madre del sandbox: Resolución JPRF-T-2025-0156, de 30-may-2025** (entonces JPRF, firmada por Mgs. María Paulina Vela Zambrano), hoy **Título II del Libro V de la Codificación de Resoluciones** | Miembros de la Junta | Solicitud de audiencia B-017, nota técnica | Presidente: Gustavo Camacho Dávila · Miembro: Roberto Javier Basantes Romero |
+| ⭐ **CITEFI — Comité de Innovación Tecnológica Financiera** | **Creado por los arts. 8-10 de la Resolución JPRF-T-2025-0156.** Órgano técnico permanente de articulación; planifica los sandboxes e **identifica «temáticas prioritarias o sectores estratégicos de innovación»**; recomienda aprobar o rechazar solicitudes. **Puede convocar como invitados a universidades, expertos y organismos multilaterales** (art. 9) | Por la Presidencia de la Junta, que lo preside | Propuesta de temática prioritaria; solicitud de invitación para la UTEQ y para la CAF o el BID | Lo integran: Presidente de la Junta (preside) + Superintendente de Bancos + Superintendente de EPS + Superintendente de Compañías, Valores y Seguros, o sus delegados. Sesiona al menos cada 6 meses |
 | **Banco Central del Ecuador** | Sistema de pagos; transitorias 1.ª y 2.ª; agente fiscal (art. 303) | Gerencia General | Nota técnica sobre las transitorias | Gerente encargado: Jorge Alberto Ponce Donoso (desde el 27-nov-2025) |
 | **Ministerio de Desarrollo Económico y Productivo** (antes MEF; Decreto 425, 19-jun-2026) | Ente rector de las finanzas públicas; PGE, deuda, Tesoro; ahora también producción, agro y acuacultura | Ministro o Viceministerio de Finanzas | Solicitud B-018, nota técnica de cero costo fiscal | Bernardo Antonio Cordovez (desde el 28-sep-2026) |
 | **MINTEL** | Rector de la transformación digital; Política de Transformación Digital 2025-2030 (blockchain en el eje de tecnologías emergentes); convenio con CNT EP | Despacho o Viceministerio de TIC | Memo B-014 | 🚦 Las fuentes discrepan sobre el titular: verificar |
 | **CNT EP** | Infraestructura de nodos y centros de datos; plan estratégico al 2029 | Gerencia | Propuesta de convenio FBSE, CNT EP y academia | Verificar |
-| **Superintendencia de Compañías, Valores y Seguros** | Sandbox del mercado de valores (art. 73.7 LMV); depósitos centralizados | Intendencia de Mercado de Valores | Nota técnica | Verificar |
-| **Superintendencia de Bancos** | Sandbox financiero (art. 439.7 COMYF) | Intendencia jurídica o de riesgos | Nota técnica | Verificar |
-| **Superintendencia de Economía Popular y Solidaria** | Cooperativas, cuarto pilar de la gobernanza 25-25-25-25 | Intendencia | Nota sobre inclusión financiera | Verificar |
+| **Superintendencia de Compañías, Valores y Seguros** | Sandbox del mercado de valores (art. 73.7 LMV, para modelos «que todavía no se encuentren específicamente regulados») y de seguros (art. 8.8); depósitos centralizados | Intendencia de Mercado de Valores | Nota técnica; **ofrecimiento de insumos para su norma de control pendiente** | 🚦 **Su norma de control del sandbox NO está localizada**; el plazo venció el 30-nov-2025 (Disp. Transitoria Única de la JPRF-T-2025-0156). Titular: verificar |
+| ⭐ **Superintendencia de Bancos** | Sandbox financiero (art. 439.7 COMYF). **ES LA PUERTA ABIERTA HOY: dictó su norma de control, Resolución SB-2025-2852 de 28-nov-2025**, Título XXII del Libro I de su Codificación. Su art. 2 admite como promotor a **«las personas jurídicas constituidas de conformidad con el ordenamiento jurídico ecuatoriano»** | Intendencia jurídica o de riesgos | Solicitud de licencia de operación temporal + proyecto piloto | Verificar |
+| **Superintendencia de Economía Popular y Solidaria** | Cooperativas, cuarto pilar de la gobernanza 25-25-25-25. Su Intendente Nacional de TIC declaró ante la Comisión 9 (2025) que hacen falta **servidores y data centers** para implementar blockchain, y pidió que la SEPS sea incluida como organismo supervisor | Intendencia | Nota sobre inclusión financiera | 🚦 Su norma de control del sandbox tampoco está localizada. Titular: verificar |
 | **SRI** | Facturación electrónica, recaudación, trazabilidad tributaria | Dirección General | Nota técnica tributaria | Verificar |
 | **UAFE** | Prevención de lavado de activos; el Ecuador aprobó la evaluación mutua de GAFILAT y no está en la lista gris del GAFI | Dirección General | Nota sobre trazabilidad del beneficiario final | Verificar |
 | **DINARP y Registro Civil** | Datos públicos e identidad digital | Dirección | Nota sobre identidad digital soberana | Verificar |
@@ -72,6 +73,25 @@ fuente: hilo JRPFM (junta-politica-financiera-blockchain-soberana), fusionado co
   Es la vía más rápida si la iniciativa presidencial hace suya la propuesta.
 - **Decreto o reglamento** (Presidencia, art. 147.13): reglamentos técnicos de cada etapa.
 - **Resolución de la Junta**: norma técnica secundaria y sandbox.
+- ⭐ **Licencia de operación temporal en sandbox** (la vía más rápida y la única que no
+  requiere ley nueva). Cadena verificada el 10-oct-2026:
+  **Ley Fintech** (R.O. 2.º Supl. 215, 22-dic-2022; arts. 439.7, 73.7, 8.8 y Disp. Gral. 1.ª)
+  → **JPRM-2023-014-M** (ago-2023, primera resolución, 🚦 por verificar)
+  → **JPRF-T-2025-0156** (30-may-2025, norma madre; crea el CITEFI)
+  → **SB-2025-2852** (28-nov-2025, norma de control de la Superintendencia de Bancos).
+  Claves para argumentar: el **art. 2.4** define los desarrollos innovadores como aquellos
+  «para cuya implementación **se podría requerir reformas regulatorias**»; el **art. 2.5**
+  fija como finalidad del sandbox «comprobar su viabilidad e **identificar las
+  modificaciones regulatorias necesarias**» —eso es el «Venid a ver» en la propia norma—;
+  el **art. 7.2** dispone que los proyectos piloto **«no estarán sujetos de forma
+  transitoria a la normativa específica aplicable a la prestación habitual»**, lo que
+  permite entrar con una compañía ya existente sin calificación previa; el **art. 2.14**
+  admite pruebas **sin participación de usuarios** (elimina el riesgo de captación); el
+  **art. 13** permite **solicitud grupal** de varios promotores, que es el vehículo de la
+  gobernanza cuatripartita; y el **art. 7.6** fija evaluación **semestral**.
+  🚦 **Frontera del art. 1:** este sandbox excluye lo que es competencia exclusiva de la
+  autoridad monetaria y del BCE, es decir, los sistemas de pago. La red registra y
+  certifica; no emite moneda ni transfiere valor.
 - **Convenio interinstitucional**: modalidad (b) de la Transitoria Primera (FBSE, CNT EP
   y academia), sin gasto público.
 

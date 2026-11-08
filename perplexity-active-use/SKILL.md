@@ -170,3 +170,15 @@ Plantilla del archivo persistido:
 - [[youtube-corpus-jjmobijuesa]] — fuente complementaria en video.
 - [[anthropic-skills:notebooklmskill]] — destino natural de las
   conclusiones (subir como nota al cuaderno temático).
+
+## 🚦 Respuesta cortada a los 20 s (5-nov-2026)
+
+Con preguntas largas (56 fuentes), `ask_perplexity_playwright.py` guardó solo la interfaz: el texto traía «En curso» y un archivo de 1,6 KB. La respuesta sí existía en el hilo.
+**Cómo verificar:** si el `.md` pesa menos de 3 KB o contiene «En curso», no se terminó. **Solución:** tomar la «URL del hilo» del `.md` y leerla con
+`python scripts/leer_hilo_perplexity.py <url> <salida.txt>`, que espera a que el texto se estabilice y extrae los enlaces.
+Las cifras y hechos clave se verifican después en la fuente: Perplexity resume y puede omitir: aquí no halló un congreso que sí consta en el portal del Municipio de Riobamba.
+
+## 🚦 `NO_INPUT — login/captcha` intermitente (6-nov-2026)
+
+El script salió con `NO_INPUT` justo después de usar el mismo perfil con otro proceso. El segundo intento, sin cambiar nada, funcionó. Antes de suponer un cierre de sesión,
+reintentar una vez con el perfil libre. La numeración «arts. 154-A» que devolvió Perplexity no consta en el texto legal revisado: citar la ley por el nombre del artículo.

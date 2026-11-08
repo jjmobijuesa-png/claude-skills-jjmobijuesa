@@ -76,13 +76,41 @@ def run():
         page.close()
     ts = datetime.datetime.now().strftime("%Y-%m-%d_%H%M%S")
     payload = json.dumps(captured, ensure_ascii=False, indent=2)
-    (SNAP / f"{ts}.json").write_text(payload, encoding="utf-8")
-    (OUTDIR / "guardados.json").write_text(payload, encoding="utf-8")
     safe_title = title.encode("ascii", "replace").decode("ascii")
-    print(f"capturados {len(captured)} guardados -> {OUTDIR / 'guardados.json'}")
+
+    # ── CANDADO ANTIPISADA (10-oct-2026) ───────────────────────────────────────
+    # El corpus se vacio dos veces (17-ago y 10-oct) porque una corrida sin sesion
+    # de LinkedIn escribia su resultado vacio sobre guardados.json. Desde ahora el
+    # archivo bueno SOLO se sobrescribe si la cosecha es creible.
+    destino = OUTDIR / "guardados.json"
+    previos = 0
+    if destino.exists():
+        try:
+            previos = len(json.loads(destino.read_text(encoding="utf-8")))
+        except Exception:
+            previos = 0
+
+    muro = ("inicio de sesi" in safe_title.lower() or "sign in" in safe_title.lower()
+            or "login" in safe_title.lower())
+    # se acepta hasta un 20% de merma (el usuario puede haber desguardado posts)
+    creible = bool(captured) and not muro and len(captured) >= previos * 0.8
+
+    if creible:
+        (SNAP / f"{ts}.json").write_text(payload, encoding="utf-8")
+        destino.write_text(payload, encoding="utf-8")
+        print(f"capturados {len(captured)} guardados -> {destino}  (previos: {previos})")
+    else:
+        rechazo = SNAP / f"{ts}_RECHAZADO.json"
+        rechazo.write_text(payload, encoding="utf-8")
+        print(f"capturados {len(captured)} | previos {previos}")
+        print(f"NO SE SOBRESCRIBE guardados.json. Cosecha no creible -> {rechazo}")
+        if muro:
+            print("CAUSA: muro de autenticacion. Edge en 9222 no tiene sesion de fedphd@gmail.com.")
+        elif not captured:
+            print("CAUSA: 0 capturados. Revisa los selectores EXTRACT_JS.")
+        else:
+            print("CAUSA: merma superior al 20% frente al corpus previo.")
     print(f"page_title={safe_title!r}")
-    if not captured:
-        print("ADVERTENCIA: 0 capturados. Revisa login fedphd / selectores EXTRACT_JS / muro de auth.")
 
 if __name__ == "__main__":
     run()

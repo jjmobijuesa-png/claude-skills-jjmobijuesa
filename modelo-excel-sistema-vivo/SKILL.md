@@ -90,11 +90,46 @@ que `Total Activo = Caja + esa partida = Pasivo+Patrimonio` y el CONTROL da 0 si
 Caja ← flujo, crédito por pagar ← flujo, utilidad ← PyG: los tres cuelgan del monto de
 crédito, así que balance, flujo y PyG se mueven juntos al cambiar la palanca.
 
+## 🚦 Nunca escribir números de fila a mano (Altman QVP, 11-oct-2026)
+
+Si el generador emite filas de cabecera, separadores o subtotales **y además** las
+fórmulas llevan la fila escrita a mano (`"=C17+C18+C19"`), basta una cabecera de más
+para correr todo. En el libro Altman de Quevepalma el patrimonio quedó una fila arriba
+de donde apuntaban las fórmulas: **se leía como cero**, el control de cuadre devolvía
+justamente el patrimonio (activo − pasivo − 0) y la hoja siguiente daba tres `#¡DIV/0!`
+al dividir para él. Los números salían plausibles; solo el control los delató.
+
+**Receta: mapa de filas por nombre, en dos pasadas.**
+
+```python
+LIN = [("H", None, "ACTIVO", None), ("I", "act_cte", "Activo corriente", vals),
+       ("F", "act_tot", "TOTAL ACTIVO", (("act_cte", 1), ("act_no_cte", 1))), ...]
+FILAS, r = {}, 7                       # 1.ª pasada: solo asignar filas
+for tipo, ide, rot, dat in LIN:
+    if ide: FILAS[ide] = r
+    r += 1
+B = lambda ide, col: "BALANCES!%s%d" % (col, FILAS[ide])   # 2.ª pasada: escribir
+```
+
+Las filas `F` se declaran como **componentes con signo**, no como texto de fórmula, y
+las otras hojas referencian con `B("patrim", "E")`. Agregar o quitar una cabecera deja
+de romper nada. Imprimir el mapa al final del build es la comprobación barata.
+
+**Y los formatos numéricos van con PUNTO decimal** (`"0.0000"`, `"0.00%"`): es la
+sintaxis invariante de Excel. Con coma (`"0,0000"`) la coma se lee como separador de
+miles y el número se muestra escalado. El usuario lo ve con coma igual, por su
+configuración regional.
+
 ## Prueba del sistema (obligatoria antes de cerrar)
 
 Cambiar una palanca (p. ej. el monto del crédito) → `CalculateFull()` → leer que
 cuota, utilidad y la tabla de amortización cambiaron → **revertir**. Si no cambian,
 la cadena está rota (una celda quedó en valor y no en fórmula).
+
+Probar **cada** palanca, no una: en el libro Altman las cuatro se verificaron de un
+tirón y la tercera (reperfilar 3 M de corto a largo) subió el puntaje de 3,1334 a
+3,1945 sin que entrara un dólar — que era justamente la tesis del informe. La prueba
+no solo valida el libro: **a veces demuestra el argumento**.
 
 Formato y pila COM segura: [[excel-formato-dolar-y-m2]] (dinero `$#.##0,00`, áreas
 `" m²"`, `NumberFormatLocal`, respaldo previo, cerrar sin huérfanos). Cierre de la
