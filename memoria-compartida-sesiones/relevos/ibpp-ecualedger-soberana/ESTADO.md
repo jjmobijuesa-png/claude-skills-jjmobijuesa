@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-07 — Blindaje contractual ALB-BL-001 con base legal verificada |
+| Último checkpoint | 2026-11-07 — Guía de reunión ALB-GR-001 y blindaje ALB-BL-001 en G: y E: |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -123,6 +123,9 @@ Corrección importante: el Reglamento General exige compañía nueva y objeto ex
 12, 14, 14 bis, 14 ter, 14 quáter y 17 sustitutas del MdE-001. Nada enviado. Pendiente: revisión del abogado y MdE-001 v2.
 
 **7-nov-2026 (cierre).** E: desmontado: ALB-BL-001 solo está en G: (04 Reservado FD) y en el scratchpad; copiarlo al espejo cuando vuelva el disco. Principio comercial de Francisco: criterio antes que ejecución (memoria feedback_criterio_antes_que_ejecucion_comercial), compuerta de adopción de 5 preguntas para cada línea o segmento.
+
+**7-nov-2026 (noche).** ALB-GR-001, guía de la reunión con el equipo desarrollador (6 págs), en G: y E:. Espejo de ALB-BL-001 copiado a E:
+(el disco volvió). Guía 00a regenerada: 24 fichas. Nada enviado.
 
 ## Pendientes / preguntas abiertas
 - Envío a la CCEATI: solo con confirmación expresa de destinatario y contenido.
