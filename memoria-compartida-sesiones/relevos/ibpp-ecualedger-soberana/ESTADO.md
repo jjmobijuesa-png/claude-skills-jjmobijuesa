@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-07 — Guía de reunión ALB-GR-001 y blindaje ALB-BL-001 en G: y E: |
+| Último checkpoint | 2026-11-07 — B-026 FBSE, preguntas técnicas ALB-GR-002 y presentación ALB-PR-001 |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -126,6 +126,9 @@ Corrección importante: el Reglamento General exige compañía nueva y objeto ex
 
 **7-nov-2026 (noche).** ALB-GR-001, guía de la reunión con el equipo desarrollador (6 págs), en G: y E:. Espejo de ALB-BL-001 copiado a E:
 (el disco volvió). Guía 00a regenerada: 24 fichas. Nada enviado.
+
+**7-nov-2026 (noche, 2).** ALB-GR-002 (preguntas técnicas), B-026 (FBSE, carpeta 002) y ALB-PR-001 (presentación de 17 láminas) en G: y E:.
+Guía 00a: 27 fichas. Nada enviado. Pendiente: conciliar cláusula 12 (código abierto frente a productora) en el MdE-001 v2.
 
 ## Pendientes / preguntas abiertas
 - Envío a la CCEATI: solo con confirmación expresa de destinatario y contenido.
