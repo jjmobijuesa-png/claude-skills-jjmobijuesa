@@ -122,6 +122,8 @@ Corrección importante: el Reglamento General exige compañía nueva y objeto ex
 **7-nov-2026.** ALB-BL-001 (blindaje contractual con el equipo desarrollador): nueve normas verificadas en textos oficiales y cláusulas
 12, 14, 14 bis, 14 ter, 14 quáter y 17 sustitutas del MdE-001. Nada enviado. Pendiente: revisión del abogado y MdE-001 v2.
 
+**7-nov-2026 (cierre).** E: desmontado: ALB-BL-001 solo está en G: (04 Reservado FD) y en el scratchpad; copiarlo al espejo cuando vuelva el disco. Principio comercial de Francisco: criterio antes que ejecución (memoria feedback_criterio_antes_que_ejecucion_comercial), compuerta de adopción de 5 preguntas para cada línea o segmento.
+
 ## Pendientes / preguntas abiertas
 - Envío a la CCEATI: solo con confirmación expresa de destinatario y contenido.
 - Disco `E:` montado y espejado (29-oct-2026).
