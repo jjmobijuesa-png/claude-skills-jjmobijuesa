@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-08 — Presentación FBSE B-027; jornada cerrada |
+| Último checkpoint | 2026-11-08 — Correcciones legales, MdE-001 v2 y arquitectura ALB-AL-001 |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -131,6 +131,8 @@ Corrección importante: el Reglamento General exige compañía nueva y objeto ex
 Guía 00a: 27 fichas. Nada enviado. Pendiente: conciliar cláusula 12 (código abierto frente a productora) en el MdE-001 v2.
 
 **8-nov-2026 (madrugada).** B-027, presentación corta de la FBSE (10 láminas), en 002 FBSE Divulgacion (G: y E:). Guía 00a: 28 fichas. Nada enviado. Jornada cerrada con apagado a pedido de Francisco.
+
+**8-nov-2026 (cierre de pendientes).** Correcciones legales en cinco documentos y sus generadores; MdE-001 v2 y ALB-AL-001 nuevos, en G: y E:. Guía 00a: 30 fichas. Nada enviado.
 
 ## Pendientes / preguntas abiertas
 - Envío a la CCEATI: solo con confirmación expresa de destinatario y contenido.
