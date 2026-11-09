@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-08 — Correcciones legales, MdE-001 v2 y arquitectura ALB-AL-001 |
+| Último checkpoint | 2026-11-09 — Esquema Etriek aclarado; ALB-AL-001 v2 y documentos adecuados |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -133,6 +133,8 @@ Guía 00a: 27 fichas. Nada enviado. Pendiente: conciliar cláusula 12 (código a
 **8-nov-2026 (madrugada).** B-027, presentación corta de la FBSE (10 láminas), en 002 FBSE Divulgacion (G: y E:). Guía 00a: 28 fichas. Nada enviado. Jornada cerrada con apagado a pedido de Francisco.
 
 **8-nov-2026 (cierre de pendientes).** Correcciones legales en cinco documentos y sus generadores; MdE-001 v2 y ALB-AL-001 nuevos, en G: y E:. Guía 00a: 30 fichas. Nada enviado.
+
+**9-nov-2026.** Esquema aclarado por Francisco (Etriek matriz y licenciante no exclusiva; SAS 60/40; Etriek independiente fuera de la zona; FBSE dimensión social). ALB-AL-001 v2 para el abogado y siete documentos adecuados, en G: y E:. Nada enviado.
 
 ## Pendientes / preguntas abiertas
 - Envío a la CCEATI: solo con confirmación expresa de destinatario y contenido.
