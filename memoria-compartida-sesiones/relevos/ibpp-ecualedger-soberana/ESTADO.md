@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-09 — Complexivo ALB-CX-001, reunión con el abogado ALB-NR-002 y MG-001 con caso NVIDIA |
+| Último checkpoint | 2026-11-09 — Estudio ALB-ES-001 y capítulo 17 del manual; espejo E: pendiente |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -137,6 +137,8 @@ Guía 00a: 27 fichas. Nada enviado. Pendiente: conciliar cláusula 12 (código a
 **9-nov-2026.** Esquema aclarado por Francisco (Etriek matriz y licenciante no exclusiva; SAS 60/40; Etriek independiente fuera de la zona; FBSE dimensión social). ALB-AL-001 v2 para el abogado y siete documentos adecuados, en G: y E:. Nada enviado.
 
 **9-nov-2026 (tarde).** Carpeta 04 renombrada en G: y E:; NR-002 (abogado), CX-001 complexivo, MG-001 con capítulo 16 y B-026 con convenio universitario. Nada enviado.
+
+**9-nov-2026 (noche).** MG-001 cap. 17 (adelantamiento) y ALB-ES-001 (estudio de supremacía y posicionamiento, con BIS WP44 y la cámara rival del 19-nov). Guía 00a: 33 fichas. 🚦 E: desmontada: espejo pendiente de MG-001, ES-001 y guía. Nada enviado.
 
 ## Pendientes / preguntas abiertas
 - Envío a la CCEATI: solo con confirmación expresa de destinatario y contenido.
