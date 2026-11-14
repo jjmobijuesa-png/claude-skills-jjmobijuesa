@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-09 — Estudio ALB-ES-001 y capítulo 17 del manual; espejo E: pendiente |
+| Último checkpoint | 2026-11-13 — Dos capas y dos generaciones; MdE-001 v3; zona franca de Riobamba; CCEATI reordenada en `var 9 FBSE\CCEATI` |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -143,3 +143,14 @@ Guía 00a: 27 fichas. Nada enviado. Pendiente: conciliar cláusula 12 (código a
 ## Pendientes / preguntas abiertas
 - Envío a la CCEATI: solo con confirmación expresa de destinatario y contenido.
 - Disco `E:` montado y espejado (29-oct-2026).
+
+
+## Checkpoint 2026-11-13 (PC)
+- **Ruta nueva:** la carpeta CCEATI vive en `G:\Mi unidad\var 9 FBSE\CCEATI` (espejo `E:\vars\var 9 FBSE\CCEATI`). La copia vieja de E:
+  quedó en `E:\vars\var 9 FBSE\ZZ Respaldo CCEATI ruta anterior (13-nov-2026)`, fuera del subárbol espejado.
+- **Concepto de dos capas:** capa transversal en Etriek (sandbox incluido); casos de uso en la SAS, controlada por Etriek con recompra
+  y reinversión; primera generación = equipo del Paraguay contratado por Etriek; segunda = programadores de la SAS; la FBSE divulga.
+- **Documentos:** MdE-001 v3, ALB-AL-001 v3, estatuto con art. 26-A, BL-001 v2, NR-002 v2, CX-001 v2, transcripción y resumen de la
+  Reunión 1 (ALB-TR-001/002), zona franca (ALB-ZF-001 y presentación ALB-ZF-002 desde el cuaderno de NotebookLM).
+- **Reordenamiento:** guía ALB-GU-002 y mapa conceptual en la raíz de CCEATI; línea FBSE junta en `002`; archivo ZZ con manifiesto.
+- **Para el espejo al volver:** nada que redactar; esperar la decisión del usuario sobre borrar el archivo ZZ.
