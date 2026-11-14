@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-14 — Guía y mapa del 14-nov en «Guia Indice»; E: alineado con G: (267 = 267); ZZ de E: fuera del espejo |
+| Último checkpoint | 2026-11-14 — Ruta Tier I a III aplicada (EE-001 v2, anexos A/C/D v2, WS4 v2 hoja 9, ZF-002 v2); acta ALB-TR-003 |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -162,3 +162,4 @@ Guía 00a: 27 fichas. Nada enviado. Pendiente: conciliar cláusula 12 (código a
 - El usuario retiró de G: el archivo ZZ y movió la guía a `Guia Indice`; E: conserva el diseño anterior. No correr el espejo bidireccional sin alinear E: primero.
 - 14-nov (tarde): guía ALB-GU-002 y mapa regenerados en `CCEATI\Guia Indice` (G: y E:); la edición del 13-nov en su `_Versiones anteriores`. E: alineado con G: (267 archivos en cada lado, 0 diferencias). El ZZ de E: quedó en `E:\vars\var 9 FBSE\ZZ Archivo CCEATI (retirado de G el 14-nov-2026)`. Hay una grabación de audio del 14-nov (35 min) sin transcribir en la carpeta de la Reunión 1.
 - 14-nov (tarde): la grabación de la Reunión 2 (teléfono Android, 35 min) salió en ceros digitales; no hay transcripción. Archivo y acta ALB-TR-003 (levantada con las notas de FD) en la carpeta «00 Reunion 2 (14-nov-2026)» de 001-a, en G: y E:. Acuerdo: centro de datos de Tier I a Tier III en dos años, escalando con servicios monetizables. Lección en memoria: feedback_grabacion_android_silencio_en_llamada.
+- 14-nov (noche): ruta de niveles Tier I a III aplicada en EE-001 v2 (sección 5-A), anexos A, C y D v2 del MdE-001 y WS4 v2 (hoja 9, en `07\10 Entregables`); las v1 en `_Versiones anteriores` de cada carpeta; el WS4 del expediente 001 sin tocar. Plan base de 24 meses sin cambio; la ruta va aparte y se paga con ingresos; ambos saltos en el año 2 de operación porque el año 1 del modelo da pérdida. Pendiente de FD: clima N+1, hitos y cotizaciones. G: y E: idénticos.
