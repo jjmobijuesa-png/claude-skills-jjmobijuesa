@@ -12,8 +12,11 @@ un aviso se mueve a «Archivados» cuando ya no hace falta.
   candado. En los demás hilos rige la regla general: solo `.md` con resúmenes y punteros.
   Detalle: `MEMORIA.md` › Regla de datos y excepciones.
 - **A2 (2026-09-28) Red de skills.** `mapear_red_skills.py` ya conserva `_` en los nombres y
-  `memoria-compartida-sesiones` está enlazada (159 skills, 607 aristas, 0 huérfanas). Al citar
-  notas de memoria, usar la grafía con guion bajo. **PC:** regenerar `memory/skills_network.md`.
+  `memoria-compartida-sesiones` está enlazada. Al citar
+  notas de memoria, usar la grafía con guion bajo.
+  **Actualizado 14-nov-2026: 199 skills, 897 aristas, 1 racimo, 0 huérfanas.**
+  Mapa regenerado ese día; el pendiente de regenerarlo queda CERRADO. Las cifras
+  se generan con `mapear_red_skills.py`, no se copian a mano.
 - **A3 (2026-09-28) Rutina de cada respuesta**, para cada agente en su propio hilo:
   1. Leer la línea `[relevo]` de tu hilo y estos avisos.
   2. Si el TURNO es del otro lado, tomar la posta (TURNO = tu lado, fila en `HISTORIAL.md`)
