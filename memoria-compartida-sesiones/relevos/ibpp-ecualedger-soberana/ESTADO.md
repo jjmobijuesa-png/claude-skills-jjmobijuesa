@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-13 — Dos capas y dos generaciones; MdE-001 v3; zona franca de Riobamba; CCEATI reordenada en `var 9 FBSE\CCEATI` |
+| Último checkpoint | 2026-11-14 — ALB-ZF-002 v2 (20 láminas): ayuda memoria completa, preguntas del GAD y de los promotores con estado, tiempos de la consultoría |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -154,3 +154,9 @@ Guía 00a: 27 fichas. Nada enviado. Pendiente: conciliar cláusula 12 (código a
   Reunión 1 (ALB-TR-001/002), zona franca (ALB-ZF-001 y presentación ALB-ZF-002 desde el cuaderno de NotebookLM).
 - **Reordenamiento:** guía ALB-GU-002 y mapa conceptual en la raíz de CCEATI; línea FBSE junta en `002`; archivo ZZ con manifiesto.
 - **Para el espejo al volver:** nada que redactar; esperar la decisión del usuario sobre borrar el archivo ZZ.
+
+
+## Checkpoint 2026-11-14 (PC)
+- ALB-ZF-002 v2 en `08 Zona Franca Riobamba (GAD)`; la v1 pasó a `_Versiones anteriores` de esa carpeta.
+- Cada consulta del GAD y de los promotores lleva estado: Respondida, Parcial, Por definir o Estimado; solo se citan artículos verificados en el texto de la ley.
+- El usuario retiró de G: el archivo ZZ y movió la guía a `Guia Indice`; E: conserva el diseño anterior. No correr el espejo bidireccional sin alinear E: primero.
