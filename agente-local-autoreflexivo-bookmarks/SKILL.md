@@ -208,6 +208,24 @@ O invocar la skill hija directamente:
    pipeline** — si no, las skills nuevas se generarán con cuentas top
    desactualizadas.
 6. **Tómate tu tiempo. Calidad antes que velocidad. No saltes pasos.**
+7. 🚦🚦 **NUNCA terminar el Edge dedicado cerrando su última pestaña.** El 14-nov-2026
+   la cosecha entró bien a las 19:49 y a las 19:56 el veredicto era `MURO_AUTH`: al cerrar
+   la última pestaña, Chromium se fue sin volcar al disco las cookies que X rota en cada
+   uso, y en el perfil solo quedaron las de invitado. **`auth_token` y `ct0` se perdieron
+   por el cierre, no por caducidad.** Lo normal es **dejar ese Edge abierto**: la compuerta
+   lo reutiliza y no relanza nada. Si hay que cerrarlo, por `Browser.close` de CDP, que
+   vuelca antes de salir — y nunca justo después de navegar por x.com.
+8. 🚦 **El puerto a la escucha es necesario y NO suficiente.** Ese mismo día el puerto 9224
+   respondía CDP, la sesión estaba viva y el vigía salió con **código 4**: `connect_over_cdp`
+   venció a los 180 s **después** de conectar el websocket, porque Playwright se engancha a
+   todos los objetivos y el perfil tenía **61** (unos 40 service workers de extensiones más
+   la pestaña de bienvenida que cada extensión abre la primera vez que arranca el perfil).
+   `preflight_cdp.py` cierra ahora esa hojarasca tras un lanzamiento propio y lo registra en
+   el log. **Si vuelve a aparecer un código 4 con sesión buena, leer el recuento de objetivos
+   antes de tocar nada más.**
+9. 🚦 **No cambiar una sesión viva por una comprobación.** La avería 7 la causé probando la
+   corrección de la 8. Antes de una prueba que toca el navegador, preguntarse qué se pierde
+   si sale mal; si lo que se arriesga es la sesión, la prueba espera.
 
 ## Skills hijas auto-destiladas (estado al 2026-06-23)
 
