@@ -154,6 +154,15 @@ me adjunto por CDP»: ya se intentó y no va. La vía es GUI.
 - 🚦 No dar por buena una captura sin leer el aviso de procesos enmascarados que la acompaña:
   ahí es donde el sistema dice qué proceso falta conceder.
 - 🚦 Tres clics sin efecto = parar y barrer ([[regla-del-primer-tropiezo]]), no un cuarto clic.
+- 🚦 **Nunca leer coordenadas sobre una captura reducida.** Con `scale: 0.6` la imagen mide
+  820x461 pero el marco de clic sigue siendo 1366x768. El 9-nov-2026 un clic tomado de la
+  imagen reducida cayó en la lista de chats y **abrió el chat equivocado** con un adjunto a
+  medio preparar. En esta app un clic desviado no es un fallo cosmético: es un envío al
+  destinatario equivocado. **Trabajar siempre a escala 1 cuando se vaya a clicar**, y releer
+  la cabecera del chat tras cada cambio de pantalla antes de adjuntar o enviar.
+- 🚦 **El menú de adjuntos abre un diálogo «Abrir» que tarda**: aparece en blanco varios
+  segundos. No es un fallo. Si la captura no lo muestra, confirmar que existe enumerando
+  ventanas de clase `#32770` del pid de WhatsApp antes de volver a clicar.
 
 ## 5. Hallazgo de la primera corrida (17-oct-2026)
 
