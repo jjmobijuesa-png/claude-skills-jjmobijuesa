@@ -9,6 +9,12 @@ guardados de LinkedIn congelada 132 dias informando exito, porque el indicador
 estaba en la linea de ordenes y el puerto no existia. La comprobacion valida no
 es el indicador: es **el puerto a la escucha y respondiendo CDP**.
 
+14-nov-2026: necesario, pero NO suficiente. El puerto respondia, la sesion de X
+estaba viva y connect_over_cdp vencio a los 180 s porque el perfil tenia 61
+objetivos: los service workers de las extensiones mas la pestana de bienvenida
+que cada una abre al arrancar el perfil. Por eso, tras un lanzamiento propio,
+esta compuerta cierra la hojarasca (ver cerrar_hojarasca).
+
 QUE HACE
 --------
 1. Comprueba que algo escucha en el puerto Y que responde `/json/version`
@@ -89,6 +95,59 @@ def edge_usando_perfil(perfil):
         return None
 
 
+def cerrar_hojarasca(puerto, espera_extra=8):
+    """Cierra las pestanas que las extensiones abren al arrancar el perfil.
+
+    POR QUE EXISTE (14-nov-2026). El puerto puede responder CDP y la
+    automatizacion fallar igual: `connect_over_cdp` se engancha a TODOS los
+    objetivos al conectar. Este perfil arrastra unos 40 service workers de
+    extensiones y, recien arrancado, cada extension abre su pestana de
+    bienvenida (onboarding, welcome, pricing) hacia sitios externos que siguen
+    cargando. Con 61 objetivos el handshake vencio a los 180 s y el vigia de X
+    salio con codigo 4 teniendo la sesion viva. **El puerto a la escucha es
+    necesario y NO suficiente.**
+
+    Solo se llama cuando ESTA compuerta acaba de lanzar el navegador: si el
+    puerto ya estaba vivo, las pestanas pueden ser del usuario y no se tocan.
+    Nunca deja el navegador sin ninguna pestana, porque cerrar la ultima lo
+    termina.
+    """
+    time.sleep(espera_extra)          # que las extensiones acaben de abrir lo suyo
+    base = "http://127.0.0.1:%d" % puerto
+    try:
+        with urllib.request.urlopen(base + "/json/list", timeout=10) as r:
+            objetivos = json.loads(r.read().decode("utf-8", "replace"))
+    except Exception as e:
+        print(u"PREFLIGHT  aviso: no pude listar objetivos (%s); sigo sin limpiar."
+              % type(e).__name__)
+        return 0
+
+    paginas = [t for t in objetivos if t.get("type") == "page"]
+    en_blanco = [t for t in paginas
+                 if (t.get("url") or "") in ("about:blank", "")
+                 or (t.get("url") or "").startswith("edge://newtab")]
+    sobrantes = [t for t in paginas if t not in en_blanco]
+
+    if not en_blanco and sobrantes:
+        # no hay ninguna en blanco: se conserva una para no terminar el navegador
+        conservada = sobrantes.pop(0)
+        print(u"PREFLIGHT  sin pestana en blanco: conservo %s"
+              % (conservada.get("url") or "?")[:60])
+
+    cerradas = 0
+    for t in sobrantes:
+        try:
+            urllib.request.urlopen(base + "/json/close/" + t["id"], timeout=10).read()
+            cerradas += 1
+        except Exception:
+            pass
+
+    print(u"PREFLIGHT  hojarasca: %d pestanas de extension cerradas, "
+          u"%d en blanco conservadas, %d objetivos antes"
+          % (cerradas, len(en_blanco), len(objetivos)))
+    return cerradas
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--puerto", type=int, default=9222)
@@ -149,6 +208,8 @@ def main():
         if ok:
             print(u"PREFLIGHT OK  puerto %d responde CDP tras %.0fs  (%s)"
                   % (a.puerto, time.time() - t0, det))
+            # Lo lanzamos nosotros: dejarlo limpio. Ver cerrar_hojarasca().
+            cerrar_hojarasca(a.puerto)
             return 0
     print(u"PREFLIGHT FALLO  lance Edge y el puerto %d sigue sin responder tras %ds -> %s"
           % (a.puerto, a.espera, det))

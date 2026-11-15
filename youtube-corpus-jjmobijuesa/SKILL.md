@@ -209,6 +209,38 @@ sobre los de 2025. **Muestrear por posición** (ventanas repartidas por el
 minutaje) o normalizar a una línea antes de buscar patrones; el `grep` de
 varias líneas también falla por el salto, no por ausencia.
 
+### 🚦🚦 TEMA CERRADO por decisión del usuario — 14-nov-2026
+
+**No se vuelve a intentar la cosecha de los capítulos bloqueados. Se trabaja con lo que
+hay.** La decisión es del usuario, con estas palabras: «los cap de youtube cerrar ese tema,
+nos quedamos con los que tenemos».
+
+**Estado medido en disco ese día** (`E:\vars\var 5\YouTube-jjmobijuesa\transcripciones\`):
+
+| Carpeta | `.md` | Con transcripción real | Marcados «no disponible» |
+|---|---:|---:|---:|
+| `Sofia Web - @sofiaweb` | 51 | **29** | 22 |
+| `_manuales` | 62 | **32** | 30 |
+| `DRLAROSA-biohacking` | 0 | 0 | 0 |
+| **Total** | **113** | **61** | **52** |
+
+**Qué significa esto para cualquier sesión futura:**
+
+- 🚦 **Los 52 «no disponible» NO son un pendiente.** Son el corpus tal como queda. No
+  reabrir la tanda, no bajar el ritmo y reintentar, no probar una tercera vía.
+- 🚦 **Y no se pueden presentar como ausencia de subtítulos:** parte de esos ceros vinieron
+  de **bloqueo por IP** (`RequestBlocked` / `429`), no de que el vídeo no los tuviera. Un
+  cero por bloqueo y un cero por ausencia se ven idénticos y significan lo contrario; al
+  citar el corpus se dice **61 transcripciones reales de 113 fichas**, no «113 vídeos».
+- **Si alguna vez hace falta uno concreto**, se pide ese vídeo suelto y se anota por qué
+  valía la pena; lo que queda cerrado es la **tanda**, no la herramienta.
+- 🚦 La carpeta `DRLAROSA-biohacking` quedó con **cero** archivos. Existe y no aporta nada:
+  borrarla o repoblarla es decisión del usuario, no del agente.
+
+**Por qué queda escrito aquí y no en una lista de pendientes:** este pendiente vivió semanas
+**solo en la conversación** y por eso reaparecía en cada relevo. Un pendiente que no está en
+la skill que lo gobierna no está cerrado: está esperando que alguien lo recuerde.
+
 ## Cómo depurar si falla
 
 - **`RequestBlocked` / `IpBlocked` / `HTTP 429`:** bloqueo por IP, no ausencia
