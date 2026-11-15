@@ -23,7 +23,7 @@ metadata:
   version: 1.0
   fecha: 2026-06-19
   origen: sesión 2026-06-19 (prueba real con el cuaderno DARPA de mobijuesa360); construida sobre anthropic-skills:notebooklmskill
-  fuente: anthropic-skills:notebooklmskill (CLI notebooklm-py v0.3.4) + truco de reauth de [[reference-cuaderno-toma-decisiones-qvp]]
+  fuente: anthropic-skills:notebooklmskill (CLI notebooklm-py v0.3.4) + truco de reauth de [[reference_cuaderno_toma_decisiones_qvp]]
   relacionada: notebooklmskill, analisis-cognitivo-intervenciones-qvp, llave-maestra-autoaprendizaje-ia
 ---
 
@@ -33,7 +33,7 @@ metadata:
 Lee primero `C:\Users\datos\.claude\projects\C--Users-datos-Downloads\memory\user_role.md`
 y `MEMORY.md` para heredar perfil y proyectos (QVP, EcuaLedger/FBSE, Vista al Río).
 Cuenta NotebookLM por defecto: **mobijuesa360@gmail.com** (perfil `browser_profile_edge`).
-Ver [[feedback-notebooklm-cuenta]].
+Ver [[feedback_notebooklm_cuenta]].
 
 ## Doctrina central
 NotebookLM no es solo un generador de artefactos: es un **corpus curado + un chat
@@ -82,6 +82,12 @@ Pedir `--json` si se quieren las referencias [n] mapeadas a fuentes.
 **4. (Opcional, 🚦) Leer un artefacto de Studio a fondo:**
 - Presentación: `"$NLM" download slide-deck ./x.pdf` (o `--format pptx`). *Las diapositivas
   suelen ser imágenes sin capa de texto → leer con visión si se necesita el contenido.*
+  *Para auditar las 15-20 láminas sin gastar la visión: OCR con `rapidocr_onnxruntime` sobre PNG a 150 dpi
+  (renglones agrupados por `y`). Para **corregir o completar** una presentación de NotebookLM no hay que
+  regenerarla (vuelve a inventar): se reponen las láminas malas y se agregan láminas nativas con python-pptx
+  sobre el mismo `.pptx`, reordenando `sldIdLst` y soltando el `rel` de las retiradas. Patrón probado el
+  14-nov-2026 en ALB-ZF-002 v2 (generador `scratchpad/zf/build_zf002_v2.py`): tablas Consulta / Respuesta /
+  Estado con pastillas Respondida · Parcial · Por definir · Estimado y letra ajustada por medición.*
 - Informe/mapa/tabla: `download report ./x.md` · `download mind-map ./x.json` · `download data-table ./x.csv`.
 - Audio/vídeo: `download audio ./x.mp3` · `download video ./x.mp4` (medios; referenciar, no "leer").
 
@@ -146,6 +152,14 @@ mapa de artefactos Studio) + recomendaciones. Persistir en la carpeta del proyec
   - **La comprobación de una línea antes de recosechar:** *«si es la sesión, el `delete` que acaba de fallar funcionará justo después de la cosecha»*. Barata y concluyente.
   - 🚦 **No basta con cosechar al arrancar el día.** La nota de `feedback_notebooklm_rpc_50mib` dice que hay que cosechar antes del primer comando, y es cierto, pero **no es suficiente**: en una tanda larga de subidas y borrados la sesión se degrada igual. Recosechar es barato; hacerlo en cuanto el error se extiende a otra operación ahorra la ronda completa de reintentos.
   - 🚦 **Si se borró la fuente buena para reemplazarla, el cuaderno queda sin ella hasta que entre la nueva.** Al sustituir una fuente por una versión corregida, no dar por terminada la operación hasta volver a listar y verla en `ready`.
+
+- ⭐⭐ **`source delete` PUEDE DAR ÉXITO FALSO CON EL ID CORRECTO (8-nov-2026).** Endurece la nota del 29-oct, que atribuía el éxito falso a *inventar* el id. Caso medido: se pasó el prefijo corto `d1108d72`, el CLI imprimió la línea `Matched:` con el **título correcto**, respondió `Deleted source: d1108d72-433e-449b-a9e6-9cc1327414a7` —el id completo real— con rc=0… **y la fuente seguía en la lista.** El reintento inmediato, idéntico, sí borró.
+  - 🚦 **La línea `Matched:` es condición necesaria y NO suficiente.** La única confirmación de un borrado es **volver a listar y no verlo**. Sin ese paso, el guion informa éxito y no pasó nada.
+  - **Pista del caso:** justo antes del borrado aparecieron `rpc failed: RPC LIST_NOTEBOOKS (TransportServerError)` y un reintento con espera. El borrado se emitió sobre una resolución de cuaderno que acababa de tropezar.
+
+- ⭐⭐ **`source wait` DA FALSOS NEGATIVOS (8-nov-2026).** Devolvió `timeout` (rc=2) sobre una fuente que `source list` ya daba en **`ready`** en ese mismo momento. **No concluir nunca del `wait`: confirmar en la lista.** Es el nivel 2 del rastro contra el nivel 3, y gana el 3 —ver [[prueba-eliza-agente-que-trabaja]]. Un `wait` que agota el plazo **no autoriza** a borrar la fuente vieja, pero tampoco a darla por fallida: hay que mirar.
+
+- ⭐ **Discriminador NO destructivo para el `UNEXPECTED_ERROR` en blanco (8-nov-2026).** La nota del 7-nov proponía distinguir «intermitente» de «sesión degradada» viendo si `source delete` también falla —pero eso obliga a destruir algo. **Sirve igual cualquier escritura inocua: `source rename <id> "<su propio título>"`.** Si el rename entra con rc=0, la sesión escribe bien y el fallo es el intermitente del `add`: limpiar la fuente muerta en `preparing` y reintentar. Caso medido: `add` dio `UNEXPECTED_ERROR` con mensaje vacío **y dejó fuente muerta**; el rename entró a la primera; limpiada la muerta, el `add` entró a la primera. **El mensaje `UNEXPECTED_ERROR` no identifica el fallo; la fuente muerta sí.**
 
 - ⭐ **Cargador genérico de fuentes (11-oct-2026):**
   `~/.claude/skills/auditor-integral-notebooklm/scripts/subir_fuentes_notebooklm.py` —
@@ -223,6 +237,36 @@ PY
   (3) `--json` viene precedido de líneas «Matched:» y WARNING: extraer el primer objeto con
   `json.JSONDecoder().raw_decode`. Cargador listo y idempotente:
   `E:\vars\var 5\Universidad-Abierta\subir_aula_notebooklm.py` (add + wait + rename + registro).
+
+### 🚦🚦 Las tres averías del cargador, destapadas y arregladas el 14-nov-2026
+
+`scripts/subir_fuentes_notebooklm.py`. Las tres eran **silenciosas**, y las tres se vieron por
+volver a listar o por un `--dry` que no hacía falta hacer.
+
+1. **La idempotencia por título muere en cuanto se renombra la fuente.** La clave de omisión era
+   `prefijo + nombre de archivo`, pero la convención de esta casa obliga a renombrar después de
+   subir (`[NN Carpeta] Clase NN · Título`). Resultado: una corrida posterior **volvía a subir la
+   misma fuente, duplicada**. **Arreglado:** manda el registro `_subidas_nlm.json`, que guarda la
+   **ruta del archivo** (que no cambia) y el `source_id`; si ese id sigue vivo en el cuaderno, se
+   omite, se llame la fuente como se llame. Funciones nuevas: `ids_vivos()` y `ya_por_registro()`.
+   🚦 **La lección general: una clave de idempotencia no puede ser un campo que el propio
+   procedimiento modifica después.**
+2. **La limpieza de la fuente muerta no corría cuando más falta hacía.** Exigía el `source_id` del
+   JSON del `add`; un `add` que revienta con `AssertionError: Data should not be empty` **no
+   imprime JSON**, así que no había id y la muerta se quedaba en `preparing`. **Arreglado:**
+   `limpiar_muerta_por_nombre()` la busca por nombre de archivo entre las fuentes que **no** están
+   `ready`, la borra y confirma volviendo a listar.
+3. **`parse_json` cortaba por el primer `{` o `[` de la salida.** El CLI imprime
+   `WARNING … [req=…]` antes del JSON al reintentar un RPC, así que ganaba ese `[`, `raw_decode`
+   fallaba, `fuentes()` lo atrapaba y **devolvía `{}`** — con lo cual la idempotencia desaparecía
+   sin un aviso. **Arreglado:** prueba varios puntos de arranque en principio de línea, **exige que
+   el resultado tenga forma de listado** (`sources` o lista) y grita si no. Probado con cinco
+   casos, incluidos los dos que deben fallar.
+
+🚦 **Y una trampa de interfaz entre hermanos:** `subir_fuentes_notebooklm.py` toma **ruta o glob**
+y con un fragmento de nombre imprime «sin archivos que subir» y sale; `aula_a_pdf.py` toma
+**fragmento de nombre y no ruta**. Convenciones opuestas, los dos fallan casi en silencio.
+Comprobar cuál es cuál antes de culpar a la sesión o a la red.
 
 ## Portabilidad (revisar el 20% al reusar)
 Rutas/cuenta/canal de navegador (`browser_profile_edge` vs `_jjm`), versión del CLI (`notebooklm-py`)

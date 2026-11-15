@@ -53,12 +53,32 @@ def run(args: list[str], timeout: int = 600) -> tuple[int, str]:
 
 
 def parse_json(out: str):
-    i = out.find("{")
-    j = out.find("[")
-    k = min(x for x in (i, j) if x >= 0) if (i >= 0 or j >= 0) else -1
-    if k < 0:
-        raise ValueError("sin JSON en la salida")
-    return json.JSONDecoder().raw_decode(out[k:])[0]
+    """Extrae el JSON de una salida sucia del CLI.
+
+    14-nov-2026: la version anterior tomaba el PRIMER `{` o `[` de la salida. El CLI
+    imprime `WARNING ... [req=abc123]` antes del JSON cuando reintenta un RPC, asi que
+    ese `[` ganaba y `raw_decode` fallaba. El fallo NO se veia: `fuentes()` lo atrapaba,
+    devolvia {} y **se perdia la idempotencia en silencio** — habria vuelto a subir una
+    fuente ya presente, duplicandola. Ahora se prueban varios puntos de arranque y se
+    exige que el resultado tenga forma de listado.
+    """
+    candidatos_json = []
+    for marca in ("\n{", "\n["):          # el JSON del CLI empieza en su propia linea
+        p = out.find(marca)
+        while p >= 0:
+            candidatos_json.append(p + 1)
+            p = out.find(marca, p + 1)
+    if out[:1] in ("{", "["):
+        candidatos_json.insert(0, 0)
+    for k in sorted(candidatos_json):
+        try:
+            d = json.JSONDecoder().raw_decode(out[k:])[0]
+        except Exception:
+            continue
+        if isinstance(d, list) or (isinstance(d, dict) and "sources" in d):
+            return d
+    raise ValueError("sin JSON con forma de listado en la salida (%d candidatos probados)"
+                     % len(candidatos_json))
 
 
 def fuentes(nb: str) -> dict:
@@ -78,6 +98,63 @@ def fuentes(nb: str) -> dict:
         if t:
             out_d[t] = s
     return out_d
+
+
+def ids_vivos(ya: dict) -> set:
+    """Los ids de fuente que de verdad estan en el cuaderno ahora mismo."""
+    return {(v.get("id") or "") for v in ya.values() if v.get("id")}
+
+
+def ya_por_registro(f: str, log: list, vivos: set):
+    """Devuelve el id si este PDF ya esta subido y procesado, segun el registro.
+
+    Sobrevive al renombrado de la fuente, que es lo que rompia la idempotencia por
+    titulo: el registro guarda la RUTA del PDF, que no cambia cuando el titulo si.
+    """
+    objetivo = os.path.normcase(os.path.abspath(f))
+    for e in reversed(log or []):
+        if e.get("estado") != "listo" or not e.get("source_id"):
+            continue
+        arch = e.get("archivo") or ""
+        if os.path.normcase(os.path.abspath(arch)) == objetivo and e["source_id"] in vivos:
+            return e["source_id"]
+    return None
+
+
+def limpiar_muerta_por_nombre(nb: str, f: str) -> str:
+    """Borra la fuente muerta que deja un `add` roto sin JSON (no hay id que usar).
+
+    Se identifica por el nombre del archivo y por NO estar `ready`. La confirmacion
+    es volver a listar: el `delete` de este CLI miente en las dos direcciones.
+    """
+    nombre, raiz = Path(f).name, Path(f).stem
+    rc, out = run(["source", "list", "-n", nb, "--json"])
+    if rc != 0:
+        return "sin_limpiar(no_pude_listar)"
+    try:
+        d = parse_json(out)
+    except Exception as e:
+        return "sin_limpiar(%s)" % e
+    lista = d.get("sources", d) if isinstance(d, dict) else d
+    muertas = [x for x in (lista or [])
+               if (x.get("status") or "").lower() != "ready"
+               and (nombre in (x.get("title") or "") or raiz in (x.get("title") or ""))]
+    if not muertas:
+        return "sin_muerta"
+    borradas = []
+    for x in muertas:
+        run(["source", "delete", x["id"], "-n", nb, "-y"])
+        borradas.append(x["id"][:8])
+    rc2, out2 = run(["source", "list", "-n", nb, "--json"])
+    sigue = False
+    if rc2 == 0:
+        try:
+            d2 = parse_json(out2)
+            l2 = d2.get("sources", d2) if isinstance(d2, dict) else d2
+            sigue = any(x.get("id") in [m["id"] for m in muertas] for x in (l2 or []))
+        except Exception:
+            sigue = True
+    return ("NO_SE_BORRO:" if sigue else "limpiada:") + ",".join(borradas)
 
 
 def main() -> int:
@@ -107,20 +184,33 @@ def main() -> int:
         print(f"   {os.path.getsize(f)/1024:8.0f} KB  {os.path.basename(f)[:84]}")
 
     ya = fuentes(a.nb)
+    vivos = ids_vivos(ya)
     print(f"\nfuentes ya presentes: {len(ya)}")
-    if a.dry:
-        for f in archivos:
-            t = (a.prefijo + Path(f).stem)[:200]
-            print(f"   {'= ya esta' if (t in ya or Path(f).name in ya) else '+ subiria'}  {t}")
-        return 0
 
     log_path = Path(archivos[0]).parent / "_subidas_nlm.json"
     log = json.loads(log_path.read_text(encoding="utf-8")) if log_path.exists() else []
+
+    if a.dry:
+        for f in archivos:
+            t = (a.prefijo + Path(f).stem)[:200]
+            sid_reg = ya_por_registro(f, log, vivos)
+            if sid_reg:
+                print(f"   = ya esta (registro {sid_reg[:8]})  {t}")
+            elif t in ya or Path(f).name in ya:
+                print(f"   = ya esta (titulo)  {t}")
+            else:
+                print(f"   + subiria  {t}")
+        return 0
     ok = omitidas = fallos = 0
 
     for f in archivos:
         titulo = (a.prefijo + Path(f).stem)[:200]
         nombre = Path(f).name
+        sid_reg = ya_por_registro(f, log, vivos)
+        if sid_reg:
+            print(f"  = ya esta (registro {sid_reg[:8]}, aunque el titulo haya cambiado)")
+            omitidas += 1
+            continue
         if titulo in ya:
             print(f"  = ya esta          {titulo[:72]}"); omitidas += 1; continue
         if nombre in ya:
@@ -153,6 +243,11 @@ def main() -> int:
             # la subida rota deja una fuente muerta en estado 5: borrarla
             run(["source", "delete", sid, "-n", a.nb, "-y"])
             estado = "add_error_limpiado"
+        elif rc != 0 and not sid:
+            # 14-nov-2026: el `add` corto con AssertionError sin imprimir JSON, asi que
+            # no hay id y la rama de arriba no se ejecutaba: la fuente muerta se quedaba
+            # en «preparing». Se busca por nombre entre las que no estan `ready`.
+            estado = "add_error_" + limpiar_muerta_por_nombre(a.nb, f)
 
         marca = "OK " if estado == "listo" else "FAL"
         extra = "" if rc == 0 else "   " + out[-160:].replace("\n", " ")
