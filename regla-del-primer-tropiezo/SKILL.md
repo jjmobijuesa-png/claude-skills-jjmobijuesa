@@ -334,11 +334,13 @@ día, dos métodos, dos resultados.
 - Para decidir **el camino más barato** que resuelve el prompt: [[eficiencia-generacion-respuestas]].
 - Para no pedirle al usuario lo que se puede averiguar solo: [[cuantificar-antes-de-pedir]].
 - Para el marco de misión: [[baculo-mision-soberana]].
+- Cuando lo que falló fue **una capa de resumen** (ficha, acortador, vista previa) y no
+  la herramienta: [[metadatos-que-ocultan-el-dato-decisivo]].
 
 ## 9. La red integrada — no es una lista, es un grafo
 
-El inventario no es un catálogo de 154 entradas independientes: es una **red con 467
-aristas y un racimo central de 136 skills**. La asociación análoga —que es la materia
+El inventario no es un catálogo de 202 entradas independientes: es una **red con 950
+aristas, un único racimo que contiene a las 202 y ninguna huérfana** (14-nov-2026). La asociación análoga —que es la materia
 prima de la creatividad— necesita saber qué está conectado con qué; sobre una lista plana
 no hay nada que asociar.
 
@@ -354,9 +356,10 @@ racimos (vecindades temáticas), las huérfanas (capital muerto) y los enlaces r
 **Cómo se usa en el barrido del §3.** Al fallar algo, además de buscar el término:
 
 1. Ubicar en qué **racimo** cae el problema y leer a sus vecinos, aunque se llamen distinto.
-2. Entrar por un **cubo** si no hay pista: `llave-maestra-autoaprendizaje-ia` (grado 51),
-   `agente-local-autoreflexivo-bookmarks` (30), `memoria-financiera-inteligenciada` (21),
-   `cuantificar-antes-de-pedir` (17), `metodo-hamming-preguntas-fundamentales` (17).
+2. Entrar por un **cubo** si no hay pista: `llave-maestra-autoaprendizaje-ia` (grado 62),
+   esta misma skill (47), `agente-local-autoreflexivo-bookmarks` (33),
+   `cuantificar-antes-de-pedir` (25), `auditoria-evidencia-cuatro-niveles` (23),
+   `memoria-financiera-inteligenciada` (22), `bucle-verificacion-garantia-vs-sugerencia` (21).
 3. Revisar las **huérfanas**: una skill que nadie enlaza suele contener justo lo que nadie
    recordaba tener.
 4. Mirar los **enlaces rotos** del área: un `[[nombre]]` que apunta a una skill inexistente

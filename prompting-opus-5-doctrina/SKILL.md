@@ -44,6 +44,17 @@ metadata:
 
 # Skill `prompting-opus-5-doctrina`
 
+> 🚦 **Al 13-nov-2026 esta skill va una generación atrás.** El Opus vigente
+> es **Opus 5.5** (`claude-opus-5-5`, $4 / $20, **default de esfuerzo
+> `medium`** — un nivel por debajo del de Opus 5) y por encima está
+> **Fable 5.2** (`claude-fable-5-2`, $8 / $40). **La doctrina del QUITAR
+> sigue siendo correcta y en Fable se acentúa**: sus prompts escritos para
+> modelos anteriores son demasiado prescriptivos y le BAJAN la calidad.
+> Lo que hay que releer antes de citar son las cifras, los defaults de
+> esfuerzo y los cambios que rompen → skill `claude-api` y
+> [[selector-modelo-claude-optimo]] v2.0.
+
+
 ## Qué cambia en Opus 5 (vs Opus 4.8)
 
 Opus 5 rinde bien de entrada con los prompts que ya funcionaban en 4.8.
@@ -165,6 +176,8 @@ Darle la especificación COMPLETA de una vez y dejarlo correr. Ver
 
 ## Relacionado
 - [[selector-modelo-claude-optimo]] — cuándo elegir Opus 5.
+- [[escalera-prompting-prueba-del-techo]] — en qué escalón está la tarea y cuál es
+  la señal falsable de que hay que subir.
 - [[eficiencia-generacion-respuestas]] — misma familia: no gastar de más.
 - [[doctrina-thorp-matematica-vs-multitud]] — code review: cobertura y luego filtro.
 - [[llave-maestra-autoaprendizaje-ia]] — esta skill nació de destilar la guía oficial.

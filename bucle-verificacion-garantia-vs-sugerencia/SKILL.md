@@ -147,3 +147,6 @@ Control y verificación: [[segundo-cerebro-anclaje-verificable]],
 Arquitectura del agente: [[arnes-agentico-bucle-y-contexto]],
 [[memoria-agente-claude-md-reglas]], [[skills-empaquetar-procedimiento]].
 Método ante fallos: [[regla-del-primer-tropiezo]].
+Límites declarados: [[sala-limpia-reimplementacion-licita]] — lo que una herramienta
+rehúsa mirar es su garantía; [[metadatos-que-ocultan-el-dato-decisivo]] — un indicador
+resumido en un campo único no informa, recorta; [[escalera-prompting-prueba-del-techo]].

@@ -60,6 +60,8 @@ Leer `...\memory\user_role.md` + `MEMORY.md`. Hermana de
 ## Reuso
 [[rigor-matematico-filtro-pseudociencia]] · [[metodo-hamming-preguntas-fundamentales]]
 · [[auditar-skills-antes-de-instalar]] · [[cuantificar-antes-de-pedir]].
+· [[metadatos-que-ocultan-el-dato-decisivo]] — la ficha no es la fuente
+· [[prediccion-con-reloj]] · [[escalera-prompting-prueba-del-techo]].
 
 ## Ejemplos de invocación
 - «El proveedor dice que su solución está probada: ¿en qué nivel?»
