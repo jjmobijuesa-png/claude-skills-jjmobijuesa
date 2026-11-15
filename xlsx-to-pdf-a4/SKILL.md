@@ -52,6 +52,25 @@ The `--prefix` is prepended to each output filename so the PDFs auto-sort into g
 - Sheets with more than ~3,000 rows produce PDFs of 500KB+ and may exceed NotebookLM's per-source rate limit on the first upload — retry once if the first add fails.
 - Cells with embedded images, charts, or pivot tables: only the table values are extracted; visual elements are lost. Use a print-to-PDF route from Excel itself if visuals matter.
 
+## Cómo depurar si falla: PDF de lectura desde Excel COM (14-nov-2026)
+
+Cuando el PDF se saca **desde Excel** (`ExportAsFixedFormat`, para conservar el formato) y no con este conversor:
+
+- 🚦 **`xl.PrintCommunication = True` lanza `com_error … -2146827284`** al fijar A3: la impresora predeterminada
+  (HP Smart Tank 580-590) **no admite A3**. Arreglo: en esa sesión de Excel usar `Microsoft Print to PDF`
+  (`xl.ActivePrinter = "Microsoft Print to PDF en Ne00:"`; el puerto sale de
+  `HKCU\Software\Microsoft\Windows NT\CurrentVersion\Devices`). No se cambia la predeterminada de Windows.
+- 🚦 **`ActivePrinter` solo cambia con un libro abierto**: sin libros, la asignación falla en silencio. Ponerla
+  justo después de `Workbooks.Open`.
+- 🚦 **Las hojas A4 salen en Carta** aunque `PaperSize = 9`. Se reencuadran con PyMuPDF, vectorial y centrado:
+  `new_page(595x842 u 842x595)` + `show_pdf_page(..., keep_proportion=True)`; guardar en un archivo temporal y
+  luego `os.replace` (guardar encima del original abierto da «Permission denied»).
+- 🚦 **Un Excel que se cae deja `EXCEL.EXE` huérfano sin ventana**: cerrarlo antes de reintentar
+  (`Get-Process EXCEL | ? MainWindowTitle -eq '' | Stop-Process`).
+- 🚦 **openpyxl: un texto que empieza con «=» se guarda como fórmula** y Excel muestra #¿NOMBRE? (pasó en
+  el WS4 entregado, celda `1 PARAMETROS!D29`). Al escribir notas, no empezarlas con «=».
+- Generador probado: `scratchpad/tier/recalc_pdf.py` (recalcula, busca celdas en error, exporta y reencuadra).
+
 ## Why one PDF per sheet (and not one multi-page PDF)
 
 For ingestion into systems like NotebookLM where each PDF becomes a separately retrievable source, one-per-sheet gives more granular citation and the AI can quote a specific sheet without dragging in unrelated tabs.

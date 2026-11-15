@@ -90,7 +90,7 @@ mínimo 3,63 % y el costo de ventas máximo semanal:
 > EBITDA bajo presión y caja limitada → cuatro señales presentes simultáneamente en QVP 2024–2025.
 
 > **«EBITDA es para comparativas; OCF es para supervivencia.»**
-> — Síntesis de Jordi Altimira, LinkedIn `activity-7472573800476340224` (R25 / [[reference-tipos-flujo-caja-jordialtimira]]).
+> — Síntesis de Jordi Altimira, LinkedIn `activity-7472573800476340224` (R25 / [[reference_tipos_flujo_caja_jordialtimira]]).
 > Regla práctica derivada para la PLANTILLA ÚNICA: agregar columna **OCF mensual** además de la
 > caja contable; pregunta obligatoria en cualquier negociación de financiamiento: *"¿qué
 > entiende usted por flujo de caja libre?"* antes de firmar.

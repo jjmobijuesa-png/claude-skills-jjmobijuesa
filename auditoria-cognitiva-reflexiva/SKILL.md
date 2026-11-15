@@ -31,7 +31,7 @@ metadata:
 
 ## Acerca de mí (cargar al arrancar)
 Lee `...\memory\user_role.md` y `MEMORY.md`. Marco de decisión disponible en el cuaderno
-NotebookLM "Toma d Decisiones QVP" ([[reference-cuaderno-toma-decisiones-qvp]]): Kahneman
+NotebookLM "Toma d Decisiones QVP" ([[reference_cuaderno_toma_decisiones_qvp]]): Kahneman
 (Sistema 2, sesgos, pre-mortem) y de Bono (Seis Sombreros, CoRT, PO).
 
 ## Doctrina central
@@ -67,7 +67,7 @@ La IA se audita a sí misma tras una tarea/sesión y **alimenta a la llave maest
 6. **Primer ajuste** a aplicar ya. Persistir el aprendizaje vía [[llave-maestra-autoaprendizaje-ia]] (Paso 4/5). Esto es el **autoenfoque** central de este computador: cada sesión deja a la IA más calibrada, no solo más capaz.
 
 ## Refuerzos del corpus LinkedIn (fedphd, 2026-06-27)
-Destilado de los guardados ([[reference-linkedin-ia-cognicion-lote-fedphd]]):
+Destilado de los guardados ([[reference_linkedin_ia_cognicion_lote_fedphd]]):
 - **Origen del framework** — Miguel Á. Cervantes (varios posts guardados) ya es el **núcleo** de esta skill.
 - **Meta con estructura, no deseo** — Ana Ivars: *"un objetivo sin estructura no es un objetivo, es un
   deseo; el problema casi nunca es la motivación, sino no saber convertir la meta en un plan real"*.
@@ -93,7 +93,7 @@ La lista de sesgos del MODO 2 y las 5 facultades son estables; ajustar el vocabu
 ## Reuso
 - Cognición de **reuniones** → [[analisis-cognitivo-intervenciones-qvp]] (rúbrica de 8 dimensiones).
 - Persistencia del aprendizaje de la IA → [[llave-maestra-autoaprendizaje-ia]].
-- Marco teórico (Kahneman/de Bono) → [[reference-cuaderno-toma-decisiones-qvp]].
+- Marco teórico (Kahneman/de Bono) → [[reference_cuaderno_toma_decisiones_qvp]].
 
 ## Ejemplos de invocación
 - «Hazme una auditoría cognitiva de mi forma de decidir bajo presión.»

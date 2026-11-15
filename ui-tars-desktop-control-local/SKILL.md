@@ -98,7 +98,7 @@ en la pantalla apagada). Arreglo:
   y `switch_display "LG HD"` para capturarla.
 - Permanente: re-fijar LG HD como principal (Configuración → Sistema →
   Pantalla, o el P/Invoke `ChangeDisplaySettingsEx` con DISPLAY2 →
-  `CDS_SET_PRIMARY`). Ver [[feedback-monitor-primario-apagado]].
+  `CDS_SET_PRIMARY`). Ver [[feedback_monitor_primario_apagado]].
 
 ## Qué NO hacer / compuertas 🚦
 

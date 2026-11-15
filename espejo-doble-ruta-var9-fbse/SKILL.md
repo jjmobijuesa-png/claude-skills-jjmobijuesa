@@ -64,6 +64,13 @@ python ".../espejo_var9_fbse.py" "Tokenizacion Activos Reales - RWA\BlockChain S
   borrado arrastra lo que el usuario haya puesto dentro (PDF firmados, RAR). **Regla:** sobrescribir
   archivo por archivo; borrar solo carpetas obsoletas con otro nombre. Lo borrado en `G:` se recupera
   desde la Papelera de Drive durante 30 días.
+- ⭐🚦 **El espejo resucita lo retirado (14-nov-2026).** Como copia en los dos sentidos y nunca
+  borra, todo lo que el usuario quite o mueva en `G:` y siga en `E:` **vuelve a `G:`** en la próxima
+  corrida (el 14-nov: el archivo ZZ y la guía de la raíz de CCEATI). **Regla: antes de correr el
+  espejo, comparar los dos árboles** (`comparar_ge.py`: solo en G / solo en E / distinto tamaño) y
+  replicar en `E:` el orden de `G:`. Lo que el usuario retiró de `G:` se saca de `E:` **fuera del
+  subárbol espejado** (p. ej. `E:\vars\var 9 FBSE\ZZ Archivo CCEATI (retirado de G el 14-nov-2026)`),
+  sin borrar. Comprobación barata: la comparación da 0 / 0 / 0.
 - 🚦 **El 28-oct-2026 el disco `E:` no estaba montado.** Sin `E:`, se trabaja directamente sobre `G:`,
   pieza a pieza, contando las piezas; el espejo se ejecuta cuando `E:` vuelva.
 

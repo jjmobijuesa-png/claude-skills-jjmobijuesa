@@ -9,7 +9,7 @@ persistente ya logueado.
 import sys, time, os
 sys.stdout.reconfigure(encoding="utf-8")
 from playwright.sync_api import sync_playwright
-PROF=r"C:\Users\datos\.notebooklm\browser_profile_jjm"
+PROF=os.environ.get("PPLX_PROFILE", r"C:\Users\datos\.notebooklm\browser_profile_jjm")  # mobijuesa360 = browser_profile_edge
 OUTDIR=r"E:\vars\var 5\Perplexity-consultas"
 QUERY=sys.argv[1] if len(sys.argv)>1 else "Hola"
 SLUG=sys.argv[2] if len(sys.argv)>2 else "consulta"

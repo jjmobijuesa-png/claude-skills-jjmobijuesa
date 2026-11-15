@@ -86,7 +86,7 @@ directos: `…\Observatorio-Geopolitico\10_corpus\CATALOGO.md`.
 > ⚠️ El CLI `notebooklm` apunta al host viejo; usar el envoltorio
 > `C:\Users\datos\war_room_tmp\nlm_dominio.py` y **cosechar antes**
 > (`cosechar_nlm.py`). Ver [[auditor-integral-notebooklm]] §CSRF y
-> [[feedback-reauth-notebooklm-cosecha]].
+> [[feedback_reauth_notebooklm_cosecha]].
 
 ### Paso 2 — Enriquecimiento por investigación profunda
 - **Dentro del cuaderno:** `source add-research --mode deep --import-all

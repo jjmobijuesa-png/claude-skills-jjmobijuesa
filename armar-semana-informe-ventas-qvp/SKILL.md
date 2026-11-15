@@ -233,20 +233,31 @@ diga otra cosa:
   externo en la misma semana.
 - **El cupo de DISEBAJ es de USD 2.000.000.** La celda del libro que dice
   1.000.000 está mal. No tomarla.
-- **SEMVRA despacha en IBC de 950 kg, no a granel.** Su precio nominal de $1.290
-  por «tonelada» equivale a **$1.357,89 por tonelada real**. Siempre incluir
-  volumen y presentación en los cuadros de margen por cliente.
-- **Mundosnack: el precio es $1.280**, no $1.350 (errata de tipeo del deck, que
-  además infla su total en $2.100).
-- **Odesa es solo un ejemplo.** La cifra de $1.800 la tonelada no es un precio y
-  no debe aparecer en ningún entregable.
+- **SEMVRA despacha en IBC de 950 kg, no a granel.** Su precio nominal de
+  USD 1.290 por «tonelada» equivale a **USD 1.357,89 por tonelada real**. Siempre
+  incluir volumen y presentación en los cuadros de margen por cliente. Desde la
+  semana 46 el deck ya la factura a USD 1.356: la corrección fue adoptada.
+- **Mundosnack: el precio es USD 1.280**, no USD 1.350 (errata de tipeo del deck,
+  que además infla su total en USD 2.100).
+- **Odesa es solo un ejemplo.** La cifra de USD 1.800 la tonelada no es un precio
+  y no debe aparecer en ningún entregable.
 - **Defecto sistemático del libro de precios:** la fila «Margen de Venta a DSJ vs
   Oleína G» está calculada contra el precio de **Colombia**, no contra el de
   DISEBAJ, y por eso subdeclara el margen en exactamente la prima. La fila de
   oleína H sí usa el precio correcto. Recalcular siempre y decirlo.
 - **El costo contable real manda sobre la hoja de seguimiento.** En la semana 43
-  la oleína guineensis costó $1.310,12 por tonelada y no los $1.270,48 de la hoja:
-  $15.155 de diferencia en una semana sobre la hoja con la que se fija precio.
+  la oleína guineensis costó USD 1.310,12 por tonelada y no los USD 1.270,48 de
+  la hoja: USD 15.155 de diferencia en una semana sobre la hoja con la que se
+  fija precio.
+
+> ⚠️ **Por qué este apartado escribe `USD 1.290` y no el signo de dólar.**
+> El cuerpo de un `SKILL.md` sufre **sustitución de parámetros posicionales**: si
+> alguien invoca la skill con argumentos («semana 45»), toda aparición de `$1`,
+> `$5` u `$8` se reemplaza por el argumento y la cifra sale corrompida —`$1.290`
+> se leyó una vez como `45.290`—. Es el mismo mecanismo del §6.3, pero dentro del
+> propio archivo y no en la línea de comandos. **Regla: en el cuerpo de cualquier
+> SKILL.md, las cifras en dólares se escriben `USD`.** El signo solo es seguro
+> dentro de bloques de código, que no se sustituyen.
 - **Nunca mencionar a EPACEM**, salvo donde Francisco lo autorizó expresamente
   (Anexo III-B). El lenguaje sobre la auditoría del ERP es discreto: nunca «robo»,
   «hurto» ni «fraude».

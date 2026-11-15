@@ -173,6 +173,50 @@ asignación de `PageSetup` en try/except (con la impresora offline algunas propi
 lanzan); `FitToPagesWide=1`, `Zoom=False`, `PrintArea` explícita, `PaperSize=9`,
 `Orientation=2`.
 
+## 🛰️ IPP DIRECTO — saltarse la cola WSD de Windows (13-nov-2026)
+
+**Síntoma:** Acrobat (con `/t` o desde Ctrl+P) «imprime», la cola de Windows queda vacía al
+instante, el contador `TotalJobsPrinted` sigue en 0 y no sale papel. `Get-PrintConfiguration`
+se cuelga. A veces aparece «Font Capture: Application Error 0xc06d007e» (falta un módulo de
+carga diferida en el filtro de impresión del driver genérico IPP). **Mecanismo:** la cola WSD
+pierde el trabajo; nunca llega a la HP (el `job-id` de la impresora arranca en 1 tras su encendido).
+
+**Comprobación de una línea:** `ipp_directo.py atributos 192.168.100.39` — si responde con
+`printer-state` y `media-ready`, la HP escucha por IPP y se puede imprimir sin la cola.
+
+```bash
+S=~/.claude/skills/impresion-local-hp-diagnostico/scripts/ipp_directo.py
+python $S atributos 192.168.100.39          # estado, papel, tinta, formatos
+python $S imprimir hoja.jpg 192.168.100.39 --formato image/jpeg
+python $S trabajos 192.168.100.39
+```
+- IP de la HP: `ping -4 HPC4225C` (13-nov: **192.168.100.39**, MAC f8-ed-fc-c4-22-5c).
+- **La HP NO acepta PDF por IPP**: solo `image/jpeg`, `image/pwg-raster`, `image/urf`,
+  `application/PCLm` y PCL. Convertir cada página con PyMuPDF a JPEG A4 vertical (girar 90° las
+  apaisadas): `page.get_pixmap(matrix=fitz.Matrix(300/72,300/72).prerotate(90))`.
+- No hay dúplex (`sides-supported: one-sided`).
+- 🚦 **Si el trabajo IPP queda en `job-state 5` (processing) con 0 impresiones y la impresora
+  en `spool-area-full-report`**, el control con un JPEG liviano (100 ppp) separa los casos: si
+  tampoco sale, el problema es **físico de la impresora** (motor dormido, luz de reanudar o de
+  error parpadeando, atasco) y se resuelve en el equipo: botón Reanudar o apagar y encender.
+  Cancelar con la operación IPP 0x0008 (Cancel-Job). Caso del 13-nov: ambos JPEG se quedaron en
+  processing; el diagnóstico pasó al panel físico.
+
+### 🚦 Resultado real del 13-nov: hojas DUPLICADAS — la ley del «un solo envío»
+Desenlace: tras reiniciar la HP **todo salió**, pero el plan de ventas y el flujo de caja
+**salieron dos veces**. Causa: se reenviaron hojas que la impresora ya tenía retenidas.
+- Un trabajo «perdido» por la cola WSD o «en processing» por IPP **no está perdido**: la HP lo
+  retiene y lo imprime cuando se despierta o se reinicia. Lo mismo un Print-Job que respondió
+  **0x0507 (server-error-busy)**: puede quedar igual en su memoria.
+- **Regla:** cada hoja se envía UNA sola vez por UNA sola vía. Antes de reintentar por otra
+  vía (Acrobat → IPP), **cancelar lo pendiente en ambas** (`Get-PrintJob | Remove-PrintJob` y
+  Cancel-Job IPP de cada `job-id`) y preguntar al usuario qué salió en papel.
+- La HP acepta **un trabajo IPP a la vez**: enviar el siguiente solo cuando el anterior llegue
+  a `job-state 9` (completed). Nunca encolar en ráfaga.
+- Tras un reinicio pedido al usuario, **no reenviar nada** hasta que diga qué salió: lo retenido
+  sale solo.
+- 🚦 **No imprimir sin orden expresa del usuario para ESE lote** (orden de Francisco, 14-nov).
+
 ## La impresora
 
 | | |

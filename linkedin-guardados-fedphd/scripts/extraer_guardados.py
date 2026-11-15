@@ -47,6 +47,52 @@ EXTRACT_JS = r"""
 }
 """
 
+ESTADO = OUTDIR / "ESTADO_COSECHA.txt"
+
+
+def escribir_estado(verdicto, codigo, capturados, previos, causa=""):
+    """Deja el veredicto donde alguien lo lea.
+
+    8-nov-2026: el guion YA avisaba ('ADVERTENCIA: 0 capturados') dentro de un
+    harvest.log de 364 KB que nadie abria nunca. Un aviso sin lector es
+    operativamente identico al silencio. Esto es el aviso CON lector: un archivo
+    de cuatro lineas que la skill linkedin-guardados-fedphd obliga a mirar antes
+    de usar el corpus, y que lleva la cuenta de fallos SEGUIDOS, para que un
+    tropiezo de un dia no se lea igual que una sequia de cuatro meses.
+    """
+    seguidos = 0
+    if ESTADO.exists():
+        try:
+            for ln in ESTADO.read_text(encoding="utf-8").splitlines():
+                if ln.startswith("fallos_seguidos="):
+                    seguidos = int(ln.split("=", 1)[1].strip() or 0)
+        except Exception:
+            seguidos = 0
+    seguidos = 0 if codigo == 0 else seguidos + 1
+    alarma = ""
+    if seguidos >= 3:
+        alarma = ("\U0001F6A6 ALARMA: %d corridas seguidas sin cosechar. "
+                  "El corpus esta quieto; no lo trate como fresco.\n" % seguidos)
+    txt = (
+        "%sveredicto=%s\n"
+        "codigo=%d\n"
+        "fecha=%s\n"
+        "capturados=%d\n"
+        "previos=%d\n"
+        "fallos_seguidos=%d\n"
+        "causa=%s\n"
+        % (alarma, verdicto, codigo,
+           datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+           capturados, previos, seguidos, causa)
+    )
+    try:
+        d = txt.encode("utf-8")
+        with open(ESTADO, "wb") as f:
+            f.write(d)
+    except Exception as e:
+        print("aviso: no pude escribir %s (%s)" % (ESTADO, e))
+
+
 def run():
     captured, title = [], ""
     with sync_playwright() as p:
@@ -99,18 +145,40 @@ def run():
         (SNAP / f"{ts}.json").write_text(payload, encoding="utf-8")
         destino.write_text(payload, encoding="utf-8")
         print(f"capturados {len(captured)} guardados -> {destino}  (previos: {previos})")
+        print(f"page_title={safe_title!r}")
+        escribir_estado("COSECHA_OK", 0, len(captured), previos)
+        return 0
+
+    # ── SALIDA RUIDOSA (8-nov-2026) ────────────────────────────────────────────
+    # Antes esto imprimia la causa y salia con codigo 0, igual que una cosecha
+    # buena: el .bat seguia a clasificar y a augmentar skills sobre datos viejos,
+    # y la Tarea Programada anotaba LastTaskResult 0. El exito y el fracaso tenian
+    # la misma firma. Cada motivo tiene ahora su propio codigo.
+    rechazo = SNAP / f"{ts}_RECHAZADO.json"
+    rechazo.write_text(payload, encoding="utf-8")
+    print(f"capturados {len(captured)} | previos {previos}")
+    print(f"NO SE SOBRESCRIBE guardados.json. Cosecha no creible -> {rechazo}")
+    if muro:
+        causa = "muro de autenticacion: Edge en 9222 sin sesion de fedphd@gmail.com"
+        codigo, verdicto = 3, "MURO_AUTH"
+    elif not captured:
+        causa = "0 capturados: revisa los selectores EXTRACT_JS o la pagina"
+        codigo, verdicto = 2, "CERO_CAPTURADOS"
     else:
-        rechazo = SNAP / f"{ts}_RECHAZADO.json"
-        rechazo.write_text(payload, encoding="utf-8")
-        print(f"capturados {len(captured)} | previos {previos}")
-        print(f"NO SE SOBRESCRIBE guardados.json. Cosecha no creible -> {rechazo}")
-        if muro:
-            print("CAUSA: muro de autenticacion. Edge en 9222 no tiene sesion de fedphd@gmail.com.")
-        elif not captured:
-            print("CAUSA: 0 capturados. Revisa los selectores EXTRACT_JS.")
-        else:
-            print("CAUSA: merma superior al 20% frente al corpus previo.")
+        causa = f"merma superior al 20% frente al corpus previo ({len(captured)} vs {previos})"
+        codigo, verdicto = 2, "MERMA_EXCESIVA"
+    print(f"CAUSA: {causa}")
     print(f"page_title={safe_title!r}")
+    escribir_estado(verdicto, codigo, len(captured), previos, causa)
+    return codigo
+
 
 if __name__ == "__main__":
-    run()
+    try:
+        sys.exit(run())
+    except Exception as e:
+        # Un fallo de conexion por CDP cae aqui: antes dejaba traza en el log y
+        # nada mas. Ahora deja veredicto y sale con 4.
+        print(f"FALLO DURO: {type(e).__name__}: {e}")
+        escribir_estado("FALLO_DURO", 4, 0, 0, f"{type(e).__name__}: {e}")
+        sys.exit(4)

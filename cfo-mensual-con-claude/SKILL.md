@@ -72,7 +72,7 @@ que el conector Gmail MCP NO ve → se usa el perfil Playwright dedicado `browse
 
 > Antes de correr: si el archivo maestro `Muchas Gracias 2026.xlsx` esta cifrado, descifrar copia de
 > trabajo con `scripts\descifrar_xlsx.py` (clave `2020`, `msoffcrypto-tool`). Ver
-> [[project-finanza-integral-perfil-millonario]].
+> [[project_finanza_integral_perfil_millonario]].
 
 **W1 — Ingerir y clasificar facturas del mes.**
 Leer los PDF/escaneos de `02 Egresos` (pypdf; OCR de Adobe Scan ya trae capa de texto). Extraer

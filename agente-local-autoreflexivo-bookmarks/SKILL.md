@@ -46,13 +46,33 @@ fuente: sesión 2026-06-23 export 5550 bookmarks de @fdc_ec
 Esta skill **no analiza**: orquesta el bucle. El análisis pertenece a
 las skills hijas `intereses-*` que el pipeline crea.
 
+## 🚦🚦 Compuerta primera — leer `ESTADO_VIGIA.txt` antes de usar el corpus
+
+**Antes de citar un solo bookmark**, leer
+`E:\vars\var 5\X-com guardados\ESTADO_VIGIA.txt`. Trae el veredicto de la última
+corrida, la fecha, cuántas entradas se capturaron y una cuenta de **fallos
+seguidos** que a partir de tres encabeza el archivo con una alarma.
+
+| `verdicto` | Qué significa | Qué se puede decir del corpus |
+|---|---|---|
+| `COSECHA_OK` | Se capturó al menos una entrada | Está fresco |
+| `CERO_CAPTURADOS` | **No se pudo mirar** | Congelado. No es «sin novedades» |
+| `MURO_AUTH` | La sesión de X del perfil caducó | Congelado desde esa fecha |
+| `FALLO_DURO` | Excepción, o no hubo puerto | Congelado |
+
+**Por qué existe esta compuerta:** del 26-jun al 8-nov-2026 el corpus estuvo
+**135 días** sin cambiar y ninguna sesión se enteró. El bucle no avisaba de
+nada, y cuando empezó a avisar, el aviso no tenía lector. Un aviso sin
+consumidor equivale al silencio. Este archivo es el consumidor.
+
 ## Arquitectura del bucle
 
 ```
 ┌────────────────────────────────────────────────────────────────────┐
 │  1. CAPTURA (watch_bookmarks.py)                                   │
-│     Edge en localhost:9222 (CDP) → tab dedicada                    │
-│     → cada 5 min navega a x.com/i/bookmarks                        │
+│     Edge en localhost:9224, perfil edge-x-export (CDP)             │
+│     → --once: UNA pasada, sale con código, deja ESTADO_VIGIA.txt   │
+│     → (modo bucle solo para mirarlo a mano)                        │
 │     → intercepta respuestas GraphQL Bookmark*                      │
 │     → diff vs bookmarks.json → append novedades                    │
 └─────────────────────────┬──────────────────────────────────────────┘
@@ -96,20 +116,44 @@ las skills hijas `intereses-*` que el pipeline crea.
 | `E:\vars\var 5\X-com guardados\_snapshots\<fecha>/`                   | Snapshots fechados de respaldo                      |
 | `E:\vars\var 5\X-com guardados\INVENTARIO.{md,json}`                  | Hashes SHA-256 + tamaños                            |
 | `C:\Users\datos\.claude\skills\intereses-*\`                          | Skills hijas auto-destiladas                        |
-| `E:\vars\var 5\X-com guardados\start_edge_debug.bat`                  | Relanza Edge con `--remote-debugging-port=9222`     |
-| `E:\vars\var 5\X-com guardados\start_watch.bat`                       | Lanza el watcher                                    |
+| `E:\vars\var 5\X-com guardados\ESTADO_VIGIA.txt`                      | ⭐ Veredicto de la última corrida + fallos seguidos  |
+| `E:\vars\var 5\X-com guardados\harvest_x_diario.bat`                  | ⭐ Lo que corre la tarea: dos compuertas y un código |
+| `E:\vars\var 5\X-com guardados\harvest_x.log`                         | Registro de la envoltura (separado de `watcher.log`) |
+| `E:\vars\var 5\X-com guardados\crear_tarea_vigia_x.ps1`               | Registra la tarea programada (lo corre el usuario)  |
+| `E:\vars\var 5\X-com guardados\start_watch.bat`                       | Modo bucle, solo para mirarlo a mano                |
+| `…\scripts\preflight_cdp.py` (skill `linkedin-guardados-fedphd`)      | Compuerta CDP compartida. Nunca mata Edge           |
+| `_PELIGROSO_autostart_login.bat.desactivado`                          | 🚦 Desactivado 8-nov-2026. Mataba Edge. No reactivar |
+| `_PELIGROSO_start_edge_debug.bat.desactivado`                         | 🚦 Desactivado 8-nov-2026. Mataba Edge. No reactivar |
 
 ## Cómo se invoca (operación humana)
 
 ### Caso 1 — Tras reiniciar el computador
 
-```bat
-1) Doble-clic en start_edge_debug.bat
-2) Espera a que Edge restaure los workspaces (tu sesión @fdc_ec está
-   en `Finz`). Verifica que veas tu feed de X normal.
-3) Doble-clic en start_watch.bat
-4) La consola del watcher se queda abierta; minimízala.
+**Nada que hacer.** La tarea programada «X-com vigia bookmarks fdc_ec
+(diario)» corre a las 9:35 y levanta su propio Edge. LinkedIn va a las 9:15;
+están escalonadas a propósito.
+
+🚦 **El procedimiento viejo de esta sección era peligroso y ya no existe.**
+Decía «doble-clic en `start_edge_debug.bat`». Ese archivo hacía
+`taskkill /F /IM msedge.exe` y relanzaba Edge con
+`--remote-debugging-port=9222` **sobre el perfil por defecto** — el indicador
+que Chromium 136+ ignora en silencio. Es decir: mataba la sesión de Edge del
+usuario, WhatsApp incluida, **y encima no abría el puerto**. El 8-nov-2026 se
+desactivó junto con `autostart_login.bat`, que hacía lo mismo al iniciar
+sesión; quedan con el nombre `_PELIGROSO_*.desactivado`. **No reactivarlos.**
+
+Para levantar el puerto, siempre `preflight_cdp.py`, que nunca mata nada y
+solo da el paso si el puerto **responde**.
+
+### Caso 1-b — Correr la pasada a mano
+
+```bash
+powershell -Command "& cmd.exe /c 'E:\vars\var 5\X-com guardados\harvest_x_diario.bat'; $LASTEXITCODE"
 ```
+
+🚦 Desde Git Bash **no**: MSYS convierte `/c` en `C:/`, `cmd` arranca
+interactivo, no ejecuta nada y devuelve 0. Éxito falso perfecto
+([[feedback_git_bash_convierte_barra_c]]).
 
 ### Caso 2 — Forzar un refresh manual
 
@@ -138,14 +182,16 @@ O invocar la skill hija directamente:
 - **No es consciencia.** Es un bucle persistente con memoria
   compartida. La diferencia importa: si el watcher muere, no "se
   duerme"; simplemente deja de capturar.
-- **Vive mientras Edge debug viva.** Si el usuario cierra Edge, el
-  watcher loguea ERROR y muere. Solución: relanzar con los .bat.
-- **El watcher de esta sesión Claude muere cuando la sesión termina.**
-  Para persistencia entre reboots, registrar un Scheduled Task de
-  Windows (pendiente — el usuario debe pedirlo explícitamente).
-- **Polling cada 5 min.** Si guardas 25+ bookmarks entre polls, los del
-  fondo podrían perderse; basta correr `export_bookmarks.py` para un
-  re-scan completo desde cero.
+- **Una pasada al día, no cada 5 minutos.** Desde el 8-nov-2026 el modo de
+  producción es `--once` por tarea programada. El bucle sigue existiendo para
+  mirarlo a mano, pero no es lo que corre: **un bucle infinito no se puede
+  vigilar ni reiniciar; si muere, muere en silencio** — y así estuvo 135 días.
+- **Solo lee la cabecera del feed, y solo añade.** El archivo no se puede
+  vaciar por esta vía (`archive = new_recs + archive`). El riesgo real no es
+  perder el corpus: es **capturar cero en silencio**, que es lo que ahora
+  distingue `ESTADO_VIGIA.txt`.
+- **Si guardas muchos bookmarks en un día**, la cabecera puede no alcanzar;
+  para un re-escaneo completo, `export_bookmarks.py`.
 - **Sin LLM en el pipeline.** La clasificación es por regex sobre la
   taxonomía de `analizar_temas.py`. Si un tema nuevo emerge (ej.
   "kayaking") no se detecta hasta que el usuario lo añada a `THEMES`.
@@ -186,6 +232,77 @@ Las 16 skills `intereses-*` creadas la primera corrida del pipeline:
 
 Tema `intereses-tecnologia-programacion` (85) quedó debajo del umbral
 de creación; aparecerá cuando supere 100.
+
+## Cómo depurar si falla
+
+Todo lo de aquí se midió el 8-nov-2026, reparando el vigía.
+
+### `MURO_AUTH` — la sesión de X caducó
+
+Lo único que pide mano humana. Se abre el Edge del puerto 9224 (lo levanta
+`preflight_cdp.py --puerto 9224 --perfil C:\Users\datos\edge-x-export`), se
+entra a x.com como **@fdc_ec** en esa ventana, y se vuelve a correr. El agente
+**no** escribe la contraseña.
+
+🚦 **La sesión de X no está donde parecía.** El perfil dedicado del 9222
+(`browser_profile_edge`) tiene cookies de LinkedIn y **ninguna** de x.com. La
+de X vive en `C:\Users\datos\edge-x-export`. Por eso el vigía tiene puerto
+propio, igual que Telegram usa el 9223 ([[reference_telegram_cdp_tirr999]]).
+
+🚦 **Cookies presentes no es sesión viva.** `edge-x-export` tenía cookies de
+`.x.com` con fecha reciente y la sesión estaba muerta igual. Mismo mecanismo
+que [[notebooklm-login-reauth]]: `auth check` pasa y la sesión no sirve. **La
+única prueba es pedir la página y mirar qué devuelve.**
+
+### Cómo se averigua qué pasó de verdad
+
+Dos comprobaciones baratas, en este orden:
+
+```python
+# 1. ¿Qué cuentas tiene abiertas ese puerto? (a la sesión VIVA, por CDP)
+#    No copiar el fichero Cookies: con Edge en marcha da PermissionError,
+#    que significa «no pude mirar», NO «no hay nada».
+ctx = p.chromium.connect_over_cdp("http://localhost:9224").contexts[0]
+[c["domain"] for c in ctx.cookies() if "x.com" in c["domain"]]
+
+# 2. ¿Qué mostró la pestaña? URL, título y texto del cuerpo.
+pg.url; pg.title(); pg.inner_text("body")[:600]
+```
+
+La segunda fue la que cerró el diagnóstico: el texto era «Selecciona una opción
+a continuación… Continuar con Google».
+
+### 🚦 Detectar el muro por el PARÁMETRO, no por la ruta
+
+La URL medida fue:
+
+```
+https://x.com/i/jf/onboarding/web?redirect_after_login=%2Fi%2Fbookmarks&mode=login
+```
+
+**No contiene `/flow/login` ni `/login`.** Mi primera lista de detección eran
+rutas, y clasificó un muro de autenticación como `CERO_CAPTURADOS`. Lo
+invariante es el parámetro (`redirect_after_login`, `mode=login`); la ruta X la
+renombra. Constante `SENALES_DE_LOGIN` en `watch_bookmarks.py`.
+
+### 🚦 El `.bat` y el guion no pueden escribir en el MISMO registro
+
+Costó un veredicto. El `.bat` redirigía con `>> watcher.log`, que en Windows
+deja el archivo tomado; el `log()` del guion hacía `open("a")` sobre el mismo
+archivo → `PermissionError` → la excepción subió hasta `__main__` → **el código
+de salida pasó de 3 (sesión caducada) a 1 (fallo genérico)**.
+
+Dos arreglos, los dos necesarios: la envoltura escribe en `harvest_x.log`, y
+`log()` nunca deja que un registro ilegible tape el resultado. **Una línea de
+registro perdida es una molestia; un veredicto enmascarado es una avería** —
+pertenece a la familia de [[prueba-eliza-agente-que-trabaja]].
+
+### `CERO_CAPTURADOS` con sesión viva
+
+Entonces sí es el patrón GraphQL: `GRAPHQL_PATTERN` busca
+`/graphql/<hash>/Bookmark`. Si X renombra la operación, no casa nada y no hay
+error. Comprobarlo mirando las peticiones reales de la pestaña antes de tocar
+el patrón.
 
 ## Relacionado
 

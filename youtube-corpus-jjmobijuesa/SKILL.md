@@ -135,8 +135,90 @@ E:\vars\var 5\YouTube-jjmobijuesa\
    y se sigue.
 6. **Tómate tu tiempo. Calidad antes que velocidad. No saltes pasos.**
 
+## Cosechar un CANAL entero (9-nov-2026) 🚦
+
+El guion **no acepta una URL de canal**: solo `--playlist` o `--videos`. Y
+`--playlist` fuerza `cookiesfrombrowser('edge')` **incluso en contenido
+público**, que es justo la avería más frecuente de esta skill. `--videos` sí
+evita las cookies, pero escribe en `_manuales` **sin título**.
+
+Receta probada sobre `@sofiaweb` (envoltorio que importa las funciones del
+guion y lista el canal sin cookies):
+
+```python
+opts = {"quiet": True, "extract_flat": True, "ignoreerrors": True}   # SIN cookies
+info = yt_dlp.YoutubeDL(opts).extract_info("https://www.youtube.com/@CANAL/videos", download=False)
+```
+
+### Tres trampas que cuestan el corpus entero
+
+1. ⭐⭐ **El vídeo que importa puede estar SIN LISTAR.** En `@sofiaweb` la
+   pestaña Videos no pasaba de hace cinco años, y el curso con IA —el único con
+   el método nuevo— es de hace uno y **solo aparece en la pestaña Principal**.
+   Un inventario hecho con `/videos` concluye que el canal lleva años parado y
+   **pierde exactamente la pieza nueva**.
+   **Comprobación:** abrir la raíz del canal y recoger los `watch?v=` del DOM;
+   los que no estén en `/videos` son no listados y hay que añadirlos a mano.
+2. ⭐ **Las listas traen vídeos que el canal no lista.** Todo el curso
+   WooCommerce (#3 a #13) estaba solo en su playlist. **Cosechar por lista
+   además de por canal**, y conservar el orden de la lista: ese orden **es el
+   currículo**.
+3. 🚦 **El orden de `/videos` no es el que se ve en el navegador.** Confirmar
+   contra la página real antes de concluir nada sobre fechas.
+
+### 🚦🚦 Bloqueo de IP — y por qué no se arregla con otra variante
+
+Tras unas **78 peticiones seguidas**, YouTube corta por dirección IP:
+
+| Vía | Qué devuelve | Qué parece |
+|---|---|---|
+| `youtube-transcript-api` | `RequestBlocked` / `IpBlocked` | «este vídeo no tiene transcripción» |
+| URL `api/timedtext` de yt-dlp | `HTTP 429 Too Many Requests` | cero caracteres, lengua detectada |
+
+⭐ **Las dos vías mueren con la misma IP caliente.** La segunda funcionó en una
+sonda aislada y falló en tanda: **una sonda de un vídeo no prueba que la tanda
+pase.** El remedio es **esperar**, no una tercera variante.
+
+🚦 **Un cero por bloqueo y un cero por ausencia se ven idénticos en la salida y
+significan lo contrario.** La única lectura válida es **el mensaje de error
+real**, no el recuento. Si el guion guarda el error como dato en vez de
+gritarlo, ya perdió la distinción.
+
+### 🚦🚦 Candado antipisada — obligatorio
+
+Mismo mecanismo que [[feedback_linkedin_corpus_pisado_por_cosecha_vacia]]:
+**una cosecha fallida jamás sobrescribe una transcripción real.**
+
+```python
+def creible(destino, items):
+    if items: return True, "cosecha con %d segmentos" % len(items)
+    if not destino.exists(): return True, "sin transcripcion y no habia previo"
+    if MARCA_VACIA in destino.read_text(encoding="utf-8"): return True, "el previo tambien estaba vacio"
+    return False, "RECHAZADA: el previo tiene transcripcion real"
+```
+
+El 9-nov esto salvó 29 transcripciones (341.734 caracteres) que una tanda
+bloqueada habría dejado en «no disponible». **Las carpetas que quedan con 0
+transcripciones reales se borran**, o pasan por corpus.
+
+### 🚦 Los subtítulos viejos no traen puntuación
+
+Los automáticos de 2016-2021 llegan **sin puntos**. Cualquier análisis anclado
+al punto (`[^.]{0,90}\.`) devuelve **cero en silencio** sobre ellos y normal
+sobre los de 2025. **Muestrear por posición** (ventanas repartidas por el
+minutaje) o normalizar a una línea antes de buscar patrones; el `grep` de
+varias líneas también falla por el salto, no por ausencia.
+
 ## Cómo depurar si falla
 
+- **`RequestBlocked` / `IpBlocked` / `HTTP 429`:** bloqueo por IP, no ausencia
+  de subtítulos. **Esperar** (20 minutos o más) y bajar el ritmo a 15-20 s por
+  vídeo. No probar una tercera biblioteca: la IP es la misma.
+- **«0 transcripciones» en una tanda que antes funcionó:** leer el `error` del
+  `_INDICE.json`, no el recuento. Y comprobar que el candado no dejó pasar
+  escrituras vacías.
+- **Un patrón que aparece en un vídeo y en ninguno más:** probablemente el
+  resto son subtítulos sin puntuación. Ver la trampa anterior.
 - `Sign in to confirm you're not a bot`: actualizar yt-dlp
   (`pip install -U yt-dlp`).
 - `Could not copy Chrome cookie database`: bug conocido — Edge bloquea

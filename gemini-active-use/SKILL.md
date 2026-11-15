@@ -58,7 +58,7 @@ jjmobijuesa. Por tanto:
   como variable/argumento (o duplicar el script con ese `user_data_dir`).
 - **Deep Research** es un **modo largo** (varios minutos, navega decenas de fuentes): no esperes el
   timeout de 110 s; lánzalo, deja que termine, y luego lee el informe. Plantillas de Deep Research listas
-  en `E:\vars\var 5\Gemini-Pro\` (p. ej. fondos BID Lab + CAF VELA). Ver [[reference-gemini-pro-mobijuesa360]].
+  en `E:\vars\var 5\Gemini-Pro\` (p. ej. fondos BID Lab + CAF VELA). Ver [[reference_gemini_pro_mobijuesa360]].
 - Doctrina de reparto multimodelo intacta: delegar a Gemini Pro el razonamiento/búsqueda pesado y traer
   solo el destilado (eficiencia de tokens).
 

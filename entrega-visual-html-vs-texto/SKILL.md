@@ -39,6 +39,55 @@ prompt. Tres niveles de ventaja del formato visual/HTML: (1) **estética/profesi
 mejor que 150 líneas de texto que nadie lee entera); (3) **compartir** (se abre en cualquier
 navegador/móvil, PDF en un clic, enlace; "la información que no se comparte bien no se usa").
 
+## 🚦 Actualización 14-nov-2026: hay TIPOS, ya no sólo HTML a mano
+
+La doctrina de arriba sigue siendo correcta —el formato de entrega es el cuello
+de botella— pero **su implementación quedó una generación atrás**. Verificado
+contra esta cuenta el 14-nov-2026: hay **7 tipos de Artifact publicados**, y
+varios hacen mejor que una página escrita a mano lo que antes se escribía a mano.
+
+**La regla nueva, en una línea: si existe un tipo para lo que va a entregar, no
+se escribe HTML a mano.**
+
+| Si va a entregar… | Tipo | En vez de |
+|---|---|---|
+| Tablero, KPIs, informe recurrente de cifras | **Data** | Un HTML de gráficos hecho a mano |
+| Tabla, seguimiento, presupuesto que alguien va a llenar | **Sheets** | Un `.xlsx` suelto, salvo que pidan el archivo |
+| Presentación | **Slides** | Un `.pptx` o láminas HTML |
+| Memo, informe o plan que se seguirá editando | **Docs** | Un `.docx` suelto |
+| Lluvia de ideas, mapa, relaciones a mover | **Whiteboard** | Un diagrama estático |
+| Landing, maqueta, pieza visual | **Design** | HTML a mano |
+
+**Ventaja que no se ve a simple vista:** en el tipo **Data**, cada número muestra
+de dónde salió. Eso es trazabilidad por construcción, y es exactamente lo que
+pide [[auditoria-evidencia-cuatro-niveles]] y [[segundo-cerebro-anclaje-verificable]].
+
+### 🚦 Lo que NO se migra
+
+- **Las clases magistrales del Aula.** Son 48 HTML en 11 carpetas con casa de
+  estilo propia en su `DESIGN.md` y viven como archivos en Drive. Son un corpus
+  deliberado, no un entregable suelto. Siguen escribiéndose a mano.
+- **Lo que el usuario pida como archivo.** Si dice «dame el `.xlsx`» o «el
+  `.html`», se entrega el archivo. El tipo no es un atajo para no obedecer.
+- **Nada va a carpetas compartidas** (vale igual aquí): ver
+  [[estilo-entregables-publicos-fbse]].
+
+### Lo que NO tiene esta cuenta, aunque circule en redes
+
+Comprobado el 14-nov-2026, a propósito de una infografía de terceros sobre
+«5 herramientas nuevas de Claude»:
+
+- **Claude Meetings** es de planes Team y Enterprise. Este es un plan Pro. Lo que
+  sí hay es un **conector de reuniones** por MCP, que es otra cosa y ya funciona.
+- **Conectores de Adobe**: las skills están, pero **el servidor pide autorización**
+  (`/mcp`). **Atlassian** no aparece en esta instalación.
+
+**Mecanismo, que es lo que transfiere:** una infografía de LinkedIn no establece
+qué tiene su cuenta. **Se comprueba listando los tipos**, igual que la
+disponibilidad de un modelo se comprueba con `/model` y no con un hilo viral.
+Mismo criterio que [[cosechar-repositorios-de-agentes]] y
+[[regla-del-primer-tropiezo]].
+
 ## Criterio: cuándo SÍ y cuándo NO (analogía RAW/JPG) — 🚦 no devolver visual por defecto
 Como un fotógrafo dispara en **RAW para trabajar** y exporta **JPG para entregar**:
 - **Texto plano (RAW) = para PENSAR e ITERAR:** rápido, barato, fácil de editar. Úsalo mientras se

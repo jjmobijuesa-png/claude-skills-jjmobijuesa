@@ -58,3 +58,14 @@ descripción/caption y transcripción. Ejecutar con el **Python de 64 bits** del
 
 ## Relacionadas
 [[youtube-corpus-jjmobijuesa]] (YouTube con captions oficiales) · [[feedback_video_links_auto_transcribe]] · [[feedback_leer_video_local_frames]] (video local por frames) · [[feedback_solo_edge]] · [[humanizacion-texto-sin-firma-ia]]
+
+## ⭐ Reels de INSTAGRAM sin sesión (14-nov-2026)
+`yt-dlp` falla con «Requested content is not available, rate-limit reached or login required» y la página
+`/embed/captioned/` no trae ni el texto ni el video. Lo que sí funciona, sin iniciar sesión:
+1. Abrir el reel en el **navegador integrado** (`mcp__Claude_Browser__navigate`). `get_page_text` devuelve
+   el texto del autor, la fecha y los comentarios.
+2. Con `javascript_tool`, buscar la pista de **audio** entre los recursos cargados: es la URL de `fbcdn` con
+   `/m78/` (el `efg` base64 dice `..._audio`); las `/m367/` son las pistas de video.
+   `performance.getEntriesByType('resource').map(e=>e.name).find(n=>/fbcdn/.test(n)&&/m78\//.test(n)).replace(/&bytestart=\d+&byteend=\d+/,'')`
+3. `curl -L -e https://www.instagram.com/ -o audio.mp4 "<url>"` → `ffmpeg -ac 1 -ar 16000` → faster_whisper `small`.
+Caso: reel DfA9WtqtMI5 (155 s) transcrito completo. La URL caduca en horas: bajarla en la misma sesión.

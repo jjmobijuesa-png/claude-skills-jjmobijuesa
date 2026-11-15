@@ -33,6 +33,7 @@ import datetime as dt
 import json
 import re
 import sys
+import unicodedata
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -95,9 +96,23 @@ DESCRIPTIONS = {
 }
 
 
+# 8-nov-2026: clasificacion INSENSIBLE A ACENTOS, igual que en
+# clasificar_guardados.py. Las dos copias de esta taxonomia habian divergido por
+# tildes ("gestion"/"gestion", "habito"/"habito", "sucesion"/"sucesion") y daban
+# recuentos distintos del MISMO corpus: liderazgo 550 aqui contra 594 alla.
+# Los dos numeros se escribian en artefactos y nadie los comparo nunca.
+# 🚦 Siguen siendo dos copias: si se toca una, tocar la otra.
+def _pelar(s):
+    return "".join(c for c in unicodedata.normalize("NFD", s or "")
+                   if unicodedata.category(c) != "Mn")
+
+
+_THEMES_N = {k: [_pelar(w) for w in kws] for k, kws in THEMES.items()}
+
+
 def classify(text):
-    tl = " " + (text or "").lower() + " "
-    hits = [k for k, kws in THEMES.items() if any(w in tl for w in kws)]
+    tl = " " + _pelar(text).lower() + " "
+    hits = [k for k, kws in _THEMES_N.items() if any(w in tl for w in kws)]
     return hits or ["sin-clasificar"]
 
 

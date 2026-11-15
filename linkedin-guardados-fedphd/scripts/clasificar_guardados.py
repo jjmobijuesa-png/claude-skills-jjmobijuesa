@@ -5,7 +5,7 @@ Uso:  python clasificar_guardados.py
 Lee:  E:\\vars\\var 5\\LinkedIn-guardados\\guardados.json
 Crea: E:\\vars\\var 5\\LinkedIn-guardados\\analisis\\<ts>_clasificacion.md
 """
-import json, re, datetime
+import json, re, datetime, unicodedata
 from pathlib import Path
 
 OUT = Path(r"E:\vars\var 5\LinkedIn-guardados")
@@ -29,9 +29,27 @@ THEMES = {
     "juridico-legislativo": ["ley", "constituci", "reforma", "asamblea", "norma", "regulaci", "decreto"],
 }
 
+# 8-nov-2026: clasificacion INSENSIBLE A ACENTOS.
+# Esta taxonomia existe por duplicado (aqui y en autoreflex_pipeline_linkedin.py)
+# y las dos copias habian divergido por tildes: aqui "gestion", "habito" y
+# "sucesion" llevaban acento y alla no. Mismo corpus, dos recuentos distintos,
+# los dos escritos en artefactos: liderazgo 594 contra 550 (44 posts de
+# diferencia, solo por "gestion") y cognicion 422 contra 407 (15, por "habito").
+# Nadie lo noto. Pelando los acentos de AMBOS lados, las dos copias quedan
+# equivalentes y el recuento es uno.
+# 🚦 Siguen siendo dos copias: si se toca una, tocar la otra. Lo correcto seria
+# un solo modulo compartido; pendiente de decision.
+def _pelar(s):
+    return "".join(c for c in unicodedata.normalize("NFD", s or "")
+                   if unicodedata.category(c) != "Mn")
+
+
+_THEMES_N = {k: [_pelar(w) for w in kws] for k, kws in THEMES.items()}
+
+
 def classify(t):
-    tl = " " + (t or "").lower() + " "
-    hits = [k for k, kws in THEMES.items() if any(w in tl for w in kws)]
+    tl = " " + _pelar(t).lower() + " "
+    hits = [k for k, kws in _THEMES_N.items() if any(w in tl for w in kws)]
     return hits or ["sin-clasificar"]
 
 buckets = {}
