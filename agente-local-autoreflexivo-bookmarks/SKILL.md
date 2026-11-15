@@ -272,6 +272,53 @@ propio, igual que Telegram usa el 9223 ([[reference_telegram_cdp_tirr999]]).
 que [[notebooklm-login-reauth]]: `auth check` pasa y la sesión no sirve. **La
 única prueba es pedir la página y mirar qué devuelve.**
 
+### RUTA B — trasplantar la sesión desde el Edge del usuario (preparada, SIN PROBAR)
+
+Escrita el 14-nov-2026 y **detenida por orden del usuario antes de ejecutarse**: no
+está probada, y hasta que lo esté, la ruta buena sigue siendo la de arriba —entrar a
+mano en la ventana del perfil dedicado—. Se documenta porque el mecanismo es correcto
+y la próxima vez no hay que volver a deducirlo.
+
+**Para qué sirve:** evita que el usuario teclee la contraseña. La sesión de @fdc_ec
+vive en su Edge de todos los días; a ese Edge **no se le puede enganchar CDP** —
+Chromium 136+ ignora `--remote-debugging-port` en el perfil por defecto y el indicador
+hay que darlo al arrancar ([[feedback_cdp_9222_ignorado_perfil_defecto]])—, así que lo
+que se mueve no es el navegador: son las cookies.
+
+| Guion (en `E:\vars\var 5\X-com guardados\`) | Qué hace |
+|---|---|
+| `trasplantar_sesion_x.py` | Copia el tarro de cookies del perfil del usuario, **lo poda a solo `x.com`** e instala eso más la clave `os_crypt` en `edge-x-export` |
+| `comprobar_trasplante.py` | La comprobación barata: ¿`auth_token` trae valor legible y `/i/bookmarks` no redirige? |
+
+**Las tres compuertas que lleva dentro, y por qué cada una:**
+
+1. **Si hay cualquier Edge en marcha, para y no hace nada.** Con Edge vivo el tarro está
+   tomado: `shutil.copy2` da `PermissionError` y `sqlite3` con `immutable=1` da
+   `unable to open database file`. Una copia a medias es peor que ninguna. 🚦 Y ese
+   «no pude mirar» **no es «no hay nada»** — misma trampa que la compuerta de cookies.
+2. **Respaldo fechado de lo que se va a pisar, antes de pisarlo**
+   (`edge-x-export\_respaldo_pre-trasplante_<sello>\`), que es la regla de
+   [[feedback_set_e_no_aborta_y_rm_corre_igual]]: ningún paso destructivo detrás de uno
+   sin comprobar.
+3. **Solo viaja `x.com`.** El perfil del usuario tiene el tarro entero —banca, Google,
+   todo—; se copia, se borran las filas que no son de `x.com` y se hace `VACUUM` antes
+   de instalarlo. Un segundo perfil en la máquina con todas sus sesiones sería una
+   brecha, no una comodidad.
+
+**Lo que se mueve con las cookies y suele olvidarse:** la clave de cifrado. Los valores
+están cifrados con `os_crypt` del `Local State` de origen, así que sin ella son ruido.
+Se inyecta **solo ese campo** en el `Local State` del destino; sus preferencias no se
+tocan. El cifrado ligado a la aplicación (Chromium 127+) impide que lo lea una
+herramienta de terceros —de ahí el *Could not decrypt edge cookies* de
+[[feedback_reauth_notebooklm_cosecha]]—, pero **no impide que lo lea Edge mismo**, que
+es quien abre el perfil destino. Esa es la apuesta del mecanismo y es lo único que falta
+por verificar.
+
+**Riesgo residual honesto:** si el cifrado ligado a la aplicación no coopera en la ruta
+nueva, el trasplante no sirve y se vuelve a la ruta A. No se pierde nada —el respaldo
+está hecho y las cookies del destino eran de invitado—, pero **nadie lo ha comprobado
+todavía**.
+
 ### Cómo se averigua qué pasó de verdad
 
 Dos comprobaciones baratas, en este orden:
@@ -302,6 +349,33 @@ https://x.com/i/jf/onboarding/web?redirect_after_login=%2Fi%2Fbookmarks&mode=log
 rutas, y clasificó un muro de autenticación como `CERO_CAPTURADOS`. Lo
 invariante es el parámetro (`redirect_after_login`, `mode=login`); la ruta X la
 renombra. Constante `SENALES_DE_LOGIN` en `watch_bookmarks.py`.
+
+### 🚦🚦 Y el muro tampoco se detecta en una página PÚBLICA — una URL pública no prueba nada
+
+Corrección de la sección anterior, medida el 14-nov-2026 por la noche. Buscando
+confirmar la sesión, pedí `https://x.com/fdc_ec` y la página **cargó completa
+estando deslogueado**: nombre, 900 posts, 6.457 siguiendo, 878 seguidores, los
+posts antiguos, y el muro únicamente como hoja al pie («Continuar con teléfono ·
+Apple · Google»). La URL **no** redirigió, así que mi comprobación por parámetro
+dictaminó «SESIÓN VIVA», y era falso.
+
+**El parámetro solo delata el muro en una URL que exige sesión** (`/i/bookmarks`,
+`/home`, `/notifications`). Un perfil público es visible para cualquiera: pedirlo
+no distingue entrar de mirar.
+
+La prueba barata y sin ambigüedad son **las cookies de la sesión viva, por CDP**:
+
+```python
+ctx = p.chromium.connect_over_cdp("http://127.0.0.1:9224").contexts[0]
+n = [c["name"] for c in ctx.cookies() if "x.com" in (c.get("domain") or "")]
+viva = ("auth_token" in n) and ("ct0" in n)      # 'guest_id' solo NO es sesión
+```
+
+Ese día había 13 cookies de `.x.com` y **ninguna de las tres que importan**
+(`auth_token`, `ct0`, `twid`): solo las de invitado. Encaja con la compuerta de
+arriba —cookies presentes no es sesión viva— y le añade el otro filo: **ausencia
+de las tres sí es sesión muerta, y es la lectura más barata que existe.** Pedir
+una página solo decide si además se eligió una que exija entrar.
 
 ### 🚦 El `.bat` y el guion no pueden escribir en el MISMO registro
 
