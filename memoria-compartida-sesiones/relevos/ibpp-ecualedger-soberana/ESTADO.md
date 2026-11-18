@@ -44,7 +44,7 @@ activos digitales y solicitud de audiencia, más 8 adjuntos de 8,2 MB y el corre
 FirmaEC y el correo institucional del destinatario. El siguiente código libre es B-025.
 
 **29-oct-2026 — línea empresarial (Alfa Lab Ecuador S.A.S., en constitución; Etriek salió).** En
-`…\Adm Alfa Lab\07 Proy AlfaLab - Emiratis\001-a` y `001-b` quedó el paquete para el equipo del Paraguay
+`…\Adm Alfa Lab\07 AlfaLab EAU\001-a` y `001-b` quedó el paquete para el equipo del Paraguay
 (Ing. Ricardo Prieto): carta ALB-CT-001 (Word y PDF firmado), MdE-001 con sus anexos A, C y D,
 especificaciones del edificio ALB-EE-001, requisitos ALB-RQ-001, B-025 (línea FBSE, va por separado) y
 el Plan Maestro ALB-PM-001. Todo está presupuestado, salvo el retorno financiero del equipo: ese lo
@@ -58,7 +58,7 @@ paquete, con confirmación expresa de Francisco.
 - **Alfa Lab Ecuador S.A.S.:** usuaria de zona franca y receptora del financiamiento.
 - **Dubái:** espejo.
 
-Entregable: `…\07 Proy AlfaLab - Emiratis\001-b\ALB-HR-001` (Word y matriz Excel). Norma verificada en texto
+Entregable: `…\07 AlfaLab EAU\001-b\ALB-HR-001` (Word y matriz Excel). Norma verificada en texto
 oficial: Ley Fintech, JPRF-T-2025-0156, SB-2025-2852 y Decreto 387. La decisión que destraba: la puerta
 del entorno de pruebas (Superintendencia de Bancos o SCVS), que define el objeto de Etriek.
 Audios de Carlos Gordillo y del Ing. Prieto transcritos e integrados (v2 de ALB-HR-001, 10 págs., 33
@@ -95,7 +95,7 @@ La carta ALB-CT-001 en Word quedó restaurada en G: desde E: (copia idéntica); 
   cuenta.
 - Aviso: el enlace de la carta B-023 dejó de servir, así que a la CCEATI se le enviará por correo.
 
-**3-nov-2026.** La carpeta reservada está ahora en `…\CCEATI\00 RESERVADO FD - Ecosistema IBPP`, por decisión
+**3-nov-2026.** La carpeta reservada está ahora en `…\CCEATI\00 RESERVADO FD`, por decisión
 de Francisco. Se creó ALB-UD-002, el «Sistema de Gestión de la Innovación de los Miembros»:
 - 8 etapas, indicadores de detección temprana y 5 rutas de destino;
 - acuerdos legales y protocolo de expansión de Etriek;
