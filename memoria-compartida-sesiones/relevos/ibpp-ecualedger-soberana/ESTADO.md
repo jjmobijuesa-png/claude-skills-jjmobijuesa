@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-18 (noche) — 6 carpetas de CCEATI renombradas por rutas largas (skill vigia-rutas-largas); SO-005 v2 con vinculación; G: = E: (307), 0 rutas en rojo |
+| Último checkpoint | 2026-11-18 (mañana) — Entregables del régimen especial y figura societaria en 08\Entregables 18-nov-2026; NotebookLM v2 hecho; WS9 aprobado pero pendiente del permiso de WhatsApp |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -170,3 +170,4 @@ Guía 00a: 27 fichas. Nada enviado. Pendiente: conciliar cláusula 12 (código a
 - 18-nov: WS8 OK. NotebookLM generó ALB-ZF-007 (presentación de 14 láminas, PDF y pptx), ALB-ZF-008 (video) y ALB-ZF-009 (audio), solo con ZF-003 y ZF-004 y orientados a Word Rich; sin términos vetados (OCR). A revisar: «Word Rich mantiene el 100 %» (lámina 2) y «oferta vinculante» (lámina 14); fueron generados antes del modelo de dos compañías. Guía y mapa al 18-nov en Guia Indice. WS9 retenido.
 - 18-nov (tarde): régimen especial solo para la zona franca, piloto nacional, registro soberano propio y gobernanza cuatripartita en el lugar (ALB-ZF-010, carpeta 08). Modelo societario v2: la SAS de la zona es la fábrica de tecnología y el puente; verticales SAS o S.A. según la ley (ALB-SO-005 v2, 03 Societario). Verificado en fuente oficial: caída de la Ley de Solidaridad (texto SAS de 2020), COPCI 39-44 y 50.x, reglamento interno del operador (Acuerdo 0081-A, art. 36). Pendiente: regenerar ZF-007/008/009 tras la validación de FD; WS9 retenido.
 - 18-nov (noche): carpetas renombradas en G: y E: (00 RESERVADO FD / 001-a Centro de Datos Riobamba / 07 AlfaLab EAU / 001 Proyecto CCEATI / 06 Normativa / 05 Habilitantes). Generadores, memoria y skills actualizados. SO-005 v2 con blindaje de vinculación. Pendiente: nombre legal del socio del 40 % (FD), validación de ZF-010, luego ZF-003/005, AL-001 y regeneración de ZF-007/008/009. WS9 retenido.
+- 18-nov (mañana): ZF-003 v2, ZF-004 v2, ZF-010, SO-006 y NotebookLM v2 (deck, video, corto cinematic en inglés) en 08\Entregables 18-nov-2026 (G: = E:). Regla nueva: numerales a página completa. WS9 aprobado por FD; NO enviado porque la app de WhatsApp necesita el permiso de msedgewebview2.exe y se deniega con FD ausente. La PC no se apaga hasta enviar.
