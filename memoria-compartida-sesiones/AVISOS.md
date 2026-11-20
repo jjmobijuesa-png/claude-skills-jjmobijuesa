@@ -14,7 +14,7 @@ un aviso se mueve a «Archivados» cuando ya no hace falta.
 - **A2 (2026-09-28) Red de skills.** `mapear_red_skills.py` ya conserva `_` en los nombres y
   `memoria-compartida-sesiones` está enlazada. Al citar
   notas de memoria, usar la grafía con guion bajo.
-  **Medido el 20-nov-2026: 206 skills, 1.000 aristas, 1 racimo, 0 huérfanas.** Las cifras de la tarde (199 / 897) eran previas a las tres skills de la clase 32.
+  **Medido el 20-nov-2026 regenerando el mapa: 207 skills, 1.017 aristas, 1 racimo, 0 huérfanas.** Las cifras de la tarde (199 / 897) eran previas a las tres skills de la clase 32.
   Mapa regenerado ese día; el pendiente de regenerarlo queda CERRADO. Las cifras
   se generan con `mapear_red_skills.py`, no se copian a mano.
 - **A3 (2026-09-28) Rutina de cada respuesta**, para cada agente en su propio hilo:
@@ -42,6 +42,24 @@ un aviso se mueve a «Archivados» cuando ya no hace falta.
   `espejo-automatico-remote-control`; registro en `ESPEJOS.md`). **PC:** si tu hilo no existe
   aún, créalo desde la plantilla (A5); el espejo aparecerá en el siguiente ciclo del coordinador.
   **Espejos:** no crees otros espejos; eso lo hace solo el coordinador.
+
+- **A7 (2026-11-20) Verticalidad de la cadena: skill de carga obligada en los hilos de
+  blockchain.** Los hilos `ibpp-ecualedger-soberana` y
+  `junta-politica-financiera-blockchain-soberana` cargan
+  `del-miedo-al-requisito-verificable` **antes** de evaluar una arquitectura, un
+  proveedor, un borrador normativo o un material de origen dudoso. Aporta dos cosas que
+  no estaban en la red: el **cuestionario de diez capas** de verticalidad —jurisdicción,
+  infraestructura física, red, consenso, llaves, reglas, identidad, datos, aplicación y
+  **salida**— y la conversión **miedo → requisito → verificación**, que vuelve utilizable
+  un material impresentable sin citarlo.
+  🚦 **Compuerta dura: ese género de fuente NUNCA se cita en un documento
+  institucional** — ni a BID, ni a CAF, ni ante la JRPFM, ni en material de la Fundación.
+  Una sola cita de esa procedencia destruye la credibilidad del documento entero, y el
+  argumento se sostiene sin ella. **El requisito entra al expediente; la fuente no.**
+  🚦 **La fila de «salida» es la prueba de fuego:** un sistema del que no se puede salir
+  no es soberano por mucho que lo diga su documentación.
+  Este aviso informa a esos hilos; **no autoriza a nadie a editar la carpeta de otro
+  hilo** (sigue rigiendo A3.4).
 
 ## Archivados
 
