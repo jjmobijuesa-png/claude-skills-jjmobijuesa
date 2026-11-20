@@ -14,7 +14,7 @@ un aviso se mueve a «Archivados» cuando ya no hace falta.
 - **A2 (2026-09-28) Red de skills.** `mapear_red_skills.py` ya conserva `_` en los nombres y
   `memoria-compartida-sesiones` está enlazada. Al citar
   notas de memoria, usar la grafía con guion bajo.
-  **Medido el 14-nov-2026 (noche), regenerando el mapa: 202 skills, 950 aristas, 1 racimo, 0 huérfanas.** Las cifras de la tarde (199 / 897) eran previas a las tres skills de la clase 32.
+  **Medido el 20-nov-2026: 206 skills, 1.000 aristas, 1 racimo, 0 huérfanas.** Las cifras de la tarde (199 / 897) eran previas a las tres skills de la clase 32.
   Mapa regenerado ese día; el pendiente de regenerarlo queda CERRADO. Las cifras
   se generan con `mapear_red_skills.py`, no se copian a mano.
 - **A3 (2026-09-28) Rutina de cada respuesta**, para cada agente en su propio hilo:
