@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-20 — ZF v3: capítulo, plano y régimen al día; zona de investigación y desarrollo aplicado (ZF-011); estudio de normativa con 22 descargas oficiales (ZF-012); figura societaria v2 (reservada); presentación y videos v3 en generación |
+| Último checkpoint | 2026-11-20 — ZF v3 COMPLETA: documentos, estudio de normativa (22 descargas oficiales), figura societaria v2 (reservada), presentación y dos videos v3 revisados por OCR y transcripción |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
