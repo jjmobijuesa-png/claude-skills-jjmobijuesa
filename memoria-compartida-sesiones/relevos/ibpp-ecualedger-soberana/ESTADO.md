@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-20 (noche) — ZF v4: nodos validadores en la administración de la zona; fuera «Estado dentro del Estado» y «no es un ensayo». ZF-003 v4, ZF-004 v4, ZF-011 v2 y ZF-010 v3 colocados; presentación y videos v4 en generación |
+| Último checkpoint | 2026-11-20 (noche, 2) — ZF-010 v4 alineado con ZF-011 v3: tecnología PROBADA como valor propio de la zona, sin piloto ni experimentación; tres leyes para todo el país. Presentación y videos v4 en regeneración |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -174,3 +174,4 @@ Guía 00a: 27 fichas. Nada enviado. Pendiente: conciliar cláusula 12 (código a
 - 18-nov (tarde): WS9 enviado. Constructor: texto 13:08 + paquete completo de entregables enviado por FD 13:27. Contraparte de la cámara: texto 13:52 + 3 PDF 13:54. Vía: WhatsApp Web en Chrome con la extensión (la app de escritorio maximizada escala mal la entrada). Apagado de la PC: FD decidió dejarla encendida (la sigue usando); keep-awake activo hasta las 17:51.
 - 20-nov: FD ratificó presentación y videos v2 con cambios (fuera el criterio de diseño reservado; 18 meses en 3 etapas; Tier III 8 meses tras las matrices energética y de comunicación; 2+2 plantas). Nuevos ZF-011 (zona de investigación y desarrollo aplicado, legal y sin parecer ZEDE; tres leyes en paralelo) y ZF-012 (estudio de normativa, 22 descargas oficiales). Corrección clave: el dictamen 19-25-TI/26A es del acuerdo de inversiones, no del comercial.
 - 20-nov (noche): FD decidió sobre las piezas v3: quitar «No es un Estado dentro del Estado» (no nombrarlo siquiera) y «esto no es ningún ensayo»; los nodos validadores quedan en el edificio de administración de la zona, que atiende a toda la zona. Hechos ZF-003 v4, ZF-004 v4 (PDF + 2 DWG), ZF-011 v2 y ZF-010 v3 en 08\Entregables 18-nov-2026 (G: = E:); anteriores a _Versiones anteriores. NotebookLM v4 (deck y dos videos) en curso. Abierto: ZF-010 sigue llamando «piloto nacional» a la zona.
+- 20-nov (noche, 2): FD pidió alinear ZF-010 con ZF-011 y precisó que la tecnología ya está probada (sin experimentación). ZF-010 v4 y ZF-011 v3 colocados en G: y E:; v3 y v2 a versiones anteriores. Media v4 regenerándose con ZF-003 v4, ZF-004 v4 y ZF-011 v3.
