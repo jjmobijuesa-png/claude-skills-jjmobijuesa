@@ -123,3 +123,9 @@ lleva la tabla de hilos en `MEMORIA.md` y crea espejos con "crea espejo para <ag
 ## Espejo automático
 Cada sesión nueva de `claude remote-control` recibe su espejo «Espejo — <título>» mediante
 [[espejo-automatico-remote-control]], que ejecuta el coordinador y registra en `ESPEJOS.md`.
+
+## Consolidación diaria de los estados (20-nov-2026)
+
+Los `ESTADO.md` de los hilos son la materia prima del parte diario de cartera:
+cinco líneas, sin reunión, separando lo que se informa de lo que hay que
+decidir. Ver [[parte-diario-cartera-top-cinco]].
