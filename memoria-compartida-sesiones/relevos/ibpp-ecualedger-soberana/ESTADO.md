@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-18 (tarde) — WS9 ENVIADO: mensajes y PDF entregados a las dos contrapartes por WhatsApp Web (Claude in Chrome); informe en el chat propio de FD |
+| Último checkpoint | 2026-11-20 — ZF v3: capítulo, plano y régimen al día; zona de investigación y desarrollo aplicado (ZF-011); estudio de normativa con 22 descargas oficiales (ZF-012); figura societaria v2 (reservada); presentación y videos v3 en generación |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -172,3 +172,4 @@ Guía 00a: 27 fichas. Nada enviado. Pendiente: conciliar cláusula 12 (código a
 - 18-nov (noche): carpetas renombradas en G: y E: (00 RESERVADO FD / 001-a Centro de Datos Riobamba / 07 AlfaLab EAU / 001 Proyecto CCEATI / 06 Normativa / 05 Habilitantes). Generadores, memoria y skills actualizados. SO-005 v2 con blindaje de vinculación. Pendiente: nombre legal del socio del 40 % (FD), validación de ZF-010, luego ZF-003/005, AL-001 y regeneración de ZF-007/008/009. WS9 retenido.
 - 18-nov (mañana): ZF-003 v2, ZF-004 v2, ZF-010, SO-006 y NotebookLM v2 (deck, video, corto cinematic en inglés) en 08\Entregables 18-nov-2026 (G: = E:). Regla nueva: numerales a página completa. WS9 aprobado por FD; NO enviado porque la app de WhatsApp necesita el permiso de msedgewebview2.exe y se deniega con FD ausente. La PC no se apaga hasta enviar.
 - 18-nov (tarde): WS9 enviado. Constructor: texto 13:08 + paquete completo de entregables enviado por FD 13:27. Contraparte de la cámara: texto 13:52 + 3 PDF 13:54. Vía: WhatsApp Web en Chrome con la extensión (la app de escritorio maximizada escala mal la entrada). Apagado de la PC: FD decidió dejarla encendida (la sigue usando); keep-awake activo hasta las 17:51.
+- 20-nov: FD ratificó presentación y videos v2 con cambios (fuera el criterio de diseño reservado; 18 meses en 3 etapas; Tier III 8 meses tras las matrices energética y de comunicación; 2+2 plantas). Nuevos ZF-011 (zona de investigación y desarrollo aplicado, legal y sin parecer ZEDE; tres leyes en paralelo) y ZF-012 (estudio de normativa, 22 descargas oficiales). Corrección clave: el dictamen 19-25-TI/26A es del acuerdo de inversiones, no del comercial.
