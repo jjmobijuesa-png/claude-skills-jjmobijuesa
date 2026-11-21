@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-21 (tarde) — SO-007 v2: árbol de fondos, 60 % por aporte tecnológico, garantías vía consorcio, guion de la reunión del martes 24-nov con el autor del estudio. SO-006 v3 congelado por orden de FD |
+| Último checkpoint | 2026-11-21 (tarde) — SO-008: guion de la reunión del martes 24-nov en una lámina (pptx + pdf, reservado, G: = E:). SO-007 v2 vigente. SO-006 v3 congelado por orden de FD |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -184,3 +184,4 @@ Guía 00a: 27 fichas. Nada enviado. Pendiente: conciliar cláusula 12 (código a
 - 21-nov: ALB-ZF-016 Escenario B colocado (G: = E:). Hilo WA al Presidente de la CCEATI sigue sin enviar.
 - 21-nov: ALB-SO-007 Escenario A completo colocado (G: = E:), reservado.
 - 21-nov (tarde): SO-007 v2 colocado (G: = E:), v1 archivada. SO-006 v3 NO se toca (orden de FD). Reunión el martes 24-nov.
+- 21-nov (tarde): ALB-SO-008, guion de la reunión del 24-nov en UNA lámina (abrir, preguntar, mostrar, proponer, cerrar + franja «no abrir»), sin porcentajes ni nombres de la estructura de capital por si la pantalla se ve. Generador: scratchpad zf\obra\build_so008_lamina.py.
