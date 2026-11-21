@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-21 — ALB-SO-007 (reservado): Etriek construye la zona y Alfa Lab es usuaria; posible con cuatro blindajes. ZF-016 (escenario B) también colocado |
+| Último checkpoint | 2026-11-21 (tarde) — SO-007 v2: árbol de fondos, 60 % por aporte tecnológico, garantías vía consorcio, guion de la reunión del martes 24-nov con el autor del estudio. SO-006 v3 congelado por orden de FD |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -183,3 +183,4 @@ Guía 00a: 27 fichas. Nada enviado. Pendiente: conciliar cláusula 12 (código a
 - 20-nov (noche, v4): cifras recalibradas (sin cerrados ni 999). ZF-003 v6 y ZF-013/014/015 v4 en G: y E:; anteriores archivadas.
 - 21-nov: ALB-ZF-016 Escenario B colocado (G: = E:). Hilo WA al Presidente de la CCEATI sigue sin enviar.
 - 21-nov: ALB-SO-007 Escenario A completo colocado (G: = E:), reservado.
+- 21-nov (tarde): SO-007 v2 colocado (G: = E:), v1 archivada. SO-006 v3 NO se toca (orden de FD). Reunión el martes 24-nov.
