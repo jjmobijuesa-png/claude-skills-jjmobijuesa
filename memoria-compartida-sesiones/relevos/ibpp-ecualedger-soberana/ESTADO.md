@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-20 (cierre) — Entregables ZF completos: 17 archivos, G: = E: por sha1. ZF-008 v5 (sin lo andino; nodos en el subsuelo de la administración central y réplica en Dubái) revisado por transcripción y colocado; SO-006 v3 colocado |
+| Último checkpoint | 2026-11-20 (noche) — Paquete para Word Rich: ZF-013 carta (decisión abierta), ZF-014 cronograma valorado prototipo (USD 10 M, 4 contratos, anticipo 30 % garantizado, planillas), ZF-015 modelo de contrato de obra cierta Etapa 1; colocados en G: y E: |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -177,3 +177,4 @@ Guía 00a: 27 fichas. Nada enviado. Pendiente: conciliar cláusula 12 (código a
 - 20-nov (noche, 2): FD pidió alinear ZF-010 con ZF-011 y precisó que la tecnología ya está probada (sin experimentación). ZF-010 v4 y ZF-011 v3 colocados en G: y E:; v3 y v2 a versiones anteriores. Media v4 regenerándose con ZF-003 v4, ZF-004 v4 y ZF-011 v3.
 - 20-nov (noche, 3): FD aprobó la presentación ZF-007 v4 y el corto ZF-009 v4; los demás documentos, coherentes. SO-006 v3 en G: y E: (v2 a versiones anteriores). Nodos validadores: subsuelo del edificio de administración central; réplica en Dubái. ZF-008 v5 sin referencias andinas, en generación.
 - 20-nov (cierre): ZF-008 v5 revisado por transcripción (sin vetos ni referencias andinas) y colocado; v4 a versiones anteriores. Carpeta Entregables: 17 archivos vigentes, G: = E:.
+- 20-nov (noche): ZF-013, ZF-014 (xlsx + pdf) y ZF-015 colocados en 08/Entregables 18-nov-2026, G: = E: por sha1. El encargo de la lista de chequeo del contrato NES pasó a la sesión Financial report for Mobijuesa SS.
