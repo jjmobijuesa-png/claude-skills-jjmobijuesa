@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-20 (noche, v3) — ZF-003 v5 + ZF-013/014/015 v3: 10 M con IVA, edificio central administrativo con subsuelo de nodos (USD 1,99 M), total 9,99 M; hilo WA para el Presidente de la CCEATI en borrador (no enviado) |
+| Último checkpoint | 2026-11-20 (noche, v4) — ZF-003 v6 + ZF-013/014/015 v4 con cifras que terminan en 30 o 70: total con IVA 9.823.070, saldo 176.930; hilo WA al Presidente de la CCEATI listo, no enviado |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -180,3 +180,4 @@ Guía 00a: 27 fichas. Nada enviado. Pendiente: conciliar cláusula 12 (código a
 - 20-nov (noche): ZF-013, ZF-014 (xlsx + pdf) y ZF-015 colocados en 08/Entregables 18-nov-2026, G: = E: por sha1. El encargo de la lista de chequeo del contrato NES pasó a la sesión Financial report for Mobijuesa SS.
 - 20-nov (noche, v2): ZF-013 v2, ZF-014 v2 y ZF-015 v2 en G: y E: (sha1); v1 a versiones anteriores. Obras USD 7.098.862 + reserva 3 %; sin asignar 2.688.172,14 del presupuesto de 10 M.
 - 20-nov (noche, v3): ZF-003 v5 y ZF-013/014/015 v3 en G: y E: (sha1); anteriores a versiones anteriores. Hilo WA en 08/Hilos WA, pendiente de que FD lo envíe.
+- 20-nov (noche, v4): cifras recalibradas (sin cerrados ni 999). ZF-003 v6 y ZF-013/014/015 v4 en G: y E:; anteriores archivadas.
