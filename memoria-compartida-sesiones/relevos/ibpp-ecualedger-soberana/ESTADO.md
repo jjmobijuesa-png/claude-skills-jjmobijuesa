@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-20 (noche, v4) — ZF-003 v6 + ZF-013/014/015 v4 con cifras que terminan en 30 o 70: total con IVA 9.823.070, saldo 176.930; hilo WA al Presidente de la CCEATI listo, no enviado |
+| Último checkpoint | 2026-11-21 — ALB-ZF-016 Escenario B (SAS inmobiliaria de Word Rich para construir la zona con capital EAU): viable con tres condiciones; colocado en G: y E: |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -181,3 +181,4 @@ Guía 00a: 27 fichas. Nada enviado. Pendiente: conciliar cláusula 12 (código a
 - 20-nov (noche, v2): ZF-013 v2, ZF-014 v2 y ZF-015 v2 en G: y E: (sha1); v1 a versiones anteriores. Obras USD 7.098.862 + reserva 3 %; sin asignar 2.688.172,14 del presupuesto de 10 M.
 - 20-nov (noche, v3): ZF-003 v5 y ZF-013/014/015 v3 en G: y E: (sha1); anteriores a versiones anteriores. Hilo WA en 08/Hilos WA, pendiente de que FD lo envíe.
 - 20-nov (noche, v4): cifras recalibradas (sin cerrados ni 999). ZF-003 v6 y ZF-013/014/015 v4 en G: y E:; anteriores archivadas.
+- 21-nov: ALB-ZF-016 Escenario B colocado (G: = E:). Hilo WA al Presidente de la CCEATI sigue sin enviar.
