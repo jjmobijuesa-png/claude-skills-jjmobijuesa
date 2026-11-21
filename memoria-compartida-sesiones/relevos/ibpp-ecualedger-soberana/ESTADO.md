@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-20 (noche) — Paquete para Word Rich: ZF-013 carta (decisión abierta), ZF-014 cronograma valorado prototipo (USD 10 M, 4 contratos, anticipo 30 % garantizado, planillas), ZF-015 modelo de contrato de obra cierta Etapa 1; colocados en G: y E: |
+| Último checkpoint | 2026-11-20 (noche, v2) — Paquete Word Rich v2: centro de datos fuera (lo paga la SAS); rigor de banca de desarrollo extrapolado al inversionista de los Emiratos, banco nombrado solo al final; ZF-013/014/015 v2 colocados, v1 archivadas |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -178,3 +178,4 @@ Guía 00a: 27 fichas. Nada enviado. Pendiente: conciliar cláusula 12 (código a
 - 20-nov (noche, 3): FD aprobó la presentación ZF-007 v4 y el corto ZF-009 v4; los demás documentos, coherentes. SO-006 v3 en G: y E: (v2 a versiones anteriores). Nodos validadores: subsuelo del edificio de administración central; réplica en Dubái. ZF-008 v5 sin referencias andinas, en generación.
 - 20-nov (cierre): ZF-008 v5 revisado por transcripción (sin vetos ni referencias andinas) y colocado; v4 a versiones anteriores. Carpeta Entregables: 17 archivos vigentes, G: = E:.
 - 20-nov (noche): ZF-013, ZF-014 (xlsx + pdf) y ZF-015 colocados en 08/Entregables 18-nov-2026, G: = E: por sha1. El encargo de la lista de chequeo del contrato NES pasó a la sesión Financial report for Mobijuesa SS.
+- 20-nov (noche, v2): ZF-013 v2, ZF-014 v2 y ZF-015 v2 en G: y E: (sha1); v1 a versiones anteriores. Obras USD 7.098.862 + reserva 3 %; sin asignar 2.688.172,14 del presupuesto de 10 M.
