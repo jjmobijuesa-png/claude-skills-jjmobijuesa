@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-21 (noche) — ALB-MK-001 estudio de mercado de blockchain soberana (Gemini DR ×2, Perplexity ×3; Grok sin sesión) en 001-b\07 Mercado Alfa Lab; ALB-SO-009 regla de nacimiento + tablero en 03 Societario. SO-006 v3 intacto |
+| Último checkpoint | 2026-11-21 (noche, 2) — ALB-MK-001 v2 (esquema Etriek–Word Rich, 4 nodos, tabla de exportación tokenizada, proyección agrícola) en Entregables, ahora en «Word y DWG» y «PDF»; normativa ordenada en 5 subcarpetas; cuaderno central 144 fuentes; ambos cuadernos se mantienen |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -186,3 +186,4 @@ Guía 00a: 27 fichas. Nada enviado. Pendiente: conciliar cláusula 12 (código a
 - 21-nov (tarde): SO-007 v2 colocado (G: = E:), v1 archivada. SO-006 v3 NO se toca (orden de FD). Reunión el martes 24-nov.
 - 21-nov (tarde): ALB-SO-008, guion de la reunión del 24-nov en UNA lámina (abrir, preguntar, mostrar, proponer, cerrar + franja «no abrir»), sin porcentajes ni nombres de la estructura de capital por si la pantalla se ve. Generador: scratchpad zf\obra\build_so008_lamina.py.
 - 21-nov (noche): ALB-MK-001 (mercado) y ALB-SO-009 (regla de nacimiento: ninguna compañía sin ventas que cubran su equilibrio, una a la vez; orden Etriek → Alfa Lab → trazabilidad EUDR → integridad → naturaleza → cooperativa → fintech → defensa → Dubái → valores). Pendiente: Grok cuando FD inicie sesión en X; verificar en fuente lo marcado «por verificar».
+- 21-nov (noche, 2): Grok usado con la sesión de FD (Claude in Chrome). MK-001 v2 en Entregables. Normativa EC-EAU ordenada (+ dictámenes TBI, ley aduanera del Golfo, Dubai Customs, USDA). Cuaderno «Normativa faltante ZF» NO se borra (FD). Pendientes: Decreto-Ley 46/2021 y declaración SICE a mano; superficie agrícola real en el plan maestro.
