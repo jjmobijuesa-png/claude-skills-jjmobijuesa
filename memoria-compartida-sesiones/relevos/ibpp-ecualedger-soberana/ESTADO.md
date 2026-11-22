@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-21 (noche, 5) — ZF-014 v5 con cifras exactas y cascada (ZF-013 v5, ZF-015 v5, ZF-003 v7, ZF-016 v2, SO-007 v3); 00 RESERVADO FD reorganizado por temas (G: = E:, 431 archivos) con mapa LEAME en la raíz |
+| Último checkpoint | 2026-11-21 (noche, 7) — formatos separados (Word y DWG / PDF) en todo el archivo reservado; cuaderno central 156 fuentes con todas las versiones vigentes, incluido SO-007 v3 (los cuadernos están compartidos solo con las cuentas de FD) |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -190,3 +190,4 @@ Guía 00a: 27 fichas. Nada enviado. Pendiente: conciliar cláusula 12 (código a
 - 21-nov (noche, 3): ZF-017 + MK-001 v3; números exactos (30/70 solo ventas finales); entregables SIEMPRE en G:/E:, el scratchpad no guarda copias finales.
 - 21-nov (noche, 4): RUTA DEFINIDA de entregables = 08\Entregables 18-nov-2026 (G: y E:). ZF-017 v2 + MK-001 v4 con la cooperativa agrícola digital en el proceso de exportación.
 - 21-nov (noche, 5): cifras exactas (total con IVA 9.993.463,04) en toda la cadena; reorganización de 00 RESERVADO FD (402 movimientos, duplicados a 99 Archivo, FBSE separada, mapa en la raíz, kit para deshacer en E:\vars\var 5\Reorganizacion…).
+- 21-nov (noche, 6): formatos separados en todo el archivo reservado; cuaderno central actualizado. SO-007 v3 subido: FD aclaró que los cuadernos están compartidos solo con sus cuentas.
