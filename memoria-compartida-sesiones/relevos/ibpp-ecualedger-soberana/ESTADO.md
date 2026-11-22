@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-21 (noche, 4) — Vigentes: ALB-ZF-017 v2 (18 pasos con la cooperativa agrícola digital) y ALB-MK-001 v4 en la RUTA DEFINIDA 08\Entregables 18-nov-2026 (Word y DWG / PDF); cuaderno central 154 fuentes |
+| Último checkpoint | 2026-11-21 (noche, 5) — ZF-014 v5 con cifras exactas y cascada (ZF-013 v5, ZF-015 v5, ZF-003 v7, ZF-016 v2, SO-007 v3); 00 RESERVADO FD reorganizado por temas (G: = E:, 431 archivos) con mapa LEAME en la raíz |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -189,3 +189,4 @@ Guía 00a: 27 fichas. Nada enviado. Pendiente: conciliar cláusula 12 (código a
 - 21-nov (noche, 2): Grok usado con la sesión de FD (Claude in Chrome). MK-001 v2 en Entregables. Normativa EC-EAU ordenada (+ dictámenes TBI, ley aduanera del Golfo, Dubai Customs, USDA). Cuaderno «Normativa faltante ZF» NO se borra (FD). Pendientes: Decreto-Ley 46/2021 y declaración SICE a mano; superficie agrícola real en el plan maestro.
 - 21-nov (noche, 3): ZF-017 + MK-001 v3; números exactos (30/70 solo ventas finales); entregables SIEMPRE en G:/E:, el scratchpad no guarda copias finales.
 - 21-nov (noche, 4): RUTA DEFINIDA de entregables = 08\Entregables 18-nov-2026 (G: y E:). ZF-017 v2 + MK-001 v4 con la cooperativa agrícola digital en el proceso de exportación.
+- 21-nov (noche, 5): cifras exactas (total con IVA 9.993.463,04) en toda la cadena; reorganización de 00 RESERVADO FD (402 movimientos, duplicados a 99 Archivo, FBSE separada, mapa en la raíz, kit para deshacer en E:\vars\var 5\Reorganizacion…).
