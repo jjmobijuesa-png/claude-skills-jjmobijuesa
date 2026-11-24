@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-22 — seguridad de la zona: ALB-ZF-018 (Excel de turnos con tres fases) y ALB-ZF-019 (plan de seguridad integral) en Entregables (G: = E:); hilo WA de introducción para el Jefe del Bloque, borrador sin enviar; cuaderno central 158 fuentes |
+| Último checkpoint | 2026-11-24 — Reunión Word Rich I (Zoom de la Cámara con el autor del estudio de la zona): transcrita y analizada en ALB-NR-003, documento vivo con la hoja de ruta del estudio a la propuesta de ley; compromiso de enviar la hoja de ruta antes del viernes 27-nov; cuaderno central 160 fuentes |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -192,3 +192,4 @@ Guía 00a: 27 fichas. Nada enviado. Pendiente: conciliar cláusula 12 (código a
 - 21-nov (noche, 5): cifras exactas (total con IVA 9.993.463,04) en toda la cadena; reorganización de 00 RESERVADO FD (402 movimientos, duplicados a 99 Archivo, FBSE separada, mapa en la raíz, kit para deshacer en E:\vars\var 5\Reorganizacion…).
 - 21-nov (noche, 6): formatos separados en todo el archivo reservado; cuaderno central actualizado. SO-007 v3 subido: FD aclaró que los cuadernos están compartidos solo con sus cuentas.
 - 22-nov: ALB-ZF-018 (libro de turnos: fase activa 0/1/2, cronograma de 3 meses, tablas dinámicas, equipamiento, marco legal) y ALB-ZF-019 (plan integral: riesgos, cinco anillos, dotación por hitos 7 / 12 / 16 guardias, 210 guardias-mes frente a 288 = 27,08 % menos, armamento progresivo sin armas de fuego en el núcleo, protocolos, indicadores). Hilo WA de introducción para el Jefe del Bloque en 08\Hilos WA, pendiente del OK de FD. ZF-019 subió al cuaderno como .md (PDF falló dos veces).
+- 24-nov: Reunión Word Rich I analizada (ALB-NR-003 en Entregables\Reunion Word Rich, Word y PDF; transcripción automática local). Acuerdos: integrar la capa tecnológica al estudio de aprobación (el estudio es confidencial con la Alcaldía); enviar por correo, antes del viernes 27-nov, la hoja de ruta y el capítulo editable con los planos DWG. Escala decidida: de 1.500 m2 a 8 ha y a 25 ha (redimensionar ZF-003, ZF-004 y ZF-014). El video ZF-008 v5 que circula es anterior a la v7: regenerar como v6. Ley: carril paralelo; la Cámara impulsa, presentan el Ejecutivo o asambleístas (arts. 134, 135, 136, 140 por verificar). Etriek y la Fundación por separado.
