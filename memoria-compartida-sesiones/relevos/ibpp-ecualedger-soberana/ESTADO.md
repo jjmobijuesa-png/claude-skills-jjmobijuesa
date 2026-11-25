@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-24 — Reunión Word Rich I (Zoom de la Cámara con el autor del estudio de la zona): transcrita y analizada en ALB-NR-003, documento vivo con la hoja de ruta del estudio a la propuesta de ley; compromiso de enviar la hoja de ruta antes del viernes 27-nov; cuaderno central 160 fuentes |
+| Último checkpoint | 2026-11-24 (noche) — una sola ley: orquestación ORQ-001 preparada sin activar (encargo, manifiesto de 78 fuentes y herramientas en la carpeta 06 Marco Legal Nacional de la zona); reglamento interno de la zona en paralelo |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -194,3 +194,9 @@ Guía 00a: 27 fichas. Nada enviado. Pendiente: conciliar cláusula 12 (código a
 - 22-nov: ALB-ZF-018 (libro de turnos: fase activa 0/1/2, cronograma de 3 meses, tablas dinámicas, equipamiento, marco legal) y ALB-ZF-019 (plan integral: riesgos, cinco anillos, dotación por hitos 7 / 12 / 16 guardias, 210 guardias-mes frente a 288 = 27,08 % menos, armamento progresivo sin armas de fuego en el núcleo, protocolos, indicadores). Hilo WA de introducción para el Jefe del Bloque en 08\Hilos WA, pendiente del OK de FD. ZF-019 subió al cuaderno como .md (PDF falló dos veces).
 - 24-nov: Reunión Word Rich I analizada (ALB-NR-003 en Entregables\Reunion Word Rich, Word y PDF; transcripción automática local). Acuerdos: integrar la capa tecnológica al estudio de aprobación (el estudio es confidencial con la Alcaldía); enviar por correo, antes del viernes 27-nov, la hoja de ruta y el capítulo editable con los planos DWG. Escala decidida: de 1.500 m2 a 8 ha y a 25 ha (redimensionar ZF-003, ZF-004 y ZF-014). El video ZF-008 v5 que circula es anterior a la v7: regenerar como v6. Ley: carril paralelo; la Cámara impulsa, presentan el Ejecutivo o asambleístas (arts. 134, 135, 136, 140 por verificar). Etriek y la Fundación por separado.
 - 24-nov (noche): ALB-ZF-020 (hoja de ruta de trabajo conjunto, 2 págs.: carril de la zona y carril de la ley hasta la Asamblea y la Presidencia) y ALB-ZF-021 (nota de una página para la reunión del Presidente de la Cámara con el Presidente de la República) en Entregables (G: = E:). Bases constitucionales 134 a 138 y 140 confirmadas en el texto de la Constitución. NR-003 v1.1. Cuaderno central 162 fuentes. Pendiente: que FD envíe ambos por correo.
+
+### Checkpoint 2026-11-24 (noche) — ORQ-001
+- Decisión del titular: las tres leyes de la IBPP y sus reglamentos se consolidan en una sola ley, con un capítulo nuevo en el título de zonas francas del COPCI, sin reforma constitucional. En paralelo va el reglamento interno de la zona de Riobamba, dentro del marco vigente.
+- Preparado, sin activar, en `08 …/Normativa Zonas Francas EC/06 Marco Legal Nacional`: el encargo, el manifiesto JSON de 78 fuentes verificadas y `_herramientas`.
+- Encargo enviado a la sesión «Ingienería de prompts», que escribe el prompt del orquestador (Fable 5.2, con Opus 5.5 de respaldo). Consulta de versiones enviada a «IBPP - EcuaLedger Soberana v1».
+- Siguiente paso: revisar el prompt que devuelva el agente de prompts y actualizar ZF-020 y NR-003; después, el titular activa.
