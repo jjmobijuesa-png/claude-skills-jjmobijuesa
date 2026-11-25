@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-25 — hoja de ruta de la zona v2 y documento vivo de reuniones v1.2 (ley única); textos legales completos; orquestación ORQ-001 v1.3 lista para activar |
+| Último checkpoint | 2026-11-25 (tarde) — carta, contrato de la Etapa 1 y escenario B a 25 ha; proyección de ingresos v2 con naves y oficinas; documento vivo de reuniones v1.5; ORQ-001 v1.3 sigue sin activar |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -208,3 +208,4 @@ Guía 00a: 27 fichas. Nada enviado. Pendiente: conciliar cláusula 12 (código a
 - 25-nov: presentaciones y videos actualizados a las 25 ha y entregados; documento vivo de reuniones v1.3. Faltan las decisiones del titular (reparto de áreas, financiamiento de las 17 ha, carta y contrato a 25 ha, figura de la cooperativa).
 - 25-nov (2.ª ronda): reparto de las 25 ha fundamentado con prácticas internacionales; financiamiento de la zona con los fondos de los Emiratos administrados por el operador; esquema societario v2 compartible; video de la cooperativa en generación.
 - 25-nov: video de la cooperativa en español entregado; el cinematográfico en inglés espera la cuota de NotebookLM; documento vivo de reuniones v1.4.
+- 25-nov (tarde): la carta al operador, el contrato de la Etapa 1 y el escenario B pasan a 25 ha (ZF-013 v6, ZF-015 v6, ZF-016 v3). La proyección de ingresos v2 (ZF-026 v2) suma naves y oficinas para arriendo. Documento vivo de reuniones v1.5. Todo en G: = E: por sha1; las versiones anteriores, archivadas. Pendiente: el cinematográfico en inglés de la cooperativa (cuota de NotebookLM).
