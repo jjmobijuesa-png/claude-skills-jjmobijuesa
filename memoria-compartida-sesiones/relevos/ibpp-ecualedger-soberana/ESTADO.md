@@ -205,3 +205,4 @@ Guía 00a: 27 fichas. Nada enviado. Pendiente: conciliar cláusula 12 (código a
 - 25-nov: la hoja de ruta de la zona pasó a v2 y el documento vivo de reuniones a v1.2, con la ley única. Las ocho normas nuevas están en `02 EC Normativa Conexa`. ORQ-001 (v1.3) queda listo para que el titular lo active.
 - 25-nov: el cuaderno central tiene la hoja de ruta v2 y el documento vivo de reuniones v1.2, en lugar de sus versiones anteriores (163 fuentes).
 - 25-nov: la zona pasa a 25 ha con cuatro áreas como un solo centro orientado al acuerdo con los Emiratos. Hechos: capítulo v8, plano v5, cronograma v6, anexo financiero de la cooperativa digital y esquema de la red de zonas francas. Videos y presentaciones en generación en el cuaderno.
+- 25-nov: presentaciones y videos actualizados a las 25 ha y entregados; documento vivo de reuniones v1.3. Faltan las decisiones del titular (reparto de áreas, financiamiento de las 17 ha, carta y contrato a 25 ha, figura de la cooperativa).
