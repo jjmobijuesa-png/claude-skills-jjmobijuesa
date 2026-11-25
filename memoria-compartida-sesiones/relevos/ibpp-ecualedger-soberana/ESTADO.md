@@ -200,3 +200,4 @@ Guía 00a: 27 fichas. Nada enviado. Pendiente: conciliar cláusula 12 (código a
 - Preparado, sin activar, en `08 …/Normativa Zonas Francas EC/06 Marco Legal Nacional`: el encargo, el manifiesto JSON de 78 fuentes verificadas y `_herramientas`.
 - Encargo enviado a la sesión «Ingienería de prompts», que escribe el prompt del orquestador (Fable 5.2, con Opus 5.5 de respaldo). Consulta de versiones enviada a «IBPP - EcuaLedger Soberana v1».
 - Siguiente paso: revisar el prompt que devuelva el agente de prompts y actualizar ZF-020 y NR-003; después, el titular activa.
+- 24-nov (cierre): el agente de prompts entregó el prompt ORQ-001 (unos 5.000 tokens). Revisado y llevado a v1.1: rutas absolutas y maqueta neutra `_herramientas/doc_neutro.py` (A4, sin logo, membrete, firma ni glosario; probada sin imágenes ni vetos). Listo para activar cuando el titular cierre la actualización de ZF-020 y NR-003.
