@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-24 (noche) — una sola ley: orquestación ORQ-001 preparada sin activar (encargo, manifiesto de 78 fuentes y herramientas en la carpeta 06 Marco Legal Nacional de la zona); reglamento interno de la zona en paralelo |
+| Último checkpoint | 2026-11-25 — hoja de ruta de la zona v2 y documento vivo de reuniones v1.2 (ley única); textos legales completos; orquestación ORQ-001 v1.3 lista para activar |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -202,3 +202,4 @@ Guía 00a: 27 fichas. Nada enviado. Pendiente: conciliar cláusula 12 (código a
 - Siguiente paso: revisar el prompt que devuelva el agente de prompts y actualizar ZF-020 y NR-003; después, el titular activa.
 - 24-nov (cierre): el agente de prompts entregó el prompt ORQ-001 (unos 5.000 tokens). Revisado y llevado a v1.1: rutas absolutas y maqueta neutra `_herramientas/doc_neutro.py` (A4, sin logo, membrete, firma ni glosario; probada sin imágenes ni vetos). Listo para activar cuando el titular cierre la actualización de ZF-020 y NR-003.
 - 25-nov: cerrados los siete huecos normativos del manifiesto ORQ-001. COMF, Ley de Mercado de Valores, Reglamento del COPCI, Acuerdo MPCEIP-2024-0081-A, Ley Notarial, Ley de Registro de Datos Públicos y Ley de Transformación Digital están ahora en disco, descargados de fuentes oficiales. El manifiesto tiene 86 fuentes y el prompt va en v1.3.
+- 25-nov: la hoja de ruta de la zona pasó a v2 y el documento vivo de reuniones a v1.2, con la ley única. Las ocho normas nuevas están en `02 EC Normativa Conexa`. ORQ-001 (v1.3) queda listo para que el titular lo active.
