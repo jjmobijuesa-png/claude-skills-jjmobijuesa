@@ -229,3 +229,12 @@ Guía 00a: 27 fichas. Nada enviado. Pendiente: conciliar cláusula 12 (código a
 - Respaldos en `06 Marco Legal Nacional\_Versiones anteriores`: «(86 fuentes, antes de LF…)» y «(98, pre COMF)». El manifiesto vigente tiene 98 fuentes y es igual en G: y E:.
 - 25-nov (noche): el titular declara listo ORQ-001 y fija su activación para el **viernes 27-nov-2026 por la mañana**. El prompt es la v1.6, del agente de prompts. El manifiesto tiene 98 fuentes; G: = E: (sha256 7F958A064D7E…).
 - 25-nov (noche): sobre el «COMF íntegro del correo de la Fundación», el agente de prompts confirma que no entró a ese correo ni bajó ningún archivo. En disco siguen los tres libros: I en LF02, II en N23 y III en N21. No hay nada nuevo que indexar mientras no aparezca un archivo.
+
+### Checkpoint 2026-11-25 22:13 (espejo nube)
+- Francisco pidió analizar los entregables del proyecto (IBPP, zona franca y esquema societario) con el «algoritmo» de cinco pasos.
+  Hecho en `archivos/analisis-algoritmo-elon-entregables.md`, a partir del inventario de este ESTADO (sin abrir documentos fuente).
+- El artículo de Substack («Hardcore principles») no se pudo leer desde la nube (DNS bloqueado). La skill de A7 no está en el repo.
+- **Para la PC al volver:**
+  1. Leer el análisis y llevar sus cuatro preguntas (§8) al titular.
+  2. Si Francisco lo aprueba: congelar el paquete de la operadora en cinco piezas y anteponer el correo del 27-nov a la activación de ORQ-001.
+  3. Hacer la lista de requisitos de la ley con dueño antes de activar el orquestador.
