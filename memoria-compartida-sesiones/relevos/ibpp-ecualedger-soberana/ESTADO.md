@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-25 (tarde) — carta, contrato de la Etapa 1 y escenario B a 25 ha; proyección de ingresos v2 con naves y oficinas; documento vivo de reuniones v1.5; ORQ-001 v1.3 sigue sin activar |
+| Último checkpoint | 2026-11-25 (noche) — manifiesto ORQ-001 reconciliado con la carpeta 07 (LF) y corregido el caso COMF: la Ley de Mercado de Valores es el Libro II del COMF; ORQ-001 (prompt v1.6, del agente de prompts) sigue SIN activar |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -210,3 +210,20 @@ Guía 00a: 27 fichas. Nada enviado. Pendiente: conciliar cláusula 12 (código a
 - 25-nov: video de la cooperativa en español entregado; el cinematográfico en inglés espera la cuota de NotebookLM; documento vivo de reuniones v1.4.
 - 25-nov (tarde): la carta al operador, el contrato de la Etapa 1 y el escenario B pasan a 25 ha (ZF-013 v6, ZF-015 v6, ZF-016 v3). La proyección de ingresos v2 (ZF-026 v2) suma naves y oficinas para arriendo. Documento vivo de reuniones v1.5. Todo en G: = E: por sha1; las versiones anteriores, archivadas. Pendiente: el cinematográfico en inglés de la cooperativa (cuota de NotebookLM).
 - 25-nov (tarde): a pedido del agente de prompts (ORQ-001 v1.4, por orden del titular), el manifiesto se reconcilió con la carpeta `07 Legislacion financiera` (alias LF, compilaciones LEXIS). Son 12 normas nuevas; 10 fuentes previas quedan marcadas como superadas, sin borrarse. Total: 98 fuentes. La Ley de Mercado de Valores (N23) y el Reglamento de Inversiones (N27) siguen como base. Respaldo en `_Versiones anteriores`. ORQ-001 sigue sin activar.
+- 25-nov (noche), corrección del titular: la Ley de Mercado de Valores no es una ley aparte; es el Libro II del COMF. N23 se reclasificó como «COMF, Libro II: mercado de valores», parte de LF02.
+
+### Criterio vigente del manifiesto ORQ-001 (para quien lo lea o lo active)
+- **Carpeta 07 (alias LF) = versión base del titular**, con copias de LEXIS. Manda sobre cualquier otra copia de la misma norma. Las fuentes superadas no se borran: llevan «superada_por» y solo sirven para la historia legislativa.
+- **COMF, tres libros, verificado en los textos:**
+  - Libro I (monetario y financiero) = LF02, de LEXIS, al 4-VI-2026. Trae solo el Libro I: lo dice el encabezado de cada página.
+  - Libro II (mercado de valores) = N23, al 13-X-2025. Se cita como COMF, Libro II, nunca como ley autónoma.
+  - Libro III (seguros) = solo en N21, el código íntegro al 22-XII-2022.
+  - El archivo «ley de mercado de valores.pdf» de Descargas es una gaceta extranjera, no el COMF.
+- **Huecos que quedan:**
+  - confirmar en LEXIS si el Libro II tuvo reformas después del 13-X-2025;
+  - el Libro III, solo si la ley toca seguros;
+  - el D. E. 757 vigente;
+  - la LOEEGE (la ley) con su última reforma.
+- **Evolución del criterio:** primero se indexaron N21 a N28 (descargas oficiales provisionales); luego, la carpeta 07 como base, deduplicando por norma y no por archivo (ningún PDF coincide byte a byte); por último, el COMF se corrigió de «ley más código» a «un código en tres libros».
+- 🚦 Los PDF de LEXIS se citan por su Registro Oficial y nunca se adjuntan: cada página lleva la marca del usuario que los descargó.
+- Respaldos en `06 Marco Legal Nacional\_Versiones anteriores`: «(86 fuentes, antes de LF…)» y «(98, pre COMF)». El manifiesto vigente tiene 98 fuentes y es igual en G: y E:.
