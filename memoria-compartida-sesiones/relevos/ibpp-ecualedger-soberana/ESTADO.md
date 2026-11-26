@@ -2,11 +2,11 @@
 
 | Campo | Valor |
 |---|---|
-| **TURNO** | PC |
+| **TURNO** | NUBE |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-25 (noche) — manifiesto ORQ-001 listo (98 fuentes, COMF en tres libros); el titular fija la ACTIVACIÓN de ORQ-001 para el viernes 27-nov-2026 por la mañana |
-| Motivo del último relevo | — |
+| Último checkpoint | 2026-11-25 22:13 (Guayaquil) — espejo: análisis de entregables con el algoritmo de cinco pasos en `archivos/analisis-algoritmo-elon-entregables.md` |
+| Motivo del último relevo | Toma automática: el usuario escribió en el espejo (PC detenida) |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
 `archivos/` transporta **resúmenes y punteros en Markdown, nunca el documento fuente**.
