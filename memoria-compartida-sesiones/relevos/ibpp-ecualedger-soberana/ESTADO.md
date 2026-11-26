@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-25 (noche) — manifiesto ORQ-001 reconciliado con la carpeta 07 (LF) y corregido el caso COMF: la Ley de Mercado de Valores es el Libro II del COMF; ORQ-001 (prompt v1.6, del agente de prompts) sigue SIN activar |
+| Último checkpoint | 2026-11-25 (noche) — manifiesto ORQ-001 listo (98 fuentes, COMF en tres libros); el titular fija la ACTIVACIÓN de ORQ-001 para el viernes 27-nov-2026 por la mañana |
 | Motivo del último relevo | — |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -227,3 +227,5 @@ Guía 00a: 27 fichas. Nada enviado. Pendiente: conciliar cláusula 12 (código a
 - **Evolución del criterio:** primero se indexaron N21 a N28 (descargas oficiales provisionales); luego, la carpeta 07 como base, deduplicando por norma y no por archivo (ningún PDF coincide byte a byte); por último, el COMF se corrigió de «ley más código» a «un código en tres libros».
 - 🚦 Los PDF de LEXIS se citan por su Registro Oficial y nunca se adjuntan: cada página lleva la marca del usuario que los descargó.
 - Respaldos en `06 Marco Legal Nacional\_Versiones anteriores`: «(86 fuentes, antes de LF…)» y «(98, pre COMF)». El manifiesto vigente tiene 98 fuentes y es igual en G: y E:.
+- 25-nov (noche): el titular declara listo ORQ-001 y fija su activación para el **viernes 27-nov-2026 por la mañana**. El prompt es la v1.6, del agente de prompts. El manifiesto tiene 98 fuentes; G: = E: (sha256 7F958A064D7E…).
+- 25-nov (noche): sobre el «COMF íntegro del correo de la Fundación», el agente de prompts confirma que no entró a ese correo ni bajó ningún archivo. En disco siguen los tres libros: I en LF02, II en N23 y III en N21. No hay nada nuevo que indexar mientras no aparezca un archivo.
