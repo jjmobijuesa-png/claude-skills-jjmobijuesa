@@ -5,7 +5,7 @@
 | **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
-| Último checkpoint | 2026-11-25 22:13 (Guayaquil) — espejo: análisis de entregables con el algoritmo de cinco pasos en `archivos/analisis-algoritmo-elon-entregables.md` |
+| Último checkpoint | 2026-11-27 — ORQ-001 activado por el titular (orquestador: «IBPP - EcuaLedger Soberana v1»); ALB-AN-001, análisis de presupuestos, entregado; manifiesto con 99 fuentes (EXT01) |
 | Motivo del último relevo | La PC retoma: encargo del titular (análisis de presupuestos, 26-nov) |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
@@ -238,3 +238,6 @@ Guía 00a: 27 fichas. Nada enviado. Pendiente: conciliar cláusula 12 (código a
   1. Leer el análisis y llevar sus cuatro preguntas (§8) al titular.
   2. Si Francisco lo aprueba: congelar el paquete de la operadora en cinco piezas y anteponer el correo del 27-nov a la activación de ORQ-001.
   3. Hacer la lista de requisitos de la ley con dueño antes de activar el orquestador.
+- 27-nov: el titular activó ORQ-001; el orquestador es la sesión «IBPP - EcuaLedger Soberana v1». A su pedido se agregó EXT01 al manifiesto: el Proyecto de Ley de Activos Virtuales, trámite 486893. Ahora tiene 99 fuentes, G: = E:.
+- 27-nov: ALB-AN-001, análisis de presupuestos (7 págs., reservado), en Entregables 18-nov-2026, G: y E:. Clasifica 32 presupuestos: 10 verificados, 8 verificables y 14 creencias. Las creencias más pesadas son sobre Word Rich: identidad, USD 50 M y terreno. Porter: la SAS es el negocio más expuesto. Su anexo trae los requisitos de la ley con dueño, para revisar el resultado del orquestador.
+- **Para el que siga:** llevar al titular las seis decisiones de la sección 9 de ALB-AN-001. Sin su orden no se envía nada.
