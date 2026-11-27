@@ -2,11 +2,11 @@
 
 | Campo | Valor |
 |---|---|
-| **TURNO** | NUBE |
+| **TURNO** | PC |
 | Principal | Sesión local "IBPP - EcuaLedger Soberana" (PC). Su carpeta de trabajo en `E:` ya no existe; se recomienda continuar en "IBPP - EcuaLedger Soberana v2" |
 | Espejo | Sesión nube "Espejo — IBPP - EcuaLedger Soberana" |
 | Último checkpoint | 2026-11-25 22:13 (Guayaquil) — espejo: análisis de entregables con el algoritmo de cinco pasos en `archivos/analisis-algoritmo-elon-entregables.md` |
-| Motivo del último relevo | Toma automática: el usuario escribió en el espejo (PC detenida) |
+| Motivo del último relevo | La PC retoma: encargo del titular (análisis de presupuestos, 26-nov) |
 
 ## 🚦 Regla de datos de este canal — leer antes de escribir aquí
 `archivos/` transporta **resúmenes y punteros en Markdown, nunca el documento fuente**.
